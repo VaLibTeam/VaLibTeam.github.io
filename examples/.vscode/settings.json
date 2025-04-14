@@ -1,0 +1,8 @@
+{
+    "C_Cpp.default.compilerPath": "/usr/bin/g++",
+    "files.associations": {
+        "*.asm": "nasm",
+        "*.inc": "nasm",
+        "*.tpp": "cpp"
+    }
+}

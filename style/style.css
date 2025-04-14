@@ -1,33 +1,33 @@
 :root {
-    --primary-color: #4a6fa5;
-    --secondary-color: #166088;
-    --accent-color: #4fc3f7;
-    --dark-color: #1a2639;
+    --primary-color: #3a5a80;  
+    --secondary-color: #0d4b6e; 
+    --accent-color: #3dabdc;
+    --dark-color: #121a26;     
     --light-color: #f0f4f8;
     --success-color: #4caf50;
 
     --bg-color: #f0f4f8;
-    --text-color: #1a2639;
+    --text-color: #121a26;     
 
     --card-bg: white;
-    --card-bg2: #dfd6d6;
+    --card-bg2: #e0e0e0;      
 
-    --header-bg: linear-gradient(135deg, #4a6fa5, #166088);
+    --header-bg: linear-gradient(135deg, #3a5a80, #0d4b6e); 
     --nav-bg: white;
-    --footer-bg: #1a2639;
+    --footer-bg: #121a26;     
 }
 
 .dark-mode {
-    --bg-color: #121212;
-    --text-color: #f0f4f8;
+    --bg-color: #0a0a0a;      
+    --text-color: #e0e4e8;    
 
-    --card-bg: #1e1e1e;
-    --card-bg2: #1b1919;
+    --card-bg: #121212;
+    --card-bg2: #0c0c0c;
 
-    --header-bg: linear-gradient(135deg, #1a2639, #0d1a2b);
-    --nav-bg: #1a2639;
-    --footer-bg: #0d1a2b;
-    --primary-color: #4fc3f7;
+    --header-bg: linear-gradient(135deg, #121a26, #080e16); 
+    --nav-bg: #121212;
+    --footer-bg: #080e16;    
+    --primary-color: #329ed3;
 }
 
 * {
@@ -235,32 +235,6 @@ h2::after {
     background-color: #3da8d8;
 }
 
-.features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.feature-card {
-    background-color: var(--card-bg2);
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-}
-
-.feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.feature-icon {
-    font-size: 2.5rem;
-    color: var(--accent-color);
-    margin-bottom: 1rem;
-}
-
 footer {
     background-color: var(--footer-bg);
     color: white;
@@ -297,7 +271,7 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Dark mode toggle */
+
 .theme-toggle {
     display: flex;
     align-items: center;
@@ -340,7 +314,7 @@ footer {
     transform: translateX(26px);
 }
 
-/* Responsive design */
+
 @media (max-width: 768px) {
     .nav-container {
         flex-direction: column;
@@ -370,9 +344,8 @@ footer {
 }
 
 .button-link {
-    /*display: inline-block;*/
     padding: 5px 10px;
-    /*background-color: #3498db;*/
+    
     color: #3498db;
     text-decoration: none;
     border-radius: 5px;

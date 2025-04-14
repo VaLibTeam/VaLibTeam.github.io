@@ -1,0 +1,73 @@
+.step {
+    margin-bottom: 20px;
+    display: none;
+}
+
+.step.active {
+    display: block;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.terminal {
+    background: #1e1e1e;
+    color: #3c953c;
+    padding: 10px;
+    font-family: "JetBrains Mono", "JetBrains Mono NL", monospace;
+    border-radius: 5px;
+    position: relative;
+    white-space: pre-wrap;
+}
+
+.sh-keyword  { color: #569CD6; }
+.sh-command  { color: #7fc3e6; }
+.sh-flag     { color: #D7BA7D; }
+.sh-string   { color: #509a25; }
+.sh-arg      { color: #86c5b2; }
+
+.copy-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #444;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.progress {
+    height: 8px;
+    background: #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #4caf50;
+    width: 0;
+    transition: width 0.3s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.info-list {
+    margin: 1em 0;
+}
+.info-list ul {
+    padding-left: 1.5em;
+}
+.info-list li {
+    margin-bottom: 0.3em;
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,28 +11,29 @@
     <title>VaLib - Vast Library</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css"/>
+    <link rel="stylesheet" href="style/card.css"/>
+    <link rel="stylesheet" href="style/tutorial.css"/>
+    <link rel="stylesheet" href="style/examples.css"/>
 </head>
 <body>
 <header>
     <div class="header-bg"></div>
     <div class="header-content">
-<!--        <img src="assets/logo.png" alt="VaLib Logo" class="logo-img">-->
         <h1>VaLib</h1>
         <p>Vast Library for C++ Developers</p>
     </div>
 </header>
 
 <nav>
-    <div class="nav-container">
-<!--        <div class="logo-small">-->
-<!--            <span style="color: var(&#45;&#45;primary-color); font-weight: bold; font-size: 1.2rem;">VaLib</span>-->
-<!--        </div>-->
-        <ul class="nav-links">
+    <div class="nav-container" style="display: flex; align-items: center;">
+        <ul class="nav-links" style="display: flex; list-style: none; padding: 0; margin: 0;">
             <li><a href="#about">About VaLib</a></li>
-
             <li><a href="#contact">Contact</a></li>
             <li><a href="#why">Why VaLib?</a></li>
+            <li><a href="#docs">Docs</a></li>
+        </ul>
+        <ul style="display: flex; list-style: none; padding: 0">
             <li class="theme-toggle">
                 <span class="toggle-icon"><i class="fas fa-moon"></i></span>
                 <div class="toggle-switch"></div>
@@ -52,27 +53,84 @@
     <section id="why">
         <h2>Why Choose VaLib?</h2>
         <div class="features">
-            <div class="feature-card">
+            <div class="feature-card" data-expanded="false">
                 <div class="feature-icon">
                     <i class="fas fa-bolt"></i>
                 </div>
                 <h3>High Performance</h3>
-                <p>Optimized for speed and efficiency, VaLib components are designed with performance in mind, ensuring minimal overhead in your applications.</p>
+                <p class="short">Optimized for speed and efficiency.</p>
+                <p class="more">VaLib components are designed with performance in mind, ensuring minimal overhead in your applications.</p>
+                <button class="read-more">Read more</button>
             </div>
-            <div class="feature-card">
+
+            <div class="feature-card" data-expanded="false">
                 <div class="feature-icon">
                     <i class="fas fa-code"></i>
                 </div>
                 <h3>Modern C++</h3>
-                <p>Built using modern C++ standards (etc. <a target="_blank" class="button-link" href="https://en.cppreference.com/w/cpp/20">C++20</a>, <a target="_blank" class="button-link" href="https://en.cppreference.com/w/cpp/23">C++23</a>), VaLib takes advantage of the latest language features for cleaner, safer code.</p>
+                <p class="short">Built using modern C++ standards.</p>
+                <p class="more">VaLib uses <a target="_blank" class="button-link" href="https://en.cppreference.com/w/cpp/20">C++20</a>, <a target="_blank" class="button-link" href="https://en.cppreference.com/w/cpp/23">C++23</a>, and leverages the latest features for cleaner, safer code.</p>
+                <button class="read-more">Read more</button>
             </div>
-            <div class="feature-card">
+
+            <div class="feature-card" data-expanded="false">
                 <div class="feature-icon">
                     <i class="fas fa-book"></i>
                 </div>
                 <h3>Comprehensive Docs</h3>
-                <p>Detailed documentation with examples for every module, making it easy to integrate VaLib into your projects.</p>
+                <p class="short">Documentation with examples.</p>
+                <p class="more">Detailed documentation with examples for every module, making it easy to integrate VaLib into your projects.</p>
+                <button class="read-more">Read more</button>
             </div>
+        </div>
+    </section>
+
+    <section id="docs">
+        <h2>Docs</h2>
+        <p>If you want to see VaLib documentation press the button below.</p>
+        <div style="text-align: center;">
+            <a href="docs/index.html" target="_blank" class="btn">Explore documentation</a>
+        </div>
+    </section>
+
+    <section id="examples">
+        <h2>Examples</h2>
+        <p>If you want to see code examples using VaLib press the button below.</p>
+
+        <div style="text-align: center; margin-top: 20px;" id="button-container">
+            <button id="see-examples-btn" class="btn">See examples</button>
+        </div>
+
+        <div id="iframe-wrapper" class="collapsed">
+            <div class="fade-mask">
+                <iframe src="examples/index.html" width="90%" height="500px" style="border: none;"></iframe>
+            </div>
+            <div style="margin-top: 20px;">
+                <a href="examples/index.html" target="_blank" id="open-new-tab" class="btn">Open in new tab</a>
+                <button id="back-btn" class="btn" style="margin-left: 10px;">Back</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to build -->
+    <section id="how-to-build" class="section">
+        <h2>How to build</h2>
+        <div class="progress"><div id="build-progress" class="progress-bar"></div></div>
+        <div id="build-steps"></div>
+        <div class="buttons">
+            <button id="build-prev" class="btn">Back</button>
+            <button id="build-next" class="btn">Next</button>
+        </div>
+    </section>
+
+    <!-- How to install -->
+    <section id="how-to-install" class="section" style="display: none;">
+        <h2>How to install</h2>
+        <div class="progress"><div id="install-progress" class="progress-bar"></div></div>
+        <div id="install-steps"></div>
+        <div class="buttons">
+            <button id="install-prev" class="btn">Back</button>
+            <button id="install-next" class="btn">Next</button>
         </div>
     </section>
 
@@ -89,12 +147,13 @@
         <h3>VaLib - Vast Library for C++</h3>
         <div class="social-links">
             <a href="https://github.com/VaLibTeam/VaLib"><i class="fab fa-github"></i></a>
-<!--            <a href="#"><i class="fab fa-twitter"></i></a>-->
-<!--            <a href="#"><i class="fab fa-discord"></i></a>-->
+<!--            <a href="#"><i class="fab fa-discord"></i></a>--> <!-- TODO: discord -->
         </div>
         <p class="copyright">&copy; 2025 VaLibTeam. All rights reserved.</p>
     </div>
 </footer>
-    <script src="script.js"></script>
+    <script src="script/script.js"></script>
+    <script src="script/tutorial.js"></script>
+    <script src="script/examples.js"></script>
 </body>
 </html>
