@@ -6,7 +6,10 @@ const backBtn = document.getElementById('back-btn');
 seeBtn.addEventListener('click', () => {
     buttonContainer.style.display = 'none';
     iframeWrapper.classList.add('expanded');
-    document.getElementById('examples').scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+    setTimeout(() => {
+        document.getElementById('examples').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 800);
 });
 
 backBtn.addEventListener('click', () => {
