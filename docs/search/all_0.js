@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['data_0',['data',['../classVaString.html#a42ce05db7405cc4aa49f531879a07457',1,'VaString']]]
+  ['_5f_5fbasicarray_0',['__BasicArray',['../classva_1_1detail_1_1____BasicArray.html',1,'va::detail::__BasicArray&lt; T, N &gt;'],['../classva_1_1detail_1_1____BasicArray.html#a392d33e1d3af3be57e49939cfa268395',1,'va::detail::__BasicArray::__BasicArray()']]]
 ];

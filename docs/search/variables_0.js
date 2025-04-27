@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['data_0',['data',['../classVaString.html#a42ce05db7405cc4aa49f531879a07457',1,'VaString']]]
+  ['buckets_0',['buckets',['../classVaDict.html#ab3ca51a653ee4ea1117fb1dc628b0ba2',1,'VaDict']]]
 ];

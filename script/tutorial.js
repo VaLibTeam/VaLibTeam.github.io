@@ -48,7 +48,7 @@ const installSteps = [
         title: "Step 3: Verify installation",
         content: [
             { type: "text", value: "To verify everything is correctly installed, run:" },
-            { type: "terminal", value: "scripts/checkInstall.sh" },
+            { type: "terminal", value: "scripts/check-install.sh" },
         ]
     },
 ];

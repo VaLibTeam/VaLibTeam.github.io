@@ -4,27 +4,26 @@
 #include <VaLib/Utils/format.hpp>
 
 struct Town {
-    VaString name;
+  VaString name;
 
-    Town(VaString str): name(str) {};
+  Town(VaString str) : name(str) {};
 
-    VaString toString() const {
-        return name;
-    }
+  VaString toString() const { return name; }
 };
 
 int main() {
-    // -- example data --
-    VaString name = "Liam";
-    int age = 21;
-    Town town("New York");
+  // -- example data --
+  VaString name = "Liam";
+  int age = 21;
+  Town town("New York");
 
-    va::printlnf("Hello! my name is %s and I am %d years old. I live in %q", name, age, town);
+  va::printlnf("Hello! my name is %s and I am %d years old. I live in %q", name,
+               age, town);
 
-    int n = 30;
-    VaString result = va::sprintf("%d * 2: %d", n, n * 2);
+  int n = 30;
+  VaString result = va::sprintf("%d * 2: %d", n, n * 2);
 
-    va::printlnf("%s", result);
+  va::printlnf("%s", result);
 }
 
 /* --- output ---

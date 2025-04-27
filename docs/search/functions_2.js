@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['tocstylestring_0',['toCStyleString',['../classVaString.html#a8f72b9e005be43781d026d9554aa63af',1,'VaString']]],
-  ['tostdstring_1',['toStdString',['../classVaString.html#a0df30c9c8d69bc05131b705dba5d2d79',1,'VaString']]]
+  ['back_0',['back',['../classva_1_1detail_1_1____BasicArray.html#a9a5b072dc109082057c81cb09eacb697',1,'va::detail::__BasicArray::back() noexcept'],['../classva_1_1detail_1_1____BasicArray.html#a2d46006c80778d832d9795389d3543e9',1,'va::detail::__BasicArray::back() const noexcept'],['../classVaList.html#a52ac95b47ba965751fbcc8b676614953',1,'VaList::back()'],['../classVaList.html#a7633b22f7ce2c620004d059faeaa36c7',1,'VaList::back() const'],['../classVaSlice.html#a3b7b503f51cd85864eb1a4039d04ab8d',1,'VaSlice::back()'],['../classVaSlice.html#a2047341cb1a4786b80c47bb2c7d88302',1,'VaSlice::back() const']]]
 ];

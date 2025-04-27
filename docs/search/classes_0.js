@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['valist_0',['VaList',['../classVaList.html',1,'']]],
-  ['vastring_1',['VaString',['../classVaString.html',1,'']]]
+  ['_5f_5fbasicarray_0',['__BasicArray',['../classva_1_1detail_1_1____BasicArray.html',1,'va::detail']]]
 ];

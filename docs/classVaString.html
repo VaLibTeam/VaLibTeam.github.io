@@ -72,113 +72,841 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classVaString-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">VaString Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p><code>#include &lt;<a class="el" href="String_8hpp_source.html">String.hpp</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a26a0074c30520b8ae0886bc927a98059" id="r_a26a0074c30520b8ae0886bc927a98059"><td class="memItemLeft" align="right" valign="top"><a id="a26a0074c30520b8ae0886bc927a98059" name="a26a0074c30520b8ae0886bc927a98059"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>ConstIterator</b> = const char*</td></tr>
+<tr class="separator:a26a0074c30520b8ae0886bc927a98059"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afac7cd40321e1d246b6cb8eafd3117a9" id="r_afac7cd40321e1d246b6cb8eafd3117a9"><td class="memItemLeft" align="right" valign="top"><a id="afac7cd40321e1d246b6cb8eafd3117a9" name="afac7cd40321e1d246b6cb8eafd3117a9"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>ReverseIterator</b> = std::reverse_iterator&lt;Iterator&gt;</td></tr>
+<tr class="separator:afac7cd40321e1d246b6cb8eafd3117a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a283b42cccd97f9beb0ccbc62e91b265f" id="r_a283b42cccd97f9beb0ccbc62e91b265f"><td class="memItemLeft" align="right" valign="top"><a id="a283b42cccd97f9beb0ccbc62e91b265f" name="a283b42cccd97f9beb0ccbc62e91b265f"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>ConstReverseIterator</b> = std::reverse_iterator&lt;ConstIterator&gt;</td></tr>
+<tr class="separator:a283b42cccd97f9beb0ccbc62e91b265f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac4e0f29e0c275bf2a0937594c9366046" id="r_ac4e0f29e0c275bf2a0937594c9366046"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4e0f29e0c275bf2a0937594c9366046">VaString</a> ()</td></tr>
-<tr class="separator:ac4e0f29e0c275bf2a0937594c9366046"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af76d91847360c9cbe53150b0eefb6b58" id="r_af76d91847360c9cbe53150b0eefb6b58"><td class="memItemLeft" align="right" valign="top"><a id="af76d91847360c9cbe53150b0eefb6b58" name="af76d91847360c9cbe53150b0eefb6b58"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>VaString</b> (const std::string &amp;str)</td></tr>
-<tr class="separator:af76d91847360c9cbe53150b0eefb6b58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99997148d2d84aaa932afa6f6b5f718a" id="r_a99997148d2d84aaa932afa6f6b5f718a"><td class="memItemLeft" align="right" valign="top"><a id="a99997148d2d84aaa932afa6f6b5f718a" name="a99997148d2d84aaa932afa6f6b5f718a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>VaString</b> (const char *str)</td></tr>
-<tr class="separator:a99997148d2d84aaa932afa6f6b5f718a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add908832439e9cd8479fe1022fa3f854" id="r_add908832439e9cd8479fe1022fa3f854"><td class="memItemLeft" align="right" valign="top"><a id="add908832439e9cd8479fe1022fa3f854" name="add908832439e9cd8479fe1022fa3f854"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>VaString</b> (const char *str, Size size)</td></tr>
-<tr class="separator:add908832439e9cd8479fe1022fa3f854"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a438bee850d5d9d04d45f9b8976aa74fc" id="r_a438bee850d5d9d04d45f9b8976aa74fc"><td class="memItemLeft" align="right" valign="top"><a id="a438bee850d5d9d04d45f9b8976aa74fc" name="a438bee850d5d9d04d45f9b8976aa74fc"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>VaString</b> (const <a class="el" href="classVaString.html">VaString</a> &amp;str)</td></tr>
-<tr class="separator:a438bee850d5d9d04d45f9b8976aa74fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a155d85340b49c1a26e206c79a15796d7" id="r_a155d85340b49c1a26e206c79a15796d7"><td class="memItemLeft" align="right" valign="top"><a id="a155d85340b49c1a26e206c79a15796d7" name="a155d85340b49c1a26e206c79a15796d7"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>VaString</b> (<a class="el" href="classVaString.html">VaString</a> &amp;&amp;str) noexcept</td></tr>
-<tr class="separator:a155d85340b49c1a26e206c79a15796d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07bbf5699f8f3c70cece2ebcb51fe381" id="r_a07bbf5699f8f3c70cece2ebcb51fe381"><td class="memItemLeft" align="right" valign="top"><a id="a07bbf5699f8f3c70cece2ebcb51fe381" name="a07bbf5699f8f3c70cece2ebcb51fe381"></a>
-<a class="el" href="classVaString.html">VaString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classVaString.html">VaString</a> &amp;other)</td></tr>
+<tr class="memitem:a0711e09bc551f5caa35a4900c0d718f5" id="r_a0711e09bc551f5caa35a4900c0d718f5"><td class="memItemLeft" align="right" valign="top"><a id="a0711e09bc551f5caa35a4900c0d718f5" name="a0711e09bc551f5caa35a4900c0d718f5"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>VaString</b> () noexcept</td></tr>
+<tr class="memdesc:a0711e09bc551f5caa35a4900c0d718f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. Initializes an empty string. <br /></td></tr>
+<tr class="separator:a0711e09bc551f5caa35a4900c0d718f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a618d2f9a586773f9b8c5033e54a61d46" id="r_a618d2f9a586773f9b8c5033e54a61d46"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a618d2f9a586773f9b8c5033e54a61d46">VaString</a> (const std::string &amp;str) noexcept</td></tr>
+<tr class="memdesc:a618d2f9a586773f9b8c5033e54a61d46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classVaString.html">VaString</a> from a std::string.  <br /></td></tr>
+<tr class="separator:a618d2f9a586773f9b8c5033e54a61d46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fea6807c35dd583c3cd8728df53b0f4" id="r_a3fea6807c35dd583c3cd8728df53b0f4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fea6807c35dd583c3cd8728df53b0f4">VaString</a> (const char *str) noexcept</td></tr>
+<tr class="memdesc:a3fea6807c35dd583c3cd8728df53b0f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classVaString.html">VaString</a> from a C-style string.  <br /></td></tr>
+<tr class="separator:a3fea6807c35dd583c3cd8728df53b0f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56a83f5b1b9a168830d758fbe5e06c0f" id="r_a56a83f5b1b9a168830d758fbe5e06c0f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56a83f5b1b9a168830d758fbe5e06c0f">VaString</a> (const char *str, Size size) noexcept</td></tr>
+<tr class="memdesc:a56a83f5b1b9a168830d758fbe5e06c0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classVaString.html">VaString</a> from a C-style string with a specified size.  <br /></td></tr>
+<tr class="separator:a56a83f5b1b9a168830d758fbe5e06c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7a3f98a87df4c85e025ec2723cfdeb0" id="r_ae7a3f98a87df4c85e025ec2723cfdeb0"><td class="memItemLeft" align="right" valign="top"><a id="ae7a3f98a87df4c85e025ec2723cfdeb0" name="ae7a3f98a87df4c85e025ec2723cfdeb0"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>VaString</b> (Size count, char c) noexcept</td></tr>
+<tr class="separator:ae7a3f98a87df4c85e025ec2723cfdeb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35a4447a17a7cad32a276934b8f6a4e3" id="r_a35a4447a17a7cad32a276934b8f6a4e3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35a4447a17a7cad32a276934b8f6a4e3">VaString</a> (const <a class="el" href="classVaString.html">VaString</a> &amp;other) noexcept</td></tr>
+<tr class="memdesc:a35a4447a17a7cad32a276934b8f6a4e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor. Creates a copy of another <a class="el" href="classVaString.html">VaString</a>.  <br /></td></tr>
+<tr class="separator:a35a4447a17a7cad32a276934b8f6a4e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c868f4815b7325d0e75d6dd9b30a71a" id="r_a1c868f4815b7325d0e75d6dd9b30a71a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c868f4815b7325d0e75d6dd9b30a71a">VaString</a> (const <a class="el" href="classVaImmutableString.html">VaImmutableString</a> &amp;other) noexcept</td></tr>
+<tr class="memdesc:a1c868f4815b7325d0e75d6dd9b30a71a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classVaString.html">VaString</a> from a <a class="el" href="classVaImmutableString.html">VaImmutableString</a>.  <br /></td></tr>
+<tr class="separator:a1c868f4815b7325d0e75d6dd9b30a71a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d482e0a78c46c3adb99d33dbeffe2b3" id="r_a8d482e0a78c46c3adb99d33dbeffe2b3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d482e0a78c46c3adb99d33dbeffe2b3">VaString</a> (<a class="el" href="classVaString.html">VaString</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="memdesc:a8d482e0a78c46c3adb99d33dbeffe2b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move constructor. Transfers ownership from another <a class="el" href="classVaString.html">VaString</a>.  <br /></td></tr>
+<tr class="separator:a8d482e0a78c46c3adb99d33dbeffe2b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d603ca34b54175560c5b47cda11675f" id="r_a6d603ca34b54175560c5b47cda11675f"><td class="memItemLeft" align="right" valign="top"><a id="a6d603ca34b54175560c5b47cda11675f" name="a6d603ca34b54175560c5b47cda11675f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>~VaString</b> () noexcept</td></tr>
+<tr class="memdesc:a6d603ca34b54175560c5b47cda11675f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. Releases the allocated memory. <br /></td></tr>
+<tr class="separator:a6d603ca34b54175560c5b47cda11675f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c9f7bf19481dfadc8b8edd0ac38ddb9" id="r_a9c9f7bf19481dfadc8b8edd0ac38ddb9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c9f7bf19481dfadc8b8edd0ac38ddb9">reserve</a> (Size minCap)</td></tr>
+<tr class="memdesc:a9c9f7bf19481dfadc8b8edd0ac38ddb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensures that the string has at least the specified minimum capacity.  <br /></td></tr>
+<tr class="separator:a9c9f7bf19481dfadc8b8edd0ac38ddb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61f96be04499143fd8cce75e212a6d07" id="r_a61f96be04499143fd8cce75e212a6d07"><td class="memItemLeft" align="right" valign="top"><a id="a61f96be04499143fd8cce75e212a6d07" name="a61f96be04499143fd8cce75e212a6d07"></a>
+Size&#160;</td><td class="memItemRight" valign="bottom"><b>hash</b> () const</td></tr>
+<tr class="separator:a61f96be04499143fd8cce75e212a6d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07bbf5699f8f3c70cece2ebcb51fe381" id="r_a07bbf5699f8f3c70cece2ebcb51fe381"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVaString.html">VaString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07bbf5699f8f3c70cece2ebcb51fe381">operator=</a> (const <a class="el" href="classVaString.html">VaString</a> &amp;other)</td></tr>
+<tr class="memdesc:a07bbf5699f8f3c70cece2ebcb51fe381"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy assignment operator. Copies the content of another <a class="el" href="classVaString.html">VaString</a>.  <br /></td></tr>
 <tr class="separator:a07bbf5699f8f3c70cece2ebcb51fe381"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7fc3309927355d141f8bd93f80f890b" id="r_af7fc3309927355d141f8bd93f80f890b"><td class="memItemLeft" align="right" valign="top"><a id="af7fc3309927355d141f8bd93f80f890b" name="af7fc3309927355d141f8bd93f80f890b"></a>
-<a class="el" href="classVaString.html">VaString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classVaString.html">VaString</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="memitem:af7fc3309927355d141f8bd93f80f890b" id="r_af7fc3309927355d141f8bd93f80f890b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVaString.html">VaString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7fc3309927355d141f8bd93f80f890b">operator=</a> (<a class="el" href="classVaString.html">VaString</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="memdesc:af7fc3309927355d141f8bd93f80f890b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move assignment operator. Transfers ownership from another <a class="el" href="classVaString.html">VaString</a>.  <br /></td></tr>
 <tr class="separator:af7fc3309927355d141f8bd93f80f890b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87f8554bab1263be9ccf3e33b75b066a" id="r_a87f8554bab1263be9ccf3e33b75b066a"><td class="memItemLeft" align="right" valign="top"><a id="a87f8554bab1263be9ccf3e33b75b066a" name="a87f8554bab1263be9ccf3e33b75b066a"></a>
-<a class="el" href="classVaString.html">VaString</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator+</b> (const <a class="el" href="classVaString.html">VaString</a> &amp;str) const</td></tr>
-<tr class="separator:a87f8554bab1263be9ccf3e33b75b066a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a889ed9f4e959614c8895817b22b2ef1a" id="r_a889ed9f4e959614c8895817b22b2ef1a"><td class="memItemLeft" align="right" valign="top"><a id="a889ed9f4e959614c8895817b22b2ef1a" name="a889ed9f4e959614c8895817b22b2ef1a"></a>
-<a class="el" href="classVaString.html">VaString</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator+</b> (const char *str) const</td></tr>
+<tr class="memitem:a91d04e9f5acd505f7634045310cd348c" id="r_a91d04e9f5acd505f7634045310cd348c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVaString.html">VaString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91d04e9f5acd505f7634045310cd348c">operator+</a> (const <a class="el" href="classVaString.html">VaString</a> &amp;other) const</td></tr>
+<tr class="memdesc:a91d04e9f5acd505f7634045310cd348c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concatenates two VaStrings.  <br /></td></tr>
+<tr class="separator:a91d04e9f5acd505f7634045310cd348c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a889ed9f4e959614c8895817b22b2ef1a" id="r_a889ed9f4e959614c8895817b22b2ef1a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVaString.html">VaString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a889ed9f4e959614c8895817b22b2ef1a">operator+</a> (const char *str) const</td></tr>
+<tr class="memdesc:a889ed9f4e959614c8895817b22b2ef1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concatenates a <a class="el" href="classVaString.html">VaString</a> with a C-style string.  <br /></td></tr>
 <tr class="separator:a889ed9f4e959614c8895817b22b2ef1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1934fde1f73bb7b6f94d8a1ea639002c" id="r_a1934fde1f73bb7b6f94d8a1ea639002c"><td class="memItemLeft" align="right" valign="top"><a id="a1934fde1f73bb7b6f94d8a1ea639002c" name="a1934fde1f73bb7b6f94d8a1ea639002c"></a>
-<a class="el" href="classVaString.html">VaString</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator+</b> (char ch) const</td></tr>
+<tr class="memitem:a1934fde1f73bb7b6f94d8a1ea639002c" id="r_a1934fde1f73bb7b6f94d8a1ea639002c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVaString.html">VaString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1934fde1f73bb7b6f94d8a1ea639002c">operator+</a> (char ch) const</td></tr>
+<tr class="memdesc:a1934fde1f73bb7b6f94d8a1ea639002c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concatenates a <a class="el" href="classVaString.html">VaString</a> with a single character.  <br /></td></tr>
 <tr class="separator:a1934fde1f73bb7b6f94d8a1ea639002c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59685d82a2f188a37dd87592da81182f" id="r_a59685d82a2f188a37dd87592da81182f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59685d82a2f188a37dd87592da81182f">operator==</a> (const <a class="el" href="classVaString.html">VaString</a> &amp;other) const</td></tr>
-<tr class="separator:a59685d82a2f188a37dd87592da81182f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5667f6104b7fb0fc5803304c9d0d8133" id="r_a5667f6104b7fb0fc5803304c9d0d8133"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5667f6104b7fb0fc5803304c9d0d8133">operator!=</a> (const <a class="el" href="classVaString.html">VaString</a> &amp;other) const</td></tr>
-<tr class="separator:a5667f6104b7fb0fc5803304c9d0d8133"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae480575fa72c8c42066421bdabdf1a03" id="r_ae480575fa72c8c42066421bdabdf1a03"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVaString.html">VaString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae480575fa72c8c42066421bdabdf1a03">append</a> (const char *str, Size strLen) noexcept</td></tr>
+<tr class="memdesc:ae480575fa72c8c42066421bdabdf1a03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a substring to the current <a class="el" href="classVaString.html">VaString</a> object.  <br /></td></tr>
+<tr class="separator:ae480575fa72c8c42066421bdabdf1a03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2aa2d32aad263c0f28ce19c79314061f" id="r_a2aa2d32aad263c0f28ce19c79314061f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVaString.html">VaString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2aa2d32aad263c0f28ce19c79314061f">append</a> (const char *str)</td></tr>
+<tr class="memdesc:a2aa2d32aad263c0f28ce19c79314061f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a C-style string to the current <a class="el" href="classVaString.html">VaString</a> object.  <br /></td></tr>
+<tr class="separator:a2aa2d32aad263c0f28ce19c79314061f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a018a5a081c23bc2ab135f41219805c48" id="r_a018a5a081c23bc2ab135f41219805c48"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVaString.html">VaString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a018a5a081c23bc2ab135f41219805c48">operator+=</a> (const <a class="el" href="classVaString.html">VaString</a> &amp;other) noexcept</td></tr>
+<tr class="memdesc:a018a5a081c23bc2ab135f41219805c48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends another <a class="el" href="classVaString.html">VaString</a> to the current string.  <br /></td></tr>
+<tr class="separator:a018a5a081c23bc2ab135f41219805c48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a367cef35a05da6fbaf97096e063744d5" id="r_a367cef35a05da6fbaf97096e063744d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVaString.html">VaString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a367cef35a05da6fbaf97096e063744d5">operator+=</a> (const char *str)</td></tr>
+<tr class="memdesc:a367cef35a05da6fbaf97096e063744d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a C-style string to the current string.  <br /></td></tr>
+<tr class="separator:a367cef35a05da6fbaf97096e063744d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a447b539fbdfec02fa6973aebaebfd061" id="r_a447b539fbdfec02fa6973aebaebfd061"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVaString.html">VaString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a447b539fbdfec02fa6973aebaebfd061">operator+=</a> (char ch) noexcept</td></tr>
+<tr class="memdesc:a447b539fbdfec02fa6973aebaebfd061"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a single character to the current string.  <br /></td></tr>
+<tr class="separator:a447b539fbdfec02fa6973aebaebfd061"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93a937d1c5a4c1be3e9ebcd603e270e8" id="r_a93a937d1c5a4c1be3e9ebcd603e270e8"><td class="memItemLeft" align="right" valign="top">char &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93a937d1c5a4c1be3e9ebcd603e270e8">operator[]</a> (Size index) noexcept</td></tr>
+<tr class="memdesc:a93a937d1c5a4c1be3e9ebcd603e270e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides access to a character at a specific index.  <br /></td></tr>
+<tr class="separator:a93a937d1c5a4c1be3e9ebcd603e270e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23c582986d14bf3f72925dee2a5539f3" id="r_a23c582986d14bf3f72925dee2a5539f3"><td class="memItemLeft" align="right" valign="top">const char &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23c582986d14bf3f72925dee2a5539f3">operator[]</a> (Size index) const noexcept</td></tr>
+<tr class="memdesc:a23c582986d14bf3f72925dee2a5539f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides read-only access to a character at a specific index.  <br /></td></tr>
+<tr class="separator:a23c582986d14bf3f72925dee2a5539f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24bc6496ee4314bb01695f09f3bb6de8" id="r_a24bc6496ee4314bb01695f09f3bb6de8"><td class="memItemLeft" align="right" valign="top">char &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24bc6496ee4314bb01695f09f3bb6de8">at</a> (Size index)</td></tr>
+<tr class="memdesc:a24bc6496ee4314bb01695f09f3bb6de8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides access to a character at a specific index with bounds checking.  <br /></td></tr>
+<tr class="separator:a24bc6496ee4314bb01695f09f3bb6de8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0d58fcb9682476eb2cf9cedc9fafd33" id="r_af0d58fcb9682476eb2cf9cedc9fafd33"><td class="memItemLeft" align="right" valign="top">const char &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0d58fcb9682476eb2cf9cedc9fafd33">at</a> (Size index) const</td></tr>
+<tr class="memdesc:af0d58fcb9682476eb2cf9cedc9fafd33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides read-only access to a character at a specific index with bounds checking.  <br /></td></tr>
+<tr class="separator:af0d58fcb9682476eb2cf9cedc9fafd33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0df30c9c8d69bc05131b705dba5d2d79" id="r_a0df30c9c8d69bc05131b705dba5d2d79"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0df30c9c8d69bc05131b705dba5d2d79">toStdString</a> () const</td></tr>
+<tr class="memdesc:a0df30c9c8d69bc05131b705dba5d2d79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the <a class="el" href="classVaString.html">VaString</a> to a std::string.  <br /></td></tr>
 <tr class="separator:a0df30c9c8d69bc05131b705dba5d2d79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f72b9e005be43781d026d9554aa63af" id="r_a8f72b9e005be43781d026d9554aa63af"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f72b9e005be43781d026d9554aa63af">toCStyleString</a> () const</td></tr>
-<tr class="separator:a8f72b9e005be43781d026d9554aa63af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa61572a7aca6d71350fd302323e794fd" id="r_aa61572a7aca6d71350fd302323e794fd"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa61572a7aca6d71350fd302323e794fd">operator[]</a> (size_t index) const</td></tr>
-<tr class="separator:aa61572a7aca6d71350fd302323e794fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d1c112906788fbc8db79bfd3b8bab09" id="r_a7d1c112906788fbc8db79bfd3b8bab09"><td class="memItemLeft" align="right" valign="top"><a id="a7d1c112906788fbc8db79bfd3b8bab09" name="a7d1c112906788fbc8db79bfd3b8bab09"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>TODO</b> (_maqix_, &quot;add find functions&quot;)</td></tr>
-<tr class="separator:a7d1c112906788fbc8db79bfd3b8bab09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfed61f4979713c1c5b2b4c12f101303" id="r_acfed61f4979713c1c5b2b4c12f101303"><td class="memItemLeft" align="right" valign="top"><a id="acfed61f4979713c1c5b2b4c12f101303" name="acfed61f4979713c1c5b2b4c12f101303"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>TODO</b> (_maqix_, &quot;add substr function&quot;)</td></tr>
-<tr class="separator:acfed61f4979713c1c5b2b4c12f101303"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7fa553d2f9afaf38c25d468cd6ef556" id="r_aa7fa553d2f9afaf38c25d468cd6ef556"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa7fa553d2f9afaf38c25d468cd6ef556">toCStyleString</a> () const</td></tr>
+<tr class="memdesc:aa7fa553d2f9afaf38c25d468cd6ef556"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the <a class="el" href="classVaString.html">VaString</a> to a C-style string.  <br /></td></tr>
+<tr class="separator:aa7fa553d2f9afaf38c25d468cd6ef556"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ca2f50034fb2c82e723d49d67adc1a0" id="r_a7ca2f50034fb2c82e723d49d67adc1a0"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ca2f50034fb2c82e723d49d67adc1a0">getData</a> () noexcept</td></tr>
+<tr class="memdesc:a7ca2f50034fb2c82e723d49d67adc1a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides access to the internal C-style string representation.  <br /></td></tr>
+<tr class="separator:a7ca2f50034fb2c82e723d49d67adc1a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a769546ea9e439ebf7231fa4d3f5b6161" id="r_a769546ea9e439ebf7231fa4d3f5b6161"><td class="memItemLeft" align="right" valign="top"><a id="a769546ea9e439ebf7231fa4d3f5b6161" name="a769546ea9e439ebf7231fa4d3f5b6161"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>operator std::string</b> () const</td></tr>
+<tr class="separator:a769546ea9e439ebf7231fa4d3f5b6161"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb3cbd8a0a0a991f15f121f849700064" id="r_abb3cbd8a0a0a991f15f121f849700064"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb3cbd8a0a0a991f15f121f849700064">getData</a> () const noexcept</td></tr>
+<tr class="memdesc:abb3cbd8a0a0a991f15f121f849700064"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides access to the internal C-style string representation.  <br /></td></tr>
+<tr class="separator:abb3cbd8a0a0a991f15f121f849700064"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93759940e201e191ef9a29fa713951d3" id="r_a93759940e201e191ef9a29fa713951d3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93759940e201e191ef9a29fa713951d3">isEmpty</a> () const</td></tr>
+<tr class="memdesc:a93759940e201e191ef9a29fa713951d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the string is empty.  <br /></td></tr>
 <tr class="separator:a93759940e201e191ef9a29fa713951d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9cdd255dbeb8ce8d63a0d4a50e87733" id="r_af9cdd255dbeb8ce8d63a0d4a50e87733"><td class="memItemLeft" align="right" valign="top">Size&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9cdd255dbeb8ce8d63a0d4a50e87733">find</a> (const <a class="el" href="classVaString.html">VaString</a> &amp;<a class="el" href="#a7ac0443d20cac1dc377dc512efdb18ca">substr</a>) const</td></tr>
+<tr class="memdesc:af9cdd255dbeb8ce8d63a0d4a50e87733"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the first occurrence of a substring within the string.  <br /></td></tr>
+<tr class="separator:af9cdd255dbeb8ce8d63a0d4a50e87733"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ac0443d20cac1dc377dc512efdb18ca" id="r_a7ac0443d20cac1dc377dc512efdb18ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVaString.html">VaString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ac0443d20cac1dc377dc512efdb18ca">substr</a> (Size start, Size length=<a class="el" href="#aba1b35a8d2b78defcd812f8324165373">npos</a>) const</td></tr>
+<tr class="memdesc:a7ac0443d20cac1dc377dc512efdb18ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts a substring from the string.  <br /></td></tr>
+<tr class="separator:a7ac0443d20cac1dc377dc512efdb18ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6311347aac72835d2b8147b6e08e7a2e" id="r_a6311347aac72835d2b8147b6e08e7a2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVaString.html">VaString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6311347aac72835d2b8147b6e08e7a2e">insert</a> (Size pos, const char *str, Size strLen)</td></tr>
+<tr class="memdesc:a6311347aac72835d2b8147b6e08e7a2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts a substring into the current <a class="el" href="classVaString.html">VaString</a> object at a specified position.  <br /></td></tr>
+<tr class="separator:a6311347aac72835d2b8147b6e08e7a2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25d0829ad18298fee3f75787aefbe158" id="r_a25d0829ad18298fee3f75787aefbe158"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVaString.html">VaString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25d0829ad18298fee3f75787aefbe158">insert</a> (Size pos, const char *str)</td></tr>
+<tr class="memdesc:a25d0829ad18298fee3f75787aefbe158"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts a C-style string into the current <a class="el" href="classVaString.html">VaString</a> object at a specified position.  <br /></td></tr>
+<tr class="separator:a25d0829ad18298fee3f75787aefbe158"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e476847acd18397989d769da3a60d23" id="r_a0e476847acd18397989d769da3a60d23"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVaString.html">VaString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e476847acd18397989d769da3a60d23">insert</a> (Size pos, const <a class="el" href="classVaString.html">VaString</a> &amp;other)</td></tr>
+<tr class="memdesc:a0e476847acd18397989d769da3a60d23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts another <a class="el" href="classVaString.html">VaString</a> into the current <a class="el" href="classVaString.html">VaString</a> object at a specified position.  <br /></td></tr>
+<tr class="separator:a0e476847acd18397989d769da3a60d23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a371c926e1526c4e42be2da0f7e6ec345" id="r_a371c926e1526c4e42be2da0f7e6ec345"><td class="memItemLeft" align="right" valign="top"><a id="a371c926e1526c4e42be2da0f7e6ec345" name="a371c926e1526c4e42be2da0f7e6ec345"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="classVaImmutableString.html">VaImmutableString</a> &amp;other) const noexcept</td></tr>
+<tr class="separator:a371c926e1526c4e42be2da0f7e6ec345"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49187da0fff868f442ecf685987276ab" id="r_a49187da0fff868f442ecf685987276ab"><td class="memItemLeft" align="right" valign="top"><a id="a49187da0fff868f442ecf685987276ab" name="a49187da0fff868f442ecf685987276ab"></a>
+<a class="el" href="classVaString.html">VaString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator+=</b> (<a class="el" href="classVaString.html">VaString</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="separator:a49187da0fff868f442ecf685987276ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89368b622a9da827fc24ea37dc431bd9" id="r_a89368b622a9da827fc24ea37dc431bd9"><td class="memItemLeft" align="right" valign="top"><a id="a89368b622a9da827fc24ea37dc431bd9" name="a89368b622a9da827fc24ea37dc431bd9"></a>
+Iterator&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () noexcept</td></tr>
+<tr class="separator:a89368b622a9da827fc24ea37dc431bd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad35dd46045c9504945a1831c6d700161" id="r_ad35dd46045c9504945a1831c6d700161"><td class="memItemLeft" align="right" valign="top"><a id="ad35dd46045c9504945a1831c6d700161" name="ad35dd46045c9504945a1831c6d700161"></a>
+Iterator&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () noexcept</td></tr>
+<tr class="separator:ad35dd46045c9504945a1831c6d700161"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08dc3c685f4fb68cad7933823cdea865" id="r_a08dc3c685f4fb68cad7933823cdea865"><td class="memItemLeft" align="right" valign="top"><a id="a08dc3c685f4fb68cad7933823cdea865" name="a08dc3c685f4fb68cad7933823cdea865"></a>
+ConstIterator&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () const noexcept</td></tr>
+<tr class="separator:a08dc3c685f4fb68cad7933823cdea865"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a676cb2159b16c766a434adf2b0ee556a" id="r_a676cb2159b16c766a434adf2b0ee556a"><td class="memItemLeft" align="right" valign="top"><a id="a676cb2159b16c766a434adf2b0ee556a" name="a676cb2159b16c766a434adf2b0ee556a"></a>
+ConstIterator&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () const noexcept</td></tr>
+<tr class="separator:a676cb2159b16c766a434adf2b0ee556a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b82aa48a6a1f92ecbe232ac8b01d3d2" id="r_a7b82aa48a6a1f92ecbe232ac8b01d3d2"><td class="memItemLeft" align="right" valign="top"><a id="a7b82aa48a6a1f92ecbe232ac8b01d3d2" name="a7b82aa48a6a1f92ecbe232ac8b01d3d2"></a>
+ConstIterator&#160;</td><td class="memItemRight" valign="bottom"><b>cbegin</b> () const noexcept</td></tr>
+<tr class="separator:a7b82aa48a6a1f92ecbe232ac8b01d3d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b7872a9778309bfdbbe6ce2d4caa73f" id="r_a1b7872a9778309bfdbbe6ce2d4caa73f"><td class="memItemLeft" align="right" valign="top"><a id="a1b7872a9778309bfdbbe6ce2d4caa73f" name="a1b7872a9778309bfdbbe6ce2d4caa73f"></a>
+ConstIterator&#160;</td><td class="memItemRight" valign="bottom"><b>cend</b> () const noexcept</td></tr>
+<tr class="separator:a1b7872a9778309bfdbbe6ce2d4caa73f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f80a57d612ae753ff00bb3225df4825" id="r_a7f80a57d612ae753ff00bb3225df4825"><td class="memItemLeft" align="right" valign="top"><a id="a7f80a57d612ae753ff00bb3225df4825" name="a7f80a57d612ae753ff00bb3225df4825"></a>
+ReverseIterator&#160;</td><td class="memItemRight" valign="bottom"><b>rbegin</b> ()</td></tr>
+<tr class="separator:a7f80a57d612ae753ff00bb3225df4825"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef329e868db9d3a68580258543390238" id="r_aef329e868db9d3a68580258543390238"><td class="memItemLeft" align="right" valign="top"><a id="aef329e868db9d3a68580258543390238" name="aef329e868db9d3a68580258543390238"></a>
+ReverseIterator&#160;</td><td class="memItemRight" valign="bottom"><b>rend</b> ()</td></tr>
+<tr class="separator:aef329e868db9d3a68580258543390238"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79c8a80288c86dd95e7df09dc30e10eb" id="r_a79c8a80288c86dd95e7df09dc30e10eb"><td class="memItemLeft" align="right" valign="top"><a id="a79c8a80288c86dd95e7df09dc30e10eb" name="a79c8a80288c86dd95e7df09dc30e10eb"></a>
+ConstReverseIterator&#160;</td><td class="memItemRight" valign="bottom"><b>rbegin</b> () const</td></tr>
+<tr class="separator:a79c8a80288c86dd95e7df09dc30e10eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56715010f4d62cffa17455b09eae7776" id="r_a56715010f4d62cffa17455b09eae7776"><td class="memItemLeft" align="right" valign="top"><a id="a56715010f4d62cffa17455b09eae7776" name="a56715010f4d62cffa17455b09eae7776"></a>
+ConstReverseIterator&#160;</td><td class="memItemRight" valign="bottom"><b>rend</b> () const</td></tr>
+<tr class="separator:a56715010f4d62cffa17455b09eae7776"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92ff0c6dfb9893e5b22574d71417b3ed" id="r_a92ff0c6dfb9893e5b22574d71417b3ed"><td class="memItemLeft" align="right" valign="top"><a id="a92ff0c6dfb9893e5b22574d71417b3ed" name="a92ff0c6dfb9893e5b22574d71417b3ed"></a>
+ConstReverseIterator&#160;</td><td class="memItemRight" valign="bottom"><b>crbegin</b> () const</td></tr>
+<tr class="separator:a92ff0c6dfb9893e5b22574d71417b3ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa18a28448240fdee1a0ce9459a68582c" id="r_aa18a28448240fdee1a0ce9459a68582c"><td class="memItemLeft" align="right" valign="top"><a id="aa18a28448240fdee1a0ce9459a68582c" name="aa18a28448240fdee1a0ce9459a68582c"></a>
+ConstReverseIterator&#160;</td><td class="memItemRight" valign="bottom"><b>crend</b> () const</td></tr>
+<tr class="separator:aa18a28448240fdee1a0ce9459a68582c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a40c8dc183858a00978936ab8d817cd7a" id="r_a40c8dc183858a00978936ab8d817cd7a"><td class="memTemplParams" colspan="2">template&lt;Size N&gt; </td></tr>
+<tr class="memitem:a40c8dc183858a00978936ab8d817cd7a"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classVaString.html">VaString</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a40c8dc183858a00978936ab8d817cd7a">Make</a> (const char(&amp;str)[N])</td></tr>
+<tr class="memdesc:a40c8dc183858a00978936ab8d817cd7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classVaString.html">VaString</a> object from a given C-style string.  <br /></td></tr>
+<tr class="separator:a40c8dc183858a00978936ab8d817cd7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a96d5f6240a600a81876c14e2301969e8" id="r_a96d5f6240a600a81876c14e2301969e8"><td class="memItemLeft" align="right" valign="top"><a id="a96d5f6240a600a81876c14e2301969e8" name="a96d5f6240a600a81876c14e2301969e8"></a>
+friends&#160;</td><td class="memItemRight" valign="bottom">: friend inline Size <a class="el" href="#a979d253069d05e829755abb346fc29f9">len</a>(const <a class="el" href="classVaString.html">VaString</a>&amp; str) { return str.len</td></tr>
+<tr class="separator:a96d5f6240a600a81876c14e2301969e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dc9da1a598e6999e6a883fcc9c39e4d" id="r_a4dc9da1a598e6999e6a883fcc9c39e4d"><td class="memItemLeft" align="right" valign="top"><a id="a4dc9da1a598e6999e6a883fcc9c39e4d" name="a4dc9da1a598e6999e6a883fcc9c39e4d"></a>
+operators&#160;</td><td class="memItemRight" valign="bottom">: friend bool operator==(const <a class="el" href="classVaString.html">VaString</a>&amp; lhs</td></tr>
+<tr class="separator:a4dc9da1a598e6999e6a883fcc9c39e4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5244233f328119aa7a0a70f1acf1f9c5" id="r_a5244233f328119aa7a0a70f1acf1f9c5"><td class="memItemLeft" align="right" valign="top"><a id="a5244233f328119aa7a0a70f1acf1f9c5" name="a5244233f328119aa7a0a70f1acf1f9c5"></a>
+operators const <a class="el" href="classVaString.html">VaString</a> &amp;rhs&#160;</td><td class="memItemRight" valign="bottom"><b>noexcept</b></td></tr>
+<tr class="separator:a5244233f328119aa7a0a70f1acf1f9c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d00fe8f7c2cfb97ace3677a8008117c" id="r_a9d00fe8f7c2cfb97ace3677a8008117c"><td class="memItemLeft" align="right" valign="top"><a id="a9d00fe8f7c2cfb97ace3677a8008117c" name="a9d00fe8f7c2cfb97ace3677a8008117c"></a>
+iterators&#160;</td><td class="memItemRight" valign="bottom">: using Iterator = char*</td></tr>
+<tr class="separator:a9d00fe8f7c2cfb97ace3677a8008117c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:aba1b35a8d2b78defcd812f8324165373" id="r_aba1b35a8d2b78defcd812f8324165373"><td class="memItemLeft" align="right" valign="top">static constexpr Size&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba1b35a8d2b78defcd812f8324165373">npos</a> = -1</td></tr>
+<tr class="memitem:aba1b35a8d2b78defcd812f8324165373" id="r_aba1b35a8d2b78defcd812f8324165373"><td class="memItemLeft" align="right" valign="top"><a id="aba1b35a8d2b78defcd812f8324165373" name="aba1b35a8d2b78defcd812f8324165373"></a>
+static constexpr Size&#160;</td><td class="memItemRight" valign="bottom"><b>npos</b> = -1</td></tr>
+<tr class="memdesc:aba1b35a8d2b78defcd812f8324165373"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an invalid position constant. <br /></td></tr>
 <tr class="separator:aba1b35a8d2b78defcd812f8324165373"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:acb407f1793d68002ec2bc2c112062d1a" id="r_acb407f1793d68002ec2bc2c112062d1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb407f1793d68002ec2bc2c112062d1a">resize</a> (Size newCap)</td></tr>
+<tr class="memdesc:acb407f1793d68002ec2bc2c112062d1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resizes the string buffer to a new capacity.  <br /></td></tr>
+<tr class="separator:acb407f1793d68002ec2bc2c112062d1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a979d253069d05e829755abb346fc29f9" id="r_a979d253069d05e829755abb346fc29f9"><td class="memItemLeft" align="right" valign="top">Size&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a979d253069d05e829755abb346fc29f9">len</a></td></tr>
+<tr class="memitem:a979d253069d05e829755abb346fc29f9" id="r_a979d253069d05e829755abb346fc29f9"><td class="memItemLeft" align="right" valign="top"><a id="a979d253069d05e829755abb346fc29f9" name="a979d253069d05e829755abb346fc29f9"></a>
+Size&#160;</td><td class="memItemRight" valign="bottom"><b>len</b></td></tr>
+<tr class="memdesc:a979d253069d05e829755abb346fc29f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current length of the string. <br /></td></tr>
 <tr class="separator:a979d253069d05e829755abb346fc29f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93bb2eb735e7a1b3c2289feb398943d7" id="r_a93bb2eb735e7a1b3c2289feb398943d7"><td class="memItemLeft" align="right" valign="top"><a id="a93bb2eb735e7a1b3c2289feb398943d7" name="a93bb2eb735e7a1b3c2289feb398943d7"></a>
+Size&#160;</td><td class="memItemRight" valign="bottom"><b>cap</b></td></tr>
+<tr class="memdesc:a93bb2eb735e7a1b3c2289feb398943d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current capacity of the string buffer. <br /></td></tr>
+<tr class="separator:a93bb2eb735e7a1b3c2289feb398943d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42ce05db7405cc4aa49f531879a07457" id="r_a42ce05db7405cc4aa49f531879a07457"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42ce05db7405cc4aa49f531879a07457">data</a></td></tr>
+<tr class="memdesc:a42ce05db7405cc4aa49f531879a07457"><td class="mdescLeft">&#160;</td><td class="mdescRight">raw string data.  <br /></td></tr>
 <tr class="separator:a42ce05db7405cc4aa49f531879a07457"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a300e34f867bccb3e9ab1cbf001b9c857" id="r_a300e34f867bccb3e9ab1cbf001b9c857"><td class="memItemLeft" align="right" valign="top"><a id="a300e34f867bccb3e9ab1cbf001b9c857" name="a300e34f867bccb3e9ab1cbf001b9c857"></a>
+friends&#160;</td><td class="memItemRight" valign="bottom">: friend class <a class="el" href="classVaImmutableString.html">VaImmutableString</a></td></tr>
+<tr class="separator:a300e34f867bccb3e9ab1cbf001b9c857"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:a4e4346a5591651d1a6fa69c3c204e660" id="r_a4e4346a5591651d1a6fa69c3c204e660"><td class="memItemLeft" align="right" valign="top">Size&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e4346a5591651d1a6fa69c3c204e660">len</a> (const <a class="el" href="classVaString.html">VaString</a> &amp;str)</td></tr>
-<tr class="memdesc:a4e4346a5591651d1a6fa69c3c204e660"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the length of the given <a class="el" href="classVaString.html">VaString</a>.  <br /></td></tr>
-<tr class="separator:a4e4346a5591651d1a6fa69c3c204e660"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0149716df3714a3c2999ccb7990086f6" id="r_a0149716df3714a3c2999ccb7990086f6"><td class="memItemLeft" align="right" valign="top">Size&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0149716df3714a3c2999ccb7990086f6">cap</a> (const <a class="el" href="classVaString.html">VaString</a> &amp;str)</td></tr>
+<tr class="memdesc:a0149716df3714a3c2999ccb7990086f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the capacity of the string buffer.  <br /></td></tr>
+<tr class="separator:a0149716df3714a3c2999ccb7990086f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd47ac8d85ed28151337c065da011e53" id="r_acd47ac8d85ed28151337c065da011e53"><td class="memItemLeft" align="right" valign="top"><a id="acd47ac8d85ed28151337c065da011e53" name="acd47ac8d85ed28151337c065da011e53"></a>
+<a class="el" href="classVaString.html">VaString</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator+</b> (const std::string &amp;lhs, const <a class="el" href="classVaString.html">VaString</a> &amp;rhs)</td></tr>
+<tr class="separator:acd47ac8d85ed28151337c065da011e53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedd05e5e8ab2f8b55a01aded0507b00b" id="r_aedd05e5e8ab2f8b55a01aded0507b00b"><td class="memItemLeft" align="right" valign="top"><a id="aedd05e5e8ab2f8b55a01aded0507b00b" name="aedd05e5e8ab2f8b55a01aded0507b00b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="classVaString.html">VaString</a> &amp;lhs, const std::string &amp;rhs)</td></tr>
+<tr class="separator:aedd05e5e8ab2f8b55a01aded0507b00b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1744a22950235555d47b7f3443ebccd6" id="r_a1744a22950235555d47b7f3443ebccd6"><td class="memItemLeft" align="right" valign="top"><a id="a1744a22950235555d47b7f3443ebccd6" name="a1744a22950235555d47b7f3443ebccd6"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const std::string &amp;lhs, const <a class="el" href="classVaString.html">VaString</a> &amp;rhs)</td></tr>
+<tr class="separator:a1744a22950235555d47b7f3443ebccd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47f9d4e7c6251e281c235386bc9010df" id="r_a47f9d4e7c6251e281c235386bc9010df"><td class="memItemLeft" align="right" valign="top"><a id="a47f9d4e7c6251e281c235386bc9010df" name="a47f9d4e7c6251e281c235386bc9010df"></a>
+<a class="el" href="classVaString.html">VaString</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator+</b> (const char *lhs, const <a class="el" href="classVaString.html">VaString</a> &amp;rhs)</td></tr>
+<tr class="separator:a47f9d4e7c6251e281c235386bc9010df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa177536b882ca741946e05fd19de4099" id="r_aa177536b882ca741946e05fd19de4099"><td class="memItemLeft" align="right" valign="top"><a id="aa177536b882ca741946e05fd19de4099" name="aa177536b882ca741946e05fd19de4099"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (<a class="el" href="classVaString.html">VaString</a> lhs, const char *rhs)</td></tr>
+<tr class="separator:aa177536b882ca741946e05fd19de4099"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ced979b28b781b150802a2e14522b66" id="r_a0ced979b28b781b150802a2e14522b66"><td class="memItemLeft" align="right" valign="top"><a id="a0ced979b28b781b150802a2e14522b66" name="a0ced979b28b781b150802a2e14522b66"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const char *lhs, const <a class="el" href="classVaString.html">VaString</a> &amp;rhs)</td></tr>
+<tr class="separator:a0ced979b28b781b150802a2e14522b66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac53b5aecaef73263b9c45398c3931c3e" id="r_ac53b5aecaef73263b9c45398c3931c3e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac53b5aecaef73263b9c45398c3931c3e">operator!=</a> (const <a class="el" href="classVaString.html">VaString</a> &amp;lhs, const <a class="el" href="classVaString.html">VaString</a> &amp;rhs) noexcept</td></tr>
+<tr class="memdesc:ac53b5aecaef73263b9c45398c3931c3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two VaStrings for inequality.  <br /></td></tr>
+<tr class="separator:ac53b5aecaef73263b9c45398c3931c3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adef02dfbad82a59909812610deda5ce6" id="r_adef02dfbad82a59909812610deda5ce6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adef02dfbad82a59909812610deda5ce6">operator&lt;</a> (const <a class="el" href="classVaString.html">VaString</a> &amp;lhs, const <a class="el" href="classVaString.html">VaString</a> &amp;rhs)</td></tr>
+<tr class="memdesc:adef02dfbad82a59909812610deda5ce6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two VaStrings for less than.  <br /></td></tr>
+<tr class="separator:adef02dfbad82a59909812610deda5ce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2389f7eae54f8c7db21fa30f4f8c73bf" id="r_a2389f7eae54f8c7db21fa30f4f8c73bf"><td class="memItemLeft" align="right" valign="top"><a id="a2389f7eae54f8c7db21fa30f4f8c73bf" name="a2389f7eae54f8c7db21fa30f4f8c73bf"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&gt;</b> (const <a class="el" href="classVaString.html">VaString</a> &amp;lhs, const <a class="el" href="classVaString.html">VaString</a> &amp;rhs)</td></tr>
+<tr class="separator:a2389f7eae54f8c7db21fa30f4f8c73bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a613f49a5a457d5385cd2be332fe51699" id="r_a613f49a5a457d5385cd2be332fe51699"><td class="memItemLeft" align="right" valign="top"><a id="a613f49a5a457d5385cd2be332fe51699" name="a613f49a5a457d5385cd2be332fe51699"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;=</b> (const <a class="el" href="classVaString.html">VaString</a> &amp;lhs, const <a class="el" href="classVaString.html">VaString</a> &amp;rhs)</td></tr>
+<tr class="separator:a613f49a5a457d5385cd2be332fe51699"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a7688c78a6b6f0236c562644a81a8a8" id="r_a7a7688c78a6b6f0236c562644a81a8a8"><td class="memItemLeft" align="right" valign="top"><a id="a7a7688c78a6b6f0236c562644a81a8a8" name="a7a7688c78a6b6f0236c562644a81a8a8"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&gt;=</b> (const <a class="el" href="classVaString.html">VaString</a> &amp;lhs, const <a class="el" href="classVaString.html">VaString</a> &amp;rhs)</td></tr>
+<tr class="separator:a7a7688c78a6b6f0236c562644a81a8a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classVaString.html">VaString</a> - string implementation for VaLib</p>
-<dl class="section note"><dt>Note</dt><dd><a class="el" href="classVaString.html">VaString</a> is immutable, meaning it is not a good choice if you perform many string operations </dd>
-<dd>
-if you need a mutable string, you can use VaMutString </dd></dl>
+<div class="textblock"><p>for VaLib A dynamic string class for managing and manipulating character strings.</p>
+<dl class="section note"><dt>Note</dt><dd><a class="el" href="classVaString.html">VaString</a> is mutable. </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ac4e0f29e0c275bf2a0937594c9366046" name="ac4e0f29e0c275bf2a0937594c9366046"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4e0f29e0c275bf2a0937594c9366046">&#9670;&#160;</a></span>VaString()</h2>
+<a id="a618d2f9a586773f9b8c5033e54a61d46" name="a618d2f9a586773f9b8c5033e54a61d46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a618d2f9a586773f9b8c5033e54a61d46">&#9670;&#160;</a></span>VaString() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VaString::VaString </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="classVaString.html">VaString</a> from a std::string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>The std::string to initialize from. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3fea6807c35dd583c3cd8728df53b0f4" name="a3fea6807c35dd583c3cd8728df53b0f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fea6807c35dd583c3cd8728df53b0f4">&#9670;&#160;</a></span>VaString() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VaString::VaString </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="classVaString.html">VaString</a> from a C-style string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>The C-style string to initialize from. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a56a83f5b1b9a168830d758fbe5e06c0f" name="a56a83f5b1b9a168830d758fbe5e06c0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56a83f5b1b9a168830d758fbe5e06c0f">&#9670;&#160;</a></span>VaString() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VaString::VaString </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>str</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="classVaString.html">VaString</a> from a C-style string with a specified size. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>The C-style string to initialize from </td></tr>
+    <tr><td class="paramname">size</td><td>The number of characters to copy </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a35a4447a17a7cad32a276934b8f6a4e3" name="a35a4447a17a7cad32a276934b8f6a4e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35a4447a17a7cad32a276934b8f6a4e3">&#9670;&#160;</a></span>VaString() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VaString::VaString </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classVaString.html">VaString</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copy constructor. Creates a copy of another <a class="el" href="classVaString.html">VaString</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The <a class="el" href="classVaString.html">VaString</a> to copy from </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1c868f4815b7325d0e75d6dd9b30a71a" name="a1c868f4815b7325d0e75d6dd9b30a71a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c868f4815b7325d0e75d6dd9b30a71a">&#9670;&#160;</a></span>VaString() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VaString::VaString </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classVaImmutableString.html">VaImmutableString</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="classVaString.html">VaString</a> from a <a class="el" href="classVaImmutableString.html">VaImmutableString</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The <a class="el" href="classVaImmutableString.html">VaImmutableString</a> to initialize from </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8d482e0a78c46c3adb99d33dbeffe2b3" name="a8d482e0a78c46c3adb99d33dbeffe2b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d482e0a78c46c3adb99d33dbeffe2b3">&#9670;&#160;</a></span>VaString() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VaString::VaString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVaString.html">VaString</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move constructor. Transfers ownership from another <a class="el" href="classVaString.html">VaString</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The <a class="el" href="classVaString.html">VaString</a> to move from </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2aa2d32aad263c0f28ce19c79314061f" name="a2aa2d32aad263c0f28ce19c79314061f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2aa2d32aad263c0f28ce19c79314061f">&#9670;&#160;</a></span>append() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVaString.html">VaString</a> &amp; VaString::append </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Appends a C-style string to the current <a class="el" href="classVaString.html">VaString</a> object. </p>
+<p>This function appends the provided null-terminated C-style string (<code>str</code>) to the current <a class="el" href="classVaString.html">VaString</a> object. The length of the string is determined using <code>std::strlen</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>A pointer to the null-terminated C-style string to append. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classVaString.html">VaString</a>&amp; A reference to the current <a class="el" href="classVaString.html">VaString</a> object after the string has been appended. </dd></dl>
+
+</div>
+</div>
+<a id="ae480575fa72c8c42066421bdabdf1a03" name="ae480575fa72c8c42066421bdabdf1a03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae480575fa72c8c42066421bdabdf1a03">&#9670;&#160;</a></span>append() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVaString.html">VaString</a> &amp; VaString::append </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>str</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>strLen</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Appends a substring to the current <a class="el" href="classVaString.html">VaString</a> object. </p>
+<p>This function appends a specified number of characters from the given C-style string to the end of the current <a class="el" href="classVaString.html">VaString</a> object.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>A pointer to the C-style string to append. </td></tr>
+    <tr><td class="paramname">strLen</td><td>The number of characters to append from the provided string. If strLen is greater than the length of the string, behavior is undefined.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the modified <a class="el" href="classVaString.html">VaString</a> object. </dd></dl>
+
+</div>
+</div>
+<a id="a24bc6496ee4314bb01695f09f3bb6de8" name="a24bc6496ee4314bb01695f09f3bb6de8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24bc6496ee4314bb01695f09f3bb6de8">&#9670;&#160;</a></span>at() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">VaString::VaString </td>
+          <td class="memname">char &amp; VaString::at </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Provides access to a character at a specific index with bounds checking. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>The index of the character to access. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the character at the specified index.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classIndexOutOfRangeError.html" title="Error class for index out of range errors.">IndexOutOfRangeError</a></td><td>if the index is greater than or equal to the length of the string. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af0d58fcb9682476eb2cf9cedc9fafd33" name="af0d58fcb9682476eb2cf9cedc9fafd33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0d58fcb9682476eb2cf9cedc9fafd33">&#9670;&#160;</a></span>at() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char &amp; VaString::at </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Provides read-only access to a character at a specific index with bounds checking. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>The index of the character to access. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A constant reference to the character at the specified index.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classIndexOutOfRangeError.html" title="Error class for index out of range errors.">IndexOutOfRangeError</a></td><td>if the index is greater than or equal to the length of the string. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af9cdd255dbeb8ce8d63a0d4a50e87733" name="af9cdd255dbeb8ce8d63a0d4a50e87733"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9cdd255dbeb8ce8d63a0d4a50e87733">&#9670;&#160;</a></span>find()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Size VaString::find </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classVaString.html">VaString</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>substr</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Finds the first occurrence of a substring within the string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">substr</td><td>The substring to search for. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The starting index of the substring if found, or npos if not found. </dd></dl>
+
+</div>
+</div>
+<a id="abb3cbd8a0a0a991f15f121f849700064" name="abb3cbd8a0a0a991f15f121f849700064"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb3cbd8a0a0a991f15f121f849700064">&#9670;&#160;</a></span>getData() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * VaString::getData </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Provides access to the internal C-style string representation. </p>
+<dl class="section return"><dt>Returns</dt><dd>A constant pointer to the character array representing the string data.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The returned pointer isn't null-terminated and must not be modified. </dd></dl>
+
+</div>
+</div>
+<a id="a7ca2f50034fb2c82e723d49d67adc1a0" name="a7ca2f50034fb2c82e723d49d67adc1a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ca2f50034fb2c82e723d49d67adc1a0">&#9670;&#160;</a></span>getData() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * VaString::getData </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<p>VaLib - Vast Library Licensed under GNU GPL v2 License. See LICENSE file. (C) 2025 MaqiX </p>
+
+<p>Provides access to the internal C-style string representation. </p>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the internal character buffer of the string.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The returned pointer is not null-terminated and points to the internal data of the string. Modifying the data through this pointer will affect the <a class="el" href="classVaString.html">VaString</a> object. </dd></dl>
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a25d0829ad18298fee3f75787aefbe158" name="a25d0829ad18298fee3f75787aefbe158"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25d0829ad18298fee3f75787aefbe158">&#9670;&#160;</a></span>insert() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVaString.html">VaString</a> &amp; VaString::insert </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>pos</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>str</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inserts a C-style string into the current <a class="el" href="classVaString.html">VaString</a> object at a specified position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>The position at which to insert the string. Must be less than or equal to the length of the string. </td></tr>
+    <tr><td class="paramname">str</td><td>A pointer to the null-terminated C-style string to insert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classVaString.html">VaString</a>&amp; A reference to the modified <a class="el" href="classVaString.html">VaString</a> object.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classIndexOutOfRangeError.html" title="Error class for index out of range errors.">IndexOutOfRangeError</a></td><td>if the position is greater than the length of the string. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6311347aac72835d2b8147b6e08e7a2e" name="a6311347aac72835d2b8147b6e08e7a2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6311347aac72835d2b8147b6e08e7a2e">&#9670;&#160;</a></span>insert() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVaString.html">VaString</a> &amp; VaString::insert </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>pos</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>str</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>strLen</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inserts a substring into the current <a class="el" href="classVaString.html">VaString</a> object at a specified position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>The position at which to insert the substring. Must be less than or equal to the length of the string. </td></tr>
+    <tr><td class="paramname">str</td><td>A pointer to the C-style string to insert. </td></tr>
+    <tr><td class="paramname">strLen</td><td>The number of characters to insert from the provided string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classVaString.html">VaString</a>&amp; A reference to the modified <a class="el" href="classVaString.html">VaString</a> object.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classIndexOutOfRangeError.html" title="Error class for index out of range errors.">IndexOutOfRangeError</a></td><td>if the position is greater than the length of the string. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0e476847acd18397989d769da3a60d23" name="a0e476847acd18397989d769da3a60d23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e476847acd18397989d769da3a60d23">&#9670;&#160;</a></span>insert() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVaString.html">VaString</a> &amp; VaString::insert </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>pos</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classVaString.html">VaString</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inserts another <a class="el" href="classVaString.html">VaString</a> into the current <a class="el" href="classVaString.html">VaString</a> object at a specified position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>The position at which to insert the <a class="el" href="classVaString.html">VaString</a>. Must be less than or equal to the length of the string. </td></tr>
+    <tr><td class="paramname">other</td><td>The <a class="el" href="classVaString.html">VaString</a> to insert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classVaString.html">VaString</a>&amp; A reference to the modified <a class="el" href="classVaString.html">VaString</a> object.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classIndexOutOfRangeError.html" title="Error class for index out of range errors.">IndexOutOfRangeError</a></td><td>if the position is greater than the length of the string. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a93759940e201e191ef9a29fa713951d3" name="a93759940e201e191ef9a29fa713951d3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a93759940e201e191ef9a29fa713951d3">&#9670;&#160;</a></span>isEmpty()</h2>
 
@@ -193,105 +921,481 @@ if you need a mutable string, you can use VaMutString </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>isEmpty - returns whether the string is empty </p>
+
+<p>Checks if the string is empty. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if the string is empty, false otherwise. </dd></dl>
 
 </div>
 </div>
-<a id="a5667f6104b7fb0fc5803304c9d0d8133" name="a5667f6104b7fb0fc5803304c9d0d8133"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5667f6104b7fb0fc5803304c9d0d8133">&#9670;&#160;</a></span>operator!=()</h2>
+<a id="a40c8dc183858a00978936ab8d817cd7a" name="a40c8dc183858a00978936ab8d817cd7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40c8dc183858a00978936ab8d817cd7a">&#9670;&#160;</a></span>Make()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Size N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classVaString.html">VaString</a> VaString::Make </td>
+          <td>(</td>
+          <td class="paramtype">const char(&amp;)</td>          <td class="paramname"><span class="paramname"><em>str</em>[N]</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a <a class="el" href="classVaString.html">VaString</a> object from a given C-style string. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">N</td><td>The size of the input C-style string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>A reference to a constant C-style string array. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classVaString.html">VaString</a> An instance of <a class="el" href="classVaString.html">VaString</a> initialized with the input string and its size.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The input string must be a null-terminated C-style string. </dd></dl>
+
+</div>
+</div>
+<a id="a1934fde1f73bb7b6f94d8a1ea639002c" name="a1934fde1f73bb7b6f94d8a1ea639002c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1934fde1f73bb7b6f94d8a1ea639002c">&#9670;&#160;</a></span>operator+() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool VaString::operator!= </td>
+          <td class="memname"><a class="el" href="classVaString.html">VaString</a> VaString::operator+ </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>ch</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Concatenates a <a class="el" href="classVaString.html">VaString</a> with a single character. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ch</td><td>The character to concatenate. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="classVaString.html">VaString</a> containing the concatenated result. </dd></dl>
+
+</div>
+</div>
+<a id="a889ed9f4e959614c8895817b22b2ef1a" name="a889ed9f4e959614c8895817b22b2ef1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a889ed9f4e959614c8895817b22b2ef1a">&#9670;&#160;</a></span>operator+() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVaString.html">VaString</a> VaString::operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Concatenates a <a class="el" href="classVaString.html">VaString</a> with a C-style string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>The C-style string to concatenate. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="classVaString.html">VaString</a> containing the concatenated result. </dd></dl>
+
+</div>
+</div>
+<a id="a91d04e9f5acd505f7634045310cd348c" name="a91d04e9f5acd505f7634045310cd348c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91d04e9f5acd505f7634045310cd348c">&#9670;&#160;</a></span>operator+() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVaString.html">VaString</a> VaString::operator+ </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classVaString.html">VaString</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>operator!= - checks if two strings are <em>not</em> the same </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Concatenates two VaStrings. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">other</td><td>The other string to compare with this one</td></tr>
+    <tr><td class="paramname">other</td><td>The <a class="el" href="classVaString.html">VaString</a> to concatenate </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>inverse of <a class="el" href="#a59685d82a2f188a37dd87592da81182f">operator==</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="classVaString.html">VaString</a> containing the concatenated result. </dd></dl>
 
 </div>
 </div>
-<a id="a59685d82a2f188a37dd87592da81182f" name="a59685d82a2f188a37dd87592da81182f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a59685d82a2f188a37dd87592da81182f">&#9670;&#160;</a></span>operator==()</h2>
+<a id="a447b539fbdfec02fa6973aebaebfd061" name="a447b539fbdfec02fa6973aebaebfd061"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a447b539fbdfec02fa6973aebaebfd061">&#9670;&#160;</a></span>operator+=() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool VaString::operator== </td>
+          <td class="memname"><a class="el" href="classVaString.html">VaString</a> &amp; VaString::operator+= </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>ch</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Appends a single character to the current string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ch</td><td>The character to append. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the current object. </dd></dl>
+
+</div>
+</div>
+<a id="a367cef35a05da6fbaf97096e063744d5" name="a367cef35a05da6fbaf97096e063744d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a367cef35a05da6fbaf97096e063744d5">&#9670;&#160;</a></span>operator+=() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVaString.html">VaString</a> &amp; VaString::operator+= </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Appends a C-style string to the current string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>The C-style string to append. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the current object. </dd></dl>
+
+</div>
+</div>
+<a id="a018a5a081c23bc2ab135f41219805c48" name="a018a5a081c23bc2ab135f41219805c48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a018a5a081c23bc2ab135f41219805c48">&#9670;&#160;</a></span>operator+=() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVaString.html">VaString</a> &amp; VaString::operator+= </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classVaString.html">VaString</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<p>operator== - checks if two strings are the same </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Appends another <a class="el" href="classVaString.html">VaString</a> to the current string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">other</td><td>The other string to compare with this one </td></tr>
+    <tr><td class="paramname">other</td><td>The <a class="el" href="classVaString.html">VaString</a> to append. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the current object. </dd></dl>
 
 </div>
 </div>
-<a id="aa61572a7aca6d71350fd302323e794fd" name="aa61572a7aca6d71350fd302323e794fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa61572a7aca6d71350fd302323e794fd">&#9670;&#160;</a></span>operator[]()</h2>
+<a id="a07bbf5699f8f3c70cece2ebcb51fe381" name="a07bbf5699f8f3c70cece2ebcb51fe381"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07bbf5699f8f3c70cece2ebcb51fe381">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char VaString::operator[] </td>
+          <td class="memname"><a class="el" href="classVaString.html">VaString</a> &amp; VaString::operator= </td>
           <td>(</td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype">const <a class="el" href="classVaString.html">VaString</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>operator[] - allows accessing specific characters in the string </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Copy assignment operator. Copies the content of another <a class="el" href="classVaString.html">VaString</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">index</td><td>The index of the character to return</td></tr>
+    <tr><td class="paramname">other</td><td>The <a class="el" href="classVaString.html">VaString</a> to copy from. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section warning"><dt>Warning</dt><dd>the char type in C++ is only 1 byte, so if the string contains non-ANSI characters, this may not work as expected </dd>
-<dd>
-since <a class="el" href="classVaString.html">VaString</a> is <em>immutable</em>, this function returns a copy, not a reference or modifiable value</dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">if</td><td>the index is out of the string's bounds, the function throws an IndexOutOfRangeError </td></tr>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the current object. </dd></dl>
+
+</div>
+</div>
+<a id="af7fc3309927355d141f8bd93f80f890b" name="af7fc3309927355d141f8bd93f80f890b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7fc3309927355d141f8bd93f80f890b">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVaString.html">VaString</a> &amp; VaString::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVaString.html">VaString</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move assignment operator. Transfers ownership from another <a class="el" href="classVaString.html">VaString</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The <a class="el" href="classVaString.html">VaString</a> to move from </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the current object </dd></dl>
+
+</div>
+</div>
+<a id="a23c582986d14bf3f72925dee2a5539f3" name="a23c582986d14bf3f72925dee2a5539f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23c582986d14bf3f72925dee2a5539f3">&#9670;&#160;</a></span>operator[]() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char &amp; VaString::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Provides read-only access to a character at a specific index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>The index of the character to access. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A constant reference to the character at the specified index.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>No bounds checking is performed. Accessing an out-of-bounds index results in undefined behavior. </dd></dl>
+
+</div>
+</div>
+<a id="a93a937d1c5a4c1be3e9ebcd603e270e8" name="a93a937d1c5a4c1be3e9ebcd603e270e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93a937d1c5a4c1be3e9ebcd603e270e8">&#9670;&#160;</a></span>operator[]() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char &amp; VaString::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Provides access to a character at a specific index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>The index of the character to access. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the character at the specified index.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>No bounds checking is performed. Accessing an out-of-bounds index results in undefined behavior. </dd></dl>
+
+</div>
+</div>
+<a id="a9c9f7bf19481dfadc8b8edd0ac38ddb9" name="a9c9f7bf19481dfadc8b8edd0ac38ddb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c9f7bf19481dfadc8b8edd0ac38ddb9">&#9670;&#160;</a></span>reserve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VaString::reserve </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>minCap</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ensures that the string has at least the specified minimum capacity. </p>
+<p>If the current capacity of the string is less than the specified minimum capacity, the string's capacity is increased to meet the requirement.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">minCap</td><td>The minimum capacity to reserve for the string. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a8f72b9e005be43781d026d9554aa63af" name="a8f72b9e005be43781d026d9554aa63af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8f72b9e005be43781d026d9554aa63af">&#9670;&#160;</a></span>toCStyleString()</h2>
+<a id="acb407f1793d68002ec2bc2c112062d1a" name="acb407f1793d68002ec2bc2c112062d1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb407f1793d68002ec2bc2c112062d1a">&#9670;&#160;</a></span>resize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VaString::resize </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>newCap</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resizes the string buffer to a new capacity. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newCap</td><td>The new capacity for the string buffer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7ac0443d20cac1dc377dc512efdb18ca" name="a7ac0443d20cac1dc377dc512efdb18ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ac0443d20cac1dc377dc512efdb18ca">&#9670;&#160;</a></span>substr()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const char * VaString::toCStyleString </td>
+          <td class="memname"><a class="el" href="classVaString.html">VaString</a> VaString::substr </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>start</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>length</em><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#aba1b35a8d2b78defcd812f8324165373">npos</a></span></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Extracts a substring from the string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>The starting index of the substring. </td></tr>
+    <tr><td class="paramname">length</td><td>The length of the substring. Defaults to npos, which extracts to the end of the string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="classVaString.html">VaString</a> containing the extracted substring. </dd></dl>
+
+</div>
+</div>
+<a id="aa7fa553d2f9afaf38c25d468cd6ef556" name="aa7fa553d2f9afaf38c25d468cd6ef556"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7fa553d2f9afaf38c25d468cd6ef556">&#9670;&#160;</a></span>toCStyleString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * VaString::toCStyleString </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>toCStyleString - converts <a class="el" href="classVaString.html">VaString</a> to a c-style string (char pointer) </p><dl class="section return"><dt>Returns</dt><dd>c-style string, which is a copy of the <a class="el" href="classVaString.html">VaString</a>'s data</dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>this function uses new[] to allocate memory for the new string. You must manually release this memory with delete[] later </dd></dl>
+
+<p>Converts the <a class="el" href="classVaString.html">VaString</a> to a C-style string. </p>
+<dl class="section return"><dt>Returns</dt><dd>A dynamically allocated C-style string containing the same content.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This function uses new[] to allocate memory for the new string. You must manually release this memory with delete[] later </dd></dl>
 
 </div>
 </div>
@@ -309,13 +1413,15 @@ since <a class="el" href="classVaString.html">VaString</a> is <em>immutable</em>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>toStdString - converts <a class="el" href="classVaString.html">VaString</a> to a std::string from C++ stdlib </p><dl class="section return"><dt>Returns</dt><dd>std::string containing data from <a class="el" href="classVaString.html">VaString</a> (data is copied) </dd></dl>
+
+<p>Converts the <a class="el" href="classVaString.html">VaString</a> to a std::string. </p>
+<dl class="section return"><dt>Returns</dt><dd>A std::string containing the same content. </dd></dl>
 
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Symbol Documentation</h2>
-<a id="a4e4346a5591651d1a6fa69c3c204e660" name="a4e4346a5591651d1a6fa69c3c204e660"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e4346a5591651d1a6fa69c3c204e660">&#9670;&#160;</a></span>len</h2>
+<a id="a0149716df3714a3c2999ccb7990086f6" name="a0149716df3714a3c2999ccb7990086f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0149716df3714a3c2999ccb7990086f6">&#9670;&#160;</a></span>cap</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -324,7 +1430,7 @@ since <a class="el" href="classVaString.html">VaString</a> is <em>immutable</em>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Size len </td>
+          <td class="memname">Size cap </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classVaString.html">VaString</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
           <td></td>
@@ -337,15 +1443,90 @@ since <a class="el" href="classVaString.html">VaString</a> is <em>immutable</em>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the length of the given <a class="el" href="classVaString.html">VaString</a>. </p>
+<p>Retrieves the capacity of the string buffer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">str</td><td>The string whose length is returned. </td></tr>
+    <tr><td class="paramname">str</td><td>The <a class="el" href="classVaString.html">VaString</a> to query. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The length of the string.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This is not a method, but a free-standing function. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The capacity of the string buffer. </dd></dl>
+
+</div>
+</div>
+<a id="ac53b5aecaef73263b9c45398c3931c3e" name="ac53b5aecaef73263b9c45398c3931c3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac53b5aecaef73263b9c45398c3931c3e">&#9670;&#160;</a></span>operator!=</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classVaString.html">VaString</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>lhs</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classVaString.html">VaString</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compares two VaStrings for inequality. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The <a class="el" href="classVaString.html">VaString</a> to compare with. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the strings are not equal, false otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="adef02dfbad82a59909812610deda5ce6" name="adef02dfbad82a59909812610deda5ce6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adef02dfbad82a59909812610deda5ce6">&#9670;&#160;</a></span>operator&lt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classVaString.html">VaString</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>lhs</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classVaString.html">VaString</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compares two VaStrings for less than. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The <a class="el" href="classVaString.html">VaString</a> to compare with. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the lhs is less than rhs, false otherwise. </dd></dl>
 
 </div>
 </div>
@@ -369,60 +1550,14 @@ since <a class="el" href="classVaString.html">VaString</a> is <em>immutable</em>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>data - raw string data.</p>
+
+<p>raw string data. </p>
 <dl class="section note"><dt>Note</dt><dd>data is not null-terminated. The length is managed by the <a class="el" href="#a979d253069d05e829755abb346fc29f9">len</a> variable </dd></dl>
 
 </div>
 </div>
-<a id="a979d253069d05e829755abb346fc29f9" name="a979d253069d05e829755abb346fc29f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a979d253069d05e829755abb346fc29f9">&#9670;&#160;</a></span>len</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Size VaString::len</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>len - variable storing the length of the string </p>
-
-</div>
-</div>
-<a id="aba1b35a8d2b78defcd812f8324165373" name="aba1b35a8d2b78defcd812f8324165373"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba1b35a8d2b78defcd812f8324165373">&#9670;&#160;</a></span>npos</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr Size VaString::npos = -1</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>npos - constant representing no position</p>
-<dl class="section note"><dt>Note</dt><dd>returned by various search methods (e.g., find) when nothing is found </dd></dl>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>Include/Types/<a class="el" href="String_8hpp_source.html">String.hpp</a></li>
+<li>Include/VaLib/Types/<a class="el" href="String_8hpp_source.html">String.hpp</a></li>
 <li>src/Types/<b>String.cpp</b></li>
 </ul>
 </div><!-- contents -->
