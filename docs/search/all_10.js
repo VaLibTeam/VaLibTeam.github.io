@@ -1,10 +1,20 @@
 var searchData=
 [
-  ['pairatindex_0',['pairAtIndex',['../classVaDict.html#a0dae4f4d2576bdd4848f5ed6170f9444',1,'VaDict::pairAtIndex(Size index)'],['../classVaDict.html#ac464b3ac4e7ee3a6aa380d9c271504f5',1,'VaDict::pairAtIndex(Size index) const']]],
-  ['pairref_1',['PairRef',['../structVaDict_1_1PairRef.html',1,'VaDict']]],
-  ['permissionerror_2',['PermissionError',['../classPermissionError.html',1,'PermissionError'],['../classPermissionError.html#a4c203d3b2e5aba2b290447e6f0b98b24',1,'PermissionError::PermissionError()']]],
-  ['pop_3',['pop',['../classVaList.html#a3b0cd59d5c6cc529e64d7f1badf2ca27',1,'VaList::pop()'],['../classVaList.html#afb7c299613a396740c40775ddcc34e60',1,'VaList::pop(Size index)']]],
-  ['prepend_4',['prepend',['../classVaList.html#aeceed8d76236dbc5efb77b3565a44b46',1,'VaList::prepend(const T &amp;elm)'],['../classVaList.html#acbd2cb7deec7d3eab00a22802669b1c6',1,'VaList::prepend(T &amp;&amp;elm)']]],
-  ['prependemplace_5',['prependEmplace',['../classVaList.html#a680b8ad54a33b25e640bb1df5e2312ef',1,'VaList']]],
-  ['prevorder_6',['prevOrder',['../structVaDictEntry.html#ad6287e17984b57a084b0a793ddad7418',1,'VaDictEntry']]]
+  ['pairatback_0',['pairAtBack',['../classVaDict.html#a89d077e82a836a882fbaed67cea4852b',1,'VaDict::pairAtBack()'],['../classVaDict.html#a5b40fd272132271379e4f5b355dd59d7',1,'VaDict::pairAtBack() const']]],
+  ['pairatfront_1',['pairAtFront',['../classVaDict.html#aa02d46b04cbf26c3c609659bf735a849',1,'VaDict::pairAtFront()'],['../classVaDict.html#aa74194a2435506ef3115c605b2bf43bd',1,'VaDict::pairAtFront() const']]],
+  ['pairatindex_2',['pairAtIndex',['../classVaDict.html#a0dae4f4d2576bdd4848f5ed6170f9444',1,'VaDict::pairAtIndex(Size index)'],['../classVaDict.html#ac464b3ac4e7ee3a6aa380d9c271504f5',1,'VaDict::pairAtIndex(Size index) const']]],
+  ['pairref_3',['PairRef',['../structVaDict_1_1PairRef.html',1,'VaDict']]],
+  ['performance_4',['High Performance',['../index.html#autotoc_md10',1,'']]],
+  ['permissionerror_5',['PermissionError',['../classPermissionError.html',1,'PermissionError'],['../classPermissionError.html#a4c203d3b2e5aba2b290447e6f0b98b24',1,'PermissionError::PermissionError()']]],
+  ['pop_6',['pop',['../classVaLinkedList.html#a10d34e257a159b8c48e018d6263b3cdd',1,'VaLinkedList::pop()'],['../classVaLinkedList.html#a80e9fae8445fd67b36d4c06a88499174',1,'VaLinkedList::pop(Size index)'],['../classVaList.html#a3b0cd59d5c6cc529e64d7f1badf2ca27',1,'VaList::pop()'],['../classVaList.html#afb7c299613a396740c40775ddcc34e60',1,'VaList::pop(Size index)']]],
+  ['prepend_7',['prepend',['../classVaLinkedList.html#ad72fcd896f618298fc3015e73c98130c',1,'VaLinkedList::prepend(const T &amp;value)'],['../classVaLinkedList.html#a0c5c1641896842ca8668de3082c7f1bb',1,'VaLinkedList::prepend(T &amp;&amp;value)'],['../classVaList.html#aeceed8d76236dbc5efb77b3565a44b46',1,'VaList::prepend(const T &amp;elm)'],['../classVaList.html#acbd2cb7deec7d3eab00a22802669b1c6',1,'VaList::prepend(T &amp;&amp;elm)']]],
+  ['prependall_8',['prependAll',['../classVaLinkedList.html#aa60b56478145346c8867f79245200f9c',1,'VaLinkedList::prependAll()'],['../classVaList.html#a57824a8fd682a159b0b06d0dd8b0d0c4',1,'VaList::prependAll()']]],
+  ['prependeach_9',['prependEach',['../classVaLinkedList.html#a126c1c42979c88b98c7145d1c7268953',1,'VaLinkedList::prependEach(const Iterable &amp;iterable)'],['../classVaLinkedList.html#a5b18b5466e392ffe2b0e515abf5ceeee',1,'VaLinkedList::prependEach(Iterable &amp;&amp;iterable)'],['../classVaLinkedList.html#aca3552bf5194c05c0aedf4cef7faedf5',1,'VaLinkedList::prependEach(const VaLinkedList &amp;other)'],['../classVaLinkedList.html#ab4b468a1d71976145ecefa7e0452b12d',1,'VaLinkedList::prependEach(VaLinkedList &amp;&amp;other)'],['../classVaList.html#ade5983e03755285162e2a7b4fdaac5e5',1,'VaList::prependEach(const Iterable &amp;other)'],['../classVaList.html#af4b7122bbbf015c0de9ccd12a2505f8b',1,'VaList::prependEach(Iterable &amp;&amp;other)'],['../classVaList.html#a75faee70cd1cf9c27b42957839317564',1,'VaList::prependEach(const VaList &amp;other)'],['../classVaList.html#abc4e6cfeb20b9c90dd21209020f4956a',1,'VaList::prependEach(VaList &amp;&amp;other)']]],
+  ['prependemplace_10',['prependEmplace',['../classVaList.html#a680b8ad54a33b25e640bb1df5e2312ef',1,'VaList']]],
+  ['prevorder_11',['prevOrder',['../structVaDictEntry.html#ad6287e17984b57a084b0a793ddad7418',1,'VaDictEntry']]],
+  ['promote_12',['promote',['../classVaWeakPtr.html#af25c3ffe6efa302269c94758985ff390',1,'VaWeakPtr::promote()'],['../classVaWeakPtr_3_01T_0f_0e_4.html#a17893326f871e7c833e16e046b6bcfda',1,'VaWeakPtr&lt; T[]&gt;::promote()']]],
+  ['ptr_13',['ptr',['../structva_1_1detail_1_1ControlBlock.html#a2517287fa7d30e4a975c3d1b4d414187',1,'va::detail::ControlBlock::ptr'],['../structva_1_1detail_1_1ControlBlock_3_01T_0f_0e_4.html#acbdb8b9406545d5d85b594af7bb84139',1,'va::detail::ControlBlock&lt; T[]&gt;::ptr']]],
+  ['pushentry_14',['pushEntry',['../classVaDict.html#ac398734879355283d2dd9aed50a9587d',1,'VaDict']]],
+  ['putatback_15',['putAtBack',['../classVaDict.html#a41e81fda7c43edc38cafe9b5032bcdef',1,'VaDict::putAtBack(const K &amp;key, const V &amp;value)'],['../classVaDict.html#a6813943111060f98c67a213692d23f93',1,'VaDict::putAtBack(ConstPairRef pair)']]],
+  ['putatfront_16',['putAtFront',['../classVaDict.html#a4c29f3fd104e6d9fd31115aac73fcc65',1,'VaDict::putAtFront(const K &amp;key, const V &amp;value)'],['../classVaDict.html#a57cfe44099d4e7015172903c8ca34534',1,'VaDict::putAtFront(ConstPairRef pair)']]]
 ];

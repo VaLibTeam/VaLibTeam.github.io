@@ -86,60 +86,70 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVaAny_1_1AlignedBuffer.html">AlignedBuffer</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVaAny_1_1VTable.html">VTable</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a85c408b7f01e38f1ed9dac773011facd" id="r_a85c408b7f01e38f1ed9dac773011facd"><td class="memTemplParams" colspan="2"><a id="a85c408b7f01e38f1ed9dac773011facd" name="a85c408b7f01e38f1ed9dac773011facd"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a85c408b7f01e38f1ed9dac773011facd"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>VaAny</b> (T &amp;&amp;value)</td></tr>
+<tr class="memitem:afd7173efb0be75d151301c0e19c2ac72" id="r_afd7173efb0be75d151301c0e19c2ac72"><td class="memItemLeft" align="right" valign="top"><a id="afd7173efb0be75d151301c0e19c2ac72" name="afd7173efb0be75d151301c0e19c2ac72"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>VaAny</b> ()=default</td></tr>
+<tr class="memdesc:afd7173efb0be75d151301c0e19c2ac72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor for <a class="el" href="classVaAny.html">VaAny</a>. <br /></td></tr>
+<tr class="separator:afd7173efb0be75d151301c0e19c2ac72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85c408b7f01e38f1ed9dac773011facd" id="r_a85c408b7f01e38f1ed9dac773011facd"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a85c408b7f01e38f1ed9dac773011facd"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a85c408b7f01e38f1ed9dac773011facd">VaAny</a> (T &amp;&amp;value)</td></tr>
+<tr class="memdesc:a85c408b7f01e38f1ed9dac773011facd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classVaAny.html">VaAny</a> object with the given value.  <br /></td></tr>
 <tr class="separator:a85c408b7f01e38f1ed9dac773011facd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3f0865528148cfd98b974cf77cf4dd8" id="r_ad3f0865528148cfd98b974cf77cf4dd8"><td class="memItemLeft" align="right" valign="top"><a id="ad3f0865528148cfd98b974cf77cf4dd8" name="ad3f0865528148cfd98b974cf77cf4dd8"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>VaAny</b> (const <a class="el" href="classVaAny.html">VaAny</a> &amp;other)</td></tr>
+<tr class="memitem:ad3f0865528148cfd98b974cf77cf4dd8" id="r_ad3f0865528148cfd98b974cf77cf4dd8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3f0865528148cfd98b974cf77cf4dd8">VaAny</a> (const <a class="el" href="classVaAny.html">VaAny</a> &amp;other)</td></tr>
+<tr class="memdesc:ad3f0865528148cfd98b974cf77cf4dd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor for <a class="el" href="classVaAny.html">VaAny</a>. Creates a new <a class="el" href="classVaAny.html">VaAny</a> object as a copy of the given object. If the value is stored on the heap, it will be cloned. Otherwise, it will be copied into the small buffer optimization (SBO) storage.  <br /></td></tr>
 <tr class="separator:ad3f0865528148cfd98b974cf77cf4dd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02b53851bb3d2da8addad7a18f7d96e9" id="r_a02b53851bb3d2da8addad7a18f7d96e9"><td class="memItemLeft" align="right" valign="top"><a id="a02b53851bb3d2da8addad7a18f7d96e9" name="a02b53851bb3d2da8addad7a18f7d96e9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>VaAny</b> (<a class="el" href="classVaAny.html">VaAny</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="memitem:a02b53851bb3d2da8addad7a18f7d96e9" id="r_a02b53851bb3d2da8addad7a18f7d96e9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02b53851bb3d2da8addad7a18f7d96e9">VaAny</a> (<a class="el" href="classVaAny.html">VaAny</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="memdesc:a02b53851bb3d2da8addad7a18f7d96e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move constructor for <a class="el" href="classVaAny.html">VaAny</a>. Creates a new <a class="el" href="classVaAny.html">VaAny</a> object by transferring ownership of the value from the given object. If the value is stored on the heap, the pointer is moved. Otherwise, the value is moved into the SBO storage.  <br /></td></tr>
 <tr class="separator:a02b53851bb3d2da8addad7a18f7d96e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc360854dbab4890c84de09f6a175433" id="r_abc360854dbab4890c84de09f6a175433"><td class="memItemLeft" align="right" valign="top"><a id="abc360854dbab4890c84de09f6a175433" name="abc360854dbab4890c84de09f6a175433"></a>
-<a class="el" href="classVaAny.html">VaAny</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classVaAny.html">VaAny</a> &amp;other)</td></tr>
+<tr class="memitem:a9f45452e993965f1d588673c5cb33671" id="r_a9f45452e993965f1d588673c5cb33671"><td class="memItemLeft" align="right" valign="top"><a id="a9f45452e993965f1d588673c5cb33671" name="a9f45452e993965f1d588673c5cb33671"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>~VaAny</b> ()</td></tr>
+<tr class="memdesc:a9f45452e993965f1d588673c5cb33671"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor for <a class="el" href="classVaAny.html">VaAny</a>. Cleans up any resources held by the object, including destroying the stored value and deallocating memory if the value is stored on the heap. <br /></td></tr>
+<tr class="separator:a9f45452e993965f1d588673c5cb33671"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc360854dbab4890c84de09f6a175433" id="r_abc360854dbab4890c84de09f6a175433"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVaAny.html">VaAny</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc360854dbab4890c84de09f6a175433">operator=</a> (const <a class="el" href="classVaAny.html">VaAny</a> &amp;other)</td></tr>
+<tr class="memdesc:abc360854dbab4890c84de09f6a175433"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy assignment operator for <a class="el" href="classVaAny.html">VaAny</a>. Assigns the value from another <a class="el" href="classVaAny.html">VaAny</a> object to this one. If the value is stored on the heap, it will be cloned. Otherwise, it will be copied into the small buffer optimization (SBO) storage.  <br /></td></tr>
 <tr class="separator:abc360854dbab4890c84de09f6a175433"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51811a62bd0be79ceba1a6d893633769" id="r_a51811a62bd0be79ceba1a6d893633769"><td class="memItemLeft" align="right" valign="top"><a id="a51811a62bd0be79ceba1a6d893633769" name="a51811a62bd0be79ceba1a6d893633769"></a>
-<a class="el" href="classVaAny.html">VaAny</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classVaAny.html">VaAny</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="memitem:a51811a62bd0be79ceba1a6d893633769" id="r_a51811a62bd0be79ceba1a6d893633769"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVaAny.html">VaAny</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51811a62bd0be79ceba1a6d893633769">operator=</a> (<a class="el" href="classVaAny.html">VaAny</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="memdesc:a51811a62bd0be79ceba1a6d893633769"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move assignment operator for <a class="el" href="classVaAny.html">VaAny</a>. Transfers ownership of the value from another <a class="el" href="classVaAny.html">VaAny</a> object to this one. If the value is stored on the heap, the pointer is moved. Otherwise, the value is moved into the SBO storage.  <br /></td></tr>
 <tr class="separator:a51811a62bd0be79ceba1a6d893633769"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1ab6edbe790cd368547249bf6029221" id="r_ad1ab6edbe790cd368547249bf6029221"><td class="memTemplParams" colspan="2"><a id="ad1ab6edbe790cd368547249bf6029221" name="ad1ab6edbe790cd368547249bf6029221"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ad1ab6edbe790cd368547249bf6029221"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>emplace</b> (T &amp;&amp;value)</td></tr>
+<tr class="memitem:ad1ab6edbe790cd368547249bf6029221" id="r_ad1ab6edbe790cd368547249bf6029221"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ad1ab6edbe790cd368547249bf6029221"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad1ab6edbe790cd368547249bf6029221">emplace</a> (T &amp;&amp;value)</td></tr>
+<tr class="memdesc:ad1ab6edbe790cd368547249bf6029221"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new value in the <a class="el" href="classVaAny.html">VaAny</a> object, replacing any existing value.  <br /></td></tr>
 <tr class="separator:ad1ab6edbe790cd368547249bf6029221"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48f408bca8bb1bb4b6b2de277d92fb0e" id="r_a48f408bca8bb1bb4b6b2de277d92fb0e"><td class="memItemLeft" align="right" valign="top"><a id="a48f408bca8bb1bb4b6b2de277d92fb0e" name="a48f408bca8bb1bb4b6b2de277d92fb0e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> () noexcept</td></tr>
+<tr class="memitem:a48f408bca8bb1bb4b6b2de277d92fb0e" id="r_a48f408bca8bb1bb4b6b2de277d92fb0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48f408bca8bb1bb4b6b2de277d92fb0e">reset</a> () noexcept</td></tr>
+<tr class="memdesc:a48f408bca8bb1bb4b6b2de277d92fb0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the <a class="el" href="classVaAny.html">VaAny</a> object, destroying any stored value.  <br /></td></tr>
 <tr class="separator:a48f408bca8bb1bb4b6b2de277d92fb0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8dc89bc1bf4749456dc74fc6a683eeeb" id="r_a8dc89bc1bf4749456dc74fc6a683eeeb"><td class="memItemLeft" align="right" valign="top"><a id="a8dc89bc1bf4749456dc74fc6a683eeeb" name="a8dc89bc1bf4749456dc74fc6a683eeeb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>swap</b> (<a class="el" href="classVaAny.html">VaAny</a> &amp;other) noexcept</td></tr>
+<tr class="memitem:a8dc89bc1bf4749456dc74fc6a683eeeb" id="r_a8dc89bc1bf4749456dc74fc6a683eeeb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8dc89bc1bf4749456dc74fc6a683eeeb">swap</a> (<a class="el" href="classVaAny.html">VaAny</a> &amp;other) noexcept</td></tr>
+<tr class="memdesc:a8dc89bc1bf4749456dc74fc6a683eeeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps the contents of this <a class="el" href="classVaAny.html">VaAny</a> object with another.  <br /></td></tr>
 <tr class="separator:a8dc89bc1bf4749456dc74fc6a683eeeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64f05e89f59f7f83e0eefdb02f4dcb14" id="r_a64f05e89f59f7f83e0eefdb02f4dcb14"><td class="memTemplParams" colspan="2"><a id="a64f05e89f59f7f83e0eefdb02f4dcb14" name="a64f05e89f59f7f83e0eefdb02f4dcb14"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a64f05e89f59f7f83e0eefdb02f4dcb14"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>get</b> ()</td></tr>
+<tr class="memitem:a64f05e89f59f7f83e0eefdb02f4dcb14" id="r_a64f05e89f59f7f83e0eefdb02f4dcb14"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a64f05e89f59f7f83e0eefdb02f4dcb14"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a64f05e89f59f7f83e0eefdb02f4dcb14">get</a> ()</td></tr>
+<tr class="memdesc:a64f05e89f59f7f83e0eefdb02f4dcb14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the stored value as the specified type.  <br /></td></tr>
 <tr class="separator:a64f05e89f59f7f83e0eefdb02f4dcb14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7bc7238530526285ce04c997374f395a" id="r_a7bc7238530526285ce04c997374f395a"><td class="memTemplParams" colspan="2"><a id="a7bc7238530526285ce04c997374f395a" name="a7bc7238530526285ce04c997374f395a"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a7bc7238530526285ce04c997374f395a"><td class="memTemplItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>get</b> () const</td></tr>
+<tr class="memitem:a7bc7238530526285ce04c997374f395a" id="r_a7bc7238530526285ce04c997374f395a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a7bc7238530526285ce04c997374f395a"><td class="memTemplItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a7bc7238530526285ce04c997374f395a">get</a> () const</td></tr>
+<tr class="memdesc:a7bc7238530526285ce04c997374f395a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the stored value as the specified type (const version).  <br /></td></tr>
 <tr class="separator:a7bc7238530526285ce04c997374f395a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c48375850cb2e07df728a5b33ff5260" id="r_a0c48375850cb2e07df728a5b33ff5260"><td class="memItemLeft" align="right" valign="top"><a id="a0c48375850cb2e07df728a5b33ff5260" name="a0c48375850cb2e07df728a5b33ff5260"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasValue</b> () const noexcept</td></tr>
+<tr class="memitem:a0c48375850cb2e07df728a5b33ff5260" id="r_a0c48375850cb2e07df728a5b33ff5260"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c48375850cb2e07df728a5b33ff5260">hasValue</a> () const noexcept</td></tr>
+<tr class="memdesc:a0c48375850cb2e07df728a5b33ff5260"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the <a class="el" href="classVaAny.html">VaAny</a> object contains a value.  <br /></td></tr>
 <tr class="separator:a0c48375850cb2e07df728a5b33ff5260"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d2059363012f42055d25888b37593d8" id="r_a3d2059363012f42055d25888b37593d8"><td class="memTemplParams" colspan="2"><a id="a3d2059363012f42055d25888b37593d8" name="a3d2059363012f42055d25888b37593d8"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a3d2059363012f42055d25888b37593d8"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>isType</b> () const</td></tr>
+<tr class="memitem:a3d2059363012f42055d25888b37593d8" id="r_a3d2059363012f42055d25888b37593d8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a3d2059363012f42055d25888b37593d8"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a3d2059363012f42055d25888b37593d8">isType</a> () const</td></tr>
+<tr class="memdesc:a3d2059363012f42055d25888b37593d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the stored value is of the specified type.  <br /></td></tr>
 <tr class="separator:a3d2059363012f42055d25888b37593d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c37aed922808dbbb28ed62b8cd26e2f" id="r_a9c37aed922808dbbb28ed62b8cd26e2f"><td class="memItemLeft" align="right" valign="top"><a id="a9c37aed922808dbbb28ed62b8cd26e2f" name="a9c37aed922808dbbb28ed62b8cd26e2f"></a>
-TypeID &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>currentType</b> () const</td></tr>
+<tr class="memitem:a9c37aed922808dbbb28ed62b8cd26e2f" id="r_a9c37aed922808dbbb28ed62b8cd26e2f"><td class="memItemLeft" align="right" valign="top">TypeID &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c37aed922808dbbb28ed62b8cd26e2f">currentType</a> () const</td></tr>
+<tr class="memdesc:a9c37aed922808dbbb28ed62b8cd26e2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the type information of the currently stored value.  <br /></td></tr>
 <tr class="separator:a9c37aed922808dbbb28ed62b8cd26e2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69df43941564d2c41f407c19559141d1" id="r_a69df43941564d2c41f407c19559141d1"><td class="memItemLeft" align="right" valign="top"><a id="a69df43941564d2c41f407c19559141d1" name="a69df43941564d2c41f407c19559141d1"></a>
-void *&#160;</td><td class="memItemRight" valign="bottom"><b>unsafePtr</b> () noexcept</td></tr>
+<tr class="memitem:a69df43941564d2c41f407c19559141d1" id="r_a69df43941564d2c41f407c19559141d1"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69df43941564d2c41f407c19559141d1">unsafePtr</a> () noexcept</td></tr>
+<tr class="memdesc:a69df43941564d2c41f407c19559141d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a raw pointer to the stored value.  <br /></td></tr>
 <tr class="separator:a69df43941564d2c41f407c19559141d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a291bf52d1d1c3d59231ccadbd37bf5fb" id="r_a291bf52d1d1c3d59231ccadbd37bf5fb"><td class="memItemLeft" align="right" valign="top"><a id="a291bf52d1d1c3d59231ccadbd37bf5fb" name="a291bf52d1d1c3d59231ccadbd37bf5fb"></a>
-const void *&#160;</td><td class="memItemRight" valign="bottom"><b>unsafePtr</b> () const noexcept</td></tr>
+<tr class="memitem:a291bf52d1d1c3d59231ccadbd37bf5fb" id="r_a291bf52d1d1c3d59231ccadbd37bf5fb"><td class="memItemLeft" align="right" valign="top">const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a291bf52d1d1c3d59231ccadbd37bf5fb">unsafePtr</a> () const noexcept</td></tr>
+<tr class="memdesc:a291bf52d1d1c3d59231ccadbd37bf5fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a raw pointer to the stored value (const version).  <br /></td></tr>
 <tr class="separator:a291bf52d1d1c3d59231ccadbd37bf5fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-types" name="pro-types"></a>
@@ -147,9 +157,6 @@ Protected Types</h2></td></tr>
 <tr class="memitem:a48595b27663f45f2e1982635c6b75872" id="r_a48595b27663f45f2e1982635c6b75872"><td class="memItemLeft" align="right" valign="top"><a id="a48595b27663f45f2e1982635c6b75872" name="a48595b27663f45f2e1982635c6b75872"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>TypeID</b> = const std::type_info</td></tr>
 <tr class="separator:a48595b27663f45f2e1982635c6b75872"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad288c740934e5f03a7d7dc47f4d04eac" id="r_ad288c740934e5f03a7d7dc47f4d04eac"><td class="memItemLeft" align="right" valign="top"><a id="ad288c740934e5f03a7d7dc47f4d04eac" name="ad288c740934e5f03a7d7dc47f4d04eac"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>Storage</b> = std::aligned_storage_t&lt;SBO_SIZE, alignof(std::max_align_t)&gt;</td></tr>
-<tr class="separator:ad288c740934e5f03a7d7dc47f4d04eac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -184,18 +191,539 @@ union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="memitem:a1b9e140bf77c5c79dc48ea9e715ad357" id="r_a1b9e140bf77c5c79dc48ea9e715ad357"><td class="memItemLeft" >
 &#160;&#160;&#160;void *&#160;&#160;&#160;<b>heapPtr</b>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="separator:a1b9e140bf77c5c79dc48ea9e715ad357"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd4b03ea3d16d9ba2c4da8fbf4cd21a6" id="r_abd4b03ea3d16d9ba2c4da8fbf4cd21a6"><td class="memItemLeft" >
-&#160;&#160;&#160;Storage&#160;&#160;&#160;<b>sboBuf</b>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:abd4b03ea3d16d9ba2c4da8fbf4cd21a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98fcded4d43e4b0d58ba644b052e6935" id="r_a98fcded4d43e4b0d58ba644b052e6935"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="structVaAny_1_1AlignedBuffer.html">AlignedBuffer</a>&#160;&#160;&#160;<b>sboBuf</b>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a98fcded4d43e4b0d58ba644b052e6935"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6751ba2f85b6c30f08410d9449ee412" id="r_ae6751ba2f85b6c30f08410d9449ee412"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="separator:ae6751ba2f85b6c30f08410d9449ee412"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-static-attribs" name="pro-static-attribs"></a>
 Static Protected Attributes</h2></td></tr>
-<tr class="memitem:aa12343ea311c761f3f7e356af52509a3" id="r_aa12343ea311c761f3f7e356af52509a3"><td class="memItemLeft" align="right" valign="top"><a id="aa12343ea311c761f3f7e356af52509a3" name="aa12343ea311c761f3f7e356af52509a3"></a>
-static constexpr std::size_t&#160;</td><td class="memItemRight" valign="bottom"><b>SBO_SIZE</b> = 24</td></tr>
-<tr class="separator:aa12343ea311c761f3f7e356af52509a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a750282acf50f87b7418f6ee627c82e41" id="r_a750282acf50f87b7418f6ee627c82e41"><td class="memItemLeft" align="right" valign="top"><a id="a750282acf50f87b7418f6ee627c82e41" name="a750282acf50f87b7418f6ee627c82e41"></a>
+static constexpr Size&#160;</td><td class="memItemRight" valign="bottom"><b>SBO_SIZE</b> = 24</td></tr>
+<tr class="separator:a750282acf50f87b7418f6ee627c82e41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a85c408b7f01e38f1ed9dac773011facd" name="a85c408b7f01e38f1ed9dac773011facd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85c408b7f01e38f1ed9dac773011facd">&#9670;&#160;</a></span>VaAny() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VaAny::VaAny </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="classVaAny.html">VaAny</a> object with the given value. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of the value to store. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The value to store in the <a class="el" href="classVaAny.html">VaAny</a> object.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This constructor uses perfect forwarding to store the value. </dd></dl>
+
+</div>
+</div>
+<a id="ad3f0865528148cfd98b974cf77cf4dd8" name="ad3f0865528148cfd98b974cf77cf4dd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3f0865528148cfd98b974cf77cf4dd8">&#9670;&#160;</a></span>VaAny() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VaAny::VaAny </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classVaAny.html">VaAny</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copy constructor for <a class="el" href="classVaAny.html">VaAny</a>. Creates a new <a class="el" href="classVaAny.html">VaAny</a> object as a copy of the given object. If the value is stored on the heap, it will be cloned. Otherwise, it will be copied into the small buffer optimization (SBO) storage. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The <a class="el" href="classVaAny.html">VaAny</a> object to copy from. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a02b53851bb3d2da8addad7a18f7d96e9" name="a02b53851bb3d2da8addad7a18f7d96e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02b53851bb3d2da8addad7a18f7d96e9">&#9670;&#160;</a></span>VaAny() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VaAny::VaAny </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVaAny.html">VaAny</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move constructor for <a class="el" href="classVaAny.html">VaAny</a>. Creates a new <a class="el" href="classVaAny.html">VaAny</a> object by transferring ownership of the value from the given object. If the value is stored on the heap, the pointer is moved. Otherwise, the value is moved into the SBO storage. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The <a class="el" href="classVaAny.html">VaAny</a> object to move from. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9c37aed922808dbbb28ed62b8cd26e2f" name="a9c37aed922808dbbb28ed62b8cd26e2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c37aed922808dbbb28ed62b8cd26e2f">&#9670;&#160;</a></span>currentType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TypeID &amp; VaAny::currentType </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves the type information of the currently stored value. </p>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the std::type_info object representing the type of the stored value.</dd></dl>
+<p>If the <a class="el" href="classVaAny.html">VaAny</a> object is empty, this method returns the type information for void. </p>
+
+</div>
+</div>
+<a id="ad1ab6edbe790cd368547249bf6029221" name="ad1ab6edbe790cd368547249bf6029221"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1ab6edbe790cd368547249bf6029221">&#9670;&#160;</a></span>emplace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VaAny::emplace </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a new value in the <a class="el" href="classVaAny.html">VaAny</a> object, replacing any existing value. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of the value to construct. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The value to construct in the <a class="el" href="classVaAny.html">VaAny</a> object.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This method uses perfect forwarding to construct the value in-place. If the size and alignment of the type allow, the value is stored in the small buffer optimization (SBO) storage. Otherwise, it is allocated on the heap. Any previously stored value is destroyed before the new value is constructed. </p>
+
+</div>
+</div>
+<a id="a64f05e89f59f7f83e0eefdb02f4dcb14" name="a64f05e89f59f7f83e0eefdb02f4dcb14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64f05e89f59f7f83e0eefdb02f4dcb14">&#9670;&#160;</a></span>get() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T &amp; VaAny::get </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves the stored value as the specified type. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type to cast the stored value to. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the stored value of type T.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classInvalidAnyCastError.html">InvalidAnyCastError</a></td><td>If the stored value is not of type T.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This method casts the stored value to the specified type T. If the stored value's type does not match T, an exception is thrown. </p>
+
+</div>
+</div>
+<a id="a7bc7238530526285ce04c997374f395a" name="a7bc7238530526285ce04c997374f395a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bc7238530526285ce04c997374f395a">&#9670;&#160;</a></span>get() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const T &amp; VaAny::get </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves the stored value as the specified type (const version). </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type to cast the stored value to. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A const reference to the stored value of type T.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classInvalidAnyCastError.html">InvalidAnyCastError</a></td><td>If the stored value is not of type T.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This method casts the stored value to the specified type T. If the stored value's type does not match T, an exception is thrown. </p>
+
+</div>
+</div>
+<a id="a0c48375850cb2e07df728a5b33ff5260" name="a0c48375850cb2e07df728a5b33ff5260"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c48375850cb2e07df728a5b33ff5260">&#9670;&#160;</a></span>hasValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool VaAny::hasValue </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if the <a class="el" href="classVaAny.html">VaAny</a> object contains a value. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if the object contains a value, false otherwise.</dd></dl>
+<p>This method returns true if the <a class="el" href="classVaAny.html">VaAny</a> object currently holds a value, and false if it is empty. </p>
+
+</div>
+</div>
+<a id="a3d2059363012f42055d25888b37593d8" name="a3d2059363012f42055d25888b37593d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d2059363012f42055d25888b37593d8">&#9670;&#160;</a></span>isType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool VaAny::isType </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if the stored value is of the specified type. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type to check against the stored value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the stored value is of type T, false otherwise.</dd></dl>
+<p>This method compares the type of the stored value with the specified type T. If the stored value's type matches T, it returns true. Otherwise, it returns false. </p>
+
+</div>
+</div>
+<a id="abc360854dbab4890c84de09f6a175433" name="abc360854dbab4890c84de09f6a175433"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc360854dbab4890c84de09f6a175433">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVaAny.html">VaAny</a> &amp; VaAny::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classVaAny.html">VaAny</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copy assignment operator for <a class="el" href="classVaAny.html">VaAny</a>. Assigns the value from another <a class="el" href="classVaAny.html">VaAny</a> object to this one. If the value is stored on the heap, it will be cloned. Otherwise, it will be copied into the small buffer optimization (SBO) storage. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The <a class="el" href="classVaAny.html">VaAny</a> object to copy from. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to this <a class="el" href="classVaAny.html">VaAny</a> object. </dd></dl>
+
+</div>
+</div>
+<a id="a51811a62bd0be79ceba1a6d893633769" name="a51811a62bd0be79ceba1a6d893633769"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51811a62bd0be79ceba1a6d893633769">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVaAny.html">VaAny</a> &amp; VaAny::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVaAny.html">VaAny</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move assignment operator for <a class="el" href="classVaAny.html">VaAny</a>. Transfers ownership of the value from another <a class="el" href="classVaAny.html">VaAny</a> object to this one. If the value is stored on the heap, the pointer is moved. Otherwise, the value is moved into the SBO storage. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The <a class="el" href="classVaAny.html">VaAny</a> object to move from. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to this <a class="el" href="classVaAny.html">VaAny</a> object. </dd></dl>
+
+</div>
+</div>
+<a id="a48f408bca8bb1bb4b6b2de277d92fb0e" name="a48f408bca8bb1bb4b6b2de277d92fb0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48f408bca8bb1bb4b6b2de277d92fb0e">&#9670;&#160;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VaAny::reset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resets the <a class="el" href="classVaAny.html">VaAny</a> object, destroying any stored value. </p>
+<p>If a value is stored in the <a class="el" href="classVaAny.html">VaAny</a> object, this method destroys it and deallocates any memory if the value was stored on the heap. After calling this method, the <a class="el" href="classVaAny.html">VaAny</a> object will be empty. </p>
+
+</div>
+</div>
+<a id="a8dc89bc1bf4749456dc74fc6a683eeeb" name="a8dc89bc1bf4749456dc74fc6a683eeeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dc89bc1bf4749456dc74fc6a683eeeb">&#9670;&#160;</a></span>swap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VaAny::swap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVaAny.html">VaAny</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Swaps the contents of this <a class="el" href="classVaAny.html">VaAny</a> object with another. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The <a class="el" href="classVaAny.html">VaAny</a> object to swap with.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This method exchanges the contents of the two <a class="el" href="classVaAny.html">VaAny</a> objects. If the objects are the same, no operation is performed. </p>
+
+</div>
+</div>
+<a id="a291bf52d1d1c3d59231ccadbd37bf5fb" name="a291bf52d1d1c3d59231ccadbd37bf5fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a291bf52d1d1c3d59231ccadbd37bf5fb">&#9670;&#160;</a></span>unsafePtr() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const void * VaAny::unsafePtr </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Provides a raw pointer to the stored value (const version). </p>
+<dl class="section return"><dt>Returns</dt><dd>A const void pointer to the stored value.</dd></dl>
+<p>This method returns a raw pointer to the stored value, allowing unsafe access. Use this method with caution, as it bypasses type safety. </p>
+
+</div>
+</div>
+<a id="a69df43941564d2c41f407c19559141d1" name="a69df43941564d2c41f407c19559141d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69df43941564d2c41f407c19559141d1">&#9670;&#160;</a></span>unsafePtr() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * VaAny::unsafePtr </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Provides a raw pointer to the stored value. </p>
+<dl class="section return"><dt>Returns</dt><dd>A void pointer to the stored value.</dd></dl>
+<p>This method returns a raw pointer to the stored value, allowing unsafe access. Use this method with caution, as it bypasses type safety. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Include/VaLib/Types/<a class="el" href="Any_8hpp_source.html">Any.hpp</a></li>
 </ul>

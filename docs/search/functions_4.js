@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['dataptr_0',['dataPtr',['../classva_1_1detail_1_1____BasicArray.html#a0ac5aff5086abc73077dce7f82462b38',1,'va::detail::__BasicArray::dataPtr() noexcept'],['../classva_1_1detail_1_1____BasicArray.html#ae9cde468b6672cd41831ce384b44f6db',1,'va::detail::__BasicArray::dataPtr() const noexcept']]],
-  ['del_1',['del',['../classVaList.html#a84dbc776afd6e8ac69865b5dfb9f36c1',1,'VaList']]],
-  ['deleteobjects_2',['deleteObjects',['../classVaList.html#af03b15db5ba4940e798c27ef49519048',1,'VaList']]],
-  ['destroy_3',['destroy',['../classVaResult.html#a08250e899f3efd0a5ae2c0c8657944b0',1,'VaResult::destroy()'],['../classVaResult_3_01void_00_01E_01_4.html#a39816da246c1712888f0006423d71209',1,'VaResult&lt; void, E &gt;::destroy()']]],
-  ['divisionbyzeroerror_4',['DivisionByZeroError',['../classDivisionByZeroError.html#a1d09796e76b23e7d2bc4a609c28a8bb3',1,'DivisionByZeroError']]]
+  ['emplace_0',['emplace',['../classVaAny.html#ad1ab6edbe790cd368547249bf6029221',1,'VaAny']]],
+  ['ensurecapacity_1',['ensureCapacity',['../classVaDict.html#a8f97b89834368d453d4848837a992530',1,'VaDict']]],
+  ['equalsordered_2',['equalsOrdered',['../classVaDict.html#a8a35d1bbd1f641d3f2f1ee056bb45b5c',1,'VaDict']]],
+  ['expand_3',['expand',['../classVaList.html#a11f6d2b974b3dd5bdbcfd2b7d2e8e4ce',1,'VaList']]]
 ];

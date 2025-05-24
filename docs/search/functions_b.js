@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['make_0',['Make',['../classVaImmutableString.html#a0dc389c0b5b8d3e86d9a92dcf0a07a1e',1,'VaImmutableString::Make()'],['../classVaString.html#a40c8dc183858a00978936ab8d817cd7a',1,'VaString::Make()'],['../classVaTuple_3_4.html#ae3347e76b483771c0a7b8741ae827716',1,'VaTuple&lt;&gt;::Make()'],['../classVaTuple_3_01Head_00_01Tail_8_8_8_01_4.html#a719a55888181cb3755d7bea5fef9d117',1,'VaTuple&lt; Head, Tail... &gt;::Make()']]],
-  ['merge_1',['merge',['../classVaSet.html#a19449039c61293d5eab897b5c64ae49d',1,'VaSet']]]
+  ['linktoend_0',['linkToEnd',['../classVaLinkedList.html#ab36111dfdd4135dfbc16902292dfd7a4',1,'VaLinkedList']]],
+  ['linktofront_1',['linkToFront',['../classVaLinkedList.html#abe900302c4047dd4ea31ecfec94a4562',1,'VaLinkedList']]],
+  ['lock_2',['lock',['../classVaWeakPtr.html#ac3e94ba0c88081f53aef07431d1579ca',1,'VaWeakPtr::lock()'],['../classVaWeakPtr_3_01T_0f_0e_4.html#a14f02c38943c94f33e32a1664b634879',1,'VaWeakPtr&lt; T[]&gt;::lock()']]]
 ];

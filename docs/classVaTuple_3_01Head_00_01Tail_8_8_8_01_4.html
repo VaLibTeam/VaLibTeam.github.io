@@ -76,7 +76,6 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
-<a href="#friends">Friends</a> &#124;
 <a href="classVaTuple_3_01Head_00_01Tail_8_8_8_01_4-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">VaTuple&lt; Head, Tail... &gt; Class Template Reference</div></div>
 </div><!--header-->
@@ -174,17 +173,6 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a2c1bf2e705fe2d4e3965e5846230a73e" id="r_a2c1bf2e705fe2d4e3965e5846230a73e"><td class="memItemLeft" align="right" valign="top"><a id="a2c1bf2e705fe2d4e3965e5846230a73e" name="a2c1bf2e705fe2d4e3965e5846230a73e"></a>
 Head&#160;</td><td class="memItemRight" valign="bottom"><b>head</b></td></tr>
 <tr class="separator:a2c1bf2e705fe2d4e3965e5846230a73e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
-Friends</h2></td></tr>
-<tr class="memitem:a08b6cd8fbc795794bc4cc136c187caad" id="r_a08b6cd8fbc795794bc4cc136c187caad"><td class="memTemplParams" colspan="2">template&lt;typename... Types1, typename... Types2, Size... I1, Size... I2&gt; </td></tr>
-<tr class="memitem:a08b6cd8fbc795794bc4cc136c187caad"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a08b6cd8fbc795794bc4cc136c187caad">concatenate</a> (const <a class="el" href="classVaTuple.html">VaTuple</a>&lt; Types1... &gt; &amp;, const <a class="el" href="classVaTuple.html">VaTuple</a>&lt; Types2... &gt; &amp;, std::index_sequence&lt; I1... &gt;, std::index_sequence&lt; I2... &gt;)</td></tr>
-<tr class="memdesc:a08b6cd8fbc795794bc4cc136c187caad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concatenates two VaTuples into one.  <br /></td></tr>
-<tr class="separator:a08b6cd8fbc795794bc4cc136c187caad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6348e94ecdd1cc59181f05a27f318e8a" id="r_a6348e94ecdd1cc59181f05a27f318e8a"><td class="memTemplParams" colspan="2">template&lt;typename... Types1, typename... Types2&gt; </td></tr>
-<tr class="memitem:a6348e94ecdd1cc59181f05a27f318e8a"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a6348e94ecdd1cc59181f05a27f318e8a">operator+</a> (const <a class="el" href="classVaTuple.html">VaTuple</a>&lt; Types1... &gt; &amp;, const <a class="el" href="classVaTuple.html">VaTuple</a>&lt; Types2... &gt; &amp;)</td></tr>
-<tr class="memdesc:a6348e94ecdd1cc59181f05a27f318e8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concatenation operator for VaTuples.  <br /></td></tr>
-<tr class="separator:a6348e94ecdd1cc59181f05a27f318e8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename Head, typename... Tail&gt;<br />
@@ -859,112 +847,6 @@ template&lt;typename Head , typename... Tail&gt; </div>
 <p>Returns a const reference to the third element. </p>
 <dl class="section return"><dt>Returns</dt><dd>Const reference to the third element.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Asserts at compile time if the tuple has fewer than three elements. </dd></dl>
-
-</div>
-</div>
-<h2 class="groupheader">Friends And Related Symbol Documentation</h2>
-<a id="a08b6cd8fbc795794bc4cc136c187caad" name="a08b6cd8fbc795794bc4cc136c187caad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08b6cd8fbc795794bc4cc136c187caad">&#9670;&#160;</a></span>concatenate</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Head , typename... Tail&gt; </div>
-<div class="memtemplate">
-template&lt;typename... Types1, typename... Types2, Size... I1, Size... I2&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto concatenate </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classVaTuple.html">VaTuple</a>&lt; Types1... &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>lhs</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classVaTuple.html">VaTuple</a>&lt; Types2... &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::index_sequence&lt; I1... &gt;</td>          <td class="paramname"><span class="paramname">, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::index_sequence&lt; I2... &gt;</td>          <td class="paramname"><span class="paramname"></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Concatenates two VaTuples into one. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Types1</td><td>Types of the first tuple. </td></tr>
-    <tr><td class="paramname">Types2</td><td>Types of the second tuple. </td></tr>
-    <tr><td class="paramname">I1</td><td>Index sequence for first tuple. </td></tr>
-    <tr><td class="paramname">I2</td><td>Index sequence for second tuple. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">lhs</td><td>Left tuple. </td></tr>
-    <tr><td class="paramname">rhs</td><td>Right tuple. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>New <a class="el" href="classVaTuple.html">VaTuple</a> with all elements from both. </dd></dl>
-
-</div>
-</div>
-<a id="a6348e94ecdd1cc59181f05a27f318e8a" name="a6348e94ecdd1cc59181f05a27f318e8a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6348e94ecdd1cc59181f05a27f318e8a">&#9670;&#160;</a></span>operator+</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Head , typename... Tail&gt; </div>
-<div class="memtemplate">
-template&lt;typename... Types1, typename... Types2&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto operator+ </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classVaTuple.html">VaTuple</a>&lt; Types1... &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>lhs</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classVaTuple.html">VaTuple</a>&lt; Types2... &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Concatenation operator for VaTuples. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">lhs</td><td>Left tuple. </td></tr>
-    <tr><td class="paramname">rhs</td><td>Right tuple. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>New <a class="el" href="classVaTuple.html">VaTuple</a> combining both tuples. </dd></dl>
 
 </div>
 </div>

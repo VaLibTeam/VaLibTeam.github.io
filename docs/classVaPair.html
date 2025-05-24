@@ -100,10 +100,10 @@ template&lt;typename U1 , typename U2 &gt; </td></tr>
 <tr class="memitem:a677d5bca0ef68764c3d81cb3ad3d9f0b" id="r_a677d5bca0ef68764c3d81cb3ad3d9f0b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a677d5bca0ef68764c3d81cb3ad3d9f0b">operator!=</a> (const <a class="el" href="classVaPair.html">VaPair</a>&lt; T1, T2 &gt; &amp;other) const noexcept</td></tr>
 <tr class="memdesc:a677d5bca0ef68764c3d81cb3ad3d9f0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inequality comparison operator.  <br /></td></tr>
 <tr class="separator:a677d5bca0ef68764c3d81cb3ad3d9f0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5eb7ae2b18dee0608d9ccb745d4dd9df" id="r_a5eb7ae2b18dee0608d9ccb745d4dd9df"><td class="memTemplParams" colspan="2">template&lt;typename U1  = T1, typename U2  = T2, typename  = std::enable_if_t&lt;std::is_same_v&lt;U1, U2&gt;&gt;&gt; </td></tr>
-<tr class="memitem:a5eb7ae2b18dee0608d9ccb745d4dd9df"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5eb7ae2b18dee0608d9ccb745d4dd9df">swap</a> () noexcept</td></tr>
-<tr class="memdesc:a5eb7ae2b18dee0608d9ccb745d4dd9df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps the first and second elements.  <br /></td></tr>
-<tr class="separator:a5eb7ae2b18dee0608d9ccb745d4dd9df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad431f0ba76ad16e3f05a357a31e46132" id="r_ad431f0ba76ad16e3f05a357a31e46132"><td class="memTemplParams" colspan="2">template&lt;typename U1  = T1, typename U2  = T2&gt; </td></tr>
+<tr class="memitem:ad431f0ba76ad16e3f05a357a31e46132"><td class="memTemplItemLeft" align="right" valign="top">tt::EnableIf&lt; tt::IsSame&lt; U1, U2 &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad431f0ba76ad16e3f05a357a31e46132">swap</a> () noexcept</td></tr>
+<tr class="memdesc:ad431f0ba76ad16e3f05a357a31e46132"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps the first and second elements.  <br /></td></tr>
+<tr class="separator:ad431f0ba76ad16e3f05a357a31e46132"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54fd3a236f913fc0d238de2803a0156c" id="r_a54fd3a236f913fc0d238de2803a0156c"><td class="memTemplParams" colspan="2">template&lt;int N&gt; </td></tr>
 <tr class="memitem:a54fd3a236f913fc0d238de2803a0156c"><td class="memTemplItemLeft" align="right" valign="top">auto &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a54fd3a236f913fc0d238de2803a0156c">get</a> () noexcept</td></tr>
 <tr class="memdesc:a54fd3a236f913fc0d238de2803a0156c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets element by index.  <br /></td></tr>
@@ -397,21 +397,21 @@ template&lt;typename T1 , typename T2 &gt; </div>
 
 </div>
 </div>
-<a id="a5eb7ae2b18dee0608d9ccb745d4dd9df" name="a5eb7ae2b18dee0608d9ccb745d4dd9df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5eb7ae2b18dee0608d9ccb745d4dd9df">&#9670;&#160;</a></span>swap()</h2>
+<a id="ad431f0ba76ad16e3f05a357a31e46132" name="ad431f0ba76ad16e3f05a357a31e46132"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad431f0ba76ad16e3f05a357a31e46132">&#9670;&#160;</a></span>swap()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T1 , typename T2 &gt; </div>
 <div class="memtemplate">
-template&lt;typename U1  = T1, typename U2  = T2, typename  = std::enable_if_t&lt;std::is_same_v&lt;U1, U2&gt;&gt;&gt; </div>
+template&lt;typename U1  = T1, typename U2  = T2&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classVaPair.html">VaPair</a>&lt; T1, T2 &gt;::swap </td>
+          <td class="memname">tt::EnableIf&lt; tt::IsSame&lt; U1, U2 &gt; &gt; <a class="el" href="classVaPair.html">VaPair</a>&lt; T1, T2 &gt;::swap </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>

@@ -107,8 +107,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isEmpty</b> () const<
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:af09be6493db28a05788f37232cba0140" id="r_af09be6493db28a05788f37232cba0140"><td class="memItemLeft" align="right" valign="top"><a id="af09be6493db28a05788f37232cba0140" name="af09be6493db28a05788f37232cba0140"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>resize</b> (Size newCap)</td></tr>
+<tr class="memitem:af09be6493db28a05788f37232cba0140" id="r_af09be6493db28a05788f37232cba0140"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af09be6493db28a05788f37232cba0140">resize</a> (Size newCap)</td></tr>
+<tr class="memdesc:af09be6493db28a05788f37232cba0140"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resizes the internal buffer to a new capacity.  <br /></td></tr>
 <tr class="separator:af09be6493db28a05788f37232cba0140"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac75cacbdf97e2572ce000656489ebfaf" id="r_ac75cacbdf97e2572ce000656489ebfaf"><td class="memItemLeft" align="right" valign="top"><a id="ac75cacbdf97e2572ce000656489ebfaf" name="ac75cacbdf97e2572ce000656489ebfaf"></a>
 Size&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> () const</td></tr>
@@ -118,6 +118,7 @@ Size&#160;</td><td class="memItemRight" valign="bottom"><b>capacity</b> () const
 <tr class="separator:ae6cf23ea7cbb0af59a137f3a0a630d64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a523d42efbebac47f241d38eec9e7092c" id="r_a523d42efbebac47f241d38eec9e7092c"><td class="memItemLeft" align="right" valign="top"><a id="a523d42efbebac47f241d38eec9e7092c" name="a523d42efbebac47f241d38eec9e7092c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>deleteObjects</b> ()</td></tr>
+<tr class="memdesc:a523d42efbebac47f241d38eec9e7092c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys all elements if their type is not trivially destructible. <br /></td></tr>
 <tr class="separator:a523d42efbebac47f241d38eec9e7092c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe0d3804a6eeb1c87c92d996e6c414d9" id="r_abe0d3804a6eeb1c87c92d996e6c414d9"><td class="memItemLeft" align="right" valign="top"><a id="abe0d3804a6eeb1c87c92d996e6c414d9" name="abe0d3804a6eeb1c87c92d996e6c414d9"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>expand</b> ()</td></tr>
@@ -128,16 +129,52 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> ()</td></t
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a449a533d5b7500fae33b81e2a02c1b26" id="r_a449a533d5b7500fae33b81e2a02c1b26"><td class="memItemLeft" align="right" valign="top"><a id="a449a533d5b7500fae33b81e2a02c1b26" name="a449a533d5b7500fae33b81e2a02c1b26"></a>
-Size&#160;</td><td class="memItemRight" valign="bottom"><b>len</b></td></tr>
-<tr class="separator:a449a533d5b7500fae33b81e2a02c1b26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a832a1fb674b150045b1b5a0dce62ff87" id="r_a832a1fb674b150045b1b5a0dce62ff87"><td class="memItemLeft" align="right" valign="top"><a id="a832a1fb674b150045b1b5a0dce62ff87" name="a832a1fb674b150045b1b5a0dce62ff87"></a>
 Size&#160;</td><td class="memItemRight" valign="bottom"><b>cap</b></td></tr>
 <tr class="separator:a832a1fb674b150045b1b5a0dce62ff87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a449a533d5b7500fae33b81e2a02c1b26" id="r_a449a533d5b7500fae33b81e2a02c1b26"><td class="memItemLeft" align="right" valign="top"><a id="a449a533d5b7500fae33b81e2a02c1b26" name="a449a533d5b7500fae33b81e2a02c1b26"></a>
+Size&#160;</td><td class="memItemRight" valign="bottom"><b>len</b></td></tr>
+<tr class="separator:a449a533d5b7500fae33b81e2a02c1b26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a589b5ed1277c8c79653bbbdbf4de69c6" id="r_a589b5ed1277c8c79653bbbdbf4de69c6"><td class="memItemLeft" align="right" valign="top"><a id="a589b5ed1277c8c79653bbbdbf4de69c6" name="a589b5ed1277c8c79653bbbdbf4de69c6"></a>
 T *&#160;</td><td class="memItemRight" valign="bottom"><b>data</b></td></tr>
 <tr class="separator:a589b5ed1277c8c79653bbbdbf4de69c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="af09be6493db28a05788f37232cba0140" name="af09be6493db28a05788f37232cba0140"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af09be6493db28a05788f37232cba0140">&#9670;&#160;</a></span>resize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classva_1_1detail_1_1StackBase.html">va::detail::StackBase</a>&lt; T, void &gt;::resize </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>newCap</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resizes the internal buffer to a new capacity. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newCap</td><td>New capacity for the buffer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Include/VaLib/Types/<a class="el" href="Stack_8hpp_source.html">Stack.hpp</a></li>
 </ul>

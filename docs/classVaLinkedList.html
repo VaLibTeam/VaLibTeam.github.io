@@ -87,6 +87,7 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVaLinkedList_1_1ConstIterator.html">ConstIterator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides read-only bidirectional access to the list elements. Supports forward and backward traversal without modifying elements.  <a href="classVaLinkedList_1_1ConstIterator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
@@ -94,6 +95,10 @@ Public Types</h2></td></tr>
 <tr class="memitem:a148a201ea77f356f23ade5e16fdfb0c5" id="r_a148a201ea77f356f23ade5e16fdfb0c5"><td class="memItemLeft" align="right" valign="top"><a id="a148a201ea77f356f23ade5e16fdfb0c5" name="a148a201ea77f356f23ade5e16fdfb0c5"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>Node</b> = <a class="el" href="structVaLinkedListNode.html">VaLinkedListNode</a>&lt;T&gt;</td></tr>
 <tr class="separator:a148a201ea77f356f23ade5e16fdfb0c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa666e4c4fb31360e934ecced959a300a" id="r_aa666e4c4fb31360e934ecced959a300a"><td class="memItemLeft" align="right" valign="top"><a id="aa666e4c4fb31360e934ecced959a300a" name="aa666e4c4fb31360e934ecced959a300a"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>RawView</b> = <a class="el" href="structVaLinkedListRawView.html">VaLinkedListRawView</a>&lt;T&gt;</td></tr>
+<tr class="memdesc:aa666e4c4fb31360e934ecced959a300a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for a raw layout-compatible view of the linked list internals. This struct can be used for safe inspection or unsafe manipulation. <br /></td></tr>
+<tr class="separator:aa666e4c4fb31360e934ecced959a300a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd29536f4e3fe842325132ef767077e6" id="r_acd29536f4e3fe842325132ef767077e6"><td class="memItemLeft" align="right" valign="top"><a id="acd29536f4e3fe842325132ef767077e6" name="acd29536f4e3fe842325132ef767077e6"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>ReverseIterator</b> = std::reverse_iterator&lt;Iterator&gt;</td></tr>
 <tr class="separator:acd29536f4e3fe842325132ef767077e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -103,96 +108,208 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>ConstReverseIterator
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae69e554d39166d60cd28ce7f17d8d1b0" id="r_ae69e554d39166d60cd28ce7f17d8d1b0"><td class="memItemLeft" align="right" valign="top"><a id="ae69e554d39166d60cd28ce7f17d8d1b0" name="ae69e554d39166d60cd28ce7f17d8d1b0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>VaLinkedList</b> (Size initCap)</td></tr>
+<tr class="memitem:a4683b98136214e630d0c826a819f3b19" id="r_a4683b98136214e630d0c826a819f3b19"><td class="memItemLeft" align="right" valign="top"><a id="a4683b98136214e630d0c826a819f3b19" name="a4683b98136214e630d0c826a819f3b19"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>VaLinkedList</b> ()</td></tr>
+<tr class="memdesc:a4683b98136214e630d0c826a819f3b19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. Initializes an empty list with no reserved capacity. <br /></td></tr>
+<tr class="separator:a4683b98136214e630d0c826a819f3b19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae69e554d39166d60cd28ce7f17d8d1b0" id="r_ae69e554d39166d60cd28ce7f17d8d1b0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae69e554d39166d60cd28ce7f17d8d1b0">VaLinkedList</a> (Size initCap)</td></tr>
+<tr class="memdesc:ae69e554d39166d60cd28ce7f17d8d1b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an empty list and preallocates a given number of nodes.  <br /></td></tr>
 <tr class="separator:ae69e554d39166d60cd28ce7f17d8d1b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d1c84e9c5a0364b379d64b0ecd84e94" id="r_a3d1c84e9c5a0364b379d64b0ecd84e94"><td class="memItemLeft" align="right" valign="top"><a id="a3d1c84e9c5a0364b379d64b0ecd84e94" name="a3d1c84e9c5a0364b379d64b0ecd84e94"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>VaLinkedList</b> (const <a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;other)</td></tr>
+<tr class="memitem:a3d1c84e9c5a0364b379d64b0ecd84e94" id="r_a3d1c84e9c5a0364b379d64b0ecd84e94"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d1c84e9c5a0364b379d64b0ecd84e94">VaLinkedList</a> (const <a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;other)</td></tr>
+<tr class="memdesc:a3d1c84e9c5a0364b379d64b0ecd84e94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor. Creates a deep copy of another list, duplicating all elements.  <br /></td></tr>
 <tr class="separator:a3d1c84e9c5a0364b379d64b0ecd84e94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88404acb97594af51f2070991f38260a" id="r_a88404acb97594af51f2070991f38260a"><td class="memItemLeft" align="right" valign="top"><a id="a88404acb97594af51f2070991f38260a" name="a88404acb97594af51f2070991f38260a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>VaLinkedList</b> (std::initializer_list&lt; T &gt; init)</td></tr>
+<tr class="memitem:a88404acb97594af51f2070991f38260a" id="r_a88404acb97594af51f2070991f38260a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88404acb97594af51f2070991f38260a">VaLinkedList</a> (std::initializer_list&lt; T &gt; init)</td></tr>
+<tr class="memdesc:a88404acb97594af51f2070991f38260a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a list from an initializer list.  <br /></td></tr>
 <tr class="separator:a88404acb97594af51f2070991f38260a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02b7d7d75b090c517a4f04e2f7cef324" id="r_a02b7d7d75b090c517a4f04e2f7cef324"><td class="memItemLeft" align="right" valign="top"><a id="a02b7d7d75b090c517a4f04e2f7cef324" name="a02b7d7d75b090c517a4f04e2f7cef324"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>VaLinkedList</b> (<a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="memitem:a02b7d7d75b090c517a4f04e2f7cef324" id="r_a02b7d7d75b090c517a4f04e2f7cef324"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02b7d7d75b090c517a4f04e2f7cef324">VaLinkedList</a> (<a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="memdesc:a02b7d7d75b090c517a4f04e2f7cef324"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move constructor. Transfers ownership of resources from another list.  <br /></td></tr>
 <tr class="separator:a02b7d7d75b090c517a4f04e2f7cef324"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8753fb9fdf19f99e9fda8ca4f43ef73" id="r_aa8753fb9fdf19f99e9fda8ca4f43ef73"><td class="memItemLeft" align="right" valign="top"><a id="aa8753fb9fdf19f99e9fda8ca4f43ef73" name="aa8753fb9fdf19f99e9fda8ca4f43ef73"></a>
-<a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;other)</td></tr>
+<tr class="memitem:a75ad69bfd304f3c11b31ded0d8516199" id="r_a75ad69bfd304f3c11b31ded0d8516199"><td class="memItemLeft" align="right" valign="top"><a id="a75ad69bfd304f3c11b31ded0d8516199" name="a75ad69bfd304f3c11b31ded0d8516199"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>~VaLinkedList</b> ()</td></tr>
+<tr class="memdesc:a75ad69bfd304f3c11b31ded0d8516199"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. Destroys all elements and releases memory used by the free list. <br /></td></tr>
+<tr class="separator:a75ad69bfd304f3c11b31ded0d8516199"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8753fb9fdf19f99e9fda8ca4f43ef73" id="r_aa8753fb9fdf19f99e9fda8ca4f43ef73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8753fb9fdf19f99e9fda8ca4f43ef73">operator=</a> (const <a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;other)</td></tr>
+<tr class="memdesc:aa8753fb9fdf19f99e9fda8ca4f43ef73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy assignment operator. Replaces contents with a deep copy of another list.  <br /></td></tr>
 <tr class="separator:aa8753fb9fdf19f99e9fda8ca4f43ef73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b7e8337b8b4c8c0076ce2edfe622f0b" id="r_a7b7e8337b8b4c8c0076ce2edfe622f0b"><td class="memItemLeft" align="right" valign="top"><a id="a7b7e8337b8b4c8c0076ce2edfe622f0b" name="a7b7e8337b8b4c8c0076ce2edfe622f0b"></a>
-<a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="memitem:a7b7e8337b8b4c8c0076ce2edfe622f0b" id="r_a7b7e8337b8b4c8c0076ce2edfe622f0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b7e8337b8b4c8c0076ce2edfe622f0b">operator=</a> (<a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="memdesc:a7b7e8337b8b4c8c0076ce2edfe622f0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move assignment operator. Transfers ownership of contents from another list.  <br /></td></tr>
 <tr class="separator:a7b7e8337b8b4c8c0076ce2edfe622f0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa624b798f3f671de702b6ae6fe5cb9e" id="r_aaa624b798f3f671de702b6ae6fe5cb9e"><td class="memItemLeft" align="right" valign="top"><a id="aaa624b798f3f671de702b6ae6fe5cb9e" name="aaa624b798f3f671de702b6ae6fe5cb9e"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;other) const</td></tr>
-<tr class="separator:aaa624b798f3f671de702b6ae6fe5cb9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c3fe651dcfc030cf25d92c55dedfe97" id="r_a2c3fe651dcfc030cf25d92c55dedfe97"><td class="memItemLeft" align="right" valign="top"><a id="a2c3fe651dcfc030cf25d92c55dedfe97" name="a2c3fe651dcfc030cf25d92c55dedfe97"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;other) const</td></tr>
-<tr class="separator:a2c3fe651dcfc030cf25d92c55dedfe97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15126cc6db41cb79a3c0a07965d61b8f" id="r_a15126cc6db41cb79a3c0a07965d61b8f"><td class="memItemLeft" align="right" valign="top"><a id="a15126cc6db41cb79a3c0a07965d61b8f" name="a15126cc6db41cb79a3c0a07965d61b8f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;</b> (const <a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;other) const</td></tr>
-<tr class="separator:a15126cc6db41cb79a3c0a07965d61b8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a669791a8946bf53f4e830f7b7b542733" id="r_a669791a8946bf53f4e830f7b7b542733"><td class="memItemLeft" align="right" valign="top"><a id="a669791a8946bf53f4e830f7b7b542733" name="a669791a8946bf53f4e830f7b7b542733"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&gt;</b> (const <a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;other) const</td></tr>
-<tr class="separator:a669791a8946bf53f4e830f7b7b542733"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa52553e9151b61086d87e22fd51fd7c9" id="r_aa52553e9151b61086d87e22fd51fd7c9"><td class="memItemLeft" align="right" valign="top"><a id="aa52553e9151b61086d87e22fd51fd7c9" name="aa52553e9151b61086d87e22fd51fd7c9"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;=</b> (const <a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;other) const</td></tr>
-<tr class="separator:aa52553e9151b61086d87e22fd51fd7c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeadd6096b419c30688b0d1f0d0fcb76a" id="r_aeadd6096b419c30688b0d1f0d0fcb76a"><td class="memItemLeft" align="right" valign="top"><a id="aeadd6096b419c30688b0d1f0d0fcb76a" name="aeadd6096b419c30688b0d1f0d0fcb76a"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&gt;=</b> (const <a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;other) const</td></tr>
-<tr class="separator:aeadd6096b419c30688b0d1f0d0fcb76a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9cb2abe60b7dcc7e1d43e88273f0da0" id="r_af9cb2abe60b7dcc7e1d43e88273f0da0"><td class="memItemLeft" align="right" valign="top"><a id="af9cb2abe60b7dcc7e1d43e88273f0da0" name="af9cb2abe60b7dcc7e1d43e88273f0da0"></a>
-T &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> (Size index)</td></tr>
+<tr class="memitem:af9cb2abe60b7dcc7e1d43e88273f0da0" id="r_af9cb2abe60b7dcc7e1d43e88273f0da0"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9cb2abe60b7dcc7e1d43e88273f0da0">get</a> (Size index)</td></tr>
+<tr class="memdesc:af9cb2abe60b7dcc7e1d43e88273f0da0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the element at the given index.  <br /></td></tr>
 <tr class="separator:af9cb2abe60b7dcc7e1d43e88273f0da0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec6f851f008115c2af3b5c6211a8b87b" id="r_aec6f851f008115c2af3b5c6211a8b87b"><td class="memItemLeft" align="right" valign="top"><a id="aec6f851f008115c2af3b5c6211a8b87b" name="aec6f851f008115c2af3b5c6211a8b87b"></a>
-const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> (Size index) const</td></tr>
+<tr class="memitem:aec6f851f008115c2af3b5c6211a8b87b" id="r_aec6f851f008115c2af3b5c6211a8b87b"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec6f851f008115c2af3b5c6211a8b87b">get</a> (Size index) const</td></tr>
+<tr class="memdesc:aec6f851f008115c2af3b5c6211a8b87b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the element at the given index.  <br /></td></tr>
 <tr class="separator:aec6f851f008115c2af3b5c6211a8b87b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a593ea7dd9d840a7fa02fc440281bfe37" id="r_a593ea7dd9d840a7fa02fc440281bfe37"><td class="memItemLeft" align="right" valign="top"><a id="a593ea7dd9d840a7fa02fc440281bfe37" name="a593ea7dd9d840a7fa02fc440281bfe37"></a>
-T &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (Size index)</td></tr>
+<tr class="memitem:a593ea7dd9d840a7fa02fc440281bfe37" id="r_a593ea7dd9d840a7fa02fc440281bfe37"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a593ea7dd9d840a7fa02fc440281bfe37">operator[]</a> (Size index)</td></tr>
+<tr class="memdesc:a593ea7dd9d840a7fa02fc440281bfe37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides unchecked access to the element at the given index.  <br /></td></tr>
 <tr class="separator:a593ea7dd9d840a7fa02fc440281bfe37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e6887841a0a32183c487188ebc7b545" id="r_a7e6887841a0a32183c487188ebc7b545"><td class="memItemLeft" align="right" valign="top"><a id="a7e6887841a0a32183c487188ebc7b545" name="a7e6887841a0a32183c487188ebc7b545"></a>
-const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (Size index) const</td></tr>
+<tr class="memitem:a7e6887841a0a32183c487188ebc7b545" id="r_a7e6887841a0a32183c487188ebc7b545"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e6887841a0a32183c487188ebc7b545">operator[]</a> (Size index) const</td></tr>
+<tr class="memdesc:a7e6887841a0a32183c487188ebc7b545"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides unchecked const access to the element at the given index.  <br /></td></tr>
 <tr class="separator:a7e6887841a0a32183c487188ebc7b545"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a349eb4c62b0cee48f36c70ac734c6e40" id="r_a349eb4c62b0cee48f36c70ac734c6e40"><td class="memItemLeft" align="right" valign="top"><a id="a349eb4c62b0cee48f36c70ac734c6e40" name="a349eb4c62b0cee48f36c70ac734c6e40"></a>
-T &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>at</b> (Size index)</td></tr>
-<tr class="separator:a349eb4c62b0cee48f36c70ac734c6e40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8dcfa557003888f90e86a4803edfe40" id="r_ac8dcfa557003888f90e86a4803edfe40"><td class="memItemLeft" align="right" valign="top"><a id="ac8dcfa557003888f90e86a4803edfe40" name="ac8dcfa557003888f90e86a4803edfe40"></a>
-const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>at</b> (Size index) const</td></tr>
-<tr class="separator:ac8dcfa557003888f90e86a4803edfe40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc5e0643afc091b12edc362380846654" id="r_afc5e0643afc091b12edc362380846654"><td class="memItemLeft" align="right" valign="top"><a id="afc5e0643afc091b12edc362380846654" name="afc5e0643afc091b12edc362380846654"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>append</b> (const T &amp;value)</td></tr>
+<tr class="memitem:a8ba56d76e8551a6f2b0d4dc50f0d2152" id="r_a8ba56d76e8551a6f2b0d4dc50f0d2152"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ba56d76e8551a6f2b0d4dc50f0d2152">at</a> (int32 index)</td></tr>
+<tr class="memdesc:a8ba56d76e8551a6f2b0d4dc50f0d2152"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the element at the given index with bounds checking. Supports negative indexing, where -1 refers to the last element, -2 to the second last, and so on.  <br /></td></tr>
+<tr class="separator:a8ba56d76e8551a6f2b0d4dc50f0d2152"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a356ee195d0ab7c0f5ed4d139fd85b9fb" id="r_a356ee195d0ab7c0f5ed4d139fd85b9fb"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a356ee195d0ab7c0f5ed4d139fd85b9fb">at</a> (int32 index) const</td></tr>
+<tr class="memdesc:a356ee195d0ab7c0f5ed4d139fd85b9fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the element at the given index with bounds checking. Supports negative indexing, where -1 refers to the last element, -2 to the second last, and so on.  <br /></td></tr>
+<tr class="separator:a356ee195d0ab7c0f5ed4d139fd85b9fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae99346aa13cc2ee5f0bb350ab8cec087" id="r_ae99346aa13cc2ee5f0bb350ab8cec087"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae99346aa13cc2ee5f0bb350ab8cec087">set</a> (int32 index, const T &amp;value)</td></tr>
+<tr class="memdesc:ae99346aa13cc2ee5f0bb350ab8cec087"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value at the specified index to the given value. Supports negative indexing, where -1 refers to the last element, -2 to the second last, and so on.  <br /></td></tr>
+<tr class="separator:ae99346aa13cc2ee5f0bb350ab8cec087"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5a99402bf5d6c1b19b85a718b2f8d24" id="r_ac5a99402bf5d6c1b19b85a718b2f8d24"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5a99402bf5d6c1b19b85a718b2f8d24">set</a> (int32 index, T &amp;&amp;value)</td></tr>
+<tr class="memdesc:ac5a99402bf5d6c1b19b85a718b2f8d24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value at the specified index to the given value (move version). Supports negative indexing, where -1 refers to the last element, -2 to the second last, and so on.  <br /></td></tr>
+<tr class="separator:ac5a99402bf5d6c1b19b85a718b2f8d24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc5e0643afc091b12edc362380846654" id="r_afc5e0643afc091b12edc362380846654"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc5e0643afc091b12edc362380846654">append</a> (const T &amp;value)</td></tr>
+<tr class="memdesc:afc5e0643afc091b12edc362380846654"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a new element to the end of the list.  <br /></td></tr>
 <tr class="separator:afc5e0643afc091b12edc362380846654"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74cf61d979781be5cf2855a9e2596902" id="r_a74cf61d979781be5cf2855a9e2596902"><td class="memItemLeft" align="right" valign="top"><a id="a74cf61d979781be5cf2855a9e2596902" name="a74cf61d979781be5cf2855a9e2596902"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>append</b> (T &amp;&amp;value)</td></tr>
+<tr class="memitem:a74cf61d979781be5cf2855a9e2596902" id="r_a74cf61d979781be5cf2855a9e2596902"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74cf61d979781be5cf2855a9e2596902">append</a> (T &amp;&amp;value)</td></tr>
+<tr class="memdesc:a74cf61d979781be5cf2855a9e2596902"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a new element to the end of the list (move version).  <br /></td></tr>
 <tr class="separator:a74cf61d979781be5cf2855a9e2596902"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad72fcd896f618298fc3015e73c98130c" id="r_ad72fcd896f618298fc3015e73c98130c"><td class="memItemLeft" align="right" valign="top"><a id="ad72fcd896f618298fc3015e73c98130c" name="ad72fcd896f618298fc3015e73c98130c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>prepend</b> (const T &amp;value)</td></tr>
+<tr class="memitem:ad72fcd896f618298fc3015e73c98130c" id="r_ad72fcd896f618298fc3015e73c98130c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad72fcd896f618298fc3015e73c98130c">prepend</a> (const T &amp;value)</td></tr>
+<tr class="memdesc:ad72fcd896f618298fc3015e73c98130c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepends a new element to the beginning of the list.  <br /></td></tr>
 <tr class="separator:ad72fcd896f618298fc3015e73c98130c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c5c1641896842ca8668de3082c7f1bb" id="r_a0c5c1641896842ca8668de3082c7f1bb"><td class="memItemLeft" align="right" valign="top"><a id="a0c5c1641896842ca8668de3082c7f1bb" name="a0c5c1641896842ca8668de3082c7f1bb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>prepend</b> (T &amp;&amp;value)</td></tr>
+<tr class="memitem:a0c5c1641896842ca8668de3082c7f1bb" id="r_a0c5c1641896842ca8668de3082c7f1bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c5c1641896842ca8668de3082c7f1bb">prepend</a> (T &amp;&amp;value)</td></tr>
+<tr class="memdesc:a0c5c1641896842ca8668de3082c7f1bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepends a new element to the beginning of the list (move version).  <br /></td></tr>
 <tr class="separator:a0c5c1641896842ca8668de3082c7f1bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c3e25d2f8369e639d1c85085811c02a" id="r_a9c3e25d2f8369e639d1c85085811c02a"><td class="memItemLeft" align="right" valign="top"><a id="a9c3e25d2f8369e639d1c85085811c02a" name="a9c3e25d2f8369e639d1c85085811c02a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>insert</b> (Size index, const T &amp;value)</td></tr>
+<tr class="memitem:a9c3e25d2f8369e639d1c85085811c02a" id="r_a9c3e25d2f8369e639d1c85085811c02a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c3e25d2f8369e639d1c85085811c02a">insert</a> (Size index, const T &amp;value)</td></tr>
+<tr class="memdesc:a9c3e25d2f8369e639d1c85085811c02a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts a new element at the specified index.  <br /></td></tr>
 <tr class="separator:a9c3e25d2f8369e639d1c85085811c02a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a138d34210e22e47a29d833c7dc18fd72" id="r_a138d34210e22e47a29d833c7dc18fd72"><td class="memItemLeft" align="right" valign="top"><a id="a138d34210e22e47a29d833c7dc18fd72" name="a138d34210e22e47a29d833c7dc18fd72"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>insert</b> (Size index, T &amp;&amp;value)</td></tr>
+<tr class="memitem:a138d34210e22e47a29d833c7dc18fd72" id="r_a138d34210e22e47a29d833c7dc18fd72"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a138d34210e22e47a29d833c7dc18fd72">insert</a> (Size index, T &amp;&amp;value)</td></tr>
+<tr class="memdesc:a138d34210e22e47a29d833c7dc18fd72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts a new element at the specified index (move version).  <br /></td></tr>
 <tr class="separator:a138d34210e22e47a29d833c7dc18fd72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14079ef6cd28492f0e8297110420b16a" id="r_a14079ef6cd28492f0e8297110420b16a"><td class="memItemLeft" align="right" valign="top"><a id="a14079ef6cd28492f0e8297110420b16a" name="a14079ef6cd28492f0e8297110420b16a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>del</b> (Size index)</td></tr>
+<tr class="memitem:ac32adf02a4c5e19505bf32ea7ccbbe0f" id="r_ac32adf02a4c5e19505bf32ea7ccbbe0f"><td class="memTemplParams" colspan="2"><a id="ac32adf02a4c5e19505bf32ea7ccbbe0f" name="ac32adf02a4c5e19505bf32ea7ccbbe0f"></a>
+template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:ac32adf02a4c5e19505bf32ea7ccbbe0f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>appendEmplace</b> (Args &amp;&amp;... args)</td></tr>
+<tr class="separator:ac32adf02a4c5e19505bf32ea7ccbbe0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71f0c7d9cc5da144e3760b7d2df23abc" id="r_a71f0c7d9cc5da144e3760b7d2df23abc"><td class="memTemplParams" colspan="2"><a id="a71f0c7d9cc5da144e3760b7d2df23abc" name="a71f0c7d9cc5da144e3760b7d2df23abc"></a>
+template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:a71f0c7d9cc5da144e3760b7d2df23abc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>prependEmplace</b> (Args &amp;&amp;... args)</td></tr>
+<tr class="separator:a71f0c7d9cc5da144e3760b7d2df23abc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac892c1469f90524f248592e14d506858" id="r_ac892c1469f90524f248592e14d506858"><td class="memTemplParams" colspan="2"><a id="ac892c1469f90524f248592e14d506858" name="ac892c1469f90524f248592e14d506858"></a>
+template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:ac892c1469f90524f248592e14d506858"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>insertEmplace</b> (Size index, Args &amp;&amp;... args)</td></tr>
+<tr class="separator:ac892c1469f90524f248592e14d506858"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaed873f8f6104e1bc83ae2b759294231" id="r_aaed873f8f6104e1bc83ae2b759294231"><td class="memTemplParams" colspan="2">template&lt;typename Iterable &gt; </td></tr>
+<tr class="memitem:aaed873f8f6104e1bc83ae2b759294231"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aaed873f8f6104e1bc83ae2b759294231">appendEach</a> (const Iterable &amp;iterable)</td></tr>
+<tr class="memdesc:aaed873f8f6104e1bc83ae2b759294231"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends each element from an iterable container to the end of the list.  <br /></td></tr>
+<tr class="separator:aaed873f8f6104e1bc83ae2b759294231"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af413d4d78c95e8d359ec2465ef7eda6f" id="r_af413d4d78c95e8d359ec2465ef7eda6f"><td class="memTemplParams" colspan="2">template&lt;typename Iterable , typename  = tt::EnableIf&lt;!tt::IsSame&lt;tt::RemoveCVRef&lt;Iterable&gt;, VaLinkedList&lt;T&gt;&gt;&gt;&gt; </td></tr>
+<tr class="memitem:af413d4d78c95e8d359ec2465ef7eda6f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af413d4d78c95e8d359ec2465ef7eda6f">appendEach</a> (Iterable &amp;&amp;iterable)</td></tr>
+<tr class="memdesc:af413d4d78c95e8d359ec2465ef7eda6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends each element from an iterable container to the end of the list (move version).  <br /></td></tr>
+<tr class="separator:af413d4d78c95e8d359ec2465ef7eda6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0286ad8b53d639731c77329ff064308" id="r_ac0286ad8b53d639731c77329ff064308"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0286ad8b53d639731c77329ff064308">appendEach</a> (const <a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;other)</td></tr>
+<tr class="memdesc:ac0286ad8b53d639731c77329ff064308"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends all elements from another linked list to the end of this list.  <br /></td></tr>
+<tr class="separator:ac0286ad8b53d639731c77329ff064308"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a582b316ba9687703b7326837247178a2" id="r_a582b316ba9687703b7326837247178a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a582b316ba9687703b7326837247178a2">appendEach</a> (<a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;&amp;other)</td></tr>
+<tr class="memdesc:a582b316ba9687703b7326837247178a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends all elements from another linked list to the end of this list (move version).  <br /></td></tr>
+<tr class="separator:a582b316ba9687703b7326837247178a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d2cca15f5bfa23fde789c3a9fb44915" id="r_a6d2cca15f5bfa23fde789c3a9fb44915"><td class="memTemplParams" colspan="2"><a id="a6d2cca15f5bfa23fde789c3a9fb44915" name="a6d2cca15f5bfa23fde789c3a9fb44915"></a>
+template&lt;typename Iterable &gt; </td></tr>
+<tr class="memitem:a6d2cca15f5bfa23fde789c3a9fb44915"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>extend</b> (const Iterable &amp;iterable)</td></tr>
+<tr class="separator:a6d2cca15f5bfa23fde789c3a9fb44915"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42c1b227fb350df471216eb906800f86" id="r_a42c1b227fb350df471216eb906800f86"><td class="memTemplParams" colspan="2"><a id="a42c1b227fb350df471216eb906800f86" name="a42c1b227fb350df471216eb906800f86"></a>
+template&lt;typename Iterable , typename  = tt::EnableIf&lt;!tt::IsSame&lt;tt::RemoveCVRef&lt;Iterable&gt;, VaLinkedList&lt;T&gt;&gt;&gt;&gt; </td></tr>
+<tr class="memitem:a42c1b227fb350df471216eb906800f86"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>extend</b> (Iterable &amp;&amp;iterable)</td></tr>
+<tr class="separator:a42c1b227fb350df471216eb906800f86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a126c1c42979c88b98c7145d1c7268953" id="r_a126c1c42979c88b98c7145d1c7268953"><td class="memTemplParams" colspan="2">template&lt;typename Iterable &gt; </td></tr>
+<tr class="memitem:a126c1c42979c88b98c7145d1c7268953"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a126c1c42979c88b98c7145d1c7268953">prependEach</a> (const Iterable &amp;iterable)</td></tr>
+<tr class="memdesc:a126c1c42979c88b98c7145d1c7268953"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepends each element from an iterable container to the beginning of the list.  <br /></td></tr>
+<tr class="separator:a126c1c42979c88b98c7145d1c7268953"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b18b5466e392ffe2b0e515abf5ceeee" id="r_a5b18b5466e392ffe2b0e515abf5ceeee"><td class="memTemplParams" colspan="2">template&lt;typename Iterable , typename  = tt::EnableIf&lt;!tt::IsSame&lt;tt::RemoveCVRef&lt;Iterable&gt;, VaLinkedList&lt;T&gt;&gt;&gt;&gt; </td></tr>
+<tr class="memitem:a5b18b5466e392ffe2b0e515abf5ceeee"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5b18b5466e392ffe2b0e515abf5ceeee">prependEach</a> (Iterable &amp;&amp;iterable)</td></tr>
+<tr class="memdesc:a5b18b5466e392ffe2b0e515abf5ceeee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepends each element from an iterable container to the beginning of the list (move version).  <br /></td></tr>
+<tr class="separator:a5b18b5466e392ffe2b0e515abf5ceeee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca3552bf5194c05c0aedf4cef7faedf5" id="r_aca3552bf5194c05c0aedf4cef7faedf5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca3552bf5194c05c0aedf4cef7faedf5">prependEach</a> (const <a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;other)</td></tr>
+<tr class="memdesc:aca3552bf5194c05c0aedf4cef7faedf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepends all elements from another linked list to the beginning of this list.  <br /></td></tr>
+<tr class="separator:aca3552bf5194c05c0aedf4cef7faedf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4b468a1d71976145ecefa7e0452b12d" id="r_ab4b468a1d71976145ecefa7e0452b12d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4b468a1d71976145ecefa7e0452b12d">prependEach</a> (<a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;&amp;other)</td></tr>
+<tr class="memdesc:ab4b468a1d71976145ecefa7e0452b12d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepends all elements from another linked list to the beginning of this list (move version).  <br /></td></tr>
+<tr class="separator:ab4b468a1d71976145ecefa7e0452b12d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a731d404d060c5e5392b5206efefc8072" id="r_a731d404d060c5e5392b5206efefc8072"><td class="memTemplParams" colspan="2">template&lt;typename Iterable &gt; </td></tr>
+<tr class="memitem:a731d404d060c5e5392b5206efefc8072"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a731d404d060c5e5392b5206efefc8072">insertEach</a> (Size pos, const Iterable &amp;iterable)</td></tr>
+<tr class="memdesc:a731d404d060c5e5392b5206efefc8072"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts each element from an iterable container at the specified position in the list.  <br /></td></tr>
+<tr class="separator:a731d404d060c5e5392b5206efefc8072"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c7cc00a603b13530c333357f7b6e88c" id="r_a2c7cc00a603b13530c333357f7b6e88c"><td class="memTemplParams" colspan="2">template&lt;typename Iterable , typename  = tt::EnableIf&lt;!tt::IsSame&lt;tt::RemoveCVRef&lt;Iterable&gt;, VaLinkedList&lt;T&gt;&gt;&gt;&gt; </td></tr>
+<tr class="memitem:a2c7cc00a603b13530c333357f7b6e88c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a2c7cc00a603b13530c333357f7b6e88c">insertEach</a> (Size pos, Iterable &amp;&amp;iterable)</td></tr>
+<tr class="memdesc:a2c7cc00a603b13530c333357f7b6e88c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts each element from an iterable container at the specified position in the list (move version).  <br /></td></tr>
+<tr class="separator:a2c7cc00a603b13530c333357f7b6e88c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a249f04dfc93b76a79d3abc9e3ebea692" id="r_a249f04dfc93b76a79d3abc9e3ebea692"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a249f04dfc93b76a79d3abc9e3ebea692">insertEach</a> (Size pos, const <a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;other)</td></tr>
+<tr class="memdesc:a249f04dfc93b76a79d3abc9e3ebea692"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts all elements from another linked list at the specified position in this list.  <br /></td></tr>
+<tr class="separator:a249f04dfc93b76a79d3abc9e3ebea692"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a363653639853e8ed7e5459a202936fd6" id="r_a363653639853e8ed7e5459a202936fd6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a363653639853e8ed7e5459a202936fd6">insertEach</a> (Size pos, <a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;&amp;other)</td></tr>
+<tr class="memdesc:a363653639853e8ed7e5459a202936fd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts all elements from another linked list at the specified position in this list (move version).  <br /></td></tr>
+<tr class="separator:a363653639853e8ed7e5459a202936fd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a600a136ad467dddff305ab22ca872d0d" id="r_a600a136ad467dddff305ab22ca872d0d"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:a600a136ad467dddff305ab22ca872d0d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a600a136ad467dddff305ab22ca872d0d">appendAll</a> (Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:a600a136ad467dddff305ab22ca872d0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends multiple elements to the end of the list.  <br /></td></tr>
+<tr class="separator:a600a136ad467dddff305ab22ca872d0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa60b56478145346c8867f79245200f9c" id="r_aa60b56478145346c8867f79245200f9c"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:aa60b56478145346c8867f79245200f9c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa60b56478145346c8867f79245200f9c">prependAll</a> (Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:aa60b56478145346c8867f79245200f9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepends multiple elements to the beginning of the list.  <br /></td></tr>
+<tr class="separator:aa60b56478145346c8867f79245200f9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf0249fd0551d61861d4c81126350449" id="r_aaf0249fd0551d61861d4c81126350449"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:aaf0249fd0551d61861d4c81126350449"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aaf0249fd0551d61861d4c81126350449">insertAll</a> (Size index, Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:aaf0249fd0551d61861d4c81126350449"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts multiple elements at the specified index in the list.  <br /></td></tr>
+<tr class="separator:aaf0249fd0551d61861d4c81126350449"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14079ef6cd28492f0e8297110420b16a" id="r_a14079ef6cd28492f0e8297110420b16a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14079ef6cd28492f0e8297110420b16a">del</a> (Size index)</td></tr>
+<tr class="memdesc:a14079ef6cd28492f0e8297110420b16a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the element at the specified index.  <br /></td></tr>
 <tr class="separator:a14079ef6cd28492f0e8297110420b16a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10d34e257a159b8c48e018d6263b3cdd" id="r_a10d34e257a159b8c48e018d6263b3cdd"><td class="memItemLeft" align="right" valign="top"><a id="a10d34e257a159b8c48e018d6263b3cdd" name="a10d34e257a159b8c48e018d6263b3cdd"></a>
-T&#160;</td><td class="memItemRight" valign="bottom"><b>pop</b> ()</td></tr>
+<tr class="memitem:a10d34e257a159b8c48e018d6263b3cdd" id="r_a10d34e257a159b8c48e018d6263b3cdd"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10d34e257a159b8c48e018d6263b3cdd">pop</a> ()</td></tr>
+<tr class="memdesc:a10d34e257a159b8c48e018d6263b3cdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes and returns the last element in the list.  <br /></td></tr>
 <tr class="separator:a10d34e257a159b8c48e018d6263b3cdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a249ea5644661d1f73fe38991044d4e" id="r_a8a249ea5644661d1f73fe38991044d4e"><td class="memItemLeft" align="right" valign="top"><a id="a8a249ea5644661d1f73fe38991044d4e" name="a8a249ea5644661d1f73fe38991044d4e"></a>
-T&#160;</td><td class="memItemRight" valign="bottom"><b>shift</b> ()</td></tr>
+<tr class="memitem:a80e9fae8445fd67b36d4c06a88499174" id="r_a80e9fae8445fd67b36d4c06a88499174"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80e9fae8445fd67b36d4c06a88499174">pop</a> (Size index)</td></tr>
+<tr class="memdesc:a80e9fae8445fd67b36d4c06a88499174"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes and returns the element at the specified index.  <br /></td></tr>
+<tr class="separator:a80e9fae8445fd67b36d4c06a88499174"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a249ea5644661d1f73fe38991044d4e" id="r_a8a249ea5644661d1f73fe38991044d4e"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a249ea5644661d1f73fe38991044d4e">shift</a> ()</td></tr>
+<tr class="memdesc:a8a249ea5644661d1f73fe38991044d4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes and returns the first element in the list.  <br /></td></tr>
 <tr class="separator:a8a249ea5644661d1f73fe38991044d4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa0c92c40ab3991f3f61a722c0110cf0" id="r_afa0c92c40ab3991f3f61a722c0110cf0"><td class="memItemLeft" align="right" valign="top"><a id="afa0c92c40ab3991f3f61a722c0110cf0" name="afa0c92c40ab3991f3f61a722c0110cf0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>reserve</b> (Size minCap) noexcept</td></tr>
+<tr class="memitem:a76971702048a786242bc02651547cdcd" id="r_a76971702048a786242bc02651547cdcd"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76971702048a786242bc02651547cdcd">front</a> ()</td></tr>
+<tr class="memdesc:a76971702048a786242bc02651547cdcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the first element in the list.  <br /></td></tr>
+<tr class="separator:a76971702048a786242bc02651547cdcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc7a5c8ec0b31b18f3bca029738ba454" id="r_acc7a5c8ec0b31b18f3bca029738ba454"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc7a5c8ec0b31b18f3bca029738ba454">front</a> () const</td></tr>
+<tr class="memdesc:acc7a5c8ec0b31b18f3bca029738ba454"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the first element in the list.  <br /></td></tr>
+<tr class="separator:acc7a5c8ec0b31b18f3bca029738ba454"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b7b279584a4d25f7651ee16924436e4" id="r_a6b7b279584a4d25f7651ee16924436e4"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b7b279584a4d25f7651ee16924436e4">back</a> ()</td></tr>
+<tr class="memdesc:a6b7b279584a4d25f7651ee16924436e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the last element in the list.  <br /></td></tr>
+<tr class="separator:a6b7b279584a4d25f7651ee16924436e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acacf8c08a0115d7cada4b2652375aade" id="r_acacf8c08a0115d7cada4b2652375aade"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acacf8c08a0115d7cada4b2652375aade">back</a> () const</td></tr>
+<tr class="memdesc:acacf8c08a0115d7cada4b2652375aade"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the last element in the list.  <br /></td></tr>
+<tr class="separator:acacf8c08a0115d7cada4b2652375aade"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd21d23ca56a3e4e1a510cff2dae656d" id="r_afd21d23ca56a3e4e1a510cff2dae656d"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd21d23ca56a3e4e1a510cff2dae656d">frontUnchecked</a> () noexcept</td></tr>
+<tr class="memdesc:afd21d23ca56a3e4e1a510cff2dae656d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the first element in the list without bounds checking.  <br /></td></tr>
+<tr class="separator:afd21d23ca56a3e4e1a510cff2dae656d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cf7a951833a86c19de4c98445e5ad9a" id="r_a6cf7a951833a86c19de4c98445e5ad9a"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6cf7a951833a86c19de4c98445e5ad9a">frontUnchecked</a> () const noexcept</td></tr>
+<tr class="memdesc:a6cf7a951833a86c19de4c98445e5ad9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the first element in the list without bounds checking.  <br /></td></tr>
+<tr class="separator:a6cf7a951833a86c19de4c98445e5ad9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae16c1121b602ca10b1631f33c709d9b4" id="r_ae16c1121b602ca10b1631f33c709d9b4"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae16c1121b602ca10b1631f33c709d9b4">backUnchecked</a> () noexcept</td></tr>
+<tr class="memdesc:ae16c1121b602ca10b1631f33c709d9b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the last element in the list without bounds checking.  <br /></td></tr>
+<tr class="separator:ae16c1121b602ca10b1631f33c709d9b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac98e5b8be57ad15d8d972d3d9f0354f1" id="r_ac98e5b8be57ad15d8d972d3d9f0354f1"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac98e5b8be57ad15d8d972d3d9f0354f1">backUnchecked</a> () const noexcept</td></tr>
+<tr class="memdesc:ac98e5b8be57ad15d8d972d3d9f0354f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the last element in the list without bounds checking.  <br /></td></tr>
+<tr class="separator:ac98e5b8be57ad15d8d972d3d9f0354f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa0c92c40ab3991f3f61a722c0110cf0" id="r_afa0c92c40ab3991f3f61a722c0110cf0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa0c92c40ab3991f3f61a722c0110cf0">reserve</a> (Size minCap) noexcept</td></tr>
+<tr class="memdesc:afa0c92c40ab3991f3f61a722c0110cf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensures the internal storage can accommodate at least the given number of elements.  <br /></td></tr>
 <tr class="separator:afa0c92c40ab3991f3f61a722c0110cf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10c60e9cff4ac33446d99b08a3a170b4" id="r_a10c60e9cff4ac33446d99b08a3a170b4"><td class="memItemLeft" align="right" valign="top"><a id="a10c60e9cff4ac33446d99b08a3a170b4" name="a10c60e9cff4ac33446d99b08a3a170b4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>shrink</b> () noexcept</td></tr>
+<tr class="memitem:a10c60e9cff4ac33446d99b08a3a170b4" id="r_a10c60e9cff4ac33446d99b08a3a170b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10c60e9cff4ac33446d99b08a3a170b4">shrink</a> () noexcept</td></tr>
+<tr class="memdesc:a10c60e9cff4ac33446d99b08a3a170b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees all unused nodes currently in the free list.  <br /></td></tr>
 <tr class="separator:a10c60e9cff4ac33446d99b08a3a170b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8565b0b96ebe2be2a28cbeeba20674c" id="r_af8565b0b96ebe2be2a28cbeeba20674c"><td class="memItemLeft" align="right" valign="top"><a id="af8565b0b96ebe2be2a28cbeeba20674c" name="af8565b0b96ebe2be2a28cbeeba20674c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> (bool destroyNodes=false) noexcept</td></tr>
+<tr class="memitem:ae23dbe55fccecf63b77b244e665e04c1" id="r_ae23dbe55fccecf63b77b244e665e04c1"><td class="memItemLeft" align="right" valign="top"><a id="ae23dbe55fccecf63b77b244e665e04c1" name="ae23dbe55fccecf63b77b244e665e04c1"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isEmpty</b> ()</td></tr>
+<tr class="separator:ae23dbe55fccecf63b77b244e665e04c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8565b0b96ebe2be2a28cbeeba20674c" id="r_af8565b0b96ebe2be2a28cbeeba20674c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8565b0b96ebe2be2a28cbeeba20674c">clear</a> (bool destroyNodes=false) noexcept</td></tr>
+<tr class="memdesc:af8565b0b96ebe2be2a28cbeeba20674c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all elements from the list.  <br /></td></tr>
 <tr class="separator:af8565b0b96ebe2be2a28cbeeba20674c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a516cf243ac23571a2c105d52de2b2389" id="r_a516cf243ac23571a2c105d52de2b2389"><td class="memItemLeft" align="right" valign="top">Size&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a516cf243ac23571a2c105d52de2b2389">getLength</a> () const noexcept</td></tr>
+<tr class="memdesc:a516cf243ac23571a2c105d52de2b2389"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of elements currently stored in the list.  <br /></td></tr>
+<tr class="separator:a516cf243ac23571a2c105d52de2b2389"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5616a798ade3d8b94570cfda2fbd9ab5" id="r_a5616a798ade3d8b94570cfda2fbd9ab5"><td class="memItemLeft" align="right" valign="top">Size&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5616a798ade3d8b94570cfda2fbd9ab5">getCapacity</a> () const noexcept</td></tr>
+<tr class="memdesc:a5616a798ade3d8b94570cfda2fbd9ab5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total capacity of the linked list. This method calculates the total capacity of the linked list, which is the sum of the number of elements currently stored in the list (<code>len</code>) and the number of unused nodes available in the free list (<code>freeListSize</code>).  <br /></td></tr>
+<tr class="separator:a5616a798ade3d8b94570cfda2fbd9ab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6564b8228b875f9a6a753506161bb5b2" id="r_a6564b8228b875f9a6a753506161bb5b2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="#aa666e4c4fb31360e934ecced959a300a">RawView</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6564b8228b875f9a6a753506161bb5b2">getRawView</a> () const</td></tr>
+<tr class="memdesc:a6564b8228b875f9a6a753506161bb5b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a read-only view of the linked list internals. Reinterprets this list as a const-qualified raw view struct.  <br /></td></tr>
+<tr class="separator:a6564b8228b875f9a6a753506161bb5b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a733f02590898cf72ded09d77d9ea8d9d" id="r_a733f02590898cf72ded09d77d9ea8d9d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aa666e4c4fb31360e934ecced959a300a">RawView</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a733f02590898cf72ded09d77d9ea8d9d">getUnsafeAccess</a> ()</td></tr>
+<tr class="memdesc:a733f02590898cf72ded09d77d9ea8d9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable raw view of the linked list internals. Reinterprets this list as a <code><a class="el" href="structVaLinkedListRawView.html" title="Raw view into the internal state of a linked list. This struct provides layout-compatible access to t...">VaLinkedListRawView</a>&lt;T&gt;*</code>. Allows full mutation of head/tail/length/freelist pointers.  <br /></td></tr>
+<tr class="separator:a733f02590898cf72ded09d77d9ea8d9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93264891e7df776f1a16436d6e4bad71" id="r_a93264891e7df776f1a16436d6e4bad71"><td class="memItemLeft" align="right" valign="top"><a id="a93264891e7df776f1a16436d6e4bad71" name="a93264891e7df776f1a16436d6e4bad71"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Iterator</b> (<a class="el" href="structVaLinkedListNode.html">Node</a> *node)</td></tr>
 <tr class="separator:a93264891e7df776f1a16436d6e4bad71"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -260,68 +377,2806 @@ ConstReverseIterator&#160;</td><td class="memItemRight" valign="bottom"><b>crend
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a726da6b11bbcddc364dbbffed353fa79" id="r_a726da6b11bbcddc364dbbffed353fa79"><td class="memItemLeft" align="right" valign="top"><a id="a726da6b11bbcddc364dbbffed353fa79" name="a726da6b11bbcddc364dbbffed353fa79"></a>
-friends&#160;</td><td class="memItemRight" valign="bottom">: friend inline Size len(const <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&amp; lst) noexcept { return lst.len</td></tr>
+friends&#160;</td><td class="memItemRight" valign="bottom">: friend inline Size <a class="el" href="#a339eeb5f00bc282a890ea4f695b5a40a">len</a>(const <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&amp; lst) noexcept { return lst.len</td></tr>
 <tr class="separator:a726da6b11bbcddc364dbbffed353fa79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c23ca9361d14f67d535326442cbced7" id="r_a1c23ca9361d14f67d535326442cbced7"><td class="memItemLeft" align="right" valign="top"><a id="a1c23ca9361d14f67d535326442cbced7" name="a1c23ca9361d14f67d535326442cbced7"></a>
-iterators&#160;</td><td class="memItemRight" valign="bottom">: class Iterator { <a class="el" href="structVaLinkedListNode.html">Node</a>* current</td></tr>
+iterators&#160;</td><td class="memItemRight" valign="bottom">: class Iterator { protected: <a class="el" href="structVaLinkedListNode.html">Node</a>* current</td></tr>
 <tr class="separator:a1c23ca9361d14f67d535326442cbced7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:ada6aede19af5dc5d63f700871a146399" id="r_ada6aede19af5dc5d63f700871a146399"><td class="memItemLeft" align="right" valign="top"><a id="ada6aede19af5dc5d63f700871a146399" name="ada6aede19af5dc5d63f700871a146399"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>unlinkFromOrder</b> (<a class="el" href="structVaLinkedListNode.html">Node</a> *node) noexcept</td></tr>
+<tr class="memitem:ada6aede19af5dc5d63f700871a146399" id="r_ada6aede19af5dc5d63f700871a146399"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada6aede19af5dc5d63f700871a146399">unlinkFromOrder</a> (<a class="el" href="structVaLinkedListNode.html">Node</a> *node) noexcept</td></tr>
+<tr class="memdesc:ada6aede19af5dc5d63f700871a146399"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unlinks a node from the list without deallocating it.  <br /></td></tr>
 <tr class="separator:ada6aede19af5dc5d63f700871a146399"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab36111dfdd4135dfbc16902292dfd7a4" id="r_ab36111dfdd4135dfbc16902292dfd7a4"><td class="memItemLeft" align="right" valign="top"><a id="ab36111dfdd4135dfbc16902292dfd7a4" name="ab36111dfdd4135dfbc16902292dfd7a4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>linkToEnd</b> (<a class="el" href="structVaLinkedListNode.html">Node</a> *node) noexcept</td></tr>
+<tr class="memitem:ab36111dfdd4135dfbc16902292dfd7a4" id="r_ab36111dfdd4135dfbc16902292dfd7a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab36111dfdd4135dfbc16902292dfd7a4">linkToEnd</a> (<a class="el" href="structVaLinkedListNode.html">Node</a> *node) noexcept</td></tr>
+<tr class="memdesc:ab36111dfdd4135dfbc16902292dfd7a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a node to the end of the list.  <br /></td></tr>
 <tr class="separator:ab36111dfdd4135dfbc16902292dfd7a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe900302c4047dd4ea31ecfec94a4562" id="r_abe900302c4047dd4ea31ecfec94a4562"><td class="memItemLeft" align="right" valign="top"><a id="abe900302c4047dd4ea31ecfec94a4562" name="abe900302c4047dd4ea31ecfec94a4562"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>linkToFront</b> (<a class="el" href="structVaLinkedListNode.html">Node</a> *node) noexcept</td></tr>
+<tr class="memitem:abe900302c4047dd4ea31ecfec94a4562" id="r_abe900302c4047dd4ea31ecfec94a4562"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe900302c4047dd4ea31ecfec94a4562">linkToFront</a> (<a class="el" href="structVaLinkedListNode.html">Node</a> *node) noexcept</td></tr>
+<tr class="memdesc:abe900302c4047dd4ea31ecfec94a4562"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts a node at the front of the list.  <br /></td></tr>
 <tr class="separator:abe900302c4047dd4ea31ecfec94a4562"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5c9943465fef2b583d562a9e8519d41" id="r_ad5c9943465fef2b583d562a9e8519d41"><td class="memItemLeft" align="right" valign="top"><a id="ad5c9943465fef2b583d562a9e8519d41" name="ad5c9943465fef2b583d562a9e8519d41"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>insertBefore</b> (<a class="el" href="structVaLinkedListNode.html">Node</a> *target, <a class="el" href="structVaLinkedListNode.html">Node</a> *node) noexcept</td></tr>
+<tr class="memitem:ad5c9943465fef2b583d562a9e8519d41" id="r_ad5c9943465fef2b583d562a9e8519d41"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5c9943465fef2b583d562a9e8519d41">insertBefore</a> (<a class="el" href="structVaLinkedListNode.html">Node</a> *target, <a class="el" href="structVaLinkedListNode.html">Node</a> *node) noexcept</td></tr>
+<tr class="memdesc:ad5c9943465fef2b583d562a9e8519d41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts a node before a given target node in the list.  <br /></td></tr>
 <tr class="separator:ad5c9943465fef2b583d562a9e8519d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98643bb5cb4fa32d5a0bee6812a60ab6" id="r_a98643bb5cb4fa32d5a0bee6812a60ab6"><td class="memItemLeft" align="right" valign="top"><a id="a98643bb5cb4fa32d5a0bee6812a60ab6" name="a98643bb5cb4fa32d5a0bee6812a60ab6"></a>
-<a class="el" href="structVaLinkedListNode.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getNode</b> (const T &amp;value)</td></tr>
+<tr class="memitem:a98643bb5cb4fa32d5a0bee6812a60ab6" id="r_a98643bb5cb4fa32d5a0bee6812a60ab6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structVaLinkedListNode.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98643bb5cb4fa32d5a0bee6812a60ab6">getNode</a> (const T &amp;value)</td></tr>
+<tr class="memdesc:a98643bb5cb4fa32d5a0bee6812a60ab6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a node with a copy of the given value. Reuses from the free list if possible.  <br /></td></tr>
 <tr class="separator:a98643bb5cb4fa32d5a0bee6812a60ab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac175ba0ab74c126d08ace19958a3476a" id="r_ac175ba0ab74c126d08ace19958a3476a"><td class="memItemLeft" align="right" valign="top"><a id="ac175ba0ab74c126d08ace19958a3476a" name="ac175ba0ab74c126d08ace19958a3476a"></a>
-<a class="el" href="structVaLinkedListNode.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getNode</b> (T &amp;&amp;value)</td></tr>
+<tr class="memitem:ac175ba0ab74c126d08ace19958a3476a" id="r_ac175ba0ab74c126d08ace19958a3476a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structVaLinkedListNode.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac175ba0ab74c126d08ace19958a3476a">getNode</a> (T &amp;&amp;value)</td></tr>
+<tr class="memdesc:ac175ba0ab74c126d08ace19958a3476a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a node by moving the given value. Reuses from the free list if possible.  <br /></td></tr>
 <tr class="separator:ac175ba0ab74c126d08ace19958a3476a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab91ec1c72be7ddb5d7a9df61fb746efa" id="r_ab91ec1c72be7ddb5d7a9df61fb746efa"><td class="memItemLeft" align="right" valign="top"><a id="ab91ec1c72be7ddb5d7a9df61fb746efa" name="ab91ec1c72be7ddb5d7a9df61fb746efa"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>returnNode</b> (<a class="el" href="structVaLinkedListNode.html">Node</a> *node) noexcept</td></tr>
+<tr class="memitem:ab91ec1c72be7ddb5d7a9df61fb746efa" id="r_ab91ec1c72be7ddb5d7a9df61fb746efa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab91ec1c72be7ddb5d7a9df61fb746efa">returnNode</a> (<a class="el" href="structVaLinkedListNode.html">Node</a> *node) noexcept</td></tr>
+<tr class="memdesc:ab91ec1c72be7ddb5d7a9df61fb746efa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a node to the free list after destroying its value.  <br /></td></tr>
 <tr class="separator:ab91ec1c72be7ddb5d7a9df61fb746efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac162f99a304b9433e6fea9cdac1bb734" id="r_ac162f99a304b9433e6fea9cdac1bb734"><td class="memItemLeft" align="right" valign="top"><a id="ac162f99a304b9433e6fea9cdac1bb734" name="ac162f99a304b9433e6fea9cdac1bb734"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addNodes</b> (Size count) noexcept</td></tr>
+<tr class="memitem:ac162f99a304b9433e6fea9cdac1bb734" id="r_ac162f99a304b9433e6fea9cdac1bb734"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac162f99a304b9433e6fea9cdac1bb734">addNodes</a> (Size count) noexcept</td></tr>
+<tr class="memdesc:ac162f99a304b9433e6fea9cdac1bb734"><td class="mdescLeft">&#160;</td><td class="mdescRight">Preallocates a number of nodes and adds them to the free list.  <br /></td></tr>
 <tr class="separator:ac162f99a304b9433e6fea9cdac1bb734"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac547316c43962d8eb5dd3f3d661ce185" id="r_ac547316c43962d8eb5dd3f3d661ce185"><td class="memItemLeft" align="right" valign="top"><a id="ac547316c43962d8eb5dd3f3d661ce185" name="ac547316c43962d8eb5dd3f3d661ce185"></a>
-<a class="el" href="structVaLinkedListNode.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>nodeAt</b> (Size index) const</td></tr>
+<tr class="memitem:ac547316c43962d8eb5dd3f3d661ce185" id="r_ac547316c43962d8eb5dd3f3d661ce185"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structVaLinkedListNode.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac547316c43962d8eb5dd3f3d661ce185">nodeAt</a> (Size index) const</td></tr>
+<tr class="memdesc:ac547316c43962d8eb5dd3f3d661ce185"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the node at a specified index. Traverses from head or tail depending on proximity.  <br /></td></tr>
 <tr class="separator:ac547316c43962d8eb5dd3f3d661ce185"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac210420b35e113bd0b393ff75cf46468" id="r_ac210420b35e113bd0b393ff75cf46468"><td class="memTemplParams" colspan="2"><a id="ac210420b35e113bd0b393ff75cf46468" name="ac210420b35e113bd0b393ff75cf46468"></a>
+template&lt;typename Tuple , Size... Is&gt; </td></tr>
+<tr class="memitem:ac210420b35e113bd0b393ff75cf46468"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>prependAllImpl</b> (Tuple &amp;&amp;tup, std::index_sequence&lt; Is... &gt;)</td></tr>
+<tr class="separator:ac210420b35e113bd0b393ff75cf46468"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a941c1a3581a0aae871070df5ab121e7e" id="r_a941c1a3581a0aae871070df5ab121e7e"><td class="memItemLeft" align="right" valign="top"><a id="a941c1a3581a0aae871070df5ab121e7e" name="a941c1a3581a0aae871070df5ab121e7e"></a>
 <a class="el" href="structVaLinkedListNode.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>head</b></td></tr>
+<tr class="memdesc:a941c1a3581a0aae871070df5ab121e7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the first node in the list. <br /></td></tr>
 <tr class="separator:a941c1a3581a0aae871070df5ab121e7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed6882ee6005d60c5d3bec00ba60fea7" id="r_aed6882ee6005d60c5d3bec00ba60fea7"><td class="memItemLeft" align="right" valign="top"><a id="aed6882ee6005d60c5d3bec00ba60fea7" name="aed6882ee6005d60c5d3bec00ba60fea7"></a>
 <a class="el" href="structVaLinkedListNode.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>tail</b></td></tr>
+<tr class="memdesc:aed6882ee6005d60c5d3bec00ba60fea7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the last node in the list. <br /></td></tr>
 <tr class="separator:aed6882ee6005d60c5d3bec00ba60fea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a339eeb5f00bc282a890ea4f695b5a40a" id="r_a339eeb5f00bc282a890ea4f695b5a40a"><td class="memItemLeft" align="right" valign="top"><a id="a339eeb5f00bc282a890ea4f695b5a40a" name="a339eeb5f00bc282a890ea4f695b5a40a"></a>
 Size&#160;</td><td class="memItemRight" valign="bottom"><b>len</b></td></tr>
+<tr class="memdesc:a339eeb5f00bc282a890ea4f695b5a40a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current number of elements in the list. <br /></td></tr>
 <tr class="separator:a339eeb5f00bc282a890ea4f695b5a40a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e691fb49693e0a72d5b295c6f1cb407" id="r_a1e691fb49693e0a72d5b295c6f1cb407"><td class="memItemLeft" align="right" valign="top"><a id="a1e691fb49693e0a72d5b295c6f1cb407" name="a1e691fb49693e0a72d5b295c6f1cb407"></a>
 <a class="el" href="structVaLinkedListNode.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>freeListHead</b></td></tr>
+<tr class="memdesc:a1e691fb49693e0a72d5b295c6f1cb407"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current number of elements in the list. <br /></td></tr>
 <tr class="separator:a1e691fb49693e0a72d5b295c6f1cb407"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9be96a17dc40dfbdc56a5ab4b01b1ad8" id="r_a9be96a17dc40dfbdc56a5ab4b01b1ad8"><td class="memItemLeft" align="right" valign="top"><a id="a9be96a17dc40dfbdc56a5ab4b01b1ad8" name="a9be96a17dc40dfbdc56a5ab4b01b1ad8"></a>
 Size&#160;</td><td class="memItemRight" valign="bottom"><b>freeListSize</b></td></tr>
+<tr class="memdesc:a9be96a17dc40dfbdc56a5ab4b01b1ad8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of nodes currently stored in the free list. <br /></td></tr>
 <tr class="separator:a9be96a17dc40dfbdc56a5ab4b01b1ad8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:ab141c8c8faf779ad419691e1223c0c35" id="r_ab141c8c8faf779ad419691e1223c0c35"><td class="memItemLeft" align="right" valign="top"><a id="ab141c8c8faf779ad419691e1223c0c35" name="ab141c8c8faf779ad419691e1223c0c35"></a>
-Size&#160;</td><td class="memItemRight" valign="bottom"><b>cap</b> (const <a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;lst) noexcept</td></tr>
+<tr class="memitem:a67771a95f8b915f8b92687a73e4e1ebb" id="r_a67771a95f8b915f8b92687a73e4e1ebb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67771a95f8b915f8b92687a73e4e1ebb">operator==</a> (const <a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;lhs, const <a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;rhs)</td></tr>
+<tr class="memdesc:a67771a95f8b915f8b92687a73e4e1ebb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two lists for equality element by element.  <br /></td></tr>
+<tr class="separator:a67771a95f8b915f8b92687a73e4e1ebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0ad029881df952a101b013a92b2856b" id="r_ad0ad029881df952a101b013a92b2856b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0ad029881df952a101b013a92b2856b">operator!=</a> (const <a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;lhs, const <a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;rhs)</td></tr>
+<tr class="memdesc:ad0ad029881df952a101b013a92b2856b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether two lists are not equal.  <br /></td></tr>
+<tr class="separator:ad0ad029881df952a101b013a92b2856b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50a2b1d8212370234874695da8bffd1e" id="r_a50a2b1d8212370234874695da8bffd1e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50a2b1d8212370234874695da8bffd1e">operator&lt;</a> (const <a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;lhs, const <a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;rhs)</td></tr>
+<tr class="memdesc:a50a2b1d8212370234874695da8bffd1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two lists lexicographically using the less-than operator.  <br /></td></tr>
+<tr class="separator:a50a2b1d8212370234874695da8bffd1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cc2f30357a7fea9614c8b19be67a727" id="r_a4cc2f30357a7fea9614c8b19be67a727"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4cc2f30357a7fea9614c8b19be67a727">operator&gt;</a> (const <a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;lhs, const <a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;rhs)</td></tr>
+<tr class="memdesc:a4cc2f30357a7fea9614c8b19be67a727"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two lists to determine if the first is greater than the second.  <br /></td></tr>
+<tr class="separator:a4cc2f30357a7fea9614c8b19be67a727"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb8ce70c0aa5980c43288fc8baf86360" id="r_afb8ce70c0aa5980c43288fc8baf86360"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb8ce70c0aa5980c43288fc8baf86360">operator&lt;=</a> (const <a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;lhs, const <a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;rhs)</td></tr>
+<tr class="memdesc:afb8ce70c0aa5980c43288fc8baf86360"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if one list is less than or equal to another.  <br /></td></tr>
+<tr class="separator:afb8ce70c0aa5980c43288fc8baf86360"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b628428713ff682bea88a2e549c8596" id="r_a0b628428713ff682bea88a2e549c8596"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b628428713ff682bea88a2e549c8596">operator&gt;=</a> (const <a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;lhs, const <a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;rhs)</td></tr>
+<tr class="memdesc:a0b628428713ff682bea88a2e549c8596"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if one list is greater than or equal to another.  <br /></td></tr>
+<tr class="separator:a0b628428713ff682bea88a2e549c8596"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15eedc2e1efe6195ce8bfcdf04f6ab6e" id="r_a15eedc2e1efe6195ce8bfcdf04f6ab6e"><td class="memTemplParams" colspan="2"><a id="a15eedc2e1efe6195ce8bfcdf04f6ab6e" name="a15eedc2e1efe6195ce8bfcdf04f6ab6e"></a>
+template&lt;typename Iterable , typename  = tt::EnableIf&lt;!tt::IsSame&lt;tt::RemoveCVRef&lt;Iterable&gt;, VaLinkedList&lt;T&gt;&gt;&gt;&gt; </td></tr>
+<tr class="memitem:a15eedc2e1efe6195ce8bfcdf04f6ab6e"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;lhs, const Iterable &amp;rhs)</td></tr>
+<tr class="separator:a15eedc2e1efe6195ce8bfcdf04f6ab6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe6b7c06e3457c7f433e10eb116e0104" id="r_afe6b7c06e3457c7f433e10eb116e0104"><td class="memTemplParams" colspan="2"><a id="afe6b7c06e3457c7f433e10eb116e0104" name="afe6b7c06e3457c7f433e10eb116e0104"></a>
+template&lt;typename Iterable , typename  = tt::EnableIf&lt;!tt::IsSame&lt;tt::RemoveCVRef&lt;Iterable&gt;, VaLinkedList&lt;T&gt;&gt;&gt;&gt; </td></tr>
+<tr class="memitem:afe6b7c06e3457c7f433e10eb116e0104"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;lhs, const Iterable &amp;rhs)</td></tr>
+<tr class="separator:afe6b7c06e3457c7f433e10eb116e0104"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee3988011aac3025389037396692b1ff" id="r_aee3988011aac3025389037396692b1ff"><td class="memTemplParams" colspan="2"><a id="aee3988011aac3025389037396692b1ff" name="aee3988011aac3025389037396692b1ff"></a>
+template&lt;typename Iterable , typename  = tt::EnableIf&lt;!tt::IsSame&lt;tt::RemoveCVRef&lt;Iterable&gt;, VaLinkedList&lt;T&gt;&gt;&gt;&gt; </td></tr>
+<tr class="memitem:aee3988011aac3025389037396692b1ff"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator&lt;</b> (const <a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;lhs, const Iterable &amp;rhs)</td></tr>
+<tr class="separator:aee3988011aac3025389037396692b1ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fed84debf40ceb82bdbd190c9726262" id="r_a4fed84debf40ceb82bdbd190c9726262"><td class="memTemplParams" colspan="2"><a id="a4fed84debf40ceb82bdbd190c9726262" name="a4fed84debf40ceb82bdbd190c9726262"></a>
+template&lt;typename Iterable , typename  = tt::EnableIf&lt;!tt::IsSame&lt;tt::RemoveCVRef&lt;Iterable&gt;, VaLinkedList&lt;T&gt;&gt;&gt;&gt; </td></tr>
+<tr class="memitem:a4fed84debf40ceb82bdbd190c9726262"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator&gt;</b> (const <a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;lhs, const Iterable &amp;rhs)</td></tr>
+<tr class="separator:a4fed84debf40ceb82bdbd190c9726262"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6effcc50fcc5517f8cb3a82dbd1ab0e3" id="r_a6effcc50fcc5517f8cb3a82dbd1ab0e3"><td class="memTemplParams" colspan="2"><a id="a6effcc50fcc5517f8cb3a82dbd1ab0e3" name="a6effcc50fcc5517f8cb3a82dbd1ab0e3"></a>
+template&lt;typename Iterable , typename  = tt::EnableIf&lt;!tt::IsSame&lt;tt::RemoveCVRef&lt;Iterable&gt;, VaLinkedList&lt;T&gt;&gt;&gt;&gt; </td></tr>
+<tr class="memitem:a6effcc50fcc5517f8cb3a82dbd1ab0e3"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator&lt;=</b> (const <a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;lhs, const Iterable &amp;rhs)</td></tr>
+<tr class="separator:a6effcc50fcc5517f8cb3a82dbd1ab0e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7cdf71951e36fa88c8290f671d7488e" id="r_aa7cdf71951e36fa88c8290f671d7488e"><td class="memTemplParams" colspan="2"><a id="aa7cdf71951e36fa88c8290f671d7488e" name="aa7cdf71951e36fa88c8290f671d7488e"></a>
+template&lt;typename Iterable , typename  = tt::EnableIf&lt;!tt::IsSame&lt;tt::RemoveCVRef&lt;Iterable&gt;, VaLinkedList&lt;T&gt;&gt;&gt;&gt; </td></tr>
+<tr class="memitem:aa7cdf71951e36fa88c8290f671d7488e"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator&gt;=</b> (const <a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;lhs, const Iterable &amp;rhs)</td></tr>
+<tr class="separator:aa7cdf71951e36fa88c8290f671d7488e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab141c8c8faf779ad419691e1223c0c35" id="r_ab141c8c8faf779ad419691e1223c0c35"><td class="memItemLeft" align="right" valign="top">Size&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab141c8c8faf779ad419691e1223c0c35">cap</a> (const <a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp;lst) noexcept</td></tr>
+<tr class="memdesc:ab141c8c8faf779ad419691e1223c0c35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total capacity of the linked list, including free nodes.  <br /></td></tr>
 <tr class="separator:ab141c8c8faf779ad419691e1223c0c35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>Include/VaLib/Types/<a class="el" href="LinkedList_8hpp_source.html">LinkedList.hpp</a></li>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ae69e554d39166d60cd28ce7f17d8d1b0" name="ae69e554d39166d60cd28ce7f17d8d1b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae69e554d39166d60cd28ce7f17d8d1b0">&#9670;&#160;</a></span>VaLinkedList() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;<a class="el" href="classVaLinkedList.html">::VaLinkedList</a> </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>initCap</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs an empty list and preallocates a given number of nodes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">initCap</td><td>Number of nodes to preallocate in the internal free list. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3d1c84e9c5a0364b379d64b0ecd84e94" name="a3d1c84e9c5a0364b379d64b0ecd84e94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d1c84e9c5a0364b379d64b0ecd84e94">&#9670;&#160;</a></span>VaLinkedList() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;<a class="el" href="classVaLinkedList.html">::VaLinkedList</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copy constructor. Creates a deep copy of another list, duplicating all elements. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The list to copy from. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a88404acb97594af51f2070991f38260a" name="a88404acb97594af51f2070991f38260a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88404acb97594af51f2070991f38260a">&#9670;&#160;</a></span>VaLinkedList() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;<a class="el" href="classVaLinkedList.html">::VaLinkedList</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::initializer_list&lt; T &gt;</td>          <td class="paramname"><span class="paramname"><em>init</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a list from an initializer list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">init</td><td>List of elements to initialize the list with. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a02b7d7d75b090c517a4f04e2f7cef324" name="a02b7d7d75b090c517a4f04e2f7cef324"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02b7d7d75b090c517a4f04e2f7cef324">&#9670;&#160;</a></span>VaLinkedList() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;<a class="el" href="classVaLinkedList.html">::VaLinkedList</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move constructor. Transfers ownership of resources from another list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The list to move from. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac162f99a304b9433e6fea9cdac1bb734" name="ac162f99a304b9433e6fea9cdac1bb734"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac162f99a304b9433e6fea9cdac1bb734">&#9670;&#160;</a></span>addNodes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::addNodes </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>count</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Preallocates a number of nodes and adds them to the free list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">count</td><td>Number of nodes to add. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afc5e0643afc091b12edc362380846654" name="afc5e0643afc091b12edc362380846654"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc5e0643afc091b12edc362380846654">&#9670;&#160;</a></span>append() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::append </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Appends a new element to the end of the list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The value to append. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a74cf61d979781be5cf2855a9e2596902" name="a74cf61d979781be5cf2855a9e2596902"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74cf61d979781be5cf2855a9e2596902">&#9670;&#160;</a></span>append() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::append </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Appends a new element to the end of the list (move version). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The value to append. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a600a136ad467dddff305ab22ca872d0d" name="a600a136ad467dddff305ab22ca872d0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a600a136ad467dddff305ab22ca872d0d">&#9670;&#160;</a></span>appendAll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::appendAll </td>
+          <td>(</td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Appends multiple elements to the end of the list. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Args</td><td>Types of the elements to append. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>Elements to append to the list.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This method uses variadic templates to accept multiple arguments and appends each of them to the list in order. </dd></dl>
+
+</div>
+</div>
+<a id="aaed873f8f6104e1bc83ae2b759294231" name="aaed873f8f6104e1bc83ae2b759294231"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaed873f8f6104e1bc83ae2b759294231">&#9670;&#160;</a></span>appendEach() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename Iterable &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::appendEach </td>
+          <td>(</td>
+          <td class="paramtype">const Iterable &amp;</td>          <td class="paramname"><span class="paramname"><em>iterable</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Appends each element from an iterable container to the end of the list. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Iterable</td><td>A container type that supports iteration (e.g., std::vector, std::list). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">iterable</td><td>The container whose elements will be appended. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac0286ad8b53d639731c77329ff064308" name="ac0286ad8b53d639731c77329ff064308"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0286ad8b53d639731c77329ff064308">&#9670;&#160;</a></span>appendEach() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::appendEach </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Appends all elements from another linked list to the end of this list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The linked list whose elements will be appended. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af413d4d78c95e8d359ec2465ef7eda6f" name="af413d4d78c95e8d359ec2465ef7eda6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af413d4d78c95e8d359ec2465ef7eda6f">&#9670;&#160;</a></span>appendEach() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename Iterable , typename  = tt::EnableIf&lt;!tt::IsSame&lt;tt::RemoveCVRef&lt;Iterable&gt;, VaLinkedList&lt;T&gt;&gt;&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::appendEach </td>
+          <td>(</td>
+          <td class="paramtype">Iterable &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>iterable</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Appends each element from an iterable container to the end of the list (move version). </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Iterable</td><td>A container type that supports iteration (e.g., std::vector, std::list). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">iterable</td><td>The container whose elements will be moved and appended. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a582b316ba9687703b7326837247178a2" name="a582b316ba9687703b7326837247178a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a582b316ba9687703b7326837247178a2">&#9670;&#160;</a></span>appendEach() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::appendEach </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Appends all elements from another linked list to the end of this list (move version). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The linked list whose elements will be moved and appended. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8ba56d76e8551a6f2b0d4dc50f0d2152" name="a8ba56d76e8551a6f2b0d4dc50f0d2152"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ba56d76e8551a6f2b0d4dc50f0d2152">&#9670;&#160;</a></span>at() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T &amp; <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::at </td>
+          <td>(</td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a reference to the element at the given index with bounds checking. Supports negative indexing, where -1 refers to the last element, -2 to the second last, and so on. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Position of the element to access. Negative values count from the end of the list. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the element at the specified index.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classIndexOutOfRangeError.html" title="Error class for index out of range errors.">IndexOutOfRangeError</a></td><td>if index is out of bounds. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>This is a slow O(n/2) operation. Use with care in performance-critical code. </dd></dl>
+
+</div>
+</div>
+<a id="a356ee195d0ab7c0f5ed4d139fd85b9fb" name="a356ee195d0ab7c0f5ed4d139fd85b9fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a356ee195d0ab7c0f5ed4d139fd85b9fb">&#9670;&#160;</a></span>at() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const T &amp; <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::at </td>
+          <td>(</td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a const reference to the element at the given index with bounds checking. Supports negative indexing, where -1 refers to the last element, -2 to the second last, and so on. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Position of the element to access. Negative values count from the end of the list. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Const reference to the element at the specified index.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classIndexOutOfRangeError.html" title="Error class for index out of range errors.">IndexOutOfRangeError</a></td><td>if index is out of bounds. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>This is a slow O(n/2) operation. Use with care in performance-critical code. </dd></dl>
+
+</div>
+</div>
+<a id="a6b7b279584a4d25f7651ee16924436e4" name="a6b7b279584a4d25f7651ee16924436e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b7b279584a4d25f7651ee16924436e4">&#9670;&#160;</a></span>back() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T &amp; <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::back </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a reference to the last element in the list. </p>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the last element.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classValueError.html" title="Error class for value-related errors.">ValueError</a></td><td>If the list is empty. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acacf8c08a0115d7cada4b2652375aade" name="acacf8c08a0115d7cada4b2652375aade"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acacf8c08a0115d7cada4b2652375aade">&#9670;&#160;</a></span>back() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const T &amp; <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::back </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a const reference to the last element in the list. </p>
+<dl class="section return"><dt>Returns</dt><dd>Const reference to the last element. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classValueError.html" title="Error class for value-related errors.">ValueError</a></td><td>If the list is empty. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac98e5b8be57ad15d8d972d3d9f0354f1" name="ac98e5b8be57ad15d8d972d3d9f0354f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac98e5b8be57ad15d8d972d3d9f0354f1">&#9670;&#160;</a></span>backUnchecked() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const T &amp; <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::backUnchecked </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a const reference to the last element in the list without bounds checking. </p>
+<dl class="section return"><dt>Returns</dt><dd>Const reference to the last element.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This method does not perform any size checks. The behavior is undefined if the list is empty. </dd></dl>
+
+</div>
+</div>
+<a id="ae16c1121b602ca10b1631f33c709d9b4" name="ae16c1121b602ca10b1631f33c709d9b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae16c1121b602ca10b1631f33c709d9b4">&#9670;&#160;</a></span>backUnchecked() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T &amp; <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::backUnchecked </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a reference to the last element in the list without bounds checking. </p>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the last element.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This method does not perform any size checks. The behavior is undefined if the list is empty. </dd></dl>
+
+</div>
+</div>
+<a id="af8565b0b96ebe2be2a28cbeeba20674c" name="af8565b0b96ebe2be2a28cbeeba20674c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8565b0b96ebe2be2a28cbeeba20674c">&#9670;&#160;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::clear </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>destroyNodes</em><span class="paramdefsep"> = </span><span class="paramdefval">false</span></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Removes all elements from the list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">destroyNodes</td><td>If true, all nodes are deleted instead of returned to the free list.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>If destroyNodes is false, nodes are preserved for reuse. </dd></dl>
+
+</div>
+</div>
+<a id="a14079ef6cd28492f0e8297110420b16a" name="a14079ef6cd28492f0e8297110420b16a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14079ef6cd28492f0e8297110420b16a">&#9670;&#160;</a></span>del()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::del </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Deletes the element at the specified index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>The position of the element to delete.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classIndexOutOfRangeError.html" title="Error class for index out of range errors.">IndexOutOfRangeError</a></td><td>If the index is out of bounds. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a76971702048a786242bc02651547cdcd" name="a76971702048a786242bc02651547cdcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76971702048a786242bc02651547cdcd">&#9670;&#160;</a></span>front() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T &amp; <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::front </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a reference to the first element in the list. </p>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the first element.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classValueError.html" title="Error class for value-related errors.">ValueError</a></td><td>If the list is empty. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acc7a5c8ec0b31b18f3bca029738ba454" name="acc7a5c8ec0b31b18f3bca029738ba454"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc7a5c8ec0b31b18f3bca029738ba454">&#9670;&#160;</a></span>front() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const T &amp; <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::front </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a const reference to the first element in the list. </p>
+<dl class="section return"><dt>Returns</dt><dd>Const reference to the first element.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classValueError.html" title="Error class for value-related errors.">ValueError</a></td><td>If the list is empty. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6cf7a951833a86c19de4c98445e5ad9a" name="a6cf7a951833a86c19de4c98445e5ad9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cf7a951833a86c19de4c98445e5ad9a">&#9670;&#160;</a></span>frontUnchecked() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const T &amp; <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::frontUnchecked </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a const reference to the first element in the list without bounds checking. </p>
+<dl class="section return"><dt>Returns</dt><dd>Const reference to the first element.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This method does not perform any size checks. The behavior is undefined if the list is empty. </dd></dl>
+
+</div>
+</div>
+<a id="afd21d23ca56a3e4e1a510cff2dae656d" name="afd21d23ca56a3e4e1a510cff2dae656d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd21d23ca56a3e4e1a510cff2dae656d">&#9670;&#160;</a></span>frontUnchecked() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T &amp; <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::frontUnchecked </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a reference to the first element in the list without bounds checking. </p>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the first element.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This method does not perform any size checks. The behavior is undefined if the list is empty. </dd></dl>
+
+</div>
+</div>
+<a id="af9cb2abe60b7dcc7e1d43e88273f0da0" name="af9cb2abe60b7dcc7e1d43e88273f0da0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9cb2abe60b7dcc7e1d43e88273f0da0">&#9670;&#160;</a></span>get() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T &amp; <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::get </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a reference to the element at the given index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Position of the element to access. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the element at the specified index.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This is a slow O(n/2) operation. Prefer other access patterns when possible. </dd></dl>
+
+</div>
+</div>
+<a id="aec6f851f008115c2af3b5c6211a8b87b" name="aec6f851f008115c2af3b5c6211a8b87b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec6f851f008115c2af3b5c6211a8b87b">&#9670;&#160;</a></span>get() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const T &amp; <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::get </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a const reference to the element at the given index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Position of the element to access. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Const reference to the element at the specified index.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This is a slow O(n/2) operation. Prefer other access patterns when possible. </dd></dl>
+
+</div>
+</div>
+<a id="a5616a798ade3d8b94570cfda2fbd9ab5" name="a5616a798ade3d8b94570cfda2fbd9ab5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5616a798ade3d8b94570cfda2fbd9ab5">&#9670;&#160;</a></span>getCapacity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Size <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::getCapacity </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the total capacity of the linked list. This method calculates the total capacity of the linked list, which is the sum of the number of elements currently stored in the list (<code>len</code>) and the number of unused nodes available in the free list (<code>freeListSize</code>). </p>
+<dl class="section return"><dt>Returns</dt><dd>The total capacity of the linked list. </dd></dl>
+
+</div>
+</div>
+<a id="a516cf243ac23571a2c105d52de2b2389" name="a516cf243ac23571a2c105d52de2b2389"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a516cf243ac23571a2c105d52de2b2389">&#9670;&#160;</a></span>getLength()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Size <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::getLength </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the number of elements currently stored in the list. </p>
+<dl class="section return"><dt>Returns</dt><dd>The current length of the list. </dd></dl>
+
+</div>
+</div>
+<a id="a98643bb5cb4fa32d5a0bee6812a60ab6" name="a98643bb5cb4fa32d5a0bee6812a60ab6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98643bb5cb4fa32d5a0bee6812a60ab6">&#9670;&#160;</a></span>getNode() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structVaLinkedListNode.html">Node</a> * <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::getNode </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves a node with a copy of the given value. Reuses from the free list if possible. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The value to initialize the node with. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the allocated or reused node. </dd></dl>
+
+</div>
+</div>
+<a id="ac175ba0ab74c126d08ace19958a3476a" name="ac175ba0ab74c126d08ace19958a3476a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac175ba0ab74c126d08ace19958a3476a">&#9670;&#160;</a></span>getNode() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structVaLinkedListNode.html">Node</a> * <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::getNode </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves a node by moving the given value. Reuses from the free list if possible. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The value to move into the node. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the allocated or reused node. </dd></dl>
+
+</div>
+</div>
+<a id="a6564b8228b875f9a6a753506161bb5b2" name="a6564b8228b875f9a6a753506161bb5b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6564b8228b875f9a6a753506161bb5b2">&#9670;&#160;</a></span>getRawView()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="#aa666e4c4fb31360e934ecced959a300a">RawView</a> * <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::getRawView </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a read-only view of the linked list internals. Reinterprets this list as a const-qualified raw view struct. </p>
+<dl class="section return"><dt>Returns</dt><dd>A const pointer to <code><a class="el" href="structVaLinkedListRawView.html" title="Raw view into the internal state of a linked list. This struct provides layout-compatible access to t...">VaLinkedListRawView</a>&lt;T&gt;</code>.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This method is layout-dependent and assumes standard layout ordering. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a733f02590898cf72ded09d77d9ea8d9d" title="Returns a mutable raw view of the linked list internals. Reinterprets this list as a VaLinkedListRawV...">getUnsafeAccess()</a> for mutating access. </dd></dl>
+
+</div>
+</div>
+<a id="a733f02590898cf72ded09d77d9ea8d9d" name="a733f02590898cf72ded09d77d9ea8d9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a733f02590898cf72ded09d77d9ea8d9d">&#9670;&#160;</a></span>getUnsafeAccess()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aa666e4c4fb31360e934ecced959a300a">RawView</a> * <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::getUnsafeAccess </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a mutable raw view of the linked list internals. Reinterprets this list as a <code><a class="el" href="structVaLinkedListRawView.html" title="Raw view into the internal state of a linked list. This struct provides layout-compatible access to t...">VaLinkedListRawView</a>&lt;T&gt;*</code>. Allows full mutation of head/tail/length/freelist pointers. </p>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to <code><a class="el" href="structVaLinkedListRawView.html" title="Raw view into the internal state of a linked list. This struct provides layout-compatible access to t...">VaLinkedListRawView</a>&lt;T&gt;</code> for direct access.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This is an unsafe API. You are responsible for keeping the structure valid. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a6564b8228b875f9a6a753506161bb5b2" title="Returns a read-only view of the linked list internals. Reinterprets this list as a const-qualified ra...">getRawView()</a> for safe read-only access. </dd></dl>
+
+</div>
+</div>
+<a id="a9c3e25d2f8369e639d1c85085811c02a" name="a9c3e25d2f8369e639d1c85085811c02a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c3e25d2f8369e639d1c85085811c02a">&#9670;&#160;</a></span>insert() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::insert </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>index</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inserts a new element at the specified index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>The position at which to insert the element. </td></tr>
+    <tr><td class="paramname">value</td><td>The value to insert.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classIndexOutOfRangeError.html" title="Error class for index out of range errors.">IndexOutOfRangeError</a></td><td>If the index is greater than the current list length. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a138d34210e22e47a29d833c7dc18fd72" name="a138d34210e22e47a29d833c7dc18fd72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a138d34210e22e47a29d833c7dc18fd72">&#9670;&#160;</a></span>insert() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::insert </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>index</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inserts a new element at the specified index (move version). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>The position at which to insert the element. </td></tr>
+    <tr><td class="paramname">value</td><td>The value to insert.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classIndexOutOfRangeError.html" title="Error class for index out of range errors.">IndexOutOfRangeError</a></td><td>If the index is greater than the current list length. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aaf0249fd0551d61861d4c81126350449" name="aaf0249fd0551d61861d4c81126350449"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf0249fd0551d61861d4c81126350449">&#9670;&#160;</a></span>insertAll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::insertAll </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>index</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inserts multiple elements at the specified index in the list. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Args</td><td>Types of the elements to insert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Position to insert the elements at. </td></tr>
+    <tr><td class="paramname">args</td><td>Elements to insert into the list.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This method uses variadic templates to accept multiple arguments and inserts each of them at the specified index in order.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classIndexOutOfRangeError.html" title="Error class for index out of range errors.">IndexOutOfRangeError</a></td><td>If the index is out of bounds. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad5c9943465fef2b583d562a9e8519d41" name="ad5c9943465fef2b583d562a9e8519d41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5c9943465fef2b583d562a9e8519d41">&#9670;&#160;</a></span>insertBefore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::insertBefore </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVaLinkedListNode.html">Node</a> *</td>          <td class="paramname"><span class="paramname"><em>target</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structVaLinkedListNode.html">Node</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inserts a node before a given target node in the list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td>The node before which the new node will be inserted. </td></tr>
+    <tr><td class="paramname">node</td><td>The node to insert. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a731d404d060c5e5392b5206efefc8072" name="a731d404d060c5e5392b5206efefc8072"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a731d404d060c5e5392b5206efefc8072">&#9670;&#160;</a></span>insertEach() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename Iterable &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::insertEach </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>pos</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Iterable &amp;</td>          <td class="paramname"><span class="paramname"><em>iterable</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inserts each element from an iterable container at the specified position in the list. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Iterable</td><td>A container type that supports reverse iteration (e.g., std::vector, std::list). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>The position at which to insert the elements. </td></tr>
+    <tr><td class="paramname">iterable</td><td>The container whose elements will be inserted.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classIndexOutOfRangeError.html" title="Error class for index out of range errors.">IndexOutOfRangeError</a></td><td>If the position is out of bounds. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a249f04dfc93b76a79d3abc9e3ebea692" name="a249f04dfc93b76a79d3abc9e3ebea692"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a249f04dfc93b76a79d3abc9e3ebea692">&#9670;&#160;</a></span>insertEach() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::insertEach </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>pos</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inserts all elements from another linked list at the specified position in this list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>The position at which to insert the elements. </td></tr>
+    <tr><td class="paramname">other</td><td>The linked list whose elements will be inserted.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classIndexOutOfRangeError.html" title="Error class for index out of range errors.">IndexOutOfRangeError</a></td><td>If the position is out of bounds. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2c7cc00a603b13530c333357f7b6e88c" name="a2c7cc00a603b13530c333357f7b6e88c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c7cc00a603b13530c333357f7b6e88c">&#9670;&#160;</a></span>insertEach() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename Iterable , typename  = tt::EnableIf&lt;!tt::IsSame&lt;tt::RemoveCVRef&lt;Iterable&gt;, VaLinkedList&lt;T&gt;&gt;&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::insertEach </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>pos</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Iterable &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>iterable</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inserts each element from an iterable container at the specified position in the list (move version). </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Iterable</td><td>A container type that supports reverse iteration (e.g., std::vector, std::list). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>The position at which to insert the elements. </td></tr>
+    <tr><td class="paramname">iterable</td><td>The container whose elements will be moved and inserted.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classIndexOutOfRangeError.html" title="Error class for index out of range errors.">IndexOutOfRangeError</a></td><td>If the position is out of bounds. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a363653639853e8ed7e5459a202936fd6" name="a363653639853e8ed7e5459a202936fd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a363653639853e8ed7e5459a202936fd6">&#9670;&#160;</a></span>insertEach() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::insertEach </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>pos</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inserts all elements from another linked list at the specified position in this list (move version). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>The position at which to insert the elements. </td></tr>
+    <tr><td class="paramname">other</td><td>The linked list whose elements will be moved and inserted.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classIndexOutOfRangeError.html" title="Error class for index out of range errors.">IndexOutOfRangeError</a></td><td>If the position is out of bounds. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab36111dfdd4135dfbc16902292dfd7a4" name="ab36111dfdd4135dfbc16902292dfd7a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab36111dfdd4135dfbc16902292dfd7a4">&#9670;&#160;</a></span>linkToEnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::linkToEnd </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVaLinkedListNode.html">Node</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Appends a node to the end of the list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>Pointer to the node to be linked at the end. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abe900302c4047dd4ea31ecfec94a4562" name="abe900302c4047dd4ea31ecfec94a4562"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe900302c4047dd4ea31ecfec94a4562">&#9670;&#160;</a></span>linkToFront()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::linkToFront </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVaLinkedListNode.html">Node</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inserts a node at the front of the list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>Pointer to the node to be linked at the front. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac547316c43962d8eb5dd3f3d661ce185" name="ac547316c43962d8eb5dd3f3d661ce185"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac547316c43962d8eb5dd3f3d661ce185">&#9670;&#160;</a></span>nodeAt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structVaLinkedListNode.html">Node</a> * <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::nodeAt </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to the node at a specified index. Traverses from head or tail depending on proximity. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Index of the node to retrieve. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the node at the specified index. </dd></dl>
+
+</div>
+</div>
+<a id="aa8753fb9fdf19f99e9fda8ca4f43ef73" name="aa8753fb9fdf19f99e9fda8ca4f43ef73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8753fb9fdf19f99e9fda8ca4f43ef73">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp; <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copy assignment operator. Replaces contents with a deep copy of another list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The list to copy from. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to this list. </dd></dl>
+
+</div>
+</div>
+<a id="a7b7e8337b8b4c8c0076ce2edfe622f0b" name="a7b7e8337b8b4c8c0076ce2edfe622f0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b7e8337b8b4c8c0076ce2edfe622f0b">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVaLinkedList.html">VaLinkedList</a> &amp; <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move assignment operator. Transfers ownership of contents from another list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The list to move from. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to this list. </dd></dl>
+
+</div>
+</div>
+<a id="a593ea7dd9d840a7fa02fc440281bfe37" name="a593ea7dd9d840a7fa02fc440281bfe37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a593ea7dd9d840a7fa02fc440281bfe37">&#9670;&#160;</a></span>operator[]() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T &amp; <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Provides unchecked access to the element at the given index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Position of the element to access. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the element at the specified index.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This operation is O(n). For frequent indexed access, consider a contiguous list. </dd></dl>
+
+</div>
+</div>
+<a id="a7e6887841a0a32183c487188ebc7b545" name="a7e6887841a0a32183c487188ebc7b545"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e6887841a0a32183c487188ebc7b545">&#9670;&#160;</a></span>operator[]() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const T &amp; <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Provides unchecked const access to the element at the given index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Position of the element to access. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Const reference to the element at the specified index.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This operation is O(n). For frequent indexed access, consider a contiguous list. </dd></dl>
+
+</div>
+</div>
+<a id="a10d34e257a159b8c48e018d6263b3cdd" name="a10d34e257a159b8c48e018d6263b3cdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10d34e257a159b8c48e018d6263b3cdd">&#9670;&#160;</a></span>pop() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::pop </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Removes and returns the last element in the list. </p>
+<dl class="section return"><dt>Returns</dt><dd>The value of the removed element. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classValueError.html" title="Error class for value-related errors.">ValueError</a></td><td>If the list is empty. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a80e9fae8445fd67b36d4c06a88499174" name="a80e9fae8445fd67b36d4c06a88499174"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80e9fae8445fd67b36d4c06a88499174">&#9670;&#160;</a></span>pop() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::pop </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Deletes and returns the element at the specified index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>The position of the element to delete.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classIndexOutOfRangeError.html" title="Error class for index out of range errors.">IndexOutOfRangeError</a></td><td>If the index is out of bounds. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad72fcd896f618298fc3015e73c98130c" name="ad72fcd896f618298fc3015e73c98130c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad72fcd896f618298fc3015e73c98130c">&#9670;&#160;</a></span>prepend() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::prepend </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prepends a new element to the beginning of the list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The value to prepend. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0c5c1641896842ca8668de3082c7f1bb" name="a0c5c1641896842ca8668de3082c7f1bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c5c1641896842ca8668de3082c7f1bb">&#9670;&#160;</a></span>prepend() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::prepend </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prepends a new element to the beginning of the list (move version). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The value to prepend. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa60b56478145346c8867f79245200f9c" name="aa60b56478145346c8867f79245200f9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa60b56478145346c8867f79245200f9c">&#9670;&#160;</a></span>prependAll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::prependAll </td>
+          <td>(</td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prepends multiple elements to the beginning of the list. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Args</td><td>Types of the elements to prepend. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>Elements to prepend to the list.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This method uses variadic templates to accept multiple arguments and prepends each of them to the list in reverse order. </dd></dl>
+
+</div>
+</div>
+<a id="a126c1c42979c88b98c7145d1c7268953" name="a126c1c42979c88b98c7145d1c7268953"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a126c1c42979c88b98c7145d1c7268953">&#9670;&#160;</a></span>prependEach() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename Iterable &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::prependEach </td>
+          <td>(</td>
+          <td class="paramtype">const Iterable &amp;</td>          <td class="paramname"><span class="paramname"><em>iterable</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prepends each element from an iterable container to the beginning of the list. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Iterable</td><td>A container type that supports reverse iteration (e.g., std::vector, std::list). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">iterable</td><td>The container whose elements will be prepended. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aca3552bf5194c05c0aedf4cef7faedf5" name="aca3552bf5194c05c0aedf4cef7faedf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca3552bf5194c05c0aedf4cef7faedf5">&#9670;&#160;</a></span>prependEach() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::prependEach </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prepends all elements from another linked list to the beginning of this list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The linked list whose elements will be prepended. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5b18b5466e392ffe2b0e515abf5ceeee" name="a5b18b5466e392ffe2b0e515abf5ceeee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b18b5466e392ffe2b0e515abf5ceeee">&#9670;&#160;</a></span>prependEach() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename Iterable , typename  = tt::EnableIf&lt;!tt::IsSame&lt;tt::RemoveCVRef&lt;Iterable&gt;, VaLinkedList&lt;T&gt;&gt;&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::prependEach </td>
+          <td>(</td>
+          <td class="paramtype">Iterable &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>iterable</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prepends each element from an iterable container to the beginning of the list (move version). </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Iterable</td><td>A container type that supports reverse iteration (e.g., std::vector, std::list). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">iterable</td><td>The container whose elements will be moved and prepended. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab4b468a1d71976145ecefa7e0452b12d" name="ab4b468a1d71976145ecefa7e0452b12d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4b468a1d71976145ecefa7e0452b12d">&#9670;&#160;</a></span>prependEach() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::prependEach </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prepends all elements from another linked list to the beginning of this list (move version). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The linked list whose elements will be moved and prepended. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afa0c92c40ab3991f3f61a722c0110cf0" name="afa0c92c40ab3991f3f61a722c0110cf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa0c92c40ab3991f3f61a722c0110cf0">&#9670;&#160;</a></span>reserve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::reserve </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>minCap</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ensures the internal storage can accommodate at least the given number of elements. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">minCap</td><td>The minimum total capacity (used + free nodes) to ensure.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Nodes are preallocated and added to the free list if necessary. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This is a linked list with a free list system. Using <a class="el" href="#afa0c92c40ab3991f3f61a722c0110cf0" title="Ensures the internal storage can accommodate at least the given number of elements.">reserve()</a> before performing many element addition operations does not improve performance, as linked lists do not benefit from preallocation in the same way as contiguous containers like array lists. </dd></dl>
+
+</div>
+</div>
+<a id="ab91ec1c72be7ddb5d7a9df61fb746efa" name="ab91ec1c72be7ddb5d7a9df61fb746efa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab91ec1c72be7ddb5d7a9df61fb746efa">&#9670;&#160;</a></span>returnNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::returnNode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVaLinkedListNode.html">Node</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a node to the free list after destroying its value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>Pointer to the node to be returned. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae99346aa13cc2ee5f0bb350ab8cec087" name="ae99346aa13cc2ee5f0bb350ab8cec087"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae99346aa13cc2ee5f0bb350ab8cec087">&#9670;&#160;</a></span>set() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::set </td>
+          <td>(</td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>index</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the value at the specified index to the given value. Supports negative indexing, where -1 refers to the last element, -2 to the second last, and so on. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Position of the element to set. Negative values count from the end of the list. </td></tr>
+    <tr><td class="paramname">value</td><td>The value to set at the specified index.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classIndexOutOfRangeError.html" title="Error class for index out of range errors.">IndexOutOfRangeError</a></td><td>if index is out of bounds. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>This is a slow O(n/2) operation. Use with care in performance-critical code. </dd></dl>
+
+</div>
+</div>
+<a id="ac5a99402bf5d6c1b19b85a718b2f8d24" name="ac5a99402bf5d6c1b19b85a718b2f8d24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5a99402bf5d6c1b19b85a718b2f8d24">&#9670;&#160;</a></span>set() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::set </td>
+          <td>(</td>
+          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>index</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the value at the specified index to the given value (move version). Supports negative indexing, where -1 refers to the last element, -2 to the second last, and so on. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Position of the element to set. Negative values count from the end of the list. </td></tr>
+    <tr><td class="paramname">value</td><td>The value to move into the specified index.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classIndexOutOfRangeError.html" title="Error class for index out of range errors.">IndexOutOfRangeError</a></td><td>if index is out of bounds. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>This is a slow O(n/2) operation. Use with care in performance-critical code. </dd></dl>
+
+</div>
+</div>
+<a id="a8a249ea5644661d1f73fe38991044d4e" name="a8a249ea5644661d1f73fe38991044d4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a249ea5644661d1f73fe38991044d4e">&#9670;&#160;</a></span>shift()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::shift </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Removes and returns the first element in the list. </p>
+<dl class="section return"><dt>Returns</dt><dd>The value of the removed element.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classValueError.html" title="Error class for value-related errors.">ValueError</a></td><td>If the list is empty. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a10c60e9cff4ac33446d99b08a3a170b4" name="a10c60e9cff4ac33446d99b08a3a170b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10c60e9cff4ac33446d99b08a3a170b4">&#9670;&#160;</a></span>shrink()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::shrink </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Frees all unused nodes currently in the free list. </p>
+<dl class="section note"><dt>Note</dt><dd>This reduces memory usage by deallocating unused preallocated nodes. </dd></dl>
+
+</div>
+</div>
+<a id="ada6aede19af5dc5d63f700871a146399" name="ada6aede19af5dc5d63f700871a146399"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada6aede19af5dc5d63f700871a146399">&#9670;&#160;</a></span>unlinkFromOrder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt;::unlinkFromOrder </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVaLinkedListNode.html">Node</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Unlinks a node from the list without deallocating it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>Pointer to the node to be unlinked. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Symbol Documentation</h2>
+<a id="ab141c8c8faf779ad419691e1223c0c35" name="ab141c8c8faf779ad419691e1223c0c35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab141c8c8faf779ad419691e1223c0c35">&#9670;&#160;</a></span>cap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Size cap </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>lst</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the total capacity of the linked list, including free nodes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lst</td><td>The linked list to query. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The total capacity of the list. </dd></dl>
+
+</div>
+</div>
+<a id="ad0ad029881df952a101b013a92b2856b" name="ad0ad029881df952a101b013a92b2856b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0ad029881df952a101b013a92b2856b">&#9670;&#160;</a></span>operator!=</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>lhs</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks whether two lists are not equal. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>The first list to compare. </td></tr>
+    <tr><td class="paramname">rhs</td><td>The second list to compare. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the lists differ in size or content. </dd></dl>
+
+</div>
+</div>
+<a id="a50a2b1d8212370234874695da8bffd1e" name="a50a2b1d8212370234874695da8bffd1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50a2b1d8212370234874695da8bffd1e">&#9670;&#160;</a></span>operator&lt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>lhs</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compares two lists lexicographically using the less-than operator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>The first list. </td></tr>
+    <tr><td class="paramname">rhs</td><td>The second list. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if lhs is lexicographically less than rhs.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Does nothing meaningful if T does not support operator&lt; — returns false. </dd></dl>
+
+</div>
+</div>
+<a id="afb8ce70c0aa5980c43288fc8baf86360" name="afb8ce70c0aa5980c43288fc8baf86360"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb8ce70c0aa5980c43288fc8baf86360">&#9670;&#160;</a></span>operator&lt;=</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&lt;= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>lhs</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if one list is less than or equal to another. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>The first list. </td></tr>
+    <tr><td class="paramname">rhs</td><td>The second list. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if lhs is less than or equal to rhs. </dd></dl>
+
+</div>
+</div>
+<a id="a67771a95f8b915f8b92687a73e4e1ebb" name="a67771a95f8b915f8b92687a73e4e1ebb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67771a95f8b915f8b92687a73e4e1ebb">&#9670;&#160;</a></span>operator==</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>lhs</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compares two lists for equality element by element. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>The first list to compare. </td></tr>
+    <tr><td class="paramname">rhs</td><td>The second list to compare. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if both lists are equal in size and content.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Supports types with ==, or that are trivially copyable. </dd></dl>
+
+</div>
+</div>
+<a id="a4cc2f30357a7fea9614c8b19be67a727" name="a4cc2f30357a7fea9614c8b19be67a727"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cc2f30357a7fea9614c8b19be67a727">&#9670;&#160;</a></span>operator&gt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&gt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>lhs</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compares two lists to determine if the first is greater than the second. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>The first list. </td></tr>
+    <tr><td class="paramname">rhs</td><td>The second list. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if lhs is greater than rhs. </dd></dl>
+
+</div>
+</div>
+<a id="a0b628428713ff682bea88a2e549c8596" name="a0b628428713ff682bea88a2e549c8596"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b628428713ff682bea88a2e549c8596">&#9670;&#160;</a></span>operator&gt;=</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&gt;= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>lhs</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classVaLinkedList.html">VaLinkedList</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if one list is greater than or equal to another. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>The first list. </td></tr>
+    <tr><td class="paramname">rhs</td><td>The second list. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if lhs is greater than or equal to rhs. </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>Include/VaLib/RawAccess/<a class="el" href="RawAccess_2LinkedList_8hpp_source.html">LinkedList.hpp</a></li>
+<li>Include/VaLib/Types/<a class="el" href="Types_2LinkedList_8hpp_source.html">LinkedList.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

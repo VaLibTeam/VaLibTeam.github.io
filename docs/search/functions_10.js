@@ -1,12 +1,10 @@
 var searchData=
 [
-  ['second_0',['second',['../classVaTuple_3_01Head_00_01Tail_8_8_8_01_4.html#a1f1b368fe3eec546a1264ff48988b06b',1,'VaTuple&lt; Head, Tail... &gt;::second()'],['../classVaTuple_3_01Head_00_01Tail_8_8_8_01_4.html#a707fd90ecc12091499e9be312e09e576',1,'VaTuple&lt; Head, Tail... &gt;::second() const']]],
-  ['shrink_1',['shrink',['../classVaList.html#ababe757cc94bb42a296baa6194a29418',1,'VaList']]],
-  ['sizebytes_2',['sizeBytes',['../classVaSlice.html#a2f1921992f8053fa1c2414db4efaa84e',1,'VaSlice']]],
-  ['slice_3',['slice',['../classVaList.html#a8d949addcdbe3f5e4f69cc924536ea27',1,'VaList']]],
-  ['slicefrom_4',['sliceFrom',['../classVaList.html#ad6a40fbc52477816436e210b843afe22',1,'VaList']]],
-  ['sliceto_5',['sliceTo',['../classVaList.html#a621829aece1651d26fb5941f43078fc2',1,'VaList']]],
-  ['subslice_6',['subslice',['../classVaSlice.html#a49bcd37ba4b3b68f5e4eeed3d438bb5e',1,'VaSlice::subslice(Size offset, Size count)'],['../classVaSlice.html#af024198674e981856f5faa8e22a24c59',1,'VaSlice::subslice(Size offset)']]],
-  ['substr_7',['substr',['../classVaString.html#a7ac0443d20cac1dc377dc512efdb18ca',1,'VaString']]],
-  ['swap_8',['swap',['../classva_1_1detail_1_1____BasicArray.html#a31e955918855f210560b3ecf78f0a0c6',1,'va::detail::__BasicArray::swap()'],['../classVaPair.html#a5eb7ae2b18dee0608d9ccb745d4dd9df',1,'VaPair::swap()']]]
+  ['release_0',['release',['../classVaSharedPtr.html#a9fb77f4602c846bdb5d432519be25423',1,'VaSharedPtr::release()'],['../classVaSharedPtr_3_01T_0f_0e_4.html#a227818522716aa54777831292c3f6d1c',1,'VaSharedPtr&lt; T[]&gt;::release()'],['../classVaUniquePtr.html#a8e9855fb029db81f54ee9d9775a793f3',1,'VaUniquePtr::release()'],['../classVaUniquePtr_3_01T_0f_0e_4.html#a2167244e608420760c2213052b6c3746',1,'VaUniquePtr&lt; T[]&gt;::release()'],['../classVaWeakPtr.html#a7f4c0e3a342169bb03ac230a2012fc81',1,'VaWeakPtr::release()'],['../classVaWeakPtr_3_01T_0f_0e_4.html#ab1cb7c53143b177b941b78b132d139df',1,'VaWeakPtr&lt; T[]&gt;::release()']]],
+  ['remove_1',['remove',['../classVaDict.html#a4e2b481af164a24d55607523617d1b45',1,'VaDict']]],
+  ['removefrombucket_2',['removeFromBucket',['../classVaDict.html#a3d8ae0c038804840efc8528ab40adab9',1,'VaDict']]],
+  ['reserve_3',['reserve',['../classVaDict.html#a0788db055dc7faefcb3842c1e758f9b2',1,'VaDict::reserve()'],['../classVaLinkedList.html#afa0c92c40ab3991f3f61a722c0110cf0',1,'VaLinkedList::reserve()'],['../classVaList.html#a22fce16360c1eeb2789c764ebce1b78d',1,'VaList::reserve()'],['../classVaString.html#a9c9f7bf19481dfadc8b8edd0ac38ddb9',1,'VaString::reserve()']]],
+  ['reset_4',['reset',['../classVaSharedPtr.html#a804471a8b57deaec232a79b437c83190',1,'VaSharedPtr::reset()'],['../classVaSharedPtr_3_01T_0f_0e_4.html#aaa0ff63a8be6b9a4b06f6f9412e7114e',1,'VaSharedPtr&lt; T[]&gt;::reset()'],['../classVaUniquePtr.html#a76021018fd62848e50cf092feb71445f',1,'VaUniquePtr::reset()'],['../classVaUniquePtr_3_01T_0f_0e_4.html#a64c1bb08cb8c5ca7c8289c73b13765af',1,'VaUniquePtr&lt; T[]&gt;::reset()'],['../classVaAny.html#a48f408bca8bb1bb4b6b2de277d92fb0e',1,'VaAny::reset()']]],
+  ['resize_5',['resize',['../classVaDict.html#aa44e61f9e30ff0a28b1e6f1673aeacd9',1,'VaDict::resize()'],['../classVaList.html#a0f8699a42bb7b79764555b49bbcd5eb9',1,'VaList::resize()'],['../classva_1_1detail_1_1StackBase_3_01T_00_01void_01_4.html#af09be6493db28a05788f37232cba0140',1,'va::detail::StackBase&lt; T, void &gt;::resize()'],['../classVaString.html#acb407f1793d68002ec2bc2c112062d1a',1,'VaString::resize()']]],
+  ['returnnode_6',['returnNode',['../classVaLinkedList.html#ab91ec1c72be7ddb5d7a9df61fb746efa',1,'VaLinkedList']]]
 ];

@@ -98,6 +98,21 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
+<tr class="memitem:a063eb5ae8a6119dcd3781d42dc57d99f" id="r_a063eb5ae8a6119dcd3781d42dc57d99f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a063eb5ae8a6119dcd3781d42dc57d99f">RawView</a> = <a class="el" href="structVaDictRawView.html">VaDictRawView</a>&lt;K, V, Hash&gt;</td></tr>
+<tr class="memdesc:a063eb5ae8a6119dcd3781d42dc57d99f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for a raw view of the dictionary's internal state. This struct provides a layout-compatible snapshot of the hash map's internals, usable for both inspection and unsafe mutation.  <br /></td></tr>
+<tr class="separator:a063eb5ae8a6119dcd3781d42dc57d99f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68993c8c340cf32ef3c2cfa43d4edacf" id="r_a68993c8c340cf32ef3c2cfa43d4edacf"><td class="memItemLeft" align="right" valign="top"><a id="a68993c8c340cf32ef3c2cfa43d4edacf" name="a68993c8c340cf32ef3c2cfa43d4edacf"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b> = <a class="el" href="structVaDictEntry.html">Entry</a></td></tr>
+<tr class="separator:a68993c8c340cf32ef3c2cfa43d4edacf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af70ec10f7aabc890b5c63cfe38bb6d13" id="r_af70ec10f7aabc890b5c63cfe38bb6d13"><td class="memItemLeft" align="right" valign="top"><a id="af70ec10f7aabc890b5c63cfe38bb6d13" name="af70ec10f7aabc890b5c63cfe38bb6d13"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>difference_type</b> = std::ptrdiff_t</td></tr>
+<tr class="separator:af70ec10f7aabc890b5c63cfe38bb6d13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4f3299f68e897bed11fecd1e60848d4" id="r_ae4f3299f68e897bed11fecd1e60848d4"><td class="memItemLeft" align="right" valign="top"><a id="ae4f3299f68e897bed11fecd1e60848d4" name="ae4f3299f68e897bed11fecd1e60848d4"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>reference</b> = <a class="el" href="structVaDict_1_1PairRef.html">PairRef</a></td></tr>
+<tr class="separator:ae4f3299f68e897bed11fecd1e60848d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90cc027f80390e92815e5acb87ebac2b" id="r_a90cc027f80390e92815e5acb87ebac2b"><td class="memItemLeft" align="right" valign="top"><a id="a90cc027f80390e92815e5acb87ebac2b" name="a90cc027f80390e92815e5acb87ebac2b"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>pointer</b> = void</td></tr>
+<tr class="separator:a90cc027f80390e92815e5acb87ebac2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfd48e4511bff36baa345f88b70612b6" id="r_adfd48e4511bff36baa345f88b70612b6"><td class="memItemLeft" align="right" valign="top"><a id="adfd48e4511bff36baa345f88b70612b6" name="adfd48e4511bff36baa345f88b70612b6"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>ReverseIterator</b> = std::reverse_iterator&lt;Iterator&gt;</td></tr>
 <tr class="separator:adfd48e4511bff36baa345f88b70612b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -116,19 +131,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af86fc15a3cc10474888cb8e979575874" id="r_af86fc15a3cc10474888cb8e979575874"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af86fc15a3cc10474888cb8e979575874">VaDict</a> (<a class="el" href="classVaDict.html">VaDict</a> &amp;&amp;other) noexcept</td></tr>
 <tr class="memdesc:af86fc15a3cc10474888cb8e979575874"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move constructor. Transfers ownership of internal data from another dictionary.  <br /></td></tr>
 <tr class="separator:af86fc15a3cc10474888cb8e979575874"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79327744e26d10cb30d4b4f83b9a222f" id="r_a79327744e26d10cb30d4b4f83b9a222f"><td class="memTemplParams" colspan="2">template&lt;typename U1  = K, typename U2  = V, typename  = std::enable_if_t&lt;!std::is_reference_v&lt;U2&gt;&gt;&gt; </td></tr>
+<tr class="memitem:a79327744e26d10cb30d4b4f83b9a222f" id="r_a79327744e26d10cb30d4b4f83b9a222f"><td class="memTemplParams" colspan="2">template&lt;typename U1  = K, typename U2  = V, typename  = tt::EnableIf&lt; !tt::IsReference&lt;U2&gt; &gt;&gt; </td></tr>
 <tr class="memitem:a79327744e26d10cb30d4b4f83b9a222f"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a79327744e26d10cb30d4b4f83b9a222f">VaDict</a> (std::initializer_list&lt; <a class="el" href="classVaPair.html">VaPair</a>&lt; U1, U2 &gt; &gt; init)</td></tr>
 <tr class="memdesc:a79327744e26d10cb30d4b4f83b9a222f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a dictionary from an initializer list of key-value pairs.  <br /></td></tr>
 <tr class="separator:a79327744e26d10cb30d4b4f83b9a222f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab56280c861520f134ddae7d01e571b27" id="r_ab56280c861520f134ddae7d01e571b27"><td class="memTemplParams" colspan="2">template&lt;typename U1  = K, typename U2  = V, typename  = std::enable_if_t&lt;!std::is_reference_v&lt;U2&gt;&gt;&gt; </td></tr>
+<tr class="memitem:ab56280c861520f134ddae7d01e571b27" id="r_ab56280c861520f134ddae7d01e571b27"><td class="memTemplParams" colspan="2">template&lt;typename U1  = K, typename U2  = V, typename  = tt::EnableIf&lt; !tt::IsReference&lt;U2&gt; &gt;&gt; </td></tr>
 <tr class="memitem:ab56280c861520f134ddae7d01e571b27"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab56280c861520f134ddae7d01e571b27">VaDict</a> (std::initializer_list&lt; <a class="el" href="classVaPair.html">VaPair</a>&lt; const U1, const U2 &gt; &gt; init)</td></tr>
 <tr class="memdesc:ab56280c861520f134ddae7d01e571b27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a dictionary from an initializer list of key-value pairs.  <br /></td></tr>
 <tr class="separator:ab56280c861520f134ddae7d01e571b27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d875f8509b565b1ba8e3502e8757d27" id="r_a5d875f8509b565b1ba8e3502e8757d27"><td class="memTemplParams" colspan="2">template&lt;typename U1  = K, typename U2  = V, typename  = std::enable_if_t&lt;!std::is_reference_v&lt;U2&gt;&gt;&gt; </td></tr>
+<tr class="memitem:a5d875f8509b565b1ba8e3502e8757d27" id="r_a5d875f8509b565b1ba8e3502e8757d27"><td class="memTemplParams" colspan="2">template&lt;typename U1  = K, typename U2  = V, typename  = tt::EnableIf&lt; !std::is_reference&lt;U2&gt;::value &gt;&gt; </td></tr>
 <tr class="memitem:a5d875f8509b565b1ba8e3502e8757d27"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5d875f8509b565b1ba8e3502e8757d27">VaDict</a> (<a class="el" href="classVaList.html">VaList</a>&lt; <a class="el" href="classVaPair.html">VaPair</a>&lt; U1, U2 &gt; &gt; init)</td></tr>
 <tr class="memdesc:a5d875f8509b565b1ba8e3502e8757d27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a dictionary from an initializer list of key-value pairs.  <br /></td></tr>
 <tr class="separator:a5d875f8509b565b1ba8e3502e8757d27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b1740e9b77d7d8514124a754b7db107" id="r_a3b1740e9b77d7d8514124a754b7db107"><td class="memTemplParams" colspan="2">template&lt;typename U1  = K, typename U2  = V, typename  = std::enable_if_t&lt;!std::is_reference_v&lt;U2&gt;&gt;&gt; </td></tr>
+<tr class="memitem:a3b1740e9b77d7d8514124a754b7db107" id="r_a3b1740e9b77d7d8514124a754b7db107"><td class="memTemplParams" colspan="2">template&lt;typename U1  = K, typename U2  = V, typename  = tt::EnableIf&lt; !std::is_reference&lt;U2&gt;::value &gt;&gt; </td></tr>
 <tr class="memitem:a3b1740e9b77d7d8514124a754b7db107"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a3b1740e9b77d7d8514124a754b7db107">VaDict</a> (<a class="el" href="classVaList.html">VaList</a>&lt; <a class="el" href="classVaPair.html">VaPair</a>&lt; const U1, const U2 &gt; &gt; init)</td></tr>
 <tr class="memdesc:a3b1740e9b77d7d8514124a754b7db107"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a dictionary from an initializer list of key-value pairs.  <br /></td></tr>
 <tr class="separator:a3b1740e9b77d7d8514124a754b7db107"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -142,9 +157,147 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a86923951f2340abbcff68a8977087468" id="r_a86923951f2340abbcff68a8977087468"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVaDict.html">VaDict</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86923951f2340abbcff68a8977087468">operator=</a> (<a class="el" href="classVaDict.html">VaDict</a> &amp;&amp;other) noexcept</td></tr>
 <tr class="memdesc:a86923951f2340abbcff68a8977087468"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move assignment operator. Transfers the contents of another dictionary.  <br /></td></tr>
 <tr class="separator:a86923951f2340abbcff68a8977087468"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e3ed46fcc77644c73dd3b6eb3fcf40e" id="r_a2e3ed46fcc77644c73dd3b6eb3fcf40e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e3ed46fcc77644c73dd3b6eb3fcf40e">operator&lt;</a> (const <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V &gt; &amp;other) const</td></tr>
-<tr class="memdesc:a2e3ed46fcc77644c73dd3b6eb3fcf40e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lexicographically compares two dictionaries.  <br /></td></tr>
-<tr class="separator:a2e3ed46fcc77644c73dd3b6eb3fcf40e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac06c0edd28ed6629d16fc020c933dcce" id="r_ac06c0edd28ed6629d16fc020c933dcce"><td class="memItemLeft" align="right" valign="top"><a id="ac06c0edd28ed6629d16fc020c933dcce" name="ac06c0edd28ed6629d16fc020c933dcce"></a>
+Size&#160;</td><td class="memItemRight" valign="bottom"><b>hash</b> () const</td></tr>
+<tr class="separator:ac06c0edd28ed6629d16fc020c933dcce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0788db055dc7faefcb3842c1e758f9b2" id="r_a0788db055dc7faefcb3842c1e758f9b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0788db055dc7faefcb3842c1e758f9b2">reserve</a> (Size minCap)</td></tr>
+<tr class="memdesc:a0788db055dc7faefcb3842c1e758f9b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensures capacity is at least the specified amount.  <br /></td></tr>
+<tr class="separator:a0788db055dc7faefcb3842c1e758f9b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4be3bdfbee08bf0ac21d0b1ea7887f22" id="r_a4be3bdfbee08bf0ac21d0b1ea7887f22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4be3bdfbee08bf0ac21d0b1ea7887f22">insert</a> (Size index, const K &amp;key, const V &amp;value)</td></tr>
+<tr class="memdesc:a4be3bdfbee08bf0ac21d0b1ea7887f22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts a key-value pair at a specific position in insertion order.  <br /></td></tr>
+<tr class="separator:a4be3bdfbee08bf0ac21d0b1ea7887f22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41e81fda7c43edc38cafe9b5032bcdef" id="r_a41e81fda7c43edc38cafe9b5032bcdef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41e81fda7c43edc38cafe9b5032bcdef">putAtBack</a> (const K &amp;key, const V &amp;value)</td></tr>
+<tr class="memdesc:a41e81fda7c43edc38cafe9b5032bcdef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts or updates a key-value pair in the dictionary.  <br /></td></tr>
+<tr class="separator:a41e81fda7c43edc38cafe9b5032bcdef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec56ac49ff8adbf814100139827d66ab" id="r_aec56ac49ff8adbf814100139827d66ab"><td class="memItemLeft" align="right" valign="top"><a id="aec56ac49ff8adbf814100139827d66ab" name="aec56ac49ff8adbf814100139827d66ab"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>put</b> (const K &amp;key, const V &amp;value)</td></tr>
+<tr class="separator:aec56ac49ff8adbf814100139827d66ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6813943111060f98c67a213692d23f93" id="r_a6813943111060f98c67a213692d23f93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6813943111060f98c67a213692d23f93">putAtBack</a> (<a class="el" href="structVaDict_1_1ConstPairRef.html">ConstPairRef</a> pair)</td></tr>
+<tr class="memdesc:a6813943111060f98c67a213692d23f93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts or updates a key-value pair at the back of the dictionary.  <br /></td></tr>
+<tr class="separator:a6813943111060f98c67a213692d23f93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7802702da9fe61765e60c6908fd10f0b" id="r_a7802702da9fe61765e60c6908fd10f0b"><td class="memItemLeft" align="right" valign="top"><a id="a7802702da9fe61765e60c6908fd10f0b" name="a7802702da9fe61765e60c6908fd10f0b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>putAtBack</b> (<a class="el" href="classVaPair.html">VaPair</a>&lt; K, V &gt; pair)</td></tr>
+<tr class="separator:a7802702da9fe61765e60c6908fd10f0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c29f3fd104e6d9fd31115aac73fcc65" id="r_a4c29f3fd104e6d9fd31115aac73fcc65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c29f3fd104e6d9fd31115aac73fcc65">putAtFront</a> (const K &amp;key, const V &amp;value)</td></tr>
+<tr class="memdesc:a4c29f3fd104e6d9fd31115aac73fcc65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts or updates a key-value pair at the front of the dictionary.  <br /></td></tr>
+<tr class="separator:a4c29f3fd104e6d9fd31115aac73fcc65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57cfe44099d4e7015172903c8ca34534" id="r_a57cfe44099d4e7015172903c8ca34534"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57cfe44099d4e7015172903c8ca34534">putAtFront</a> (<a class="el" href="structVaDict_1_1ConstPairRef.html">ConstPairRef</a> pair)</td></tr>
+<tr class="memdesc:a57cfe44099d4e7015172903c8ca34534"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts or updates a key-value pair at the front of the dictionary.  <br /></td></tr>
+<tr class="separator:a57cfe44099d4e7015172903c8ca34534"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d31f8cfd6d71eb5235e493a97a1320a" id="r_a0d31f8cfd6d71eb5235e493a97a1320a"><td class="memItemLeft" align="right" valign="top"><a id="a0d31f8cfd6d71eb5235e493a97a1320a" name="a0d31f8cfd6d71eb5235e493a97a1320a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>putAtFront</b> (<a class="el" href="classVaPair.html">VaPair</a>&lt; K, V &gt; pair)</td></tr>
+<tr class="separator:a0d31f8cfd6d71eb5235e493a97a1320a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2187cfffbc1e5b4dc1976482cc10e95" id="r_ae2187cfffbc1e5b4dc1976482cc10e95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2187cfffbc1e5b4dc1976482cc10e95">del</a> (const K &amp;key)</td></tr>
+<tr class="memdesc:ae2187cfffbc1e5b4dc1976482cc10e95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a key-value pair from the dictionary.  <br /></td></tr>
+<tr class="separator:ae2187cfffbc1e5b4dc1976482cc10e95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a822dfe35415ff033742f345dab442b2b" id="r_a822dfe35415ff033742f345dab442b2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a822dfe35415ff033742f345dab442b2b">delIndex</a> (Size index)</td></tr>
+<tr class="memdesc:a822dfe35415ff033742f345dab442b2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes an entry from the dictionary at a specific insertion index.  <br /></td></tr>
+<tr class="separator:a822dfe35415ff033742f345dab442b2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26372955988e0fd8a5ba56fa9b6e0e50" id="r_a26372955988e0fd8a5ba56fa9b6e0e50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26372955988e0fd8a5ba56fa9b6e0e50">clear</a> (bool freeEntries=false)</td></tr>
+<tr class="memdesc:a26372955988e0fd8a5ba56fa9b6e0e50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all key-value pairs from the dictionary.  <br /></td></tr>
+<tr class="separator:a26372955988e0fd8a5ba56fa9b6e0e50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e2b481af164a24d55607523617d1b45" id="r_a4e2b481af164a24d55607523617d1b45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e2b481af164a24d55607523617d1b45">remove</a> (const K &amp;key)</td></tr>
+<tr class="memdesc:a4e2b481af164a24d55607523617d1b45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a key-value pair from the dictionary.  <br /></td></tr>
+<tr class="separator:a4e2b481af164a24d55607523617d1b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1eeaf544408a1d567aec8c4d0999ed5b" id="r_a1eeaf544408a1d567aec8c4d0999ed5b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1eeaf544408a1d567aec8c4d0999ed5b">contains</a> (const K &amp;key) const</td></tr>
+<tr class="memdesc:a1eeaf544408a1d567aec8c4d0999ed5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the dictionary contains the given key.  <br /></td></tr>
+<tr class="separator:a1eeaf544408a1d567aec8c4d0999ed5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c3004e35304ba716278aa393a3494f1" id="r_a5c3004e35304ba716278aa393a3494f1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c3004e35304ba716278aa393a3494f1">get</a> (const K &amp;key, V &amp;value) const</td></tr>
+<tr class="memdesc:a5c3004e35304ba716278aa393a3494f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the value for a given key, if it exists.  <br /></td></tr>
+<tr class="separator:a5c3004e35304ba716278aa393a3494f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a257099f8547e27ff8a12de97ea8ef13b" id="r_a257099f8547e27ff8a12de97ea8ef13b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a257099f8547e27ff8a12de97ea8ef13b">set</a> (const K &amp;key, const V &amp;value)</td></tr>
+<tr class="memdesc:a257099f8547e27ff8a12de97ea8ef13b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the value associated with a given key.  <br /></td></tr>
+<tr class="separator:a257099f8547e27ff8a12de97ea8ef13b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf6a91e8153ce73568afc4889184d355" id="r_aaf6a91e8153ce73568afc4889184d355"><td class="memItemLeft" align="right" valign="top">V &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf6a91e8153ce73568afc4889184d355">operator[]</a> (const K &amp;key)</td></tr>
+<tr class="memdesc:aaf6a91e8153ce73568afc4889184d355"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the value for the given key, inserting a default if missing.  <br /></td></tr>
+<tr class="separator:aaf6a91e8153ce73568afc4889184d355"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab11c2836928aa9926b41870596b27dd2" id="r_ab11c2836928aa9926b41870596b27dd2"><td class="memItemLeft" align="right" valign="top">V &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab11c2836928aa9926b41870596b27dd2">at</a> (const K &amp;key)</td></tr>
+<tr class="memdesc:ab11c2836928aa9926b41870596b27dd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the value for the given key.  <br /></td></tr>
+<tr class="separator:ab11c2836928aa9926b41870596b27dd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0610f2e6554ae14ce9f4981905d6911c" id="r_a0610f2e6554ae14ce9f4981905d6911c"><td class="memItemLeft" align="right" valign="top">const V &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0610f2e6554ae14ce9f4981905d6911c">at</a> (const K &amp;key) const</td></tr>
+<tr class="memdesc:a0610f2e6554ae14ce9f4981905d6911c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the value for the given key.  <br /></td></tr>
+<tr class="separator:a0610f2e6554ae14ce9f4981905d6911c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab416afd1648fe6f84f2150c07282bec" id="r_aab416afd1648fe6f84f2150c07282bec"><td class="memItemLeft" align="right" valign="top">V &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab416afd1648fe6f84f2150c07282bec">valueAtIndex</a> (Size index)</td></tr>
+<tr class="memdesc:aab416afd1648fe6f84f2150c07282bec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the value at a given insertion index.  <br /></td></tr>
+<tr class="separator:aab416afd1648fe6f84f2150c07282bec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae2cbf471e3fba750ffa30348b161193" id="r_aae2cbf471e3fba750ffa30348b161193"><td class="memItemLeft" align="right" valign="top"><a id="aae2cbf471e3fba750ffa30348b161193" name="aae2cbf471e3fba750ffa30348b161193"></a>
+V &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>atIndex</b> (Size index)</td></tr>
+<tr class="separator:aae2cbf471e3fba750ffa30348b161193"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fdecd903b02d425d172fe0d138aac1b" id="r_a9fdecd903b02d425d172fe0d138aac1b"><td class="memItemLeft" align="right" valign="top">const V &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9fdecd903b02d425d172fe0d138aac1b">valueAtIndex</a> (Size index) const</td></tr>
+<tr class="memdesc:a9fdecd903b02d425d172fe0d138aac1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the value at a given insertion index.  <br /></td></tr>
+<tr class="separator:a9fdecd903b02d425d172fe0d138aac1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31f881c7a37cb6f12158265d067c65cc" id="r_a31f881c7a37cb6f12158265d067c65cc"><td class="memItemLeft" align="right" valign="top"><a id="a31f881c7a37cb6f12158265d067c65cc" name="a31f881c7a37cb6f12158265d067c65cc"></a>
+const V &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>atIndex</b> (Size index) const</td></tr>
+<tr class="separator:a31f881c7a37cb6f12158265d067c65cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a407795063ce3c29017326cc034f5fb45" id="r_a407795063ce3c29017326cc034f5fb45"><td class="memItemLeft" align="right" valign="top">const K &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a407795063ce3c29017326cc034f5fb45">keyAtIndex</a> (Size index) const</td></tr>
+<tr class="memdesc:a407795063ce3c29017326cc034f5fb45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the key at a given insertion index.  <br /></td></tr>
+<tr class="separator:a407795063ce3c29017326cc034f5fb45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dae4f4d2576bdd4848f5ed6170f9444" id="r_a0dae4f4d2576bdd4848f5ed6170f9444"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structVaDict_1_1PairRef.html">PairRef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0dae4f4d2576bdd4848f5ed6170f9444">pairAtIndex</a> (Size index)</td></tr>
+<tr class="memdesc:a0dae4f4d2576bdd4848f5ed6170f9444"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable key-value pair reference at a given insertion index.  <br /></td></tr>
+<tr class="separator:a0dae4f4d2576bdd4848f5ed6170f9444"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac464b3ac4e7ee3a6aa380d9c271504f5" id="r_ac464b3ac4e7ee3a6aa380d9c271504f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structVaDict_1_1ConstPairRef.html">ConstPairRef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac464b3ac4e7ee3a6aa380d9c271504f5">pairAtIndex</a> (Size index) const</td></tr>
+<tr class="memdesc:ac464b3ac4e7ee3a6aa380d9c271504f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const key-value pair reference at a given insertion index.  <br /></td></tr>
+<tr class="separator:ac464b3ac4e7ee3a6aa380d9c271504f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9dccb9e296fe42c157c7fc398088cf8" id="r_ac9dccb9e296fe42c157c7fc398088cf8"><td class="memItemLeft" align="right" valign="top">V &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9dccb9e296fe42c157c7fc398088cf8">valueAtFront</a> ()</td></tr>
+<tr class="memdesc:ac9dccb9e296fe42c157c7fc398088cf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the value at the front of the dictionary.  <br /></td></tr>
+<tr class="separator:ac9dccb9e296fe42c157c7fc398088cf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76f6da36e4b933148b95ee05a4502cc6" id="r_a76f6da36e4b933148b95ee05a4502cc6"><td class="memItemLeft" align="right" valign="top"><a id="a76f6da36e4b933148b95ee05a4502cc6" name="a76f6da36e4b933148b95ee05a4502cc6"></a>
+V &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>front</b> ()</td></tr>
+<tr class="separator:a76f6da36e4b933148b95ee05a4502cc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdb5f3c979d88dc451eefc877e5d5624" id="r_abdb5f3c979d88dc451eefc877e5d5624"><td class="memItemLeft" align="right" valign="top">const V &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abdb5f3c979d88dc451eefc877e5d5624">valueAtFront</a> () const</td></tr>
+<tr class="memdesc:abdb5f3c979d88dc451eefc877e5d5624"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the value at the front of the dictionary (const version).  <br /></td></tr>
+<tr class="separator:abdb5f3c979d88dc451eefc877e5d5624"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44c20e66955d8905b6929494678c96a1" id="r_a44c20e66955d8905b6929494678c96a1"><td class="memItemLeft" align="right" valign="top"><a id="a44c20e66955d8905b6929494678c96a1" name="a44c20e66955d8905b6929494678c96a1"></a>
+const V &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>front</b> () const</td></tr>
+<tr class="separator:a44c20e66955d8905b6929494678c96a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00c240302083f258043e4f8810e735de" id="r_a00c240302083f258043e4f8810e735de"><td class="memItemLeft" align="right" valign="top">const K &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00c240302083f258043e4f8810e735de">keyAtFront</a> () const</td></tr>
+<tr class="memdesc:a00c240302083f258043e4f8810e735de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the key at the front of the dictionary.  <br /></td></tr>
+<tr class="separator:a00c240302083f258043e4f8810e735de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa02d46b04cbf26c3c609659bf735a849" id="r_aa02d46b04cbf26c3c609659bf735a849"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structVaDict_1_1PairRef.html">PairRef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa02d46b04cbf26c3c609659bf735a849">pairAtFront</a> ()</td></tr>
+<tr class="memdesc:aa02d46b04cbf26c3c609659bf735a849"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the key-value pair at the front of the dictionary.  <br /></td></tr>
+<tr class="separator:aa02d46b04cbf26c3c609659bf735a849"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa74194a2435506ef3115c605b2bf43bd" id="r_aa74194a2435506ef3115c605b2bf43bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structVaDict_1_1ConstPairRef.html">ConstPairRef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa74194a2435506ef3115c605b2bf43bd">pairAtFront</a> () const</td></tr>
+<tr class="memdesc:aa74194a2435506ef3115c605b2bf43bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the key-value pair at the front of the dictionary (const version).  <br /></td></tr>
+<tr class="separator:aa74194a2435506ef3115c605b2bf43bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c28fa46a91804fcb942115142c4bf1b" id="r_a0c28fa46a91804fcb942115142c4bf1b"><td class="memItemLeft" align="right" valign="top">V &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c28fa46a91804fcb942115142c4bf1b">valueAtBack</a> ()</td></tr>
+<tr class="memdesc:a0c28fa46a91804fcb942115142c4bf1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the value at the back of the dictionary.  <br /></td></tr>
+<tr class="separator:a0c28fa46a91804fcb942115142c4bf1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73a2da1fe5ca8ff7e5ba0b2c531dcf75" id="r_a73a2da1fe5ca8ff7e5ba0b2c531dcf75"><td class="memItemLeft" align="right" valign="top"><a id="a73a2da1fe5ca8ff7e5ba0b2c531dcf75" name="a73a2da1fe5ca8ff7e5ba0b2c531dcf75"></a>
+V &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>back</b> ()</td></tr>
+<tr class="separator:a73a2da1fe5ca8ff7e5ba0b2c531dcf75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76abf73d01703061fff3e3b21bbfb77b" id="r_a76abf73d01703061fff3e3b21bbfb77b"><td class="memItemLeft" align="right" valign="top">const V &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76abf73d01703061fff3e3b21bbfb77b">valueAtBack</a> () const</td></tr>
+<tr class="memdesc:a76abf73d01703061fff3e3b21bbfb77b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the value at the back of the dictionary (const version).  <br /></td></tr>
+<tr class="separator:a76abf73d01703061fff3e3b21bbfb77b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd61b40126e22ba7742ba375eb3681f8" id="r_abd61b40126e22ba7742ba375eb3681f8"><td class="memItemLeft" align="right" valign="top"><a id="abd61b40126e22ba7742ba375eb3681f8" name="abd61b40126e22ba7742ba375eb3681f8"></a>
+const V &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>back</b> () const</td></tr>
+<tr class="separator:abd61b40126e22ba7742ba375eb3681f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2cabc99840aad9e9aaa08c1c948f041" id="r_ab2cabc99840aad9e9aaa08c1c948f041"><td class="memItemLeft" align="right" valign="top">const K &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2cabc99840aad9e9aaa08c1c948f041">keyAtBack</a> () const</td></tr>
+<tr class="memdesc:ab2cabc99840aad9e9aaa08c1c948f041"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the key at the back of the dictionary.  <br /></td></tr>
+<tr class="separator:ab2cabc99840aad9e9aaa08c1c948f041"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89d077e82a836a882fbaed67cea4852b" id="r_a89d077e82a836a882fbaed67cea4852b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structVaDict_1_1PairRef.html">PairRef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89d077e82a836a882fbaed67cea4852b">pairAtBack</a> ()</td></tr>
+<tr class="memdesc:a89d077e82a836a882fbaed67cea4852b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the key-value pair at the back of the dictionary.  <br /></td></tr>
+<tr class="separator:a89d077e82a836a882fbaed67cea4852b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b40fd272132271379e4f5b355dd59d7" id="r_a5b40fd272132271379e4f5b355dd59d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structVaDict_1_1ConstPairRef.html">ConstPairRef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b40fd272132271379e4f5b355dd59d7">pairAtBack</a> () const</td></tr>
+<tr class="memdesc:a5b40fd272132271379e4f5b355dd59d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the key-value pair at the back of the dictionary (const version).  <br /></td></tr>
+<tr class="separator:a5b40fd272132271379e4f5b355dd59d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a945a94a8a2c7901d0c02cc7b1d7c1872" id="r_a945a94a8a2c7901d0c02cc7b1d7c1872"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a945a94a8a2c7901d0c02cc7b1d7c1872">isEmpty</a> () const noexcept</td></tr>
+<tr class="memdesc:a945a94a8a2c7901d0c02cc7b1d7c1872"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the dictionary is empty.  <br /></td></tr>
+<tr class="separator:a945a94a8a2c7901d0c02cc7b1d7c1872"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff4e58c990ef902ca14e0b941eaa80a4" id="r_aff4e58c990ef902ca14e0b941eaa80a4"><td class="memItemLeft" align="right" valign="top">Size&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff4e58c990ef902ca14e0b941eaa80a4">getSize</a> () const noexcept</td></tr>
+<tr class="memdesc:aff4e58c990ef902ca14e0b941eaa80a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the current number of elements in the dictionary.  <br /></td></tr>
+<tr class="separator:aff4e58c990ef902ca14e0b941eaa80a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fe2dbb63286bbfe69780b0c18c995f1" id="r_a9fe2dbb63286bbfe69780b0c18c995f1"><td class="memItemLeft" align="right" valign="top">Size&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9fe2dbb63286bbfe69780b0c18c995f1">getCapacity</a> () const noexcept</td></tr>
+<tr class="memdesc:a9fe2dbb63286bbfe69780b0c18c995f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the current capacity of the dictionary.  <br /></td></tr>
+<tr class="separator:a9fe2dbb63286bbfe69780b0c18c995f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a436a992b40ca508d2913ce286eb3b855" id="r_a436a992b40ca508d2913ce286eb3b855"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="#a063eb5ae8a6119dcd3781d42dc57d99f">RawView</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a436a992b40ca508d2913ce286eb3b855">getRawView</a> () const</td></tr>
+<tr class="memdesc:a436a992b40ca508d2913ce286eb3b855"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a safe, read-only view of the dictionary internals. This method returns a pointer to the current dictionary object, reinterpreted as a const-qualified raw view. It allows inspection of the internal state without enabling mutation.  <br /></td></tr>
+<tr class="separator:a436a992b40ca508d2913ce286eb3b855"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a9461bfb7862901314d89fc87693530" id="r_a3a9461bfb7862901314d89fc87693530"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a063eb5ae8a6119dcd3781d42dc57d99f">RawView</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a9461bfb7862901314d89fc87693530">getUnsafeAccess</a> ()</td></tr>
+<tr class="memdesc:a3a9461bfb7862901314d89fc87693530"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grants unsafe mutable access to the dictionary internals. This method returns a raw pointer to this object reinterpreted as a <code><a class="el" href="structVaDictRawView.html" title="Raw view into the internal state of a dictionary (hash map). This struct provides a layout-compatible...">VaDictRawView</a>&lt;K, V, Hash&gt;</code>. All members (buckets, size, hash) can be modified.  <br /></td></tr>
+<tr class="separator:a3a9461bfb7862901314d89fc87693530"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af79bc4b706f089c0935f5ee93c385d96" id="r_af79bc4b706f089c0935f5ee93c385d96"><td class="memItemLeft" align="right" valign="top"><a id="af79bc4b706f089c0935f5ee93c385d96" name="af79bc4b706f089c0935f5ee93c385d96"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>while</b> (a !=nullptr &amp;&amp;b !=nullptr)</td></tr>
+<tr class="separator:af79bc4b706f089c0935f5ee93c385d96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0adf8a2c88dca77732213ab27e5768b" id="r_af0adf8a2c88dca77732213ab27e5768b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0adf8a2c88dca77732213ab27e5768b">operator&gt;</a> (const <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V &gt; &amp;other) const</td></tr>
 <tr class="memdesc:af0adf8a2c88dca77732213ab27e5768b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lexicographically compares two dictionaries in the opposite direction.  <br /></td></tr>
 <tr class="separator:af0adf8a2c88dca77732213ab27e5768b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -163,48 +316,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8a35d1bbd1f641d3f2f1ee056bb45b5c" id="r_a8a35d1bbd1f641d3f2f1ee056bb45b5c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a35d1bbd1f641d3f2f1ee056bb45b5c">equalsOrdered</a> (const <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V &gt; &amp;other) const</td></tr>
 <tr class="memdesc:a8a35d1bbd1f641d3f2f1ee056bb45b5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two dictionaries for equality, preserving insertion order.  <br /></td></tr>
 <tr class="separator:a8a35d1bbd1f641d3f2f1ee056bb45b5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0788db055dc7faefcb3842c1e758f9b2" id="r_a0788db055dc7faefcb3842c1e758f9b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0788db055dc7faefcb3842c1e758f9b2">reserve</a> (Size minCap)</td></tr>
-<tr class="memdesc:a0788db055dc7faefcb3842c1e758f9b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensures capacity is at least the specified amount.  <br /></td></tr>
-<tr class="separator:a0788db055dc7faefcb3842c1e758f9b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4be3bdfbee08bf0ac21d0b1ea7887f22" id="r_a4be3bdfbee08bf0ac21d0b1ea7887f22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4be3bdfbee08bf0ac21d0b1ea7887f22">insert</a> (Size index, const K &amp;key, const V &amp;value)</td></tr>
-<tr class="memdesc:a4be3bdfbee08bf0ac21d0b1ea7887f22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts a key-value pair at a specific position in insertion order.  <br /></td></tr>
-<tr class="separator:a4be3bdfbee08bf0ac21d0b1ea7887f22"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec56ac49ff8adbf814100139827d66ab" id="r_aec56ac49ff8adbf814100139827d66ab"><td class="memItemLeft" align="right" valign="top"><a id="aec56ac49ff8adbf814100139827d66ab" name="aec56ac49ff8adbf814100139827d66ab"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>put</b> (const K &amp;key, const V &amp;value)</td></tr>
-<tr class="separator:aec56ac49ff8adbf814100139827d66ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c3004e35304ba716278aa393a3494f1" id="r_a5c3004e35304ba716278aa393a3494f1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c3004e35304ba716278aa393a3494f1">get</a> (const K &amp;key, V &amp;value) const</td></tr>
-<tr class="memdesc:a5c3004e35304ba716278aa393a3494f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the value for a given key, if it exists.  <br /></td></tr>
-<tr class="separator:a5c3004e35304ba716278aa393a3494f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8cbf063227f959f8c9598f2fd80cb09" id="r_af8cbf063227f959f8c9598f2fd80cb09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8cbf063227f959f8c9598f2fd80cb09">clear</a> ()</td></tr>
-<tr class="memdesc:af8cbf063227f959f8c9598f2fd80cb09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all key-value pairs from the dictionary.  <br /></td></tr>
-<tr class="separator:af8cbf063227f959f8c9598f2fd80cb09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e2b481af164a24d55607523617d1b45" id="r_a4e2b481af164a24d55607523617d1b45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e2b481af164a24d55607523617d1b45">remove</a> (const K &amp;key)</td></tr>
-<tr class="memdesc:a4e2b481af164a24d55607523617d1b45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a key-value pair from the dictionary.  <br /></td></tr>
-<tr class="separator:a4e2b481af164a24d55607523617d1b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1eeaf544408a1d567aec8c4d0999ed5b" id="r_a1eeaf544408a1d567aec8c4d0999ed5b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1eeaf544408a1d567aec8c4d0999ed5b">contains</a> (const K &amp;key) const</td></tr>
-<tr class="memdesc:a1eeaf544408a1d567aec8c4d0999ed5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the dictionary contains the given key.  <br /></td></tr>
-<tr class="separator:a1eeaf544408a1d567aec8c4d0999ed5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf6a91e8153ce73568afc4889184d355" id="r_aaf6a91e8153ce73568afc4889184d355"><td class="memItemLeft" align="right" valign="top">V &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf6a91e8153ce73568afc4889184d355">operator[]</a> (const K &amp;key)</td></tr>
-<tr class="memdesc:aaf6a91e8153ce73568afc4889184d355"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the value for the given key, inserting a default if missing.  <br /></td></tr>
-<tr class="separator:aaf6a91e8153ce73568afc4889184d355"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab11c2836928aa9926b41870596b27dd2" id="r_ab11c2836928aa9926b41870596b27dd2"><td class="memItemLeft" align="right" valign="top">V &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab11c2836928aa9926b41870596b27dd2">at</a> (const K &amp;key)</td></tr>
-<tr class="memdesc:ab11c2836928aa9926b41870596b27dd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the value for the given key.  <br /></td></tr>
-<tr class="separator:ab11c2836928aa9926b41870596b27dd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0610f2e6554ae14ce9f4981905d6911c" id="r_a0610f2e6554ae14ce9f4981905d6911c"><td class="memItemLeft" align="right" valign="top">const V &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0610f2e6554ae14ce9f4981905d6911c">at</a> (const K &amp;key) const</td></tr>
-<tr class="memdesc:a0610f2e6554ae14ce9f4981905d6911c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the value for the given key.  <br /></td></tr>
-<tr class="separator:a0610f2e6554ae14ce9f4981905d6911c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae2cbf471e3fba750ffa30348b161193" id="r_aae2cbf471e3fba750ffa30348b161193"><td class="memItemLeft" align="right" valign="top">V &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae2cbf471e3fba750ffa30348b161193">atIndex</a> (Size index)</td></tr>
-<tr class="memdesc:aae2cbf471e3fba750ffa30348b161193"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the value at a given insertion index.  <br /></td></tr>
-<tr class="separator:aae2cbf471e3fba750ffa30348b161193"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31f881c7a37cb6f12158265d067c65cc" id="r_a31f881c7a37cb6f12158265d067c65cc"><td class="memItemLeft" align="right" valign="top">const V &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31f881c7a37cb6f12158265d067c65cc">atIndex</a> (Size index) const</td></tr>
-<tr class="memdesc:a31f881c7a37cb6f12158265d067c65cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the value at a given insertion index.  <br /></td></tr>
-<tr class="separator:a31f881c7a37cb6f12158265d067c65cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0dae4f4d2576bdd4848f5ed6170f9444" id="r_a0dae4f4d2576bdd4848f5ed6170f9444"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structVaDict_1_1PairRef.html">PairRef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0dae4f4d2576bdd4848f5ed6170f9444">pairAtIndex</a> (Size index)</td></tr>
-<tr class="memdesc:a0dae4f4d2576bdd4848f5ed6170f9444"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable key-value pair reference at a given insertion index.  <br /></td></tr>
-<tr class="separator:a0dae4f4d2576bdd4848f5ed6170f9444"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac464b3ac4e7ee3a6aa380d9c271504f5" id="r_ac464b3ac4e7ee3a6aa380d9c271504f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structVaDict_1_1ConstPairRef.html">ConstPairRef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac464b3ac4e7ee3a6aa380d9c271504f5">pairAtIndex</a> (Size index) const</td></tr>
-<tr class="memdesc:ac464b3ac4e7ee3a6aa380d9c271504f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const key-value pair reference at a given insertion index.  <br /></td></tr>
-<tr class="separator:ac464b3ac4e7ee3a6aa380d9c271504f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a688db54664a952f37af05cd487ae4545" id="r_a688db54664a952f37af05cd487ae4545"><td class="memItemLeft" align="right" valign="top"><a id="a688db54664a952f37af05cd487ae4545" name="a688db54664a952f37af05cd487ae4545"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Iterator</b> (<a class="el" href="structVaDictEntry.html">Entry</a> *e)</td></tr>
 <tr class="separator:a688db54664a952f37af05cd487ae4545"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -262,12 +373,23 @@ ConstReverseIterator&#160;</td><td class="memItemRight" valign="bottom"><b>crend
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:add093ffa4721265ca4c273c992deb737" id="r_add093ffa4721265ca4c273c992deb737"><td class="memItemLeft" align="right" valign="top"><a id="add093ffa4721265ca4c273c992deb737" name="add093ffa4721265ca4c273c992deb737"></a>
-friends&#160;</td><td class="memItemRight" valign="bottom">: friend inline Size <a class="el" href="#a5862d13bacd696931d1b022327aae776">size</a>(const <a class="el" href="classVaDict.html">VaDict</a>&amp; dict) { return dict.size</td></tr>
-<tr class="separator:add093ffa4721265ca4c273c992deb737"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adafbf9dbee37467bf63ddb9187a24182" id="r_adafbf9dbee37467bf63ddb9187a24182"><td class="memItemLeft" align="right" valign="top"><a id="adafbf9dbee37467bf63ddb9187a24182" name="adafbf9dbee37467bf63ddb9187a24182"></a>
-iterators&#160;</td><td class="memItemRight" valign="bottom">: class Iterator { protected: <a class="el" href="structVaDictEntry.html">Entry</a>* ptr</td></tr>
-<tr class="separator:adafbf9dbee37467bf63ddb9187a24182"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80b42bed1337bf066b6cb0eaa2af5e31" id="r_a80b42bed1337bf066b6cb0eaa2af5e31"><td class="memItemLeft" align="right" valign="top"><a id="a80b42bed1337bf066b6cb0eaa2af5e31" name="a80b42bed1337bf066b6cb0eaa2af5e31"></a>
+operators&#160;</td><td class="memItemRight" valign="bottom">: bool operator&lt;(const <a class="el" href="classVaDict.html">VaDict</a>&lt;K</td></tr>
+<tr class="separator:a80b42bed1337bf066b6cb0eaa2af5e31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e9e1e813326db62ece638b344a7919b" id="r_a1e9e1e813326db62ece638b344a7919b"><td class="memItemLeft" align="right" valign="top">operators V &amp;other&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e9e1e813326db62ece638b344a7919b">const</a></td></tr>
+<tr class="separator:a1e9e1e813326db62ece638b344a7919b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f5953a7973bec4ffdfbecadc4e28146" id="r_a2f5953a7973bec4ffdfbecadc4e28146"><td class="memItemLeft" align="right" valign="top"><a id="a2f5953a7973bec4ffdfbecadc4e28146" name="a2f5953a7973bec4ffdfbecadc4e28146"></a>
+<a class="el" href="structVaDictEntry.html">Entry</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>b</b> = other.head</td></tr>
+<tr class="separator:a2f5953a7973bec4ffdfbecadc4e28146"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa04dd6be408bc1a0b4de202c432a11fe" id="r_aa04dd6be408bc1a0b4de202c432a11fe"><td class="memItemLeft" align="right" valign="top"><a id="aa04dd6be408bc1a0b4de202c432a11fe" name="aa04dd6be408bc1a0b4de202c432a11fe"></a>
+return&#160;</td><td class="memItemRight" valign="bottom"><b>b</b> = nullptr</td></tr>
+<tr class="separator:aa04dd6be408bc1a0b4de202c432a11fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94fa1acc3ef6c349160167e0a2582f51" id="r_a94fa1acc3ef6c349160167e0a2582f51"><td class="memItemLeft" align="right" valign="top"><a id="a94fa1acc3ef6c349160167e0a2582f51" name="a94fa1acc3ef6c349160167e0a2582f51"></a>
+friends&#160;</td><td class="memItemRight" valign="bottom">: friend inline Size len(const <a class="el" href="classVaDict.html">VaDict</a>&amp; dict) { return dict.size</td></tr>
+<tr class="separator:a94fa1acc3ef6c349160167e0a2582f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a223f660d04427e218cd05e8147dac6f0" id="r_a223f660d04427e218cd05e8147dac6f0"><td class="memItemLeft" align="right" valign="top"><a id="a223f660d04427e218cd05e8147dac6f0" name="a223f660d04427e218cd05e8147dac6f0"></a>
+iterators&#160;</td><td class="memItemRight" valign="bottom">: class Iterator { public: using iterator_category = std::forward_iterator_tag</td></tr>
+<tr class="separator:a223f660d04427e218cd05e8147dac6f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-types" name="pro-types"></a>
 Protected Types</h2></td></tr>
@@ -277,24 +399,43 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>Entry</b> = <a class
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:aae6b65cb6fe78d7df7f0489020399a57" id="r_aae6b65cb6fe78d7df7f0489020399a57"><td class="memItemLeft" align="right" valign="top"><a id="aae6b65cb6fe78d7df7f0489020399a57" name="aae6b65cb6fe78d7df7f0489020399a57"></a>
-Size&#160;</td><td class="memItemRight" valign="bottom"><b>computeIndex</b> (const K &amp;key) const</td></tr>
+<tr class="memitem:aae6b65cb6fe78d7df7f0489020399a57" id="r_aae6b65cb6fe78d7df7f0489020399a57"><td class="memItemLeft" align="right" valign="top">Size&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae6b65cb6fe78d7df7f0489020399a57">computeIndex</a> (const K &amp;key) const</td></tr>
+<tr class="memdesc:aae6b65cb6fe78d7df7f0489020399a57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the index for a given key in the hash table.  <br /></td></tr>
 <tr class="separator:aae6b65cb6fe78d7df7f0489020399a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa44e61f9e30ff0a28b1e6f1673aeacd9" id="r_aa44e61f9e30ff0a28b1e6f1673aeacd9"><td class="memItemLeft" align="right" valign="top"><a id="aa44e61f9e30ff0a28b1e6f1673aeacd9" name="aa44e61f9e30ff0a28b1e6f1673aeacd9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>resize</b> (Size newCap)</td></tr>
+<tr class="memitem:aa44e61f9e30ff0a28b1e6f1673aeacd9" id="r_aa44e61f9e30ff0a28b1e6f1673aeacd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa44e61f9e30ff0a28b1e6f1673aeacd9">resize</a> (Size newCap)</td></tr>
+<tr class="memdesc:aa44e61f9e30ff0a28b1e6f1673aeacd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resizes the hash table to a new capacity.  <br /></td></tr>
 <tr class="separator:aa44e61f9e30ff0a28b1e6f1673aeacd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbbd3ccacc55d9afc74eb7db1d693662" id="r_afbbd3ccacc55d9afc74eb7db1d693662"><td class="memItemLeft" align="right" valign="top"><a id="afbbd3ccacc55d9afc74eb7db1d693662" name="afbbd3ccacc55d9afc74eb7db1d693662"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>insertBefore</b> (<a class="el" href="structVaDictEntry.html">Entry</a> *next, <a class="el" href="structVaDictEntry.html">Entry</a> *newEntry)</td></tr>
+<tr class="memitem:afbbd3ccacc55d9afc74eb7db1d693662" id="r_afbbd3ccacc55d9afc74eb7db1d693662"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbbd3ccacc55d9afc74eb7db1d693662">insertBefore</a> (<a class="el" href="structVaDictEntry.html">Entry</a> *next, <a class="el" href="structVaDictEntry.html">Entry</a> *newEntry)</td></tr>
+<tr class="memdesc:afbbd3ccacc55d9afc74eb7db1d693662"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts a new entry before a specified entry in insertion order.  <br /></td></tr>
 <tr class="separator:afbbd3ccacc55d9afc74eb7db1d693662"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe6f4fbe5344ded4dbed288fb165b1f0" id="r_afe6f4fbe5344ded4dbed288fb165b1f0"><td class="memItemLeft" align="right" valign="top"><a id="afe6f4fbe5344ded4dbed288fb165b1f0" name="afe6f4fbe5344ded4dbed288fb165b1f0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>appendEntry</b> (<a class="el" href="structVaDictEntry.html">Entry</a> *newEntry)</td></tr>
+<tr class="memitem:afe6f4fbe5344ded4dbed288fb165b1f0" id="r_afe6f4fbe5344ded4dbed288fb165b1f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe6f4fbe5344ded4dbed288fb165b1f0">appendEntry</a> (<a class="el" href="structVaDictEntry.html">Entry</a> *newEntry)</td></tr>
+<tr class="memdesc:afe6f4fbe5344ded4dbed288fb165b1f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a new entry to the end of the insertion order.  <br /></td></tr>
 <tr class="separator:afe6f4fbe5344ded4dbed288fb165b1f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af600312fd2a891f405ff1b25372c08b1" id="r_af600312fd2a891f405ff1b25372c08b1"><td class="memItemLeft" align="right" valign="top"><a id="af600312fd2a891f405ff1b25372c08b1" name="af600312fd2a891f405ff1b25372c08b1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>unlinkEntry</b> (<a class="el" href="structVaDictEntry.html">Entry</a> *entry)</td></tr>
+<tr class="memitem:a3d8ae0c038804840efc8528ab40adab9" id="r_a3d8ae0c038804840efc8528ab40adab9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structVaDictEntry.html">Entry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d8ae0c038804840efc8528ab40adab9">removeFromBucket</a> (Size index, const K &amp;key)</td></tr>
+<tr class="memdesc:a3d8ae0c038804840efc8528ab40adab9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes an entry from a specific bucket in the hash table.  <br /></td></tr>
+<tr class="separator:a3d8ae0c038804840efc8528ab40adab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af600312fd2a891f405ff1b25372c08b1" id="r_af600312fd2a891f405ff1b25372c08b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af600312fd2a891f405ff1b25372c08b1">unlinkEntry</a> (<a class="el" href="structVaDictEntry.html">Entry</a> *entry)</td></tr>
+<tr class="memdesc:af600312fd2a891f405ff1b25372c08b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unlinks an entry from both the hash table and insertion order.  <br /></td></tr>
 <tr class="separator:af600312fd2a891f405ff1b25372c08b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1addbcffc4617387b0afe2da8a41010" id="r_ab1addbcffc4617387b0afe2da8a41010"><td class="memItemLeft" align="right" valign="top"><a id="ab1addbcffc4617387b0afe2da8a41010" name="ab1addbcffc4617387b0afe2da8a41010"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>unlinkFromOrder</b> (<a class="el" href="structVaDictEntry.html">Entry</a> *entry)</td></tr>
+<tr class="memitem:ab1addbcffc4617387b0afe2da8a41010" id="r_ab1addbcffc4617387b0afe2da8a41010"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1addbcffc4617387b0afe2da8a41010">unlinkFromOrder</a> (<a class="el" href="structVaDictEntry.html">Entry</a> *entry)</td></tr>
+<tr class="memdesc:ab1addbcffc4617387b0afe2da8a41010"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unlinks an entry from the insertion order only.  <br /></td></tr>
 <tr class="separator:ab1addbcffc4617387b0afe2da8a41010"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f97b89834368d453d4848837a992530" id="r_a8f97b89834368d453d4848837a992530"><td class="memItemLeft" align="right" valign="top"><a id="a8f97b89834368d453d4848837a992530" name="a8f97b89834368d453d4848837a992530"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ensureCapacity</b> ()</td></tr>
+<tr class="memdesc:a8f97b89834368d453d4848837a992530"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensures the dictionary has enough capacity to accommodate new entries. Resizes the hash table if the load factor exceeds 0.75. <br /></td></tr>
+<tr class="separator:a8f97b89834368d453d4848837a992530"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fc5d4063841f6683de1bb63bad342a9" id="r_a1fc5d4063841f6683de1bb63bad342a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structVaDictEntry.html">Entry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1fc5d4063841f6683de1bb63bad342a9">findEntry</a> (const K &amp;key)</td></tr>
+<tr class="memdesc:a1fc5d4063841f6683de1bb63bad342a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds an entry in the dictionary by its key.  <br /></td></tr>
+<tr class="separator:a1fc5d4063841f6683de1bb63bad342a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a682d8851878e12da759b0f8fe2074156" id="r_a682d8851878e12da759b0f8fe2074156"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structVaDictEntry.html">Entry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a682d8851878e12da759b0f8fe2074156">getEntry</a> (const K &amp;key, const V &amp;value)</td></tr>
+<tr class="memdesc:a682d8851878e12da759b0f8fe2074156"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new entry and links it to the hash table.  <br /></td></tr>
+<tr class="separator:a682d8851878e12da759b0f8fe2074156"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99550f78fc1675d2e26120add267dad3" id="r_a99550f78fc1675d2e26120add267dad3"><td class="memItemLeft" align="right" valign="top"><a id="a99550f78fc1675d2e26120add267dad3" name="a99550f78fc1675d2e26120add267dad3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>returnEntry</b> (<a class="el" href="structVaDictEntry.html">Entry</a> *e)</td></tr>
+<tr class="separator:a99550f78fc1675d2e26120add267dad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac398734879355283d2dd9aed50a9587d" id="r_ac398734879355283d2dd9aed50a9587d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac398734879355283d2dd9aed50a9587d">pushEntry</a> (<a class="el" href="structVaDictEntry.html">Entry</a> *newEntry)</td></tr>
+<tr class="memdesc:ac398734879355283d2dd9aed50a9587d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a new entry to the back of the insertion order.  <br /></td></tr>
+<tr class="separator:ac398734879355283d2dd9aed50a9587d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -312,14 +453,19 @@ Size&#160;</td><td class="memItemRight" valign="bottom"><b>size</b></td></tr>
 <tr class="separator:ab3ca51a653ee4ea1117fb1dc628b0ba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad66389a81c854628eab4538f9eb450f1" id="r_ad66389a81c854628eab4538f9eb450f1"><td class="memItemLeft" align="right" valign="top"><a id="ad66389a81c854628eab4538f9eb450f1" name="ad66389a81c854628eab4538f9eb450f1"></a>
 <a class="el" href="structVaDictEntry.html">Entry</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>head</b></td></tr>
+<tr class="memdesc:ad66389a81c854628eab4538f9eb450f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to first node. <br /></td></tr>
 <tr class="separator:ad66389a81c854628eab4538f9eb450f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16797d79fff50a974908acec6cd5b85f" id="r_a16797d79fff50a974908acec6cd5b85f"><td class="memItemLeft" align="right" valign="top"><a id="a16797d79fff50a974908acec6cd5b85f" name="a16797d79fff50a974908acec6cd5b85f"></a>
 <a class="el" href="structVaDictEntry.html">Entry</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>tail</b></td></tr>
+<tr class="memdesc:a16797d79fff50a974908acec6cd5b85f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to last node. <br /></td></tr>
 <tr class="separator:a16797d79fff50a974908acec6cd5b85f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b4c8db389fd2c27c4b130884d074eb4" id="r_a2b4c8db389fd2c27c4b130884d074eb4"><td class="memItemLeft" align="right" valign="top"><a id="a2b4c8db389fd2c27c4b130884d074eb4" name="a2b4c8db389fd2c27c4b130884d074eb4"></a>
 Hash&#160;</td><td class="memItemRight" valign="bottom"><b>hashFunc</b></td></tr>
 <tr class="memdesc:a2b4c8db389fd2c27c4b130884d074eb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hash function used to compute bucket indices from keys. <br /></td></tr>
 <tr class="separator:a2b4c8db389fd2c27c4b130884d074eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c5449f98056c6c037c61ef8791e47db" id="r_a1c5449f98056c6c037c61ef8791e47db"><td class="memItemLeft" align="right" valign="top"><a id="a1c5449f98056c6c037c61ef8791e47db" name="a1c5449f98056c6c037c61ef8791e47db"></a>
+<a class="el" href="structVaDictEntry.html">Entry</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
+<tr class="separator:a1c5449f98056c6c037c61ef8791e47db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
@@ -328,25 +474,45 @@ Size&#160;</td><td class="memItemRight" valign="bottom"><b>cap</b> (const <a cla
 <tr class="separator:a4cb8737585f740792b75e12e0244ec01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;typename K, typename V, typename Hash = VaDictHash&lt;K&gt;&gt;<br />
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename K, typename V, typename Hash = VaHash&lt;K&gt;&gt;<br />
 class VaDict&lt; K, V, Hash &gt;</div><p>dictionary (map) that maintains insertion order. This class implements a dictionary (key-value store) using a hash table with separate chaining.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">K</td><td>The key type (must support equality comparison and hashing). </td></tr>
     <tr><td class="paramname">V</td><td>The value type. </td></tr>
-    <tr><td class="paramname">Hash</td><td>The hash function type (defaults to <code>DictHash&lt;K&gt;</code>).</td></tr>
+    <tr><td class="paramname">Hash</td><td>The hash function type (defaults to <code><a class="el" href="structVaHash.html">VaHash</a>&lt;K&gt;</code>).</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>it preserves the order in which elements were inserted. </dd></dl>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a063eb5ae8a6119dcd3781d42dc57d99f" name="a063eb5ae8a6119dcd3781d42dc57d99f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a063eb5ae8a6119dcd3781d42dc57d99f">&#9670;&#160;</a></span>RawView</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::RawView = <a class="el" href="structVaDictRawView.html">VaDictRawView</a>&lt;K, V, Hash&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alias for a raw view of the dictionary's internal state. This struct provides a layout-compatible snapshot of the hash map's internals, usable for both inspection and unsafe mutation. </p>
+<dl class="section note"><dt>Note</dt><dd>The <code>RawView</code> type is layout-compatible with <code><a class="el" href="classVaDict.html">VaDict</a></code> and provides direct access to the internal fields such as buckets, size, and capacity. This is useful for advanced use cases like serialization or debugging. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a017fd0f034c3e4cd1c16f8e138b8c2e8" name="a017fd0f034c3e4cd1c16f8e138b8c2e8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a017fd0f034c3e4cd1c16f8e138b8c2e8">&#9670;&#160;</a></span>VaDict() <span class="overload">[1/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; </div>
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -381,7 +547,7 @@ template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; <
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; </div>
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -416,7 +582,7 @@ template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; <
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; </div>
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -451,9 +617,9 @@ template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; <
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; </div>
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
 <div class="memtemplate">
-template&lt;typename U1  = K, typename U2  = V, typename  = std::enable_if_t&lt;!std::is_reference_v&lt;U2&gt;&gt;&gt; </div>
+template&lt;typename U1  = K, typename U2  = V, typename  = tt::EnableIf&lt; !tt::IsReference&lt;U2&gt; &gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -488,9 +654,9 @@ template&lt;typename U1  = K, typename U2  = V, typename  = std::enable_if_t&lt;
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; </div>
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
 <div class="memtemplate">
-template&lt;typename U1  = K, typename U2  = V, typename  = std::enable_if_t&lt;!std::is_reference_v&lt;U2&gt;&gt;&gt; </div>
+template&lt;typename U1  = K, typename U2  = V, typename  = tt::EnableIf&lt; !tt::IsReference&lt;U2&gt; &gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -525,9 +691,9 @@ template&lt;typename U1  = K, typename U2  = V, typename  = std::enable_if_t&lt;
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; </div>
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
 <div class="memtemplate">
-template&lt;typename U1  = K, typename U2  = V, typename  = std::enable_if_t&lt;!std::is_reference_v&lt;U2&gt;&gt;&gt; </div>
+template&lt;typename U1  = K, typename U2  = V, typename  = tt::EnableIf&lt; !std::is_reference&lt;U2&gt;::value &gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -562,9 +728,9 @@ template&lt;typename U1  = K, typename U2  = V, typename  = std::enable_if_t&lt;
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; </div>
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
 <div class="memtemplate">
-template&lt;typename U1  = K, typename U2  = V, typename  = std::enable_if_t&lt;!std::is_reference_v&lt;U2&gt;&gt;&gt; </div>
+template&lt;typename U1  = K, typename U2  = V, typename  = tt::EnableIf&lt; !std::is_reference&lt;U2&gt;::value &gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -594,13 +760,48 @@ template&lt;typename U1  = K, typename U2  = V, typename  = std::enable_if_t&lt;
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="afe6f4fbe5344ded4dbed288fb165b1f0" name="afe6f4fbe5344ded4dbed288fb165b1f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe6f4fbe5344ded4dbed288fb165b1f0">&#9670;&#160;</a></span>appendEntry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::appendEntry </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVaDictEntry.html">Entry</a> *</td>          <td class="paramname"><span class="paramname"><em>newEntry</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Appends a new entry to the end of the insertion order. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newEntry</td><td>The new entry to append. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ab11c2836928aa9926b41870596b27dd2" name="ab11c2836928aa9926b41870596b27dd2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab11c2836928aa9926b41870596b27dd2">&#9670;&#160;</a></span>at() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; </div>
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -642,7 +843,7 @@ template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; <
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; </div>
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -679,98 +880,13 @@ template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; <
 
 </div>
 </div>
-<a id="aae2cbf471e3fba750ffa30348b161193" name="aae2cbf471e3fba750ffa30348b161193"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aae2cbf471e3fba750ffa30348b161193">&#9670;&#160;</a></span>atIndex() <span class="overload">[1/2]</span></h2>
+<a id="a26372955988e0fd8a5ba56fa9b6e0e50" name="a26372955988e0fd8a5ba56fa9b6e0e50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26372955988e0fd8a5ba56fa9b6e0e50">&#9670;&#160;</a></span>clear()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">V &amp; <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::atIndex </td>
-          <td>(</td>
-          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a reference to the value at a given insertion index. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">index</td><td>Index in insertion order (0-based). </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Reference to the value at the specified index.</dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classIndexOutOfRangeError.html" title="Error class for index out of range errors.">IndexOutOfRangeError</a></td><td>if index &gt;= size. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>This is a linear-time operation. </dd></dl>
-
-</div>
-</div>
-<a id="a31f881c7a37cb6f12158265d067c65cc" name="a31f881c7a37cb6f12158265d067c65cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a31f881c7a37cb6f12158265d067c65cc">&#9670;&#160;</a></span>atIndex() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const V &amp; <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::atIndex </td>
-          <td>(</td>
-          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a const reference to the value at a given insertion index. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">index</td><td>Index in insertion order (0-based). </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Const reference to the value at the specified index.</dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classIndexOutOfRangeError.html" title="Error class for index out of range errors.">IndexOutOfRangeError</a></td><td>if index &gt;= size </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="af8cbf063227f959f8c9598f2fd80cb09" name="af8cbf063227f959f8c9598f2fd80cb09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8cbf063227f959f8c9598f2fd80cb09">&#9670;&#160;</a></span>clear()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; </div>
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -778,7 +894,7 @@ template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; <
         <tr>
           <td class="memname">void <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::clear </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>freeEntries</em><span class="paramdefsep"> = </span><span class="paramdefval">false</span></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -790,9 +906,51 @@ template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; <
 </div><div class="memdoc">
 
 <p>Removes all key-value pairs from the dictionary. </p>
-<dl class="section note"><dt>Note</dt><dd>Leaves the capacity unchanged. </dd>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">freeEntries</td><td>If true, deallocates the memory used for the hash table buckets.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>If freeEntries is false, the capacity remains unchanged, and the hash table can be reused. </dd>
 <dd>
 After clearing, size is 0 and iteration is reset. </dd></dl>
+
+</div>
+</div>
+<a id="aae6b65cb6fe78d7df7f0489020399a57" name="aae6b65cb6fe78d7df7f0489020399a57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae6b65cb6fe78d7df7f0489020399a57">&#9670;&#160;</a></span>computeIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Size <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::computeIndex </td>
+          <td>(</td>
+          <td class="paramtype">const K &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Computes the index for a given key in the hash table. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>The key to compute the index for. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The index in the hash table. </dd></dl>
 
 </div>
 </div>
@@ -802,7 +960,7 @@ After clearing, size is 0 and iteration is reset. </dd></dl>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; </div>
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -832,13 +990,95 @@ template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; <
 
 </div>
 </div>
+<a id="ae2187cfffbc1e5b4dc1976482cc10e95" name="ae2187cfffbc1e5b4dc1976482cc10e95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2187cfffbc1e5b4dc1976482cc10e95">&#9670;&#160;</a></span>del()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::del </td>
+          <td>(</td>
+          <td class="paramtype">const K &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Removes a key-value pair from the dictionary. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>The key to remove.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Does nothing if key is not found. </dd>
+<dd>
+Preserves order of remaining elements. </dd></dl>
+
+</div>
+</div>
+<a id="a822dfe35415ff033742f345dab442b2b" name="a822dfe35415ff033742f345dab442b2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a822dfe35415ff033742f345dab442b2b">&#9670;&#160;</a></span>delIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::delIndex </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Removes an entry from the dictionary at a specific insertion index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>The 0-based index of the entry to remove.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classIndexOutOfRangeError.html" title="Error class for index out of range errors.">IndexOutOfRangeError</a></td><td>if the index is greater than or equal to the size of the dictionary. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This operation preserves the insertion order of the remaining elements. </dd>
+<dd>
+The operation is O(n) due to the need to traverse the insertion order list. </dd></dl>
+
+</div>
+</div>
 <a id="a8a35d1bbd1f641d3f2f1ee056bb45b5c" name="a8a35d1bbd1f641d3f2f1ee056bb45b5c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8a35d1bbd1f641d3f2f1ee056bb45b5c">&#9670;&#160;</a></span>equalsOrdered()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; </div>
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -869,13 +1109,49 @@ template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; <
 
 </div>
 </div>
+<a id="a1fc5d4063841f6683de1bb63bad342a9" name="a1fc5d4063841f6683de1bb63bad342a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fc5d4063841f6683de1bb63bad342a9">&#9670;&#160;</a></span>findEntry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structVaDictEntry.html">Entry</a> * <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::findEntry </td>
+          <td>(</td>
+          <td class="paramtype">const K &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Finds an entry in the dictionary by its key. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>The key to search for. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the entry if found, or nullptr if not found. </dd></dl>
+
+</div>
+</div>
 <a id="a5c3004e35304ba716278aa393a3494f1" name="a5c3004e35304ba716278aa393a3494f1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5c3004e35304ba716278aa393a3494f1">&#9670;&#160;</a></span>get()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; </div>
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -911,13 +1187,184 @@ template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; <
 
 </div>
 </div>
+<a id="a9fe2dbb63286bbfe69780b0c18c995f1" name="a9fe2dbb63286bbfe69780b0c18c995f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fe2dbb63286bbfe69780b0c18c995f1">&#9670;&#160;</a></span>getCapacity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Size <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::getCapacity </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves the current capacity of the dictionary. </p>
+<dl class="section return"><dt>Returns</dt><dd>The capacity of the dictionary. </dd></dl>
+
+</div>
+</div>
+<a id="a682d8851878e12da759b0f8fe2074156" name="a682d8851878e12da759b0f8fe2074156"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a682d8851878e12da759b0f8fe2074156">&#9670;&#160;</a></span>getEntry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structVaDictEntry.html">Entry</a> * <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::getEntry </td>
+          <td>(</td>
+          <td class="paramtype">const K &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const V &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a new entry and links it to the hash table. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>The key for the new entry. </td></tr>
+    <tr><td class="paramname">value</td><td>The value for the new entry. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the newly created entry. </dd></dl>
+
+</div>
+</div>
+<a id="a436a992b40ca508d2913ce286eb3b855" name="a436a992b40ca508d2913ce286eb3b855"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a436a992b40ca508d2913ce286eb3b855">&#9670;&#160;</a></span>getRawView()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="#a063eb5ae8a6119dcd3781d42dc57d99f">RawView</a> * <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::getRawView </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a safe, read-only view of the dictionary internals. This method returns a pointer to the current dictionary object, reinterpreted as a const-qualified raw view. It allows inspection of the internal state without enabling mutation. </p>
+<dl class="section return"><dt>Returns</dt><dd>A const pointer to a <code><a class="el" href="structVaDictRawView.html" title="Raw view into the internal state of a dictionary (hash map). This struct provides a layout-compatible...">VaDictRawView</a>&lt;K, V, Hash&gt;</code>.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The returned view is valid only as long as the owning dictionary (<code><a class="el" href="classVaDict.html">VaDict</a></code>) exists. Accessing the view after the dictionary is destroyed results in undefined behavior. </dd>
+<dd>
+This cast is valid because the layout of <code><a class="el" href="classVaDict.html">VaDict</a></code> begins with fields that are identical to those in <code><a class="el" href="structVaDictRawView.html" title="Raw view into the internal state of a dictionary (hash map). This struct provides a layout-compatible...">VaDictRawView</a></code>. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This method does not perform any synchronization. If the dictionary is modified concurrently, the view may become inconsistent. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a3a9461bfb7862901314d89fc87693530" title="Grants unsafe mutable access to the dictionary internals. This method returns a raw pointer to this o...">getUnsafeAccess()</a> for mutable access. </dd></dl>
+
+</div>
+</div>
+<a id="aff4e58c990ef902ca14e0b941eaa80a4" name="aff4e58c990ef902ca14e0b941eaa80a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff4e58c990ef902ca14e0b941eaa80a4">&#9670;&#160;</a></span>getSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Size <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::getSize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves the current number of elements in the dictionary. </p>
+<dl class="section return"><dt>Returns</dt><dd>The size of the dictionary. </dd></dl>
+
+</div>
+</div>
+<a id="a3a9461bfb7862901314d89fc87693530" name="a3a9461bfb7862901314d89fc87693530"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a9461bfb7862901314d89fc87693530">&#9670;&#160;</a></span>getUnsafeAccess()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a063eb5ae8a6119dcd3781d42dc57d99f">RawView</a> * <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::getUnsafeAccess </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Grants unsafe mutable access to the dictionary internals. This method returns a raw pointer to this object reinterpreted as a <code><a class="el" href="structVaDictRawView.html" title="Raw view into the internal state of a dictionary (hash map). This struct provides a layout-compatible...">VaDictRawView</a>&lt;K, V, Hash&gt;</code>. All members (buckets, size, hash) can be modified. </p>
+<dl class="section return"><dt>Returns</dt><dd>A mutable pointer to a <code><a class="el" href="structVaDictRawView.html" title="Raw view into the internal state of a dictionary (hash map). This struct provides a layout-compatible...">VaDictRawView</a>&lt;K, V, Hash&gt;</code>.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The returned view is valid only as long as the owning dictionary (<code><a class="el" href="classVaDict.html">VaDict</a></code>) exists. Accessing the view after the dictionary is destroyed results in undefined behavior. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This is an unsafe interface. The caller is responsible for maintaining all invariants of the dictionary. Incorrect use may result in memory corruption, undefined behavior, or crashes. </dd>
+<dd>
+This method does not perform any synchronization. Concurrent modifications to the dictionary while using the view may lead to race conditions or corruption. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a436a992b40ca508d2913ce286eb3b855" title="Returns a safe, read-only view of the dictionary internals. This method returns a pointer to the curr...">getRawView()</a> for a read-only alternative. </dd></dl>
+
+</div>
+</div>
 <a id="a4be3bdfbee08bf0ac21d0b1ea7887f22" name="a4be3bdfbee08bf0ac21d0b1ea7887f22"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4be3bdfbee08bf0ac21d0b1ea7887f22">&#9670;&#160;</a></span>insert()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; </div>
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -967,13 +1414,198 @@ If index == size, the pair is appended to the end. </dd></dl>
 
 </div>
 </div>
+<a id="afbbd3ccacc55d9afc74eb7db1d693662" name="afbbd3ccacc55d9afc74eb7db1d693662"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbbd3ccacc55d9afc74eb7db1d693662">&#9670;&#160;</a></span>insertBefore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::insertBefore </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVaDictEntry.html">Entry</a> *</td>          <td class="paramname"><span class="paramname"><em>next</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structVaDictEntry.html">Entry</a> *</td>          <td class="paramname"><span class="paramname"><em>newEntry</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inserts a new entry before a specified entry in insertion order. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">next</td><td>The entry to insert before. </td></tr>
+    <tr><td class="paramname">newEntry</td><td>The new entry to insert. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a945a94a8a2c7901d0c02cc7b1d7c1872" name="a945a94a8a2c7901d0c02cc7b1d7c1872"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a945a94a8a2c7901d0c02cc7b1d7c1872">&#9670;&#160;</a></span>isEmpty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::isEmpty </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if the dictionary is empty. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if the dictionary is empty, false otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="ab2cabc99840aad9e9aaa08c1c948f041" name="ab2cabc99840aad9e9aaa08c1c948f041"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2cabc99840aad9e9aaa08c1c948f041">&#9670;&#160;</a></span>keyAtBack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const K &amp; <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::keyAtBack </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves the key at the back of the dictionary. </p>
+<dl class="section return"><dt>Returns</dt><dd>Const reference to the key at the back. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classIndexOutOfRangeError.html" title="Error class for index out of range errors.">IndexOutOfRangeError</a></td><td>if the dictionary is empty. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a00c240302083f258043e4f8810e735de" name="a00c240302083f258043e4f8810e735de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00c240302083f258043e4f8810e735de">&#9670;&#160;</a></span>keyAtFront()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const K &amp; <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::keyAtFront </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves the key at the front of the dictionary. </p>
+<dl class="section return"><dt>Returns</dt><dd>Const reference to the key at the front. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classIndexOutOfRangeError.html" title="Error class for index out of range errors.">IndexOutOfRangeError</a></td><td>if the dictionary is empty. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a407795063ce3c29017326cc034f5fb45" name="a407795063ce3c29017326cc034f5fb45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a407795063ce3c29017326cc034f5fb45">&#9670;&#160;</a></span>keyAtIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const K &amp; <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::keyAtIndex </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a reference to the key at a given insertion index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Index in insertion order (0-based). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the key at the specified index.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classIndexOutOfRangeError.html" title="Error class for index out of range errors.">IndexOutOfRangeError</a></td><td>if index &gt;= size. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This is a linear-time operation. </dd></dl>
+
+</div>
+</div>
 <a id="ab68d140a86a9391c5ca91af279d87d0e" name="ab68d140a86a9391c5ca91af279d87d0e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab68d140a86a9391c5ca91af279d87d0e">&#9670;&#160;</a></span>operator!=()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; </div>
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1003,52 +1635,13 @@ template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; <
 
 </div>
 </div>
-<a id="a2e3ed46fcc77644c73dd3b6eb3fcf40e" name="a2e3ed46fcc77644c73dd3b6eb3fcf40e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e3ed46fcc77644c73dd3b6eb3fcf40e">&#9670;&#160;</a></span>operator&lt;()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::operator&lt; </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Lexicographically compares two dictionaries. </p>
-<p>Elements are compared in insertion order. If keys differ, the key comparison determines the result.</p>
-<dl class="section note"><dt>Note</dt><dd>Requires both K and V to be comparable via &lt;. </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Behavior is undefined if the types do not implement <em>operator&lt;</em>.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">other</td><td>The other dictionary to compare with. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><em>true</em> if this dictionary is lexicographically less than the other. </dd></dl>
-
-</div>
-</div>
 <a id="a3d72135d27cf06fe0f538f39625a227a" name="a3d72135d27cf06fe0f538f39625a227a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3d72135d27cf06fe0f538f39625a227a">&#9670;&#160;</a></span>operator&lt;=()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; </div>
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1084,7 +1677,7 @@ template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; <
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; </div>
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1120,7 +1713,7 @@ template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; <
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; </div>
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1156,7 +1749,7 @@ template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; <
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; </div>
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1192,7 +1785,7 @@ template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; <
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; </div>
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1220,7 +1813,7 @@ template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; <
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if this dictionary is lexicographically greater than the other.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Equivalent to <code>!(this &lt; other) &amp;&amp; !(this == other)</code>. </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Requires both <code>K</code> and <code>V</code> to implement <code>operator&lt;</code> or <code>operator&gt;</code>. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Requires both <code>K</code> and <code>V</code> to implement <code>operator&lt;</code> </dd></dl>
 
 </div>
 </div>
@@ -1230,7 +1823,7 @@ template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; <
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; </div>
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1266,7 +1859,7 @@ template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; <
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; </div>
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1299,13 +1892,157 @@ May cause rehash if load factor exceeds threshold. </dd></dl>
 
 </div>
 </div>
+<a id="a89d077e82a836a882fbaed67cea4852b" name="a89d077e82a836a882fbaed67cea4852b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89d077e82a836a882fbaed67cea4852b">&#9670;&#160;</a></span>pairAtBack() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structVaDict_1_1PairRef.html">PairRef</a> <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::pairAtBack </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves the key-value pair at the back of the dictionary. </p>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="structVaDict_1_1PairRef.html" title="Struct representing a mutable key-value pair reference.">PairRef</a> containing references to the key and value at the back. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classIndexOutOfRangeError.html" title="Error class for index out of range errors.">IndexOutOfRangeError</a></td><td>if the dictionary is empty. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5b40fd272132271379e4f5b355dd59d7" name="a5b40fd272132271379e4f5b355dd59d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b40fd272132271379e4f5b355dd59d7">&#9670;&#160;</a></span>pairAtBack() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structVaDict_1_1ConstPairRef.html">ConstPairRef</a> <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::pairAtBack </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves the key-value pair at the back of the dictionary (const version). </p>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="structVaDict_1_1ConstPairRef.html" title="Struct representing a const key-value pair reference.">ConstPairRef</a> containing const references to the key and value at the back. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classIndexOutOfRangeError.html" title="Error class for index out of range errors.">IndexOutOfRangeError</a></td><td>if the dictionary is empty. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa02d46b04cbf26c3c609659bf735a849" name="aa02d46b04cbf26c3c609659bf735a849"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa02d46b04cbf26c3c609659bf735a849">&#9670;&#160;</a></span>pairAtFront() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structVaDict_1_1PairRef.html">PairRef</a> <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::pairAtFront </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves the key-value pair at the front of the dictionary. </p>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="structVaDict_1_1PairRef.html" title="Struct representing a mutable key-value pair reference.">PairRef</a> containing references to the key and value at the front. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classIndexOutOfRangeError.html" title="Error class for index out of range errors.">IndexOutOfRangeError</a></td><td>if the dictionary is empty. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa74194a2435506ef3115c605b2bf43bd" name="aa74194a2435506ef3115c605b2bf43bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa74194a2435506ef3115c605b2bf43bd">&#9670;&#160;</a></span>pairAtFront() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structVaDict_1_1ConstPairRef.html">ConstPairRef</a> <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::pairAtFront </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves the key-value pair at the front of the dictionary (const version). </p>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="structVaDict_1_1ConstPairRef.html" title="Struct representing a const key-value pair reference.">ConstPairRef</a> containing const references to the key and value at the front. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classIndexOutOfRangeError.html" title="Error class for index out of range errors.">IndexOutOfRangeError</a></td><td>if the dictionary is empty. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a0dae4f4d2576bdd4848f5ed6170f9444" name="a0dae4f4d2576bdd4848f5ed6170f9444"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0dae4f4d2576bdd4848f5ed6170f9444">&#9670;&#160;</a></span>pairAtIndex() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; </div>
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1347,7 +2084,7 @@ template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; <
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; </div>
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1384,13 +2121,222 @@ template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; <
 
 </div>
 </div>
+<a id="ac398734879355283d2dd9aed50a9587d" name="ac398734879355283d2dd9aed50a9587d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac398734879355283d2dd9aed50a9587d">&#9670;&#160;</a></span>pushEntry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::pushEntry </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVaDictEntry.html">Entry</a> *</td>          <td class="paramname"><span class="paramname"><em>newEntry</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Appends a new entry to the back of the insertion order. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newEntry</td><td>The new entry to append. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a41e81fda7c43edc38cafe9b5032bcdef" name="a41e81fda7c43edc38cafe9b5032bcdef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41e81fda7c43edc38cafe9b5032bcdef">&#9670;&#160;</a></span>putAtBack() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::putAtBack </td>
+          <td>(</td>
+          <td class="paramtype">const K &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const V &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inserts or updates a key-value pair in the dictionary. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>The key to insert or update. </td></tr>
+    <tr><td class="paramname">value</td><td>The value to associate with the key.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>If the key already exists, its associated value is updated. </dd>
+<dd>
+If the key does not exist, a new entry is created and added to the dictionary. </dd>
+<dd>
+May trigger a resize if the load factor exceeds 0.75.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This operation invalidates iterators if resizing occurs. </dd></dl>
+
+</div>
+</div>
+<a id="a6813943111060f98c67a213692d23f93" name="a6813943111060f98c67a213692d23f93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6813943111060f98c67a213692d23f93">&#9670;&#160;</a></span>putAtBack() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::putAtBack </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVaDict_1_1ConstPairRef.html">ConstPairRef</a></td>          <td class="paramname"><span class="paramname"><em>pair</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inserts or updates a key-value pair at the back of the dictionary. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pair</td><td>A pair containing the key and value to insert or update.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>If the key already exists, its associated value is updated. </dd>
+<dd>
+If the key does not exist, a new entry is created and added to the back of the dictionary. </dd>
+<dd>
+May trigger a resize if the load factor exceeds 0.75.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This operation invalidates iterators if resizing occurs. </dd></dl>
+
+</div>
+</div>
+<a id="a4c29f3fd104e6d9fd31115aac73fcc65" name="a4c29f3fd104e6d9fd31115aac73fcc65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c29f3fd104e6d9fd31115aac73fcc65">&#9670;&#160;</a></span>putAtFront() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::putAtFront </td>
+          <td>(</td>
+          <td class="paramtype">const K &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const V &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inserts or updates a key-value pair at the front of the dictionary. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>The key to insert or update. </td></tr>
+    <tr><td class="paramname">value</td><td>The value to associate with the key.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>If the key already exists, its associated value is updated, and the key-value pair is moved to the front of the insertion order. </dd>
+<dd>
+If the key does not exist, a new entry is created and added to the front of the dictionary. </dd>
+<dd>
+May trigger a resize if the load factor exceeds 0.75.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This operation invalidates iterators if resizing occurs. </dd></dl>
+
+</div>
+</div>
+<a id="a57cfe44099d4e7015172903c8ca34534" name="a57cfe44099d4e7015172903c8ca34534"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57cfe44099d4e7015172903c8ca34534">&#9670;&#160;</a></span>putAtFront() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::putAtFront </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVaDict_1_1ConstPairRef.html">ConstPairRef</a></td>          <td class="paramname"><span class="paramname"><em>pair</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inserts or updates a key-value pair at the front of the dictionary. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pair</td><td>A <a class="el" href="structVaDict_1_1PairRef.html" title="Struct representing a mutable key-value pair reference.">PairRef</a> containing references to the key and value to insert or update.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>If the key already exists, its associated value is updated, and the key-value pair is moved to the front of the insertion order. </dd>
+<dd>
+If the key does not exist, a new entry is created and added to the front of the dictionary. </dd>
+<dd>
+May trigger a resize if the load factor exceeds 0.75.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This operation invalidates iterators if resizing occurs. </dd></dl>
+
+</div>
+</div>
 <a id="a4e2b481af164a24d55607523617d1b45" name="a4e2b481af164a24d55607523617d1b45"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4e2b481af164a24d55607523617d1b45">&#9670;&#160;</a></span>remove()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; </div>
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1422,13 +2368,54 @@ Preserves order of remaining elements. </dd></dl>
 
 </div>
 </div>
+<a id="a3d8ae0c038804840efc8528ab40adab9" name="a3d8ae0c038804840efc8528ab40adab9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d8ae0c038804840efc8528ab40adab9">&#9670;&#160;</a></span>removeFromBucket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structVaDictEntry.html">Entry</a> * <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::removeFromBucket </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>index</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const K &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Removes an entry from a specific bucket in the hash table. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>The index of the bucket. </td></tr>
+    <tr><td class="paramname">key</td><td>The key of the entry to remove. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the removed entry, or nullptr if not found. </dd></dl>
+
+</div>
+</div>
 <a id="a0788db055dc7faefcb3842c1e758f9b2" name="a0788db055dc7faefcb3842c1e758f9b2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0788db055dc7faefcb3842c1e758f9b2">&#9670;&#160;</a></span>reserve()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; </div>
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1458,8 +2445,407 @@ template&lt;typename K , typename V , typename Hash  = VaDictHash&lt;K&gt;&gt; <
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>Include/VaLib/Types/<a class="el" href="Dict_8hpp_source.html">Dict.hpp</a></li>
+<a id="aa44e61f9e30ff0a28b1e6f1673aeacd9" name="aa44e61f9e30ff0a28b1e6f1673aeacd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa44e61f9e30ff0a28b1e6f1673aeacd9">&#9670;&#160;</a></span>resize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::resize </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>newCap</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resizes the hash table to a new capacity. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newCap</td><td>The new capacity for the hash table.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Rehashes all existing entries to fit into the new bucket array. </dd></dl>
+
+</div>
+</div>
+<a id="a257099f8547e27ff8a12de97ea8ef13b" name="a257099f8547e27ff8a12de97ea8ef13b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a257099f8547e27ff8a12de97ea8ef13b">&#9670;&#160;</a></span>set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::set </td>
+          <td>(</td>
+          <td class="paramtype">const K &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const V &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Updates the value associated with a given key. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>The key to update. </td></tr>
+    <tr><td class="paramname">value</td><td>The new value to associate with the key.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>If the key does not exist, it will be inserted into the dictionary. </dd>
+<dd>
+Preserves the insertion order of the key if it already exists. </dd></dl>
+
+</div>
+</div>
+<a id="af600312fd2a891f405ff1b25372c08b1" name="af600312fd2a891f405ff1b25372c08b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af600312fd2a891f405ff1b25372c08b1">&#9670;&#160;</a></span>unlinkEntry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::unlinkEntry </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVaDictEntry.html">Entry</a> *</td>          <td class="paramname"><span class="paramname"><em>entry</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Unlinks an entry from both the hash table and insertion order. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entry</td><td>The entry to unlink. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab1addbcffc4617387b0afe2da8a41010" name="ab1addbcffc4617387b0afe2da8a41010"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1addbcffc4617387b0afe2da8a41010">&#9670;&#160;</a></span>unlinkFromOrder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::unlinkFromOrder </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVaDictEntry.html">Entry</a> *</td>          <td class="paramname"><span class="paramname"><em>entry</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Unlinks an entry from the insertion order only. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entry</td><td>The entry to unlink. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0c28fa46a91804fcb942115142c4bf1b" name="a0c28fa46a91804fcb942115142c4bf1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c28fa46a91804fcb942115142c4bf1b">&#9670;&#160;</a></span>valueAtBack() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">V &amp; <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::valueAtBack </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves the value at the back of the dictionary. </p>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the value at the back. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classIndexOutOfRangeError.html" title="Error class for index out of range errors.">IndexOutOfRangeError</a></td><td>if the dictionary is empty. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a76abf73d01703061fff3e3b21bbfb77b" name="a76abf73d01703061fff3e3b21bbfb77b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76abf73d01703061fff3e3b21bbfb77b">&#9670;&#160;</a></span>valueAtBack() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const V &amp; <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::valueAtBack </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves the value at the back of the dictionary (const version). </p>
+<dl class="section return"><dt>Returns</dt><dd>Const reference to the value at the back. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classIndexOutOfRangeError.html" title="Error class for index out of range errors.">IndexOutOfRangeError</a></td><td>if the dictionary is empty. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac9dccb9e296fe42c157c7fc398088cf8" name="ac9dccb9e296fe42c157c7fc398088cf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9dccb9e296fe42c157c7fc398088cf8">&#9670;&#160;</a></span>valueAtFront() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">V &amp; <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::valueAtFront </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves the value at the front of the dictionary. </p>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the value at the front. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classIndexOutOfRangeError.html" title="Error class for index out of range errors.">IndexOutOfRangeError</a></td><td>if the dictionary is empty. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abdb5f3c979d88dc451eefc877e5d5624" name="abdb5f3c979d88dc451eefc877e5d5624"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdb5f3c979d88dc451eefc877e5d5624">&#9670;&#160;</a></span>valueAtFront() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const V &amp; <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::valueAtFront </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves the value at the front of the dictionary (const version). </p>
+<dl class="section return"><dt>Returns</dt><dd>Const reference to the value at the front. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classIndexOutOfRangeError.html" title="Error class for index out of range errors.">IndexOutOfRangeError</a></td><td>if the dictionary is empty. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aab416afd1648fe6f84f2150c07282bec" name="aab416afd1648fe6f84f2150c07282bec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab416afd1648fe6f84f2150c07282bec">&#9670;&#160;</a></span>valueAtIndex() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">V &amp; <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::valueAtIndex </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a reference to the value at a given insertion index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Index in insertion order (0-based). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the value at the specified index.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classIndexOutOfRangeError.html" title="Error class for index out of range errors.">IndexOutOfRangeError</a></td><td>if index &gt;= size. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This is a linear-time operation. </dd></dl>
+
+</div>
+</div>
+<a id="a9fdecd903b02d425d172fe0d138aac1b" name="a9fdecd903b02d425d172fe0d138aac1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fdecd903b02d425d172fe0d138aac1b">&#9670;&#160;</a></span>valueAtIndex() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const V &amp; <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::valueAtIndex </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a const reference to the value at a given insertion index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Index in insertion order (0-based). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Const reference to the value at the specified index.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classIndexOutOfRangeError.html" title="Error class for index out of range errors.">IndexOutOfRangeError</a></td><td>if index &gt;= size </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a1e9e1e813326db62ece638b344a7919b" name="a1e9e1e813326db62ece638b344a7919b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e9e1e813326db62ece638b344a7919b">&#9670;&#160;</a></span>const</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V , typename Hash  = VaHash&lt;K&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">operators V&amp; other <a class="el" href="classVaDict.html">VaDict</a>&lt; K, V, Hash &gt;::const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{</div>
+<div class="line">        Entry* a = <a class="code hl_variable" href="#ad66389a81c854628eab4538f9eb450f1">head</a></div>
+<div class="ttc" id="aclassVaDict_html_ad66389a81c854628eab4538f9eb450f1"><div class="ttname"><a href="#ad66389a81c854628eab4538f9eb450f1">VaDict::head</a></div><div class="ttdeci">Entry * head</div><div class="ttdoc">Pointer to first node.</div><div class="ttdef"><b>Definition</b> Dict.hpp:52</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>Include/VaLib/RawAccess/<a class="el" href="RawAccess_2Dict_8hpp_source.html">Dict.hpp</a></li>
+<li>Include/VaLib/Types/<a class="el" href="Types_2Dict_8hpp_source.html">Dict.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

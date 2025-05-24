@@ -74,9 +74,10 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-types">Protected Types</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classVaFunc_3_01R_07Args_8_8_8_08_4-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">VaFunc&lt; R(Args...)&gt; Class Template Reference</div></div>
 </div><!--header-->
@@ -84,6 +85,8 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVaFunc_3_01R_07Args_8_8_8_08_4_1_1Buffer.html">Buffer</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVaFunc_3_01R_07Args_8_8_8_08_4_1_1CallableBase.html">CallableBase</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVaFunc_3_01R_07Args_8_8_8_08_4_1_1CallableImpl.html">CallableImpl</a></td></tr>
@@ -95,7 +98,7 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>VaFunc</b> (std::nullptr_t) noexcept</td></tr>
 <tr class="separator:a84fa07e9fd279d1633defde5e5f5e205"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b946974a2d29eeb21d6936759cf7292" id="r_a4b946974a2d29eeb21d6936759cf7292"><td class="memTemplParams" colspan="2"><a id="a4b946974a2d29eeb21d6936759cf7292" name="a4b946974a2d29eeb21d6936759cf7292"></a>
-template&lt;typename F , typename  = std::enable_if_t&lt;!std::is_same_v&lt;std::decay_t&lt;F&gt;, VaFunc&gt;&gt;&gt; </td></tr>
+template&lt;typename F , typename  = tt::EnableIf&lt; !tt::IsSame&lt;typename tt::Decay&lt;F&gt;, VaFunc&gt; &gt;&gt; </td></tr>
 <tr class="memitem:a4b946974a2d29eeb21d6936759cf7292"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>VaFunc</b> (F &amp;&amp;f)</td></tr>
 <tr class="separator:a4b946974a2d29eeb21d6936759cf7292"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a020d66ac608c7cf63af5a4bf8a54d8b5" id="r_a020d66ac608c7cf63af5a4bf8a54d8b5"><td class="memItemLeft" align="right" valign="top"><a id="a020d66ac608c7cf63af5a4bf8a54d8b5" name="a020d66ac608c7cf63af5a4bf8a54d8b5"></a>
@@ -110,9 +113,15 @@ template&lt;typename F , typename  = std::enable_if_t&lt;!std::is_same_v&lt;std:
 <tr class="memitem:aa28c441d5dd62d1943e912acb6c5d1e0" id="r_aa28c441d5dd62d1943e912acb6c5d1e0"><td class="memItemLeft" align="right" valign="top"><a id="aa28c441d5dd62d1943e912acb6c5d1e0" name="aa28c441d5dd62d1943e912acb6c5d1e0"></a>
 <a class="el" href="classVaFunc.html">VaFunc</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classVaFunc.html">VaFunc</a> &amp;&amp;other) noexcept</td></tr>
 <tr class="separator:aa28c441d5dd62d1943e912acb6c5d1e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd768b114c33076ea85113f68fdbbd22" id="r_abd768b114c33076ea85113f68fdbbd22"><td class="memItemLeft" align="right" valign="top"><a id="abd768b114c33076ea85113f68fdbbd22" name="abd768b114c33076ea85113f68fdbbd22"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>swap</b> (<a class="el" href="classVaFunc.html">VaFunc</a> &amp;other) noexcept</td></tr>
+<tr class="separator:abd768b114c33076ea85113f68fdbbd22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50f8a1cecb7553dc9d46708d97c0c277" id="r_a50f8a1cecb7553dc9d46708d97c0c277"><td class="memItemLeft" align="right" valign="top"><a id="a50f8a1cecb7553dc9d46708d97c0c277" name="a50f8a1cecb7553dc9d46708d97c0c277"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()</td></tr>
 <tr class="separator:a50f8a1cecb7553dc9d46708d97c0c277"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a827e546998341311bb316f133b0e6c60" id="r_a827e546998341311bb316f133b0e6c60"><td class="memItemLeft" align="right" valign="top"><a id="a827e546998341311bb316f133b0e6c60" name="a827e546998341311bb316f133b0e6c60"></a>
+R&#160;</td><td class="memItemRight" valign="bottom"><b>call</b> (Args... args) const</td></tr>
+<tr class="separator:a827e546998341311bb316f133b0e6c60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab84c7338e070c3a4a596d2ec57428c7e" id="r_ab84c7338e070c3a4a596d2ec57428c7e"><td class="memItemLeft" align="right" valign="top"><a id="ab84c7338e070c3a4a596d2ec57428c7e" name="ab84c7338e070c3a4a596d2ec57428c7e"></a>
 R&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (Args... args) const</td></tr>
 <tr class="separator:ab84c7338e070c3a4a596d2ec57428c7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -120,11 +129,13 @@ R&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (Args... 
 &#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> () const noexcept</td></tr>
 <tr class="separator:a48b67eb2cd4380893c97820db63ccaa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-types" name="pro-types"></a>
-Protected Types</h2></td></tr>
-<tr class="memitem:adcaf60f5da50bde8bfb9febf6cdac397" id="r_adcaf60f5da50bde8bfb9febf6cdac397"><td class="memItemLeft" align="right" valign="top"><a id="adcaf60f5da50bde8bfb9febf6cdac397" name="adcaf60f5da50bde8bfb9febf6cdac397"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>Buffer</b> = std::aligned_storage_t&lt;bufSize, alignof(std::max_align_t)&gt;</td></tr>
-<tr class="separator:adcaf60f5da50bde8bfb9febf6cdac397"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a00e20d1769950e6ed629a363e4017103" id="r_a00e20d1769950e6ed629a363e4017103"><td class="memItemLeft" align="right" valign="top"><a id="a00e20d1769950e6ed629a363e4017103" name="a00e20d1769950e6ed629a363e4017103"></a>
+operators&#160;</td><td class="memItemRight" valign="bottom">: friend bool operator==(const <a class="el" href="classVaFunc.html">VaFunc</a>&amp; lhs</td></tr>
+<tr class="separator:a00e20d1769950e6ed629a363e4017103"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b70f6c62f9a34056f519fde7caa078c" id="r_a4b70f6c62f9a34056f519fde7caa078c"><td class="memItemLeft" align="right" valign="top">operators std::nullptr_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b70f6c62f9a34056f519fde7caa078c">noexcept</a></td></tr>
+<tr class="separator:a4b70f6c62f9a34056f519fde7caa078c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -141,9 +152,34 @@ Buffer&#160;</td><td class="memItemRight" valign="bottom"><b>buffer</b></td></tr
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-static-attribs" name="pro-static-attribs"></a>
 Static Protected Attributes</h2></td></tr>
 <tr class="memitem:a0c56674eddb6bbff6fe84cd4b5931240" id="r_a0c56674eddb6bbff6fe84cd4b5931240"><td class="memItemLeft" align="right" valign="top"><a id="a0c56674eddb6bbff6fe84cd4b5931240" name="a0c56674eddb6bbff6fe84cd4b5931240"></a>
-static constexpr Size&#160;</td><td class="memItemRight" valign="bottom"><b>bufSize</b> = sizeof(void*) * 8</td></tr>
+static constexpr Size&#160;</td><td class="memItemRight" valign="bottom"><b>bufSize</b> = sizeof(void (*)()) * 8</td></tr>
 <tr class="separator:a0c56674eddb6bbff6fe84cd4b5931240"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a6cf01ab3449ba4849cde70671468f4bd" id="r_a6cf01ab3449ba4849cde70671468f4bd"><td class="memItemLeft" align="right" valign="top"><a id="a6cf01ab3449ba4849cde70671468f4bd" name="a6cf01ab3449ba4849cde70671468f4bd"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="classVaFunc.html">VaFunc</a> &amp;lhs, std::nullptr_t) noexcept</td></tr>
+<tr class="separator:a6cf01ab3449ba4849cde70671468f4bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a4b70f6c62f9a34056f519fde7caa078c" name="a4b70f6c62f9a34056f519fde7caa078c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b70f6c62f9a34056f519fde7caa078c">&#9670;&#160;</a></span>noexcept</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename R , typename... Args&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">operators std::nullptr_t <a class="el" href="classVaFunc.html">VaFunc</a>&lt; R(Args...)&gt;::noexcept</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{</div>
+<div class="line">        <span class="keywordflow">return</span> lhs.callable == <span class="keyword">nullptr</span></div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Include/VaLib/FuncTools/<a class="el" href="Func_8hpp_source.html">Func.hpp</a></li>
 </ul>

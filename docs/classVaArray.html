@@ -72,157 +72,140 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#friends">Friends</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classVaArray-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">VaArray&lt; T, N &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Public array type.  
+<p>Basic array implementation.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Array_8hpp_source.html">Array.hpp</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for VaArray&lt; T, N &gt;:</div>
-<div class="dyncontent">
- <div class="center">
-  <img src="classVaArray.png" usemap="#VaArray_3C_20T_2C_20N_20_3E_map" alt=""/>
-  <map id="VaArray_3C_20T_2C_20N_20_3E_map" name="VaArray_3C_20T_2C_20N_20_3E_map">
-<area href="classva_1_1detail_1_1____BasicArray.html" alt="va::detail::__BasicArray&lt; T, N &gt;" shape="rect" coords="0,0,195,24"/>
-  </map>
-</div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
-Friends</h2></td></tr>
-<tr class="memitem:aa2d137ec863423f22addf7880120c71a" id="r_aa2d137ec863423f22addf7880120c71a"><td class="memItemLeft" align="right" valign="top">Size&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2d137ec863423f22addf7880120c71a">len</a> (const <a class="el" href="classVaArray.html">VaArray</a> &amp;arr)</td></tr>
-<tr class="memdesc:aa2d137ec863423f22addf7880120c71a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets array length.  <br /></td></tr>
-<tr class="separator:aa2d137ec863423f22addf7880120c71a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_types_classva_1_1detail_1_1____BasicArray"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_classva_1_1detail_1_1____BasicArray')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classva_1_1detail_1_1____BasicArray.html">va::detail::__BasicArray&lt; T, N &gt;</a></td></tr>
-<tr class="memitem:a96fbf284740d7398560e2851ec5f92e2 inherit pub_types_classva_1_1detail_1_1____BasicArray" id="r_a96fbf284740d7398560e2851ec5f92e2"><td class="memItemLeft" align="right" valign="top">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:aadcf1b479c2ff292a64b44942055247f" id="r_aadcf1b479c2ff292a64b44942055247f"><td class="memItemLeft" align="right" valign="top"><a id="aadcf1b479c2ff292a64b44942055247f" name="aadcf1b479c2ff292a64b44942055247f"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>ConstIterator</b> = const T*</td></tr>
-<tr class="separator:a96fbf284740d7398560e2851ec5f92e2 inherit pub_types_classva_1_1detail_1_1____BasicArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a60cffcc7628139e0c48146d93ef149 inherit pub_types_classva_1_1detail_1_1____BasicArray" id="r_a1a60cffcc7628139e0c48146d93ef149"><td class="memItemLeft" align="right" valign="top">
+<tr class="separator:aadcf1b479c2ff292a64b44942055247f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa03869efffe4592ddeb43781d28e93ca" id="r_aa03869efffe4592ddeb43781d28e93ca"><td class="memItemLeft" align="right" valign="top"><a id="aa03869efffe4592ddeb43781d28e93ca" name="aa03869efffe4592ddeb43781d28e93ca"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>ReverseIterator</b> = std::reverse_iterator&lt;Iterator&gt;</td></tr>
-<tr class="separator:a1a60cffcc7628139e0c48146d93ef149 inherit pub_types_classva_1_1detail_1_1____BasicArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bbe8129803b8e1e497b467bf2567455 inherit pub_types_classva_1_1detail_1_1____BasicArray" id="r_a4bbe8129803b8e1e497b467bf2567455"><td class="memItemLeft" align="right" valign="top">
+<tr class="separator:aa03869efffe4592ddeb43781d28e93ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af42309793f129d1aae911bdc60a7800e" id="r_af42309793f129d1aae911bdc60a7800e"><td class="memItemLeft" align="right" valign="top"><a id="af42309793f129d1aae911bdc60a7800e" name="af42309793f129d1aae911bdc60a7800e"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>ConstReverseIterator</b> = std::reverse_iterator&lt;ConstIterator&gt;</td></tr>
-<tr class="separator:a4bbe8129803b8e1e497b467bf2567455 inherit pub_types_classva_1_1detail_1_1____BasicArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classva_1_1detail_1_1____BasicArray"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classva_1_1detail_1_1____BasicArray')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classva_1_1detail_1_1____BasicArray.html">va::detail::__BasicArray&lt; T, N &gt;</a></td></tr>
-<tr class="memitem:a392d33e1d3af3be57e49939cfa268395 inherit pub_methods_classva_1_1detail_1_1____BasicArray" id="r_a392d33e1d3af3be57e49939cfa268395"><td class="memTemplParams" colspan="2">template&lt;typename... Args, typename  = std::enable_if_t&lt;sizeof...(Args) == N&gt;&gt; </td></tr>
-<tr class="memitem:a392d33e1d3af3be57e49939cfa268395 inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="memTemplItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classva_1_1detail_1_1____BasicArray.html#a392d33e1d3af3be57e49939cfa268395">__BasicArray</a> (Args &amp;&amp;... args)</td></tr>
-<tr class="memdesc:a392d33e1d3af3be57e49939cfa268395 inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs array with given arguments.  <br /></td></tr>
-<tr class="separator:a392d33e1d3af3be57e49939cfa268395 inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e71907a125b2192d9e9e67e7b593c42 inherit pub_methods_classva_1_1detail_1_1____BasicArray" id="r_a7e71907a125b2192d9e9e67e7b593c42"><td class="memItemLeft" align="right" valign="top">constexpr T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classva_1_1detail_1_1____BasicArray.html#a7e71907a125b2192d9e9e67e7b593c42">operator[]</a> (Size index) noexcept</td></tr>
-<tr class="memdesc:a7e71907a125b2192d9e9e67e7b593c42 inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesses element without bounds checking.  <br /></td></tr>
-<tr class="separator:a7e71907a125b2192d9e9e67e7b593c42 inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2635b4d5a6a66b5d31371b495fc52709 inherit pub_methods_classva_1_1detail_1_1____BasicArray" id="r_a2635b4d5a6a66b5d31371b495fc52709"><td class="memItemLeft" align="right" valign="top">constexpr const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classva_1_1detail_1_1____BasicArray.html#a2635b4d5a6a66b5d31371b495fc52709">operator[]</a> (Size index) const noexcept</td></tr>
-<tr class="memdesc:a2635b4d5a6a66b5d31371b495fc52709 inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesses element without bounds checking (const version)  <br /></td></tr>
-<tr class="separator:a2635b4d5a6a66b5d31371b495fc52709 inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2356257a35a1e534c99bd6402caf305d inherit pub_methods_classva_1_1detail_1_1____BasicArray" id="r_a2356257a35a1e534c99bd6402caf305d"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classva_1_1detail_1_1____BasicArray.html#a2356257a35a1e534c99bd6402caf305d">at</a> (Size index)</td></tr>
-<tr class="memdesc:a2356257a35a1e534c99bd6402caf305d inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesses element with bounds checking.  <br /></td></tr>
-<tr class="separator:a2356257a35a1e534c99bd6402caf305d inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3bedfc2d444e06d4a40cc31afd9207a inherit pub_methods_classva_1_1detail_1_1____BasicArray" id="r_ad3bedfc2d444e06d4a40cc31afd9207a"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classva_1_1detail_1_1____BasicArray.html#ad3bedfc2d444e06d4a40cc31afd9207a">at</a> (Size index) const</td></tr>
-<tr class="memdesc:ad3bedfc2d444e06d4a40cc31afd9207a inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesses element with bounds checking (const version)  <br /></td></tr>
-<tr class="separator:ad3bedfc2d444e06d4a40cc31afd9207a inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84a4fda190720a061e3e3dc0c3146c8d inherit pub_methods_classva_1_1detail_1_1____BasicArray" id="r_a84a4fda190720a061e3e3dc0c3146c8d"><td class="memTemplParams" colspan="2">template&lt;Size L&gt; </td></tr>
-<tr class="memitem:a84a4fda190720a061e3e3dc0c3146c8d inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classva_1_1detail_1_1____BasicArray.html">__BasicArray</a>&lt; T, N+L &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classva_1_1detail_1_1____BasicArray.html#a84a4fda190720a061e3e3dc0c3146c8d">operator+</a> (const <a class="el" href="classva_1_1detail_1_1____BasicArray.html">__BasicArray</a>&lt; T, L &gt; &amp;other) const</td></tr>
-<tr class="memdesc:a84a4fda190720a061e3e3dc0c3146c8d inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concatenates two arrays.  <br /></td></tr>
-<tr class="separator:a84a4fda190720a061e3e3dc0c3146c8d inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ac5aff5086abc73077dce7f82462b38 inherit pub_methods_classva_1_1detail_1_1____BasicArray" id="r_a0ac5aff5086abc73077dce7f82462b38"><td class="memItemLeft" align="right" valign="top">constexpr T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classva_1_1detail_1_1____BasicArray.html#a0ac5aff5086abc73077dce7f82462b38">dataPtr</a> () noexcept</td></tr>
-<tr class="memdesc:a0ac5aff5086abc73077dce7f82462b38 inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns pointer to underlying data.  <br /></td></tr>
-<tr class="separator:a0ac5aff5086abc73077dce7f82462b38 inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9cde468b6672cd41831ce384b44f6db inherit pub_methods_classva_1_1detail_1_1____BasicArray" id="r_ae9cde468b6672cd41831ce384b44f6db"><td class="memItemLeft" align="right" valign="top">constexpr const T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classva_1_1detail_1_1____BasicArray.html#ae9cde468b6672cd41831ce384b44f6db">dataPtr</a> () const noexcept</td></tr>
-<tr class="memdesc:ae9cde468b6672cd41831ce384b44f6db inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns pointer to underlying data (const version)  <br /></td></tr>
-<tr class="separator:ae9cde468b6672cd41831ce384b44f6db inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9dc729d54442c599b8ccf605f4032517 inherit pub_methods_classva_1_1detail_1_1____BasicArray" id="r_a9dc729d54442c599b8ccf605f4032517"><td class="memItemLeft" align="right" valign="top">constexpr T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classva_1_1detail_1_1____BasicArray.html#a9dc729d54442c599b8ccf605f4032517">front</a> () noexcept</td></tr>
-<tr class="memdesc:a9dc729d54442c599b8ccf605f4032517 inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesses first element.  <br /></td></tr>
-<tr class="separator:a9dc729d54442c599b8ccf605f4032517 inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a5b072dc109082057c81cb09eacb697 inherit pub_methods_classva_1_1detail_1_1____BasicArray" id="r_a9a5b072dc109082057c81cb09eacb697"><td class="memItemLeft" align="right" valign="top">constexpr T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classva_1_1detail_1_1____BasicArray.html#a9a5b072dc109082057c81cb09eacb697">back</a> () noexcept</td></tr>
-<tr class="memdesc:a9a5b072dc109082057c81cb09eacb697 inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesses last element.  <br /></td></tr>
-<tr class="separator:a9a5b072dc109082057c81cb09eacb697 inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e749df183682a993befd0e2429f34ae inherit pub_methods_classva_1_1detail_1_1____BasicArray" id="r_a8e749df183682a993befd0e2429f34ae"><td class="memItemLeft" align="right" valign="top">constexpr const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classva_1_1detail_1_1____BasicArray.html#a8e749df183682a993befd0e2429f34ae">front</a> () const noexcept</td></tr>
-<tr class="memdesc:a8e749df183682a993befd0e2429f34ae inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesses first element (const version)  <br /></td></tr>
-<tr class="separator:a8e749df183682a993befd0e2429f34ae inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d46006c80778d832d9795389d3543e9 inherit pub_methods_classva_1_1detail_1_1____BasicArray" id="r_a2d46006c80778d832d9795389d3543e9"><td class="memItemLeft" align="right" valign="top">constexpr const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classva_1_1detail_1_1____BasicArray.html#a2d46006c80778d832d9795389d3543e9">back</a> () const noexcept</td></tr>
-<tr class="memdesc:a2d46006c80778d832d9795389d3543e9 inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesses last element (const version)  <br /></td></tr>
-<tr class="separator:a2d46006c80778d832d9795389d3543e9 inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f35c8abe1316205d2b342ff7d87c828 inherit pub_methods_classva_1_1detail_1_1____BasicArray" id="r_a5f35c8abe1316205d2b342ff7d87c828"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classva_1_1detail_1_1____BasicArray.html#a5f35c8abe1316205d2b342ff7d87c828">fill</a> (const T &amp;value)</td></tr>
-<tr class="memdesc:a5f35c8abe1316205d2b342ff7d87c828 inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills array with given value.  <br /></td></tr>
-<tr class="separator:a5f35c8abe1316205d2b342ff7d87c828 inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31e955918855f210560b3ecf78f0a0c6 inherit pub_methods_classva_1_1detail_1_1____BasicArray" id="r_a31e955918855f210560b3ecf78f0a0c6"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classva_1_1detail_1_1____BasicArray.html#a31e955918855f210560b3ecf78f0a0c6">swap</a> (<a class="el" href="classva_1_1detail_1_1____BasicArray.html">__BasicArray</a> &amp;other) noexcept</td></tr>
-<tr class="memdesc:a31e955918855f210560b3ecf78f0a0c6 inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps contents with another array.  <br /></td></tr>
-<tr class="separator:a31e955918855f210560b3ecf78f0a0c6 inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af253486c1d9a517a0ed3310cbd24d7a3 inherit pub_methods_classva_1_1detail_1_1____BasicArray" id="r_af253486c1d9a517a0ed3310cbd24d7a3"><td class="memTemplParams" colspan="2">template&lt;Size I&gt; </td></tr>
-<tr class="memitem:af253486c1d9a517a0ed3310cbd24d7a3 inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="memTemplItemLeft" align="right" valign="top">constexpr T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classva_1_1detail_1_1____BasicArray.html#af253486c1d9a517a0ed3310cbd24d7a3">get</a> () noexcept</td></tr>
-<tr class="memdesc:af253486c1d9a517a0ed3310cbd24d7a3 inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets element at compile-time index.  <br /></td></tr>
-<tr class="separator:af253486c1d9a517a0ed3310cbd24d7a3 inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d1a47090fb9950d12113d44879a4921 inherit pub_methods_classva_1_1detail_1_1____BasicArray" id="r_a6d1a47090fb9950d12113d44879a4921"><td class="memTemplParams" colspan="2">template&lt;Size I&gt; </td></tr>
-<tr class="memitem:a6d1a47090fb9950d12113d44879a4921 inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="memTemplItemLeft" align="right" valign="top">constexpr const T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classva_1_1detail_1_1____BasicArray.html#a6d1a47090fb9950d12113d44879a4921">get</a> () const noexcept</td></tr>
-<tr class="memdesc:a6d1a47090fb9950d12113d44879a4921 inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets element at compile-time index (const version)  <br /></td></tr>
-<tr class="separator:a6d1a47090fb9950d12113d44879a4921 inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a295ff8b42319a0ba31b59ddbecafe72a inherit pub_methods_classva_1_1detail_1_1____BasicArray" id="r_a295ff8b42319a0ba31b59ddbecafe72a"><td class="memItemLeft" align="right" valign="top">
+<tr class="separator:af42309793f129d1aae911bdc60a7800e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a2e9deac1da047cb408985f629c1a49cf" id="r_a2e9deac1da047cb408985f629c1a49cf"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e9deac1da047cb408985f629c1a49cf">VaArray</a> (std::initializer_list&lt; T &gt; init)</td></tr>
+<tr class="memdesc:a2e9deac1da047cb408985f629c1a49cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classVaArray.html" title="Basic array implementation.">VaArray</a> from an initializer list.  <br /></td></tr>
+<tr class="separator:a2e9deac1da047cb408985f629c1a49cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a85f98609b3539c872f74da324de29a" id="r_a9a85f98609b3539c872f74da324de29a"><td class="memItemLeft" align="right" valign="top">constexpr T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a85f98609b3539c872f74da324de29a">operator[]</a> (Size index) noexcept</td></tr>
+<tr class="memdesc:a9a85f98609b3539c872f74da324de29a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesses element without bounds checking.  <br /></td></tr>
+<tr class="separator:a9a85f98609b3539c872f74da324de29a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9ace9dc779765d2240607cdb9da2a02" id="r_ad9ace9dc779765d2240607cdb9da2a02"><td class="memItemLeft" align="right" valign="top">constexpr const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9ace9dc779765d2240607cdb9da2a02">operator[]</a> (Size index) const noexcept</td></tr>
+<tr class="memdesc:ad9ace9dc779765d2240607cdb9da2a02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesses element without bounds checking (const version)  <br /></td></tr>
+<tr class="separator:ad9ace9dc779765d2240607cdb9da2a02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a084fdfea4755b0ff8fdaf4c2b1e69c44" id="r_a084fdfea4755b0ff8fdaf4c2b1e69c44"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a084fdfea4755b0ff8fdaf4c2b1e69c44">at</a> (Size index)</td></tr>
+<tr class="memdesc:a084fdfea4755b0ff8fdaf4c2b1e69c44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesses element with bounds checking.  <br /></td></tr>
+<tr class="separator:a084fdfea4755b0ff8fdaf4c2b1e69c44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ea9c0c15d48050d315b2d74f3481337" id="r_a1ea9c0c15d48050d315b2d74f3481337"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ea9c0c15d48050d315b2d74f3481337">at</a> (Size index) const</td></tr>
+<tr class="memdesc:a1ea9c0c15d48050d315b2d74f3481337"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesses element with bounds checking (const version)  <br /></td></tr>
+<tr class="separator:a1ea9c0c15d48050d315b2d74f3481337"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabc120dbec3335a4d4b0ff84368f736a" id="r_aabc120dbec3335a4d4b0ff84368f736a"><td class="memTemplParams" colspan="2">template&lt;Size L&gt; </td></tr>
+<tr class="memitem:aabc120dbec3335a4d4b0ff84368f736a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classVaArray.html">VaArray</a>&lt; T, N+L &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aabc120dbec3335a4d4b0ff84368f736a">operator+</a> (const <a class="el" href="classVaArray.html">VaArray</a>&lt; T, L &gt; &amp;other) const</td></tr>
+<tr class="memdesc:aabc120dbec3335a4d4b0ff84368f736a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concatenates two arrays.  <br /></td></tr>
+<tr class="separator:aabc120dbec3335a4d4b0ff84368f736a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14ad96705c02ad585d053be532b6159d" id="r_a14ad96705c02ad585d053be532b6159d"><td class="memItemLeft" align="right" valign="top">constexpr T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14ad96705c02ad585d053be532b6159d">dataPtr</a> () noexcept</td></tr>
+<tr class="memdesc:a14ad96705c02ad585d053be532b6159d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns pointer to underlying data.  <br /></td></tr>
+<tr class="separator:a14ad96705c02ad585d053be532b6159d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23cf3987230d7099b1cd02c318138a7a" id="r_a23cf3987230d7099b1cd02c318138a7a"><td class="memItemLeft" align="right" valign="top">constexpr const T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23cf3987230d7099b1cd02c318138a7a">dataPtr</a> () const noexcept</td></tr>
+<tr class="memdesc:a23cf3987230d7099b1cd02c318138a7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns pointer to underlying data (const version)  <br /></td></tr>
+<tr class="separator:a23cf3987230d7099b1cd02c318138a7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae394352f1e1cb0f7895f0c2d7dcd6841" id="r_ae394352f1e1cb0f7895f0c2d7dcd6841"><td class="memItemLeft" align="right" valign="top">constexpr T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae394352f1e1cb0f7895f0c2d7dcd6841">front</a> () noexcept</td></tr>
+<tr class="memdesc:ae394352f1e1cb0f7895f0c2d7dcd6841"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesses first element.  <br /></td></tr>
+<tr class="separator:ae394352f1e1cb0f7895f0c2d7dcd6841"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee609198c718321f17216b5747063035" id="r_aee609198c718321f17216b5747063035"><td class="memItemLeft" align="right" valign="top">constexpr T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee609198c718321f17216b5747063035">back</a> () noexcept</td></tr>
+<tr class="memdesc:aee609198c718321f17216b5747063035"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesses last element.  <br /></td></tr>
+<tr class="separator:aee609198c718321f17216b5747063035"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae645cc22a54adcce6e388f9ceaeb0de2" id="r_ae645cc22a54adcce6e388f9ceaeb0de2"><td class="memItemLeft" align="right" valign="top">constexpr const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae645cc22a54adcce6e388f9ceaeb0de2">front</a> () const noexcept</td></tr>
+<tr class="memdesc:ae645cc22a54adcce6e388f9ceaeb0de2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesses first element (const version)  <br /></td></tr>
+<tr class="separator:ae645cc22a54adcce6e388f9ceaeb0de2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47b0a2292bb61a1ec4847b87a1897d15" id="r_a47b0a2292bb61a1ec4847b87a1897d15"><td class="memItemLeft" align="right" valign="top">constexpr const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47b0a2292bb61a1ec4847b87a1897d15">back</a> () const noexcept</td></tr>
+<tr class="memdesc:a47b0a2292bb61a1ec4847b87a1897d15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesses last element (const version)  <br /></td></tr>
+<tr class="separator:a47b0a2292bb61a1ec4847b87a1897d15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada9730cdb180be9b19cfb30b070f76ea" id="r_ada9730cdb180be9b19cfb30b070f76ea"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada9730cdb180be9b19cfb30b070f76ea">fill</a> (const T &amp;value)</td></tr>
+<tr class="memdesc:ada9730cdb180be9b19cfb30b070f76ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills array with given value.  <br /></td></tr>
+<tr class="separator:ada9730cdb180be9b19cfb30b070f76ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa56133ba636cdd7d1bfe8d91e97d5c8e" id="r_aa56133ba636cdd7d1bfe8d91e97d5c8e"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa56133ba636cdd7d1bfe8d91e97d5c8e">swap</a> (<a class="el" href="classVaArray.html">VaArray</a> &amp;other) noexcept</td></tr>
+<tr class="memdesc:aa56133ba636cdd7d1bfe8d91e97d5c8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps contents with another array.  <br /></td></tr>
+<tr class="separator:aa56133ba636cdd7d1bfe8d91e97d5c8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a090c5d6749da415c8d869b1623cedcc1" id="r_a090c5d6749da415c8d869b1623cedcc1"><td class="memTemplParams" colspan="2">template&lt;Size I&gt; </td></tr>
+<tr class="memitem:a090c5d6749da415c8d869b1623cedcc1"><td class="memTemplItemLeft" align="right" valign="top">constexpr T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a090c5d6749da415c8d869b1623cedcc1">get</a> () noexcept</td></tr>
+<tr class="memdesc:a090c5d6749da415c8d869b1623cedcc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets element at compile-time index.  <br /></td></tr>
+<tr class="separator:a090c5d6749da415c8d869b1623cedcc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa13f711805b6183ae200ebf662d4cc53" id="r_aa13f711805b6183ae200ebf662d4cc53"><td class="memTemplParams" colspan="2">template&lt;Size I&gt; </td></tr>
+<tr class="memitem:aa13f711805b6183ae200ebf662d4cc53"><td class="memTemplItemLeft" align="right" valign="top">constexpr const T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa13f711805b6183ae200ebf662d4cc53">get</a> () const noexcept</td></tr>
+<tr class="memdesc:aa13f711805b6183ae200ebf662d4cc53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets element at compile-time index (const version)  <br /></td></tr>
+<tr class="separator:aa13f711805b6183ae200ebf662d4cc53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a461560f6618729adb65d238a1df5718b" id="r_a461560f6618729adb65d238a1df5718b"><td class="memItemLeft" align="right" valign="top"><a id="a461560f6618729adb65d238a1df5718b" name="a461560f6618729adb65d238a1df5718b"></a>
 constexpr Iterator&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () noexcept</td></tr>
-<tr class="separator:a295ff8b42319a0ba31b59ddbecafe72a inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac070ba647c9a8f94eb2fbe58c9e66070 inherit pub_methods_classva_1_1detail_1_1____BasicArray" id="r_ac070ba647c9a8f94eb2fbe58c9e66070"><td class="memItemLeft" align="right" valign="top">
+<tr class="separator:a461560f6618729adb65d238a1df5718b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3da7945e75e2c708e114a8acff331eb9" id="r_a3da7945e75e2c708e114a8acff331eb9"><td class="memItemLeft" align="right" valign="top"><a id="a3da7945e75e2c708e114a8acff331eb9" name="a3da7945e75e2c708e114a8acff331eb9"></a>
 constexpr Iterator&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () noexcept</td></tr>
-<tr class="separator:ac070ba647c9a8f94eb2fbe58c9e66070 inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90d0b33d95cc3fd820754a1b0605f3cd inherit pub_methods_classva_1_1detail_1_1____BasicArray" id="r_a90d0b33d95cc3fd820754a1b0605f3cd"><td class="memItemLeft" align="right" valign="top">
+<tr class="separator:a3da7945e75e2c708e114a8acff331eb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a926d3fd354c69b43a2e4436575d475d5" id="r_a926d3fd354c69b43a2e4436575d475d5"><td class="memItemLeft" align="right" valign="top"><a id="a926d3fd354c69b43a2e4436575d475d5" name="a926d3fd354c69b43a2e4436575d475d5"></a>
 constexpr ConstIterator&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () const noexcept</td></tr>
-<tr class="separator:a90d0b33d95cc3fd820754a1b0605f3cd inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d5d0a07a6873e8b74a119c5acb05c6d inherit pub_methods_classva_1_1detail_1_1____BasicArray" id="r_a3d5d0a07a6873e8b74a119c5acb05c6d"><td class="memItemLeft" align="right" valign="top">
+<tr class="separator:a926d3fd354c69b43a2e4436575d475d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9438d81ccc79d05ace6e67e688333288" id="r_a9438d81ccc79d05ace6e67e688333288"><td class="memItemLeft" align="right" valign="top"><a id="a9438d81ccc79d05ace6e67e688333288" name="a9438d81ccc79d05ace6e67e688333288"></a>
 constexpr ConstIterator&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () const noexcept</td></tr>
-<tr class="separator:a3d5d0a07a6873e8b74a119c5acb05c6d inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7e5b3e4c1ee3d70ea53819b16ff159a inherit pub_methods_classva_1_1detail_1_1____BasicArray" id="r_ad7e5b3e4c1ee3d70ea53819b16ff159a"><td class="memItemLeft" align="right" valign="top">
+<tr class="separator:a9438d81ccc79d05ace6e67e688333288"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb72dea6c99748e34d11fed4568838d4" id="r_adb72dea6c99748e34d11fed4568838d4"><td class="memItemLeft" align="right" valign="top"><a id="adb72dea6c99748e34d11fed4568838d4" name="adb72dea6c99748e34d11fed4568838d4"></a>
 constexpr ConstIterator&#160;</td><td class="memItemRight" valign="bottom"><b>cbegin</b> () const noexcept</td></tr>
-<tr class="separator:ad7e5b3e4c1ee3d70ea53819b16ff159a inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae917ae5f714c40c35c81cb534bbc2d0e inherit pub_methods_classva_1_1detail_1_1____BasicArray" id="r_ae917ae5f714c40c35c81cb534bbc2d0e"><td class="memItemLeft" align="right" valign="top">
+<tr class="separator:adb72dea6c99748e34d11fed4568838d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a0e49c441abd1856dad6ba6c62cee0e" id="r_a3a0e49c441abd1856dad6ba6c62cee0e"><td class="memItemLeft" align="right" valign="top"><a id="a3a0e49c441abd1856dad6ba6c62cee0e" name="a3a0e49c441abd1856dad6ba6c62cee0e"></a>
 constexpr ConstIterator&#160;</td><td class="memItemRight" valign="bottom"><b>cend</b> () const noexcept</td></tr>
-<tr class="separator:ae917ae5f714c40c35c81cb534bbc2d0e inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ddaa8c655fb44fdd22e6cd2534f8594 inherit pub_methods_classva_1_1detail_1_1____BasicArray" id="r_a9ddaa8c655fb44fdd22e6cd2534f8594"><td class="memItemLeft" align="right" valign="top">
+<tr class="separator:a3a0e49c441abd1856dad6ba6c62cee0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab515aed3b21167681215ed4740e3e281" id="r_ab515aed3b21167681215ed4740e3e281"><td class="memItemLeft" align="right" valign="top"><a id="ab515aed3b21167681215ed4740e3e281" name="ab515aed3b21167681215ed4740e3e281"></a>
 constexpr ReverseIterator&#160;</td><td class="memItemRight" valign="bottom"><b>rbegin</b> () noexcept</td></tr>
-<tr class="separator:a9ddaa8c655fb44fdd22e6cd2534f8594 inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a899be0b7adfa2bb0064ba53dc7e61848 inherit pub_methods_classva_1_1detail_1_1____BasicArray" id="r_a899be0b7adfa2bb0064ba53dc7e61848"><td class="memItemLeft" align="right" valign="top">
+<tr class="separator:ab515aed3b21167681215ed4740e3e281"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91efb9a9f2b6df9d2db638ed9757b5eb" id="r_a91efb9a9f2b6df9d2db638ed9757b5eb"><td class="memItemLeft" align="right" valign="top"><a id="a91efb9a9f2b6df9d2db638ed9757b5eb" name="a91efb9a9f2b6df9d2db638ed9757b5eb"></a>
 constexpr ReverseIterator&#160;</td><td class="memItemRight" valign="bottom"><b>rend</b> () noexcept</td></tr>
-<tr class="separator:a899be0b7adfa2bb0064ba53dc7e61848 inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e766fd834082e202bd4f78303dd73a9 inherit pub_methods_classva_1_1detail_1_1____BasicArray" id="r_a6e766fd834082e202bd4f78303dd73a9"><td class="memItemLeft" align="right" valign="top">
+<tr class="separator:a91efb9a9f2b6df9d2db638ed9757b5eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1840b9787739782fe936478c45d89284" id="r_a1840b9787739782fe936478c45d89284"><td class="memItemLeft" align="right" valign="top"><a id="a1840b9787739782fe936478c45d89284" name="a1840b9787739782fe936478c45d89284"></a>
 constexpr ConstReverseIterator&#160;</td><td class="memItemRight" valign="bottom"><b>rbegin</b> () const noexcept</td></tr>
-<tr class="separator:a6e766fd834082e202bd4f78303dd73a9 inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbd159a1aae6fce0a481149e287a5827 inherit pub_methods_classva_1_1detail_1_1____BasicArray" id="r_acbd159a1aae6fce0a481149e287a5827"><td class="memItemLeft" align="right" valign="top">
+<tr class="separator:a1840b9787739782fe936478c45d89284"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2417d8188e4f7d78998762d9ad47d32" id="r_ad2417d8188e4f7d78998762d9ad47d32"><td class="memItemLeft" align="right" valign="top"><a id="ad2417d8188e4f7d78998762d9ad47d32" name="ad2417d8188e4f7d78998762d9ad47d32"></a>
 constexpr ConstReverseIterator&#160;</td><td class="memItemRight" valign="bottom"><b>rend</b> () const noexcept</td></tr>
-<tr class="separator:acbd159a1aae6fce0a481149e287a5827 inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe9a023fca8a0b1aa14b8aebcda1fda9 inherit pub_methods_classva_1_1detail_1_1____BasicArray" id="r_abe9a023fca8a0b1aa14b8aebcda1fda9"><td class="memItemLeft" align="right" valign="top">
+<tr class="separator:ad2417d8188e4f7d78998762d9ad47d32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e7acaba8c1533eeaf659358112edc07" id="r_a9e7acaba8c1533eeaf659358112edc07"><td class="memItemLeft" align="right" valign="top"><a id="a9e7acaba8c1533eeaf659358112edc07" name="a9e7acaba8c1533eeaf659358112edc07"></a>
 constexpr ConstReverseIterator&#160;</td><td class="memItemRight" valign="bottom"><b>crbegin</b> () const noexcept</td></tr>
-<tr class="separator:abe9a023fca8a0b1aa14b8aebcda1fda9 inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1e61d9ee2860b12978e4783332dd70e inherit pub_methods_classva_1_1detail_1_1____BasicArray" id="r_aa1e61d9ee2860b12978e4783332dd70e"><td class="memItemLeft" align="right" valign="top">
+<tr class="separator:a9e7acaba8c1533eeaf659358112edc07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a788796c71284b1e369baf52f6fb24c9d" id="r_a788796c71284b1e369baf52f6fb24c9d"><td class="memItemLeft" align="right" valign="top"><a id="a788796c71284b1e369baf52f6fb24c9d" name="a788796c71284b1e369baf52f6fb24c9d"></a>
 constexpr ConstReverseIterator&#160;</td><td class="memItemRight" valign="bottom"><b>crend</b> () const noexcept</td></tr>
-<tr class="separator:aa1e61d9ee2860b12978e4783332dd70e inherit pub_methods_classva_1_1detail_1_1____BasicArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_attribs_classva_1_1detail_1_1____BasicArray"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_classva_1_1detail_1_1____BasicArray')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classva_1_1detail_1_1____BasicArray.html">va::detail::__BasicArray&lt; T, N &gt;</a></td></tr>
-<tr class="memitem:a67d329111040a40da4759448c712fe90 inherit pub_attribs_classva_1_1detail_1_1____BasicArray" id="r_a67d329111040a40da4759448c712fe90"><td class="memItemLeft" align="right" valign="top">
-operators&#160;</td><td class="memItemRight" valign="bottom">: friend bool operator==(const <a class="el" href="classva_1_1detail_1_1____BasicArray.html">__BasicArray</a>&amp; lhs</td></tr>
-<tr class="separator:a67d329111040a40da4759448c712fe90 inherit pub_attribs_classva_1_1detail_1_1____BasicArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d18a7fa17093e000ee3dc1318340733 inherit pub_attribs_classva_1_1detail_1_1____BasicArray" id="r_a8d18a7fa17093e000ee3dc1318340733"><td class="memItemLeft" align="right" valign="top">
-operators const <a class="el" href="classva_1_1detail_1_1____BasicArray.html">__BasicArray</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>rhs</b></td></tr>
-<tr class="separator:a8d18a7fa17093e000ee3dc1318340733 inherit pub_attribs_classva_1_1detail_1_1____BasicArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_classva_1_1detail_1_1____BasicArray"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classva_1_1detail_1_1____BasicArray')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classva_1_1detail_1_1____BasicArray.html">va::detail::__BasicArray&lt; T, N &gt;</a></td></tr>
-<tr class="memitem:a0909ab1ecb925ad4dcb21846bd7195c0 inherit pro_attribs_classva_1_1detail_1_1____BasicArray" id="r_a0909ab1ecb925ad4dcb21846bd7195c0"><td class="memItemLeft" align="right" valign="top">
+<tr class="separator:a788796c71284b1e369baf52f6fb24c9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:ab73a4bdfbaa240cc97788962ae16188c" id="r_ab73a4bdfbaa240cc97788962ae16188c"><td class="memItemLeft" align="right" valign="top"><a id="ab73a4bdfbaa240cc97788962ae16188c" name="ab73a4bdfbaa240cc97788962ae16188c"></a>
+operators&#160;</td><td class="memItemRight" valign="bottom">: friend bool operator==(const <a class="el" href="classVaArray.html">VaArray</a>&amp; lhs</td></tr>
+<tr class="separator:ab73a4bdfbaa240cc97788962ae16188c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9f48e15f327a49f9c638944b632c170" id="r_ac9f48e15f327a49f9c638944b632c170"><td class="memItemLeft" align="right" valign="top"><a id="ac9f48e15f327a49f9c638944b632c170" name="ac9f48e15f327a49f9c638944b632c170"></a>
+operators const <a class="el" href="classVaArray.html">VaArray</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>rhs</b></td></tr>
+<tr class="separator:ac9f48e15f327a49f9c638944b632c170"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:aae42cd38a03a175ae8651e977008e2af" id="r_aae42cd38a03a175ae8651e977008e2af"><td class="memItemLeft" align="right" valign="top"><a id="aae42cd38a03a175ae8651e977008e2af" name="aae42cd38a03a175ae8651e977008e2af"></a>
 T&#160;</td><td class="memItemRight" valign="bottom"><b>data</b> [N]</td></tr>
-<tr class="separator:a0909ab1ecb925ad4dcb21846bd7195c0 inherit pro_attribs_classva_1_1detail_1_1____BasicArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:aae42cd38a03a175ae8651e977008e2af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T, Size N&gt;<br />
-class VaArray&lt; T, N &gt;</div><p>Public array type. </p>
-<p>Public array type specialization.</p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>Type of elements stored in array </td></tr>
-    <tr><td class="paramname">N</td><td>Size of array (0 for automatic size deduction)</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>This is the public interface for fixed-size arrays</dd></dl>
+class VaArray&lt; T, N &gt;</div><p>Basic array implementation. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>Type of elements stored in array </td></tr>
@@ -230,18 +213,11 @@ class VaArray&lt; T, N &gt;</div><p>Public array type. </p>
   </table>
   </dd>
 </dl>
-<p>implementation </p><dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>Type of elements stored in array </td></tr>
-    <tr><td class="paramname">N</td><td>Size of array</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>This is an internal implementation class, use <a class="el" href="classVaArray.html" title="Public array type.">VaArray</a> in public API </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This is an internal implementation class, use <a class="el" href="classVaArray.html" title="Basic array implementation.">VaArray</a> in public API </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>The class name starts with double underscore indicating it's implementation detail </dd></dl>
-</div><h2 class="groupheader">Friends And Related Symbol Documentation</h2>
-<a id="aa2d137ec863423f22addf7880120c71a" name="aa2d137ec863423f22addf7880120c71a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa2d137ec863423f22addf7880120c71a">&#9670;&#160;</a></span>len</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a2e9deac1da047cb408985f629c1a49cf" name="a2e9deac1da047cb408985f629c1a49cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e9deac1da047cb408985f629c1a49cf">&#9670;&#160;</a></span>VaArray()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -252,27 +228,567 @@ template&lt;typename T , Size N&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Size len </td>
+          <td class="memname">constexpr <a class="el" href="classVaArray.html">VaArray</a>&lt; T, N &gt;<a class="el" href="classVaArray.html">::VaArray</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classVaArray.html">VaArray</a>&lt; T, N &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>arr</em></span></td><td>)</td>
+          <td class="paramtype">std::initializer_list&lt; T &gt;</td>          <td class="paramname"><span class="paramname"><em>init</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Gets array length. </p>
+<p>Constructs a <a class="el" href="classVaArray.html" title="Basic array implementation.">VaArray</a> from an initializer list. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">arr</td><td>Array to check </td></tr>
+    <tr><td class="paramname">init</td><td>Initializer list containing elements to initialize the array</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Size of array </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the initializer list contains fewer elements than the array size, the remaining elements are default-initialized. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>If the initializer list contains more elements than the array size, excess elements are ignored. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a084fdfea4755b0ff8fdaf4c2b1e69c44" name="a084fdfea4755b0ff8fdaf4c2b1e69c44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a084fdfea4755b0ff8fdaf4c2b1e69c44">&#9670;&#160;</a></span>at() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , Size N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T &amp; <a class="el" href="classVaArray.html">VaArray</a>&lt; T, N &gt;::at </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Accesses element with bounds checking. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Index of element to access </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to requested element</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classIndexOutOfRangeError.html" title="Error class for index out of range errors.">IndexOutOfRangeError</a></td><td>if index &gt;= N </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Safer but slower than operator[] </dd></dl>
+
+</div>
+</div>
+<a id="a1ea9c0c15d48050d315b2d74f3481337" name="a1ea9c0c15d48050d315b2d74f3481337"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ea9c0c15d48050d315b2d74f3481337">&#9670;&#160;</a></span>at() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , Size N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const T &amp; <a class="el" href="classVaArray.html">VaArray</a>&lt; T, N &gt;::at </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Accesses element with bounds checking (const version) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Index of element to access </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Const reference to requested element</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classIndexOutOfRangeError.html" title="Error class for index out of range errors.">IndexOutOfRangeError</a></td><td>if index &gt;= N </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Safer but slower than operator[] </dd></dl>
+
+</div>
+</div>
+<a id="a47b0a2292bb61a1ec4847b87a1897d15" name="a47b0a2292bb61a1ec4847b87a1897d15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47b0a2292bb61a1ec4847b87a1897d15">&#9670;&#160;</a></span>back() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , Size N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr const T &amp; <a class="el" href="classVaArray.html">VaArray</a>&lt; T, N &gt;::back </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Accesses last element (const version) </p>
+<dl class="section return"><dt>Returns</dt><dd>Const reference to last element </dd></dl>
+
+</div>
+</div>
+<a id="aee609198c718321f17216b5747063035" name="aee609198c718321f17216b5747063035"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee609198c718321f17216b5747063035">&#9670;&#160;</a></span>back() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , Size N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr T &amp; <a class="el" href="classVaArray.html">VaArray</a>&lt; T, N &gt;::back </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Accesses last element. </p>
+<dl class="section return"><dt>Returns</dt><dd>Reference to last element </dd></dl>
+
+</div>
+</div>
+<a id="a23cf3987230d7099b1cd02c318138a7a" name="a23cf3987230d7099b1cd02c318138a7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23cf3987230d7099b1cd02c318138a7a">&#9670;&#160;</a></span>dataPtr() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , Size N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr const T * <a class="el" href="classVaArray.html">VaArray</a>&lt; T, N &gt;::dataPtr </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns pointer to underlying data (const version) </p>
+<dl class="section return"><dt>Returns</dt><dd>Const pointer to data array </dd></dl>
+
+</div>
+</div>
+<a id="a14ad96705c02ad585d053be532b6159d" name="a14ad96705c02ad585d053be532b6159d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14ad96705c02ad585d053be532b6159d">&#9670;&#160;</a></span>dataPtr() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , Size N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr T * <a class="el" href="classVaArray.html">VaArray</a>&lt; T, N &gt;::dataPtr </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns pointer to underlying data. </p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to data array</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Useful for interoperability with C APIs </dd></dl>
+
+</div>
+</div>
+<a id="ada9730cdb180be9b19cfb30b070f76ea" name="ada9730cdb180be9b19cfb30b070f76ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada9730cdb180be9b19cfb30b070f76ea">&#9670;&#160;</a></span>fill()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , Size N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr void <a class="el" href="classVaArray.html">VaArray</a>&lt; T, N &gt;::fill </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fills array with given value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>Value to fill array with</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Overwrites all existing elements </dd></dl>
+
+</div>
+</div>
+<a id="ae645cc22a54adcce6e388f9ceaeb0de2" name="ae645cc22a54adcce6e388f9ceaeb0de2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae645cc22a54adcce6e388f9ceaeb0de2">&#9670;&#160;</a></span>front() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , Size N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr const T &amp; <a class="el" href="classVaArray.html">VaArray</a>&lt; T, N &gt;::front </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Accesses first element (const version) </p>
+<dl class="section return"><dt>Returns</dt><dd>Const reference to first element </dd></dl>
+
+</div>
+</div>
+<a id="ae394352f1e1cb0f7895f0c2d7dcd6841" name="ae394352f1e1cb0f7895f0c2d7dcd6841"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae394352f1e1cb0f7895f0c2d7dcd6841">&#9670;&#160;</a></span>front() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , Size N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr T &amp; <a class="el" href="classVaArray.html">VaArray</a>&lt; T, N &gt;::front </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Accesses first element. </p>
+<dl class="section return"><dt>Returns</dt><dd>Reference to first element </dd></dl>
+
+</div>
+</div>
+<a id="aa13f711805b6183ae200ebf662d4cc53" name="aa13f711805b6183ae200ebf662d4cc53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa13f711805b6183ae200ebf662d4cc53">&#9670;&#160;</a></span>get() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , Size N&gt; </div>
+<div class="memtemplate">
+template&lt;Size I&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr const T &amp; <a class="el" href="classVaArray.html">VaArray</a>&lt; T, N &gt;::get </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets element at compile-time index (const version) </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">I</td><td>Index to access </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Const reference to element at index I </dd></dl>
+
+</div>
+</div>
+<a id="a090c5d6749da415c8d869b1623cedcc1" name="a090c5d6749da415c8d869b1623cedcc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a090c5d6749da415c8d869b1623cedcc1">&#9670;&#160;</a></span>get() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , Size N&gt; </div>
+<div class="memtemplate">
+template&lt;Size I&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr T &amp; <a class="el" href="classVaArray.html">VaArray</a>&lt; T, N &gt;::get </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets element at compile-time index. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">I</td><td>Index to access </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to element at index I</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Enables structured bindings support </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Compile-time checked, fails if I &gt;= N </dd></dl>
+
+</div>
+</div>
+<a id="aabc120dbec3335a4d4b0ff84368f736a" name="aabc120dbec3335a4d4b0ff84368f736a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabc120dbec3335a4d4b0ff84368f736a">&#9670;&#160;</a></span>operator+()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , Size N&gt; </div>
+<div class="memtemplate">
+template&lt;Size L&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVaArray.html">VaArray</a>&lt; T, N+L &gt; <a class="el" href="classVaArray.html">VaArray</a>&lt; T, N &gt;::operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classVaArray.html">VaArray</a>&lt; T, L &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Concatenates two arrays. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">L</td><td>Size of second array </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>Array to concatenate with </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>New array containing elements from both arrays</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Resulting array size is N + L </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>May be expensive for large arrays </dd></dl>
+
+</div>
+</div>
+<a id="ad9ace9dc779765d2240607cdb9da2a02" name="ad9ace9dc779765d2240607cdb9da2a02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9ace9dc779765d2240607cdb9da2a02">&#9670;&#160;</a></span>operator[]() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , Size N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr const T &amp; <a class="el" href="classVaArray.html">VaArray</a>&lt; T, N &gt;::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Accesses element without bounds checking (const version) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Index of element to access </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Const reference to requested element</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>No bounds checking performed </dd></dl>
+
+</div>
+</div>
+<a id="a9a85f98609b3539c872f74da324de29a" name="a9a85f98609b3539c872f74da324de29a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a85f98609b3539c872f74da324de29a">&#9670;&#160;</a></span>operator[]() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , Size N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr T &amp; <a class="el" href="classVaArray.html">VaArray</a>&lt; T, N &gt;::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Accesses element without bounds checking. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Index of element to access </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to requested element</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>No bounds checking performed </dd></dl>
+
+</div>
+</div>
+<a id="aa56133ba636cdd7d1bfe8d91e97d5c8e" name="aa56133ba636cdd7d1bfe8d91e97d5c8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa56133ba636cdd7d1bfe8d91e97d5c8e">&#9670;&#160;</a></span>swap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , Size N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr void <a class="el" href="classVaArray.html">VaArray</a>&lt; T, N &gt;::swap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVaArray.html">VaArray</a>&lt; T, N &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Swaps contents with another array. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>Array to swap with</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Performs element-wise swap </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>May be expensive for non-trivial types </dd></dl>
 
 </div>
 </div>

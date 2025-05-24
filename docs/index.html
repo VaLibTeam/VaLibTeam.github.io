@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>VaLib: Main Page</title>
+<title>VaLib: VaLib</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -70,10 +70,109 @@ $(function() {
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">VaLib Documentation</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">VaLib </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p><a class="anchor" id="md_README"></a><b>VaLib</b> *(short for Vast Library)* is a C++ library in early beta that provides a rich set of modern types and utility functions.</p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Table of Contents</h1>
+<ul>
+<li>Overview</li>
+<li>Building</li>
+<li>QuickExample</li>
+<li>Installation</li>
+<li>Usage</li>
+<li>Contributing</li>
+<li>Features</li>
+<li>License</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Overview</h1>
+<p><b>VaLib</b> is a modern and extensible C++ library, currently in early beta. It offers a wide variety of useful types, functions, and abstractions to streamline development and enhance productivity.</p>
+<h1><a class="anchor" id="autotoc_md3"></a>
+Quick Example</h1>
+<p>Replace verbose STL code like this:</p>
+<div class="fragment"><div class="line">std::vector&lt;int&gt; vec_int{1, 2, 3, 4, 5};</div>
+<div class="line">std::vector&lt;std::string&gt; vec_str;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; vec_int.size(); i++) {</div>
+<div class="line">    vec_str.push_back(std::to_string(vec_int[i]));</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">std::cout &lt;&lt; vec_str.at(0);</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; vec_str.size(); i++) {</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; vec_str[i];</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>with clean, expressive VaLib code: </p><div class="fragment"><div class="line"><a class="code hl_class" href="classVaList.html">VaList&lt;int&gt;</a> intList = {1, 2, 3, 4, 5};</div>
+<div class="line"><a class="code hl_class" href="classVaList.html">VaList&lt;VaString&gt;</a> strList = va::map(va::toString, intList);</div>
+<div class="line">std::cout &lt;&lt; strList;</div>
+<div class="ttc" id="aclassVaList_html"><div class="ttname"><a href="classVaList.html">VaList</a></div><div class="ttdef"><b>Definition</b> List.hpp:28</div></div>
+</div><!-- fragment --><blockquote class="doxtable">
+<p>&zwj;No manual loops. No <code>push_back</code>. Just expressive, functional C++. </p>
+</blockquote>
+<h1><a class="anchor" id="autotoc_md4"></a>
+Building</h1>
+<p>Building VaLib is simple — we provide a tool that handles everything for you!</p>
+<blockquote class="doxtable">
+<p>&zwj;[!NOTE] VaLib currently has no external dependencies beyond <code>libstdc++</code> (or other standard C++ library like <code>libc++</code>), so you don't need to install anything extra. </p>
+</blockquote>
+<p>To build the library, just run:</p>
+<div class="fragment"><div class="line">./build.sh --target={target}</div>
+</div><!-- fragment --><p>Replace <code>{target}</code> with the desired output type. Available options:</p><ul>
+<li><b>static</b> – builds a static library (<code>.a</code>)</li>
+<li><b>shared</b> – builds a shared library (<code>.so</code>)</li>
+<li><b>object</b> – builds a single object file (<code>.o</code>)</li>
+<li><b>all</b> – builds all of the above: static, shared, and object</li>
+</ul>
+<p>The resulting files will be placed in the <code>out/</code> directory.</p>
+<p>To explore all available build options, run:</p>
+<div class="fragment"><div class="line">./build.sh --help</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md5"></a>
+Installation</h1>
+<p>To install VaLib, you can use the same build tool as above. To install the library:</p>
+<div class="fragment"><div class="line">./build.sh --target={target} --install-libs</div>
+</div><!-- fragment --><p>Valid <code>{target}</code> values:</p><ul>
+<li><b>static</b> – builds and installs the static library (<code>.a</code>)</li>
+<li><b>shared</b> – builds and installs the shared library (<code>.so</code>)</li>
+<li><b>object</b> – builds an object file (<code>.o</code>); installation not supported</li>
+<li><b>all</b> – builds and installs both static and shared libraries, plus the object file</li>
+</ul>
+<p>To install the header files and make VaLib available for use in your own projects, run:</p>
+<div class="fragment"><div class="line">./build.sh --install-headers</div>
+</div><!-- fragment --><blockquote class="doxtable">
+<p>&zwj;[!WARNING] The <code>--install-libs</code> and <code>--install-headers</code> options require root privileges. Use <code>sudo</code> or switch to the root account to perform installation. </p>
+</blockquote>
+<h1><a class="anchor" id="autotoc_md6"></a>
+Usage</h1>
+<p>To learn how to use VaLib, check out our documentation, available online at <a href="https://VaLibTeam.github.io/docs">VaLib Documentation Page</a>.</p>
+<p>If you prefer having the documentation locally, you can generate it using <b>Doxygen</b>: </p><div class="fragment"><div class="line">doxygen Doxyfile</div>
+</div><!-- fragment --><p>The documentation will be generated in HTML format under <code>docs/html/index.html</code>.</p>
+<p>You can also find usage examples at <a href="https://VaLibTeam.github.io#examples">VaLib Examples</a>.</p>
+<h1><a class="anchor" id="autotoc_md7"></a>
+Contributing</h1>
+<p>We welcome contributions! If you'd like to contribute to VaLib, please read our contributing guidelines and feel free to open issues or pull requests.</p>
+<h1><a class="anchor" id="autotoc_md8"></a>
+Features</h1>
+<h2><a class="anchor" id="autotoc_md9"></a>
+Modern C++ Features</h2>
+<p>VaLib leverages the power of modern C++ standards like <a href="https://en.cppreference.com/w/cpp/20">C++20</a> and <a href="https://en.cppreference.com/w/cpp/23">C++23</a> to provide clean, readable, and efficient code. Some of the features used include:</p>
+<ul>
+<li>Concepts</li>
+<li>Variadic templates</li>
+<li>Smart pointers</li>
+<li><b>And much more!</b></li>
+</ul>
+<h2><a class="anchor" id="autotoc_md10"></a>
+High Performance</h2>
+<p>VaLib is designed from the ground up with performance in mind. Your applications can remain lightweight and fast, even when using advanced features.</p>
+<blockquote class="doxtable">
+<p>&zwj;[!TIP] You can run our benchmark suite using the <code>test.sh</code> script to evaluate VaLib’s performance. </p>
+</blockquote>
+<h1><a class="anchor" id="autotoc_md11"></a>
+License</h1>
+<p>VaLib is licensed under the <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU General Public License v3.0</a>. You can read the full license <a href="https://www.gnu.org/licenses/gpl-3.0.html">here</a> or in the <code>LICENSE</code> file included in this repository. </p>
+</div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"/>
 </div><!-- contents -->
 <!-- start footer part -->

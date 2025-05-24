@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['_7evabaseerror_0',['~VaBaseError',['../classVaBaseError.html#ad6439b0c652e985bea4f09230a4fb3ce',1,'VaBaseError']]],
-  ['_7evadict_1',['~VaDict',['../classVaDict.html#ab7445726c7eb73bd36af05af6a28a4ed',1,'VaDict']]],
-  ['_7evalist_2',['~VaList',['../classVaList.html#a9c77a398b0622811aaf1317f27e272c8',1,'VaList']]],
-  ['_7evaresult_3',['~VaResult',['../classVaResult.html#a20c1188774b685000b6fef61d00d1210',1,'VaResult::~VaResult()'],['../classVaResult_3_01void_00_01E_01_4.html#a1fe88d3be9198c217889ade08837768d',1,'VaResult&lt; void, E &gt;::~VaResult()']]],
-  ['_7evastring_4',['~VaString',['../classVaString.html#a6d603ca34b54175560c5b47cda11675f',1,'VaString']]]
+  ['weakcount_0',['weakCount',['../structva_1_1detail_1_1ControlBlock.html#aa11d5080702f406144fc581111419f1b',1,'va::detail::ControlBlock::weakCount'],['../structva_1_1detail_1_1ControlBlock_3_01T_0f_0e_4.html#a56a5452e009cf3c9df53e71cd07a1471',1,'va::detail::ControlBlock&lt; T[]&gt;::weakCount']]],
+  ['what_1',['what',['../classVaBaseError.html#a25c86a25a2bddf223d24d045752ff932',1,'VaBaseError']]]
 ];

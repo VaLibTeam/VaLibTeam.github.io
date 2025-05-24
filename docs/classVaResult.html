@@ -91,7 +91,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:afb3d48ef6a2bced7acd7a24492a3defa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for a successful result.  <br /></td></tr>
 <tr class="separator:afb3d48ef6a2bced7acd7a24492a3defa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e11e255e206aecb013041905a5359f1" id="r_a1e11e255e206aecb013041905a5359f1"><td class="memTemplParams" colspan="2"><a id="a1e11e255e206aecb013041905a5359f1" name="a1e11e255e206aecb013041905a5359f1"></a>
-template&lt;typename U , typename  = std::enable_if_t&lt;std::is_constructible_v&lt;T, U&amp;&amp;&gt; &amp;&amp;                                                      !std::is_same_v&lt;std::decay_t&lt;U&gt;, VaResult&gt;&gt;&gt; </td></tr>
+template&lt;typename U , typename  = tt::EnableIf&lt;            tt::IsConstructible&lt;T, U&amp;&amp;&gt; &amp;&amp; !tt::IsSame&lt;typename tt::Decay&lt;U&gt;, VaResult&gt;        &gt;&gt; </td></tr>
 <tr class="memitem:a1e11e255e206aecb013041905a5359f1"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>VaResult</b> (U &amp;&amp;v)</td></tr>
 <tr class="separator:a1e11e255e206aecb013041905a5359f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4519d3c53d5f78628f132809ff4ff126" id="r_a4519d3c53d5f78628f132809ff4ff126"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4519d3c53d5f78628f132809ff4ff126">VaResult</a> (E *e)</td></tr>
@@ -100,10 +100,10 @@ template&lt;typename U , typename  = std::enable_if_t&lt;std::is_constructible_v
 <tr class="memitem:a71da296147ef40b60d29ccaa419308c1" id="r_a71da296147ef40b60d29ccaa419308c1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71da296147ef40b60d29ccaa419308c1">VaResult</a> (E &amp;&amp;e)</td></tr>
 <tr class="memdesc:a71da296147ef40b60d29ccaa419308c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for an error result.  <br /></td></tr>
 <tr class="separator:a71da296147ef40b60d29ccaa419308c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20c1188774b685000b6fef61d00d1210" id="r_a20c1188774b685000b6fef61d00d1210"><td class="memItemLeft" align="right" valign="top"><a id="a20c1188774b685000b6fef61d00d1210" name="a20c1188774b685000b6fef61d00d1210"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>~VaResult</b> () noexcept(std::is_nothrow_destructible_v&lt; T &gt; &amp;&amp;std::is_nothrow_destructible_v&lt; E &gt;)</td></tr>
-<tr class="memdesc:a20c1188774b685000b6fef61d00d1210"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. Frees the error if present. <br /></td></tr>
-<tr class="separator:a20c1188774b685000b6fef61d00d1210"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf5c89bd5a61ec99eb1c17226e9d9909" id="r_aaf5c89bd5a61ec99eb1c17226e9d9909"><td class="memItemLeft" align="right" valign="top"><a id="aaf5c89bd5a61ec99eb1c17226e9d9909" name="aaf5c89bd5a61ec99eb1c17226e9d9909"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>~VaResult</b> () noexcept(tt::IsNoexceptDestructible&lt; T &gt; &amp;&amp;tt::IsNoexceptDestructible&lt; E &gt;)</td></tr>
+<tr class="memdesc:aaf5c89bd5a61ec99eb1c17226e9d9909"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. Frees the error if present. <br /></td></tr>
+<tr class="separator:aaf5c89bd5a61ec99eb1c17226e9d9909"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae439a21acb5f98ff6b77918ea7017db7" id="r_ae439a21acb5f98ff6b77918ea7017db7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae439a21acb5f98ff6b77918ea7017db7">VaResult</a> (const <a class="el" href="classVaResult.html">VaResult</a> &amp;other)</td></tr>
 <tr class="memdesc:ae439a21acb5f98ff6b77918ea7017db7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <br /></td></tr>
 <tr class="separator:ae439a21acb5f98ff6b77918ea7017db7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,21 +131,21 @@ template&lt;typename U , typename  = std::enable_if_t&lt;std::is_constructible_v
 <tr class="memitem:afcca29d23947f997628b977ff9fde5d0" id="r_afcca29d23947f997628b977ff9fde5d0"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afcca29d23947f997628b977ff9fde5d0">unwrapOr</a> (const T &amp;fallback) const</td></tr>
 <tr class="memdesc:afcca29d23947f997628b977ff9fde5d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value or a fallback if the result is an error.  <br /></td></tr>
 <tr class="separator:afcca29d23947f997628b977ff9fde5d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e59f7fe9fdb645e667b6e9d95cd63d6" id="r_a9e59f7fe9fdb645e667b6e9d95cd63d6"><td class="memTemplParams" colspan="2">template&lt;typename U  = E&gt; </td></tr>
-<tr class="memitem:a9e59f7fe9fdb645e667b6e9d95cd63d6"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; hasThrowItV&lt; U &gt;, void &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9e59f7fe9fdb645e667b6e9d95cd63d6">throwErr</a> ()</td></tr>
-<tr class="memdesc:a9e59f7fe9fdb645e667b6e9d95cd63d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throws the stored error by calling its <code>throwIt()</code> method.  <br /></td></tr>
-<tr class="separator:a9e59f7fe9fdb645e667b6e9d95cd63d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d0df07c040768c5339cfa877de01798" id="r_a1d0df07c040768c5339cfa877de01798"><td class="memTemplParams" colspan="2">template&lt;typename U  = E&gt; </td></tr>
-<tr class="memitem:a1d0df07c040768c5339cfa877de01798"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt;!hasThrowItV&lt; U &gt;, void &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a1d0df07c040768c5339cfa877de01798">throwErr</a> ()</td></tr>
-<tr class="memdesc:a1d0df07c040768c5339cfa877de01798"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throws the stored error by value.  <br /></td></tr>
-<tr class="separator:a1d0df07c040768c5339cfa877de01798"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9b503b1408c175c23bfaf77d42f8b66" id="r_ae9b503b1408c175c23bfaf77d42f8b66"><td class="memTemplParams" colspan="2">template&lt;typename U  = E&gt; </td></tr>
+<tr class="memitem:ae9b503b1408c175c23bfaf77d42f8b66"><td class="memTemplItemLeft" align="right" valign="top">tt::EnableIf&lt; <a class="el" href="structva_1_1HasThrowIt.html">va::HasThrowIt</a>&lt; U &gt;::value, void &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ae9b503b1408c175c23bfaf77d42f8b66">throwErr</a> ()</td></tr>
+<tr class="memdesc:ae9b503b1408c175c23bfaf77d42f8b66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throws the stored error by calling its <code>throwIt()</code> method.  <br /></td></tr>
+<tr class="separator:ae9b503b1408c175c23bfaf77d42f8b66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13a7d6b47ac5ea1438ad6143a17df4a9" id="r_a13a7d6b47ac5ea1438ad6143a17df4a9"><td class="memTemplParams" colspan="2">template&lt;typename U  = E&gt; </td></tr>
+<tr class="memitem:a13a7d6b47ac5ea1438ad6143a17df4a9"><td class="memTemplItemLeft" align="right" valign="top">tt::EnableIf&lt;!<a class="el" href="structva_1_1HasThrowIt.html">va::HasThrowIt</a>&lt; U &gt;::value, void &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a13a7d6b47ac5ea1438ad6143a17df4a9">throwErr</a> ()</td></tr>
+<tr class="memdesc:a13a7d6b47ac5ea1438ad6143a17df4a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throws the stored error by value.  <br /></td></tr>
+<tr class="separator:a13a7d6b47ac5ea1438ad6143a17df4a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a08250e899f3efd0a5ae2c0c8657944b0" id="r_a08250e899f3efd0a5ae2c0c8657944b0"><td class="memItemLeft" align="right" valign="top"><a id="a08250e899f3efd0a5ae2c0c8657944b0" name="a08250e899f3efd0a5ae2c0c8657944b0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>destroy</b> () noexcept(std::is_nothrow_destructible_v&lt; T &gt; &amp;&amp;std::is_nothrow_destructible_v&lt; E &gt;)</td></tr>
-<tr class="memdesc:a08250e899f3efd0a5ae2c0c8657944b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal helper to clean up the error if present. <br /></td></tr>
-<tr class="separator:a08250e899f3efd0a5ae2c0c8657944b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a503afba74e1a9ff23032a24bd7b7f81f" id="r_a503afba74e1a9ff23032a24bd7b7f81f"><td class="memItemLeft" align="right" valign="top"><a id="a503afba74e1a9ff23032a24bd7b7f81f" name="a503afba74e1a9ff23032a24bd7b7f81f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>destroy</b> () noexcept(tt::IsNoexceptDestructible&lt; T &gt; &amp;&amp;tt::IsNoexceptDestructible&lt; E &gt;)</td></tr>
+<tr class="memdesc:a503afba74e1a9ff23032a24bd7b7f81f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal helper to clean up the error if present. <br /></td></tr>
+<tr class="separator:a503afba74e1a9ff23032a24bd7b7f81f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -489,8 +489,8 @@ template&lt;typename T , typename E  = VaBaseError&gt; </div>
 
 </div>
 </div>
-<a id="a9e59f7fe9fdb645e667b6e9d95cd63d6" name="a9e59f7fe9fdb645e667b6e9d95cd63d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e59f7fe9fdb645e667b6e9d95cd63d6">&#9670;&#160;</a></span>throwErr() <span class="overload">[1/2]</span></h2>
+<a id="ae9b503b1408c175c23bfaf77d42f8b66" name="ae9b503b1408c175c23bfaf77d42f8b66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9b503b1408c175c23bfaf77d42f8b66">&#9670;&#160;</a></span>throwErr() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -503,7 +503,7 @@ template&lt;typename U  = E&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if_t&lt; hasThrowItV&lt; U &gt;, void &gt; <a class="el" href="classVaResult.html">VaResult</a>&lt; T, E &gt;::throwErr </td>
+          <td class="memname">tt::EnableIf&lt; <a class="el" href="structva_1_1HasThrowIt.html">va::HasThrowIt</a>&lt; U &gt;::value, void &gt; <a class="el" href="classVaResult.html">VaResult</a>&lt; T, E &gt;::throwErr </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
@@ -528,8 +528,8 @@ template&lt;typename U  = E&gt; </div>
 
 </div>
 </div>
-<a id="a1d0df07c040768c5339cfa877de01798" name="a1d0df07c040768c5339cfa877de01798"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d0df07c040768c5339cfa877de01798">&#9670;&#160;</a></span>throwErr() <span class="overload">[2/2]</span></h2>
+<a id="a13a7d6b47ac5ea1438ad6143a17df4a9" name="a13a7d6b47ac5ea1438ad6143a17df4a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13a7d6b47ac5ea1438ad6143a17df4a9">&#9670;&#160;</a></span>throwErr() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -542,7 +542,7 @@ template&lt;typename U  = E&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if_t&lt;!hasThrowItV&lt; U &gt;, void &gt; <a class="el" href="classVaResult.html">VaResult</a>&lt; T, E &gt;::throwErr </td>
+          <td class="memname">tt::EnableIf&lt;!<a class="el" href="structva_1_1HasThrowIt.html">va::HasThrowIt</a>&lt; U &gt;::value, void &gt; <a class="el" href="classVaResult.html">VaResult</a>&lt; T, E &gt;::throwErr </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
